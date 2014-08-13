@@ -1,0 +1,434 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\shared\ShowXML.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MENUSUBSCRIBE_DIALOG DIALOGEX 0, 0, 375, 205
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "QBSDK - Menu Subscription Test"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Select the QuickBooks menu you wish to add to:",
+                    IDC_STATIC,7,7,226,8
+    LTEXT           "Add To",IDC_STATIC,7,22,24,8
+    COMBOBOX        IDC_ADD_TO,35,19,103,135,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Define the menus you wish to add:\n   - Defining a single menu item will add that item directly to the QuickBooks menu selected above.\n   - Defining more than one menu item will add a submenu with those items.",
+                    IDC_STATIC,7,42,354,27
+    GROUPBOX        "Display Text",IDC_STATIC,33,72,79,78
+    GROUPBOX        "Visible Condition",IDC_STATIC,115,72,125,79
+    GROUPBOX        "Enabled Condition",IDC_STATIC,243,72,125,79
+    LTEXT           "Menu 1",IDC_STATIC,7,87,24,8
+    EDITTEXT        IDC_MENU1_TEXT,37,84,70,14,ES_AUTOHSCROLL
+    CONTROL         "If",IDC_MENU1_VISIBLE_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,119,86,25,12
+    COMBOBOX        IDC_MENU1_VISIBLE,147,86,90,116,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "If",IDC_MENU1_ENABLED_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,247,86,25,12
+    COMBOBOX        IDC_MENU1_ENABLED,275,86,90,116,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Menu 2",IDC_STATIC,7,108,24,8
+    EDITTEXT        IDC_MENU2_TEXT,37,105,70,14,ES_AUTOHSCROLL
+    CONTROL         "If",IDC_MENU2_VISIBLE_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,119,107,25,12
+    COMBOBOX        IDC_MENU2_VISIBLE,147,107,90,97,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "If",IDC_MENU2_ENABLED_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,247,107,25,12
+    COMBOBOX        IDC_MENU2_ENABLED,275,107,90,96,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Menu 3",IDC_STATIC,7,128,24,8
+    EDITTEXT        IDC_MENU3_TEXT,37,126,70,14,ES_AUTOHSCROLL
+    CONTROL         "If",IDC_MENU3_VISIBLE_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,119,128,25,12
+    COMBOBOX        IDC_MENU3_VISIBLE,147,128,90,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "If",IDC_MENU3_ENABLED_IF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,247,128,25,12
+    COMBOBOX        IDC_MENU3_ENABLED,275,128,90,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add Subscription",IDC_ADD_SUBSCRIPTION,103,184,74,14
+    PUSHBUTTON      "Close",IDCANCEL,193,184,74,14
+    CONTROL         "Show request and response XML",IDC_SHOW_XML,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,102,163,163,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MenuSubscribe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MENUSUBSCRIBE_DIALOG DLGINIT
+BEGIN
+    IDC_ADD_TO, 0x403, 5, 0
+0x6946, 0x656c, "\000" 
+    IDC_ADD_TO, 0x403, 8, 0
+0x6f43, 0x706d, 0x6e61, 0x0079, 
+    IDC_ADD_TO, 0x403, 10, 0
+0x7543, 0x7473, 0x6d6f, 0x7265, 0x0073, 
+    IDC_ADD_TO, 0x403, 8, 0
+0x6556, 0x646e, 0x726f, 0x0073, 
+    IDC_ADD_TO, 0x403, 10, 0
+0x6d45, 0x6c70, 0x796f, 0x6565, 0x0073, 
+    IDC_ADD_TO, 0x403, 8, 0
+0x6142, 0x6b6e, 0x6e69, 0x0067, 
+    IDC_MENU1_VISIBLE, 0x403, 1, 0
+"\000" 
+    IDC_MENU1_VISIBLE, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU1_VISIBLE, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_VISIBLE, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU1_VISIBLE, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU1_VISIBLE, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU1_VISIBLE, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    IDC_MENU1_ENABLED, 0x403, 1, 0
+"\000" 
+    IDC_MENU1_ENABLED, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU1_ENABLED, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU1_ENABLED, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU1_ENABLED, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU1_ENABLED, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU1_ENABLED, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    IDC_MENU2_VISIBLE, 0x403, 1, 0
+"\000" 
+    IDC_MENU2_VISIBLE, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU2_VISIBLE, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_VISIBLE, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU2_VISIBLE, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU2_VISIBLE, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU2_VISIBLE, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    IDC_MENU2_ENABLED, 0x403, 1, 0
+"\000" 
+    IDC_MENU2_ENABLED, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU2_ENABLED, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU2_ENABLED, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU2_ENABLED, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU2_ENABLED, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU2_ENABLED, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    IDC_MENU3_VISIBLE, 0x403, 1, 0
+"\000" 
+    IDC_MENU3_VISIBLE, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU3_VISIBLE, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_VISIBLE, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU3_VISIBLE, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU3_VISIBLE, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU3_VISIBLE, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    IDC_MENU3_ENABLED, 0x403, 1, 0
+"\000" 
+    IDC_MENU3_ENABLED, 0x403, 14, 0
+0x754d, 0x746c, 0x5569, 0x6573, 0x4d72, 0x646f, 0x0065, 
+    IDC_MENU3_ENABLED, 0x403, 21, 0
+0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, 0x7845, 0x7369, 
+0x7374, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 17, 0
+0x7349, 0x6341, 0x6f63, 0x6e75, 0x6174, 0x746e, 0x6f43, 0x7970, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 13, 0
+0x6148, 0x4373, 0x7375, 0x6f74, 0x656d, 0x7372, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 11, 0
+0x6148, 0x5673, 0x6e65, 0x6f64, 0x7372, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 21, 0
+0x7341, 0x6573, 0x626d, 0x796c, 0x7449, 0x6d65, 0x4573, 0x616e, 0x6c62, 
+0x6465, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 15, 0
+0x6c43, 0x7361, 0x6573, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 17, 0
+0x7345, 0x6974, 0x616d, 0x6574, 0x4573, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 17, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4579, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 15, 0
+0x6150, 0x7279, 0x6c6f, 0x456c, 0x616e, 0x6c62, 0x6465, "\000" 
+    IDC_MENU3_ENABLED, 0x403, 19, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU3_ENABLED, 0x403, 19, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, 0x4573, 0x616e, 0x6c62, 0x6465, 
+"\000" 
+    IDC_MENU3_ENABLED, 0x403, 16, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6e45, 0x6261, 0x656c, 0x0064, 
+    IDC_MENU3_ENABLED, 0x403, 20, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, 0x6e45, 0x6261, 0x656c, 
+0x0064, 
+    0
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Intuit, Inc.\0"
+            VALUE "FileDescription", "QBSDK Menu Subscription Tester\0"
+            VALUE "FileVersion", "1.0.0.1\0"
+            VALUE "InternalName", "MenuSubscribe.exe\0"
+            VALUE "LegalCopyright", "(c) Intuit, Inc.  All rights reserved.\0"
+            VALUE "OriginalFilename", "MenuSubscribe.exe\0"
+            VALUE "ProductName", "QBSDK Menu Subscription Tester\0"
+            VALUE "ProductVersion", "1.0.0.1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

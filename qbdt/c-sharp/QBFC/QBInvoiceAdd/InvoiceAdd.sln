@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceAdd", "InvoiceAdd.csproj", "{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}.Debug.ActiveCfg = Debug|.NET
+		{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}.Debug.Build.0 = Debug|.NET
+		{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}.Release.ActiveCfg = Release|.NET
+		{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

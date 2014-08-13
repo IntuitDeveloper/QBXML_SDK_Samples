@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{B6293E15-936E-4E13-B8F6-120C91417834} = s 'EventHandler'
+		'EventHandler.EXE'
+		{
+			val AppID = s {B6293E15-936E-4E13-B8F6-120C91417834}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+HKCR
+{
+	EventHandler.QBSDKCallback.1 = s 'QBSDKCallback Class'
+	{
+		CLSID = s '{70DC83AB-2EC1-478F-9204-C37485AD8E3C}'
+	}
+	EventHandler.QBSDKCallback = s 'QBSDKCallback Class'
+	{
+		CLSID = s '{70DC83AB-2EC1-478F-9204-C37485AD8E3C}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {70DC83AB-2EC1-478F-9204-C37485AD8E3C} = s 'QBSDKCallback Class'
+		{
+			ProgID = s 'EventHandler.QBSDKCallback.1'
+			VersionIndependentProgID = s 'EventHandler.QBSDKCallback'
+			val AppID = s '{B6293E15-936E-4E13-B8F6-120C91417834}'
+			LocalServer32 = s '%Module%'
+		}
+	}
+}

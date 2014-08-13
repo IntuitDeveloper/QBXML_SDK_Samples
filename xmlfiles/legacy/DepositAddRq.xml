@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- DepositAddRq.xml                                                           -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating a Deposit Add request.                        -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to add a deposit to a checking     -->
+<!-- account. This sample requires there to be an account named "Checking".     -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0" ?>
+<QBXML>
+  <QBXMLMsgsRq onError = "stopOnError">
+    <DepositAddRq requestID = "0">
+      <DepositAdd>
+        <DepositToAccountRef>
+          <FullName>Checking</FullName> 
+        </DepositToAccountRef>
+        <DepositLineAdd>
+          <PaymentTxnID>3D95-1071497099</PaymentTxnID>
+        </DepositLineAdd>
+      </DepositAdd>
+    </DepositAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

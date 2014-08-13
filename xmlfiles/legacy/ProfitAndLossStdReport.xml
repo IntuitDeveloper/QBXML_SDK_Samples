@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- ProfitAndLossStdReport.xml                                                 -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Shows the Profit and Loss Standard Report Query request.          -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to generate a standard P&L,        -->
+<!-- summarized by month for a specified date range.                            -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError="continueOnError">
+    <GeneralSummaryReportQueryRq>
+      <GeneralSummaryReportType>ProfitAndLossStandard</GeneralSummaryReportType>
+      <ReportPeriod>
+        <FromReportDate>2002-05-01</FromReportDate> 
+        <ToReportDate>2003-05-01</ToReportDate>     
+      </ReportPeriod>
+      <SummarizeColumnsBy>Month</SummarizeColumnsBy>  
+    </GeneralSummaryReportQueryRq>
+  </QBXMLMsgsRq>
+</QBXML>

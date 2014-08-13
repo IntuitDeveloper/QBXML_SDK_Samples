@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- ItemsAddRq.xml                                                             -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating item add requests.                            -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains four add requests for items, an inventory item,     -->
+<!-- non-inventory item, service item and a sales tax item.                     -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <ItemInventoryAddRq requestID = "2">
+      <ItemInventoryAdd>
+        <Name>Hammer</Name>
+        <IncomeAccountRef>
+          <FullName>Other Income</FullName>
+        </IncomeAccountRef>
+        <COGSAccountRef>
+          <FullName>Cost Of Goods Sold</FullName>
+        </COGSAccountRef>
+        <AssetAccountRef>
+          <FullName>Other Income</FullName>
+        </AssetAccountRef>
+      </ItemInventoryAdd>
+    </ItemInventoryAddRq>
+    <ItemNonInventoryAddRq requestID = "3">
+      <!-- Begin second add request: item non-inventory add request -->
+      <ItemNonInventoryAdd>
+        <Name>Desk</Name>
+        <SalesOrPurchase>
+          <Desc>Desk for the office</Desc>                              
+          <Price>206.89</Price>                         
+          <AccountRef>
+            <FullName>Other Expenses</FullName>                    
+          </AccountRef>
+        </SalesOrPurchase>
+      </ItemNonInventoryAdd>
+    </ItemNonInventoryAddRq>
+    <!-- Begin third add request: item service add request                                 -->
+    <ItemServiceAddRq requestID = "4">
+      <ItemServiceAdd>
+        <Name>Office Cleaning</Name>
+        <IsActive>1</IsActive>
+        <SalesOrPurchase>
+          <Desc>Labor for cleaning office</Desc>                              
+          <Price>120.00</Price>                         
+          <AccountRef>
+            <FullName>Other Expenses</FullName>                    
+          </AccountRef>
+        </SalesOrPurchase>
+      </ItemServiceAdd>
+    </ItemServiceAddRq>
+    <!-- Begin fourth add request: item sales tax add                                      -->
+    <ItemSalesTaxAddRq requestID = "5">
+      <ItemSalesTaxAdd>
+        <Name>Alameda County</Name>
+        <IsActive>1</IsActive>   
+        <ItemDesc>County Tax</ItemDesc>    
+        <TaxRate>8.25</TaxRate>  
+        <TaxVendorRef>                         
+          <FullName>State Board of Equalization</FullName>  
+        </TaxVendorRef>
+      </ItemSalesTaxAdd>
+    </ItemSalesTaxAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

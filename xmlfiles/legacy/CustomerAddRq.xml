@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- CustomerAddRq.xml                                                          -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating customer add requests                         -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains two customer add requests. The first request        -->
+<!-- adds a top-level customer, and the second request adds a job.              -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?> 
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError. --> 
+  <QBXMLMsgsRq onError = "stopOnError">
+    <!-- Begin first request: adding a customer -->
+    <CustomerAddRq requestID = "2">
+      <CustomerAdd>
+        <Name>Joe Customer</Name>
+        <IsActive>1</IsActive> 
+        <CompanyName>Joes Garage</CompanyName>
+        <Salutation>Mr</Salutation>
+        <FirstName>Joe</FirstName>
+        <LastName>Customer</LastName>
+        <BillAddress>                                
+          <Addr1>123 Main St.</Addr1>                     
+          <City>Mountain View</City>                       
+          <State>CA</State>                     
+          <PostalCode>94566</PostalCode>           
+        </BillAddress>
+        <Phone>650-944-1111</Phone>                       
+        <AltPhone>650-944-2111</AltPhone>                 
+        <Email>joe@joegargage.com</Email>
+        <!-- references to objects by name or ID require that the object -->
+        <!-- already exist                                               -->
+        <TermsRef>                                          
+          <FullName>Net 30</FullName>                      
+        </TermsRef>
+        <AccountNumber>89087</AccountNumber>              
+        <CreditLimit>2000.00</CreditLimit>                  
+      </CustomerAdd>
+    </CustomerAddRq>
+    <!-- Begin second request: adding another customer -->
+    <CustomerAddRq requestID = "3">
+      <CustomerAdd>
+        <Name>Equipment Installation</Name>
+        <IsActive>1</IsActive>
+        <!-- Here we're choosing to create job Equipment Installation under   -->
+        <!-- an existing customer, Joe Customer                               -->                       
+        <ParentRef>                                         
+          <FullName>Joe Customer</FullName>                      
+        </ParentRef>
+        <JobStatus>Awarded</JobStatus>                     
+        <JobStartDate>2001-03-01</JobStartDate>               
+        <JobProjectedEndDate>2001-12-01</JobProjectedEndDate> 
+        <JobEndDate>2001-12-15</JobEndDate>   
+        <JobDesc>Install new smog equipment</JobDesc>                          
+      </CustomerAdd>
+    </CustomerAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

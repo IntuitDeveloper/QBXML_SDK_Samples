@@ -1,0 +1,6 @@
+// DisplayDlg.cpp : Implementation of CDisplayDlg
+#include "stdafx.h"
+#include "DisplayDlg.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// CDisplayDlg

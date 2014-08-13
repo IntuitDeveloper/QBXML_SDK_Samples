@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- AccountQueryRq.xml                                                         -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the account query request.                    -->
+<!-- This XML file contains a single request to query accounts.                 -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to query all accounts. It does not -->
+<!-- filter the output so lots of accounts could cause this to be a bit slow.   -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="7.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <AccountQueryRq requestID="1">
+      </AccountQueryRq>
+   </QBXMLMsgsRq>
+</QBXML>
+

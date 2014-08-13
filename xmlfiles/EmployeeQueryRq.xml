@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- EmployeeQueryRq.xml                                                         -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the employee query request.                   -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to query all employees.            -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="8.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <EmployeeQueryRq requestID="c1" />
+   </QBXMLMsgsRq>
+</QBXML>
+

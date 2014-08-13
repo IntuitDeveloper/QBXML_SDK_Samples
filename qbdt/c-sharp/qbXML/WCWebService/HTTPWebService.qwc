@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<QBWCXML>
+<AppName>HTTPWebService</AppName>
+<AppID></AppID>
+<AppURL>http://localhost/WCWebService/WCWebService.asmx</AppURL>
+<AppDescription>A short description for WCWebService1</AppDescription>
+<AppSupport>http://localhost/WCWebService/WCWebService.asmx?wsdl</AppSupport>
+<OwnerID>{87EDAAF8-637E-4203-867F-4BA79C2F8998}</OwnerID>
+<FileID>{CA1C3EB8-1B61-4747-A743-8D5B438B83AC}</FileID>
+<UserName>username</UserName>
+<QBType>QBFS</QBType>
+<Style>Document</Style>
+<AuthFlags>0xF</AuthFlags>
+</QBWCXML>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PriceLevels", "PriceLevels.vbproj", "{83D1273E-25C9-4444-A2BD-923B4FE15FF5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{83D1273E-25C9-4444-A2BD-923B4FE15FF5}.Debug.ActiveCfg = Debug|.NET
+		{83D1273E-25C9-4444-A2BD-923B4FE15FF5}.Debug.Build.0 = Debug|.NET
+		{83D1273E-25C9-4444-A2BD-923B4FE15FF5}.Release.ActiveCfg = Release|.NET
+		{83D1273E-25C9-4444-A2BD-923B4FE15FF5}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

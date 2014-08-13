@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- EntityQueryRq.xml                                                          -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the entity query request.                     -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to return all entities.            -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="8.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <EntityQueryRq requestID="4">
+      </EntityQueryRq>
+   </QBXMLMsgsRq>
+</QBXML>
+

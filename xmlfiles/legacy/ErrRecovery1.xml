@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- ErrRecovery1.xml                                                           -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Request to add a check.                                           -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This file contains an XML request to add a check.                          -->
+<!-- It also passes in a new message set ID so information for this session will-->
+<!-- be saved. If everything proceeds normally, the check request will be       -->
+<!-- processed and the session status will be saved. In the event of a          -->
+<!-- failure (or just to test) this XML file may be sent to QuickBooks          -->
+<!-- a second time and status will be returned for the message set named        -->
+<!-- by the ID "AB1F2395".                                                      -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- After: ErrRecovery2.xml                                                    -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq newMessageSetID = "AB1F2395" onError="continueOnError">
+    <CheckAddRq requestID = "1">
+      <CheckAdd>
+        <AccountRef>
+          <FullName>Checking</FullName>
+        </AccountRef>
+        <PayeeEntityRef>
+          <FullName>East Bayshore Auto Mall</FullName> 
+        </PayeeEntityRef>
+        <TxnDate>2001-10-14</TxnDate>
+        <Memo>Installment check</Memo> 
+        <ExpenseLineAdd>
+          <AccountRef>
+            <FullName>Automobile</FullName> 
+          </AccountRef>
+          <Amount>520.00</Amount>
+        </ExpenseLineAdd>
+      </CheckAdd>
+    </CheckAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

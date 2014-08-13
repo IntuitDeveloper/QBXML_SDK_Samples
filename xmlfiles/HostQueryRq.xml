@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- HostQueryRq.xml                                                            -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the host query request.                       -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to obtain QB version and support   -->
+<!-- information about the host running QuickBooks.                             -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="8.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <HostQueryRq requestID="requestID_123" />
+   </QBXMLMsgsRq>
+</QBXML>
+

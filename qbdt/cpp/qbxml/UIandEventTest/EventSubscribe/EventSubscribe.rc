@@ -1,0 +1,369 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\shared\ShowXML.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\shared\\ShowXML.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EVENTSUBSCRIBE_DIALOG DIALOGEX 0, 0, 265, 260
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "QBSDK - Event Subscription Test"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "List Events",IDC_STATIC,8,6,250,43
+    LTEXT           "List Item",IDC_STATIC,13,19,27,8
+    COMBOBOX        IDC_LIST,57,17,148,177,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Add",IDC_LIST_ADD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    57,36,29,10
+    CONTROL         "Modify",IDC_LIST_MOD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,36,37,10
+    CONTROL         "Delete",IDC_LIST_DEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,133,36,37,10
+    CONTROL         "Merge",IDC_LIST_MERGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,173,36,36,10
+    PUSHBUTTON      "Add",IDC_LIST_SUBSCRIBE,215,30,37,14
+    GROUPBOX        "Transaction Events",IDC_STATIC,8,56,250,43
+    LTEXT           "Transaction",IDC_STATIC,13,69,38,8
+    COMBOBOX        IDC_TXN,57,67,148,227,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Add",IDC_TXN_ADD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    57,86,29,10
+    CONTROL         "Modify",IDC_TXN_MOD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,86,37,10
+    CONTROL         "Delete",IDC_TXN_DEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,133,86,37,10
+    PUSHBUTTON      "Add",IDC_TXN_SUBSCRIBE,215,81,37,14
+    GROUPBOX        "Selected Events",IDC_STATIC,8,106,249,76
+    LISTBOX         IDC_SELECTED,15,118,195,45,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remove",IDC_REMOVE,215,118,37,14
+    LTEXT           "UI Events:   Company File",IDC_STATIC,16,169,85,8
+    CONTROL         "Open",IDC_FILE_OPEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,107,169,33,10
+    CONTROL         "Close",IDC_FILE_CLOSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,143,169,33,10
+    GROUPBOX        "Event Handler Option",IDC_STATIC,8,190,249,26
+    CONTROL         "Launch Event Handler application if it's not already running",
+                    IDC_LAUNCH_HANDLER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,201,240,10
+    CONTROL         "Show request and response XML",IDC_SHOW_XML,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,69,224,127,10
+    DEFPUSHBUTTON   "Add Subscription",IDC_ADD_SUBSCRIPTION,50,241,74,14
+    PUSHBUTTON      "Close",IDCANCEL,140,241,74,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\EventSubscribe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EVENTSUBSCRIBE_DIALOG DLGINIT
+BEGIN
+    IDC_LIST, 0x403, 8, 0
+0x6341, 0x6f63, 0x6e75, 0x0074, 
+    IDC_LIST, 0x403, 9, 0
+0x7543, 0x7473, 0x6d6f, 0x7265, "\000" 
+    IDC_LIST, 0x403, 9, 0
+0x6d45, 0x6c70, 0x796f, 0x6565, "\000" 
+    IDC_LIST, 0x403, 10, 0
+0x744f, 0x6568, 0x4e72, 0x6d61, 0x0065, 
+    IDC_LIST, 0x403, 7, 0
+0x6556, 0x646e, 0x726f, "\000" 
+    IDC_LIST, 0x403, 14, 0
+0x7453, 0x6e61, 0x6164, 0x6472, 0x6554, 0x6d72, 0x0073, 
+    IDC_LIST, 0x403, 16, 0
+0x6144, 0x6574, 0x7244, 0x7669, 0x6e65, 0x6554, 0x6d72, 0x0073, 
+    IDC_LIST, 0x403, 6, 0
+0x6c43, 0x7361, 0x0073, 
+    IDC_LIST, 0x403, 9, 0
+0x6153, 0x656c, 0x5273, 0x7065, "\000" 
+    IDC_LIST, 0x403, 13, 0
+0x7543, 0x7473, 0x6d6f, 0x7265, 0x7954, 0x6570, "\000" 
+    IDC_LIST, 0x403, 11, 0
+0x6556, 0x646e, 0x726f, 0x7954, 0x6570, "\000" 
+    IDC_LIST, 0x403, 8, 0
+0x6f4a, 0x5462, 0x7079, 0x0065, 
+    IDC_LIST, 0x403, 12, 0
+0x7543, 0x7473, 0x6d6f, 0x7265, 0x734d, 0x0067, 
+    IDC_LIST, 0x403, 14, 0
+0x6150, 0x6d79, 0x6e65, 0x4d74, 0x7465, 0x6f68, 0x0064, 
+    IDC_LIST, 0x403, 11, 0
+0x6853, 0x7069, 0x654d, 0x6874, 0x646f, "\000" 
+    IDC_LIST, 0x403, 13, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6f43, 0x6564, "\000" 
+    IDC_LIST, 0x403, 5, 0
+0x6f54, 0x6f44, "\000" 
+    IDC_LIST, 0x403, 12, 0
+0x7449, 0x6d65, 0x6553, 0x7672, 0x6369, 0x0065, 
+    IDC_LIST, 0x403, 17, 0
+0x7449, 0x6d65, 0x6f4e, 0x496e, 0x766e, 0x6e65, 0x6f74, 0x7972, "\000" 
+    IDC_LIST, 0x403, 16, 0
+0x7449, 0x6d65, 0x744f, 0x6568, 0x4372, 0x6168, 0x6772, 0x0065, 
+    IDC_LIST, 0x403, 14, 0
+0x7449, 0x6d65, 0x6e49, 0x6576, 0x746e, 0x726f, 0x0079, 
+    IDC_LIST, 0x403, 22, 0
+0x7449, 0x6d65, 0x6e49, 0x6576, 0x746e, 0x726f, 0x4179, 0x7373, 0x6d65, 
+0x6c62, 0x0079, 
+    IDC_LIST, 0x403, 15, 0
+0x7449, 0x6d65, 0x6946, 0x6578, 0x4164, 0x7373, 0x7465, "\000" 
+    IDC_LIST, 0x403, 13, 0
+0x7449, 0x6d65, 0x7553, 0x7462, 0x746f, 0x6c61, "\000" 
+    IDC_LIST, 0x403, 13, 0
+0x7449, 0x6d65, 0x6944, 0x6373, 0x756f, 0x746e, "\000" 
+    IDC_LIST, 0x403, 12, 0
+0x7449, 0x6d65, 0x6150, 0x6d79, 0x6e65, 0x0074, 
+    IDC_LIST, 0x403, 13, 0
+0x7449, 0x6d65, 0x6153, 0x656c, 0x5473, 0x7861, "\000" 
+    IDC_LIST, 0x403, 18, 0
+0x7449, 0x6d65, 0x6153, 0x656c, 0x5473, 0x7861, 0x7247, 0x756f, 0x0070, 
+
+    IDC_LIST, 0x403, 10, 0
+0x7449, 0x6d65, 0x7247, 0x756f, 0x0070, 
+    IDC_LIST, 0x403, 11, 0
+0x7250, 0x6369, 0x4c65, 0x7665, 0x6c65, "\000" 
+    IDC_TXN, 0x403, 5, 0
+0x6942, 0x6c6c, "\000" 
+    IDC_TXN, 0x403, 17, 0
+0x6942, 0x6c6c, 0x6150, 0x6d79, 0x6e65, 0x4374, 0x6568, 0x6b63, "\000" 
+    IDC_TXN, 0x403, 22, 0
+0x6942, 0x6c6c, 0x6150, 0x6d79, 0x6e65, 0x4374, 0x6572, 0x6964, 0x4374, 
+0x7261, 0x0064, 
+    IDC_TXN, 0x403, 7, 0
+0x6843, 0x7261, 0x6567, "\000" 
+    IDC_TXN, 0x403, 6, 0
+0x6843, 0x6365, 0x006b, 
+    IDC_TXN, 0x403, 17, 0
+0x7243, 0x6465, 0x7469, 0x6143, 0x6472, 0x6843, 0x7261, 0x6567, "\000" 
+    IDC_TXN, 0x403, 17, 0
+0x7243, 0x6465, 0x7469, 0x6143, 0x6472, 0x7243, 0x6465, 0x7469, "\000" 
+    IDC_TXN, 0x403, 11, 0
+0x7243, 0x6465, 0x7469, 0x654d, 0x6f6d, "\000" 
+    IDC_TXN, 0x403, 8, 0
+0x6544, 0x6f70, 0x6973, 0x0074, 
+    IDC_TXN, 0x403, 9, 0
+0x7345, 0x6974, 0x616d, 0x6574, "\000" 
+    IDC_TXN, 0x403, 8, 0
+0x6e49, 0x6f76, 0x6369, 0x0065, 
+    IDC_TXN, 0x403, 20, 0
+0x6e49, 0x6576, 0x746e, 0x726f, 0x4179, 0x6a64, 0x7375, 0x6d74, 0x6e65, 
+0x0074, 
+    IDC_TXN, 0x403, 12, 0
+0x7449, 0x6d65, 0x6552, 0x6563, 0x7069, 0x0074, 
+    IDC_TXN, 0x403, 13, 0
+0x6f4a, 0x7275, 0x616e, 0x456c, 0x746e, 0x7972, "\000" 
+    IDC_TXN, 0x403, 14, 0
+0x7550, 0x6372, 0x6168, 0x6573, 0x724f, 0x6564, 0x0072, 
+    IDC_TXN, 0x403, 15, 0
+0x6552, 0x6563, 0x7669, 0x5065, 0x7961, 0x656d, 0x746e, "\000" 
+    IDC_TXN, 0x403, 11, 0
+0x6153, 0x656c, 0x4f73, 0x6472, 0x7265, "\000" 
+    IDC_TXN, 0x403, 13, 0
+0x6153, 0x656c, 0x5273, 0x6365, 0x6965, 0x7470, "\000" 
+    IDC_TXN, 0x403, 21, 0
+0x6153, 0x656c, 0x5473, 0x7861, 0x6150, 0x6d79, 0x6e65, 0x4374, 0x6568, 
+0x6b63, "\000" 
+    IDC_TXN, 0x403, 13, 0
+0x6954, 0x656d, 0x7254, 0x6361, 0x696b, 0x676e, "\000" 
+    IDC_TXN, 0x403, 14, 0
+0x6556, 0x646e, 0x726f, 0x7243, 0x6465, 0x7469, 0x0020, 
+    0
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Intuit, Inc.\0"
+            VALUE "FileDescription", "QBSDK Event Subscription Tester\0"
+            VALUE "FileVersion", "1.0.0.1\0"
+            VALUE "InternalName", "EventSubscribe.exe\0"
+            VALUE "LegalCopyright", "(c) Intuit, Inc.  All rights reserved.\0"
+            VALUE "OriginalFilename", "EventSubscribe.exe\0"
+            VALUE "ProductName", "QBSDK Event Subscription Tester\0"
+            VALUE "ProductVersion", "1.0.0.1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- CustomDetailReport.xml 													-->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the custom detail report query request.       -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to generate a custom detail report -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError="continueOnError">
+    <CustomDetailReportQueryRq requestID = "UUIDTYPE">
+      <CustomDetailReportType>CustomTxnDetail</CustomDetailReportType>
+      <ReportDateMacro>ThisMonth</ReportDateMacro>
+      <ReportAccountFilter>
+        <AccountTypeFilter>AccountsReceivable</AccountTypeFilter>
+      </ReportAccountFilter>
+      <SummarizeRowsBy>Account</SummarizeRowsBy>
+      <IncludeColumn>TxnNumber</IncludeColumn> 
+      <IncludeColumn>TxnType</IncludeColumn> 
+      <IncludeColumn>Amount</IncludeColumn> 
+    </CustomDetailReportQueryRq>
+  </QBXMLMsgsRq>
+</QBXML>

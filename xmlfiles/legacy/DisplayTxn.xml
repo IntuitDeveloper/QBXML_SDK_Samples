@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- DisplayTxn.xml                                                             -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the transaction display modify request.       -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This request allows an application to cause QuickBooks to bring up the     -->
+<!-- edit window for an existing transaction.  An application can use this if   -->
+<!-- the application's design allows or requires transaction modifications to   -->
+<!-- be performed in the QuickBooks UI.  It can also be used to present an      -->
+<!-- existing transaction so that operations not supported by the SDK can be    -->
+<!-- performed by the user in the QuickBooks UI.  For example, one cannot cause -->
+<!-- items to be received against a Purchase Order by adding a bill from an     -->
+<!-- application through the SDK.  An application could instead direct the user -->
+<!-- create a bill or item receipt against a Purchase Order and bring up the PO -->
+<!-- so the user only need right click on the PO to perform the operation.      -->
+<!--                                                                            -->
+<!-- This XML file contains a single request to display a purchase order that   -->
+<!-- exists in the sample product-based company file.  QuickBooks must have the -->
+<!-- sample product-based company file open in order for this request to work.  -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+    <TxnDisplayModRq requestID = "0">
+      <TxnDisplayModType>PurchaseOrder</TxnDisplayModType>
+      <TxnID>341-933281845</TxnID>
+    </TxnDisplayModRq>
+   </QBXMLMsgsRq>
+</QBXML>

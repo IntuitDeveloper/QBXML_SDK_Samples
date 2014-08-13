@@ -1,0 +1,37 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\..\WINDOWS\System32\STDOLE2.TLB#OLE Automation
+Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\..\WINDOWS\System32\msxml4.dll#Microsoft XML, v4.0
+Reference=*\G{4351618F-9059-4A79-B638-DCB8B97B3262}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\Program Files\Common Files\Intuit\QuickBooks\QBXMLRP2.dll#QBXMLRP2 1.0 Type Library
+Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\WINDOWS\system32\scrrun.dll#Microsoft Scripting Runtime
+Form=SubscriberForm.frm
+Startup="SubscriberForm"
+HelpFile=""
+ExeName32="QBDataEventSubscriber.exe"
+Command32=""
+Name="QBDataEventSubscriber"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Intuit"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

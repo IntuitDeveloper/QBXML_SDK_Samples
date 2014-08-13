@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<!-- ========================================================================== -->
+<!-- VersionQueryRq.xml                                                         -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Description: Sample illustrating query requests with qbxml version tag     -->
+<!--                                                                            -->
+<!-- This XML file contains a simple query request for multiple objects.        -->
+<!-- None of the requests contain filtering parameters. These are               -->
+<!-- requests for all data for each data type.                                  -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Language: Java                                                            -->
+<!-- Structure: qbXML                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Before: None                                                               -->
+<!-- After: None                                                                -->
+<!-- ========================================================================== -->
+
+<?qbxml version="2.0" ?>
+<QBXML>
+  <QBXMLMsgsRq onError = "stopOnError">
+    <AccountQueryRq requestID = "1" />         
+    <VendorQueryRq requestID = "2" />
+    <ItemNonInventoryQueryRq requestID = "3" />
+    <ItemServiceQueryRq requestID = "4" />
+    <ItemSalesTaxQueryRq requestID = "5" />
+    <JournalEntryQueryRq requestID = "6" />
+  </QBXMLMsgsRq>
+</QBXML>

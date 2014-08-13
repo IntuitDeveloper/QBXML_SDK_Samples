@@ -1,0 +1,7 @@
+frmPurchaseOrderModifyMain = 44, 44, 528, 476, , 22, 22, 506, 454, C
+frmPurchaseOrderSelect = 176, 176, 660, 608, , 66, 66, 550, 498, C
+modGeneric = 88, 88, 572, 520, 
+modQBFC = 110, 110, 893, 678, 
+modQBXMLRP = 154, 154, 960, 596, 
+modUtilities = -23, 33, 985, 733, C
+frmPurchaseOrderDetail = 44, 44, 518, 476, , 198, 198, 672, 630, C

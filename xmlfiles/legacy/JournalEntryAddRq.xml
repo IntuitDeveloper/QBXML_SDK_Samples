@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- JournalEntryAddRq.xml                                                      -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating a journal entry add request                   -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to add a journal entry             -->
+<!-- transaction.                                                               -->
+<!--                                                                            -->
+<!-- This example depends on having Bank accounts named "Bank Account 1"        -->
+<!-- and "Bank Account 2" and the classes "Class1" and "Class2".                -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <JournalEntryAddRq requestID = "1">
+      <JournalEntryAdd>
+        <TxnDate>2001-04-14</TxnDate>
+        <RefNumber>1</RefNumber>
+        <JournalDebitLine>
+         <AccountRef>
+            <FullName>Bank Account 1</FullName>
+          </AccountRef>
+          <Amount>10.23</Amount>
+          <Memo>Adjustment for the bank account</Memo> 
+          <ClassRef>                                        
+            <FullName>Class1</FullName>         
+          </ClassRef>
+        </JournalDebitLine>
+        <JournalCreditLine>                     
+          <AccountRef>
+            <FullName>Bank Account 2</FullName> 
+          </AccountRef>
+          <Amount>10.23</Amount>
+          <ClassRef>                            
+            <FullName>Class2</FullName> 
+          </ClassRef>
+        </JournalCreditLine>
+      </JournalEntryAdd>
+    </JournalEntryAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- ReceivePaymentToDepositQueryRq.xml                                         -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the Receive Payment To Deposit Query request. -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This is a helper request that provides back a response that contains       -->
+<!-- a list of payments that are available to deposit.                          -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq onError = "stopOnError">
+    <ReceivePaymentToDepositQueryRq requestID = "0"/>
+  </QBXMLMsgsRq>
+</QBXML>

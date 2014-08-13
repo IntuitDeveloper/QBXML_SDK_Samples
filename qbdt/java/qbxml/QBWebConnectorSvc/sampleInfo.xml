@@ -1,0 +1,37 @@
+<SampleInfo>
+  <Name>QBWebConnectorSvc</Name>
+  <Description>
+This sample is a Java web service application that communicates with
+QuickBooks via QBWebConnector. This sample is primarily intended to
+demonstrate how to implement the required methods.
+
+This samples implements the QWC 1.0 spec.
+
+This sample requires Tomcat and Axis.
+
+Run compit *.java to compile all the java sources.
+Copy the resulting directory structure (starting at "com")
+to the TOMCAT_HOME/webapps/axis/WEB-INF directory.
+</Description>
+  <Language>Java</Language>
+  <Structure>qbXML</Structure>
+  <Deployment>desktop</Deployment>
+  <QuickBooks>qbdt</QuickBooks>
+  <Project>QBWebConnector</Project>
+  <BuildCommands>
+  </BuildCommands>
+  <DistributeList>
+      <Filename>ArrayOfString.java</Filename>
+      <Filename>AuthResponse.java</Filename>
+      <Filename>compit</Filename>
+      <Filename>compit.bat</Filename>
+      <Filename>deploy.wsdd</Filename>
+      <Filename>QBWebConnectorSvc.java</Filename>
+      <Filename>QBWebConnectorSvcLocator.java</Filename>
+      <Filename>QBWebConnectorSvcSoap.java</Filename>
+      <Filename>QBWebConnectorSvcSoapImpl.java</Filename>
+      <Filename>QBWebConnectorSvcSoapStub.java</Filename>
+      <Filename>sampleInfo.xml</Filename>
+      <Filename>undeploy.wsdd</Filename>
+  </DistributeList>
+</SampleInfo>

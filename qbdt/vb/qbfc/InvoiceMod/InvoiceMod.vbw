@@ -1,0 +1,11 @@
+frmInvoiceModMain = 247, 13, 691, 445, , 22, 22, 466, 454, C
+modQBFC = 46, 19, 785, 729, 
+modGeneric = 110, 110, 554, 542, 
+frmInvoiceQuery = 154, 154, 598, 586, , 132, 132, 789, 874, C
+modUtilities = 176, 176, 620, 608, 
+frmInvoiceModify = 0, 0, 888, 649, , 176, 176, 620, 608, C
+frmEditInvoiceLine = 110, 110, 600, 542, , 88, 88, 578, 520, C
+frmShowRequest = 66, 66, 540, 509, , 44, 44, 518, 487, C
+modQBXMLRP = 0, 0, 840, 444, 
+frmPatience = 44, 44, 496, 489, , 220, 220, 672, 665, C
+frmModifying = 0, 0, 452, 445, , 154, 154, 606, 599, C

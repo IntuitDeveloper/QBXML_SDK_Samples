@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- TemplateQuery.xml                                                          -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the template query request.                   -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to query for the list of           -->
+<!-- templates defined for the currently open company file.                     -->
+<!--                                                                            -->
+<!-- This is the request an application would use to determine which templates  -->
+<!-- are defined in a company file.  An application might ask a user to import  -->
+<!-- or download a template if it can't find a particular template in the       -->
+<!-- query response.  Another strategy would be to have the user designate a    -->
+<!-- template to be used when the application creates a particular transaction. -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <TemplateQueryRq requestID="0"/>
+   </QBXMLMsgsRq>
+</QBXML>

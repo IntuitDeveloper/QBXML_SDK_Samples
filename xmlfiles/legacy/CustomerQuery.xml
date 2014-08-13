@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- CustomerQuery.xml                                                          -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the Customer Query request.                   -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to query for customers. Since      -->
+<!-- no filters are used in this request all customers will be returned.        -->
+<!-- This could be slow on company files with large numbers of customers.       -->
+<!-- You should use Iterators or filters to reduce the amount of data returned. -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq onError="continueOnError">
+    <CustomerQueryRq requestID="2" /> 
+  </QBXMLMsgsRq>
+</QBXML>

@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/WCWebService/", "http://localhost/WCWebService", "{1C4378CC-D343-45CF-8EC9-FFB7202E2BC9}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/WCWebService"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\..\..\..\..\inetpub\wwwroot\WCWebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WCWebService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WCWebService"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\..\..\..\..\inetpub\wwwroot\WCWebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WCWebService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\..\..\..\..\inetpub\wwwroot\WCWebService\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Release|.NET = Release|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C4378CC-D343-45CF-8EC9-FFB7202E2BC9}.Debug|.NET.ActiveCfg = Debug|.NET
+		{1C4378CC-D343-45CF-8EC9-FFB7202E2BC9}.Debug|.NET.Build.0 = Debug|.NET
+		{1C4378CC-D343-45CF-8EC9-FFB7202E2BC9}.Release|.NET.ActiveCfg = Release|.NET
+		{1C4378CC-D343-45CF-8EC9-FFB7202E2BC9}.Release|.NET.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

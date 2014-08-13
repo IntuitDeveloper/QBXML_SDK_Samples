@@ -1,0 +1,212 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Web Service Starter Sample (WS3)</title>
+    <script src="javascript/prototype.js" language="javascript" type="text/javascript"></script>
+</head>
+<body style="font-size: 12pt">
+<form>
+<script language="javascript" type="text/javascript">
+function reportError (resp) {
+    alert("Error " + resp.status + ': ' + resp.statusText);
+}
+function processData(request) {
+   if(request.status == 200){
+        //Success -> status=200
+        alert("Command completed successfully.");
+   }
+}
+function finalResult(request) {
+	alert("Final result: " + request.status + ': ' + request.responseText);
+}
+
+
+var strQWCXML;
+var strAppName="WCECommService";
+var strUsername
+//Note: 
+//1) The <AppURL> and <CertURL> should be https in real world application
+//2) The server may want to generate their qwcxml 
+function buildQWCXML(strUsername){
+    strQWCXML='<?xml version="1.0"?>';
+    strQWCXML=strQWCXML+'<QBWCXML>';
+    strQWCXML=strQWCXML+'<AppName>'+strAppName+'</AppName>';
+    strQWCXML=strQWCXML+'<AppID>IDNWS2</AppID>';
+    strQWCXML=strQWCXML+'<AppURL>http://localhost/WCECommSample/service/WCECommService.asmx</AppURL>';
+    strQWCXML=strQWCXML+'<AppDescription>Starter sample web service for ecommerce</AppDescription>';
+    strQWCXML=strQWCXML+'<AppSupport>http://localhost/WCECommSample/service/WCECommService.asmx?wsdl</AppSupport>';
+    strQWCXML=strQWCXML+'<CertURL>http://localhost/WCECommSample/service/WCECommService.asmx</CertURL>';
+    strQWCXML=strQWCXML+'<UserName>'+strUsername+'</UserName>';
+    strQWCXML=strQWCXML+'<OwnerID>{57F3B9B1-86F1-4fcc-B1EE-566DE1813D20}</OwnerID>';
+    strQWCXML=strQWCXML+'<FileID>{90A44FB5-33D9-4815-AC85-BC87A7E7D1EB}</FileID>';
+    strQWCXML=strQWCXML+'<QBType>QBFS</QBType>';
+    strQWCXML=strQWCXML+'<Style>Document</Style>';
+    strQWCXML=strQWCXML+'<AuthFlags>0xF</AuthFlags>';
+    strQWCXML=strQWCXML+'</QBWCXML>';
+}
+
+function AddWebService(strUsername) {
+    buildQWCXML(strUsername);
+    //alert(strQWCXML);
+    var req = new Ajax.Request("qbwc://docontrol/AddWebService", {method:'post', postBody: strQWCXML, contentType:'application/qwcxml', encoding:'UTF-8', onSuccess:processData, onFailure:reportError});
+}
+
+var strPassword;
+function SetPassword(strPassword) {
+    //alert(strPassword);
+    var req = new Ajax.Request("qbwc://docontrol/SetPassword?AppName="+strAppName+"&Password=" + strPassword, {method:'get', onSuccess:processData, onFailure:reportError});
+}
+
+function UpdateNow() {
+    var req = new Ajax.Request("qbwc://docontrol/UpdateNow?AppName="+strAppName, {method:'get', onSuccess:processData, onFailure:reportError});
+}
+
+var strIntervalInMinutes;
+var strIntervalInSeconds;
+function SetSync(strIntervalInMinutes) {
+    if(strIntervalInMinutes==""){
+        strIntervalInMinutes="60";
+    }
+    //alert(strIntervalInMinutes);
+    strIntervalInSeconds=strIntervalInMinutes*60;    
+    var req = new Ajax.Request("qbwc://docontrol/SetSync?AppName="+strAppName+"&Interval="+strIntervalInSeconds, {method:'get', onSuccess:processData, onFailure:reportError});
+}
+
+function RemoveWebService() {
+    var req = new Ajax.Request("qbwc://docontrol/RemoveWebService?AppName="+strAppName, {method:'get', onSuccess:processData, onFailure:reportError});
+}
+
+
+
+
+</script>
+
+    <span style="font-family: Arial"><span style="font-size: 16pt">
+
+    <span><strong>
+        Web Service Starter Sample (WS3) 
+        <br />
+        Merchant's Site Administration Page</strong></span>
+        <br />
+    </span></span>
+    <span >
+        <br />
+        <span style="font-size: 10pt; font-family: Arial">
+        This site demonstrates use of protocol handler - a powerful functionality provided
+        by QuickBooks Web Connector (QBWC). 
+        <br />
+        <br />
+        Protocol handler provides your web page with
+        a way to communicate directly with the QBWC running on users desktop.&nbsp; The steps
+        below walks a merchant through the setup of starter web service with his QBWC.&nbsp; Before
+        you start, make sure QBWC has been started on this system.&nbsp; You can start QBWC using
+        Start -&gt; Programs -&gt; Startup -&gt; QuickBooks Web Connector link.
+        <br />
+        <br />
+        </span>
+        <strong>
+            <br />
+            <span style="font-size: 10pt; font-family: Arial">
+        Step-1) Register web service.&nbsp;</span></strong><br />
+        <span style="font-size: 10pt; font-family: Arial">
+        When you click "AddWebService" button below, it will register your starter web service
+        with the web connector running on your desktop. &nbsp;&nbsp;<br />
+        <br />
+        Enter Username: </span>
+        <input id="Username" type="text" style="font-family: Arial; font-size: 10pt;" /><span
+            style="font-size: 9pt; font-family: Arial"> (use "testuser" for sample)</span><br />
+    </span>
+<input type="button" name="btnAddWebService" value="AddWebService" onclick="AddWebService(Username.value);" style="font-size: 10pt; font-family: Arial; width: 163px;"/><br/>
+    <br />
+    <span>
+        <br />
+        <span style="font-family: Arial"><span style="font-size: 10pt">
+        <strong>
+        Step-2) Set password for web
+        service.<br />
+        </strong>
+        When you click "SetPassword" button below, this page will set the password for your
+        web service on the web connector. This password (along with username in step-1)
+        will be authenticated by starter web service.
+        <br />
+        <br />
+        Enter password: </span></span>
+    </span>
+    <input id="Password1" type="password" style="font-family: Arial; font-size: 10pt;" /><span
+        style="font-size: 10pt; font-family: Arial"> <span style="font-size: 9pt">&nbsp;(use
+            "password" for sample)</span><br />
+    </span>
+<input type="button" name="btnSetPassword" value="SetPassword" onclick="SetPassword(Password1.value);" style="font-size: 10pt; font-family: Arial; width: 157px;"/><br/>
+    <br />
+    <span>
+        <br />
+        <span style="font-family: Arial"><span style="font-size: 10pt">
+        <strong>
+        Step-3) Perform first update
+        to web service. 
+        <br />
+        </strong>
+        This step generally allows web connector to send some information (Host, Company
+        and Preferences Query response) about your company file to the web service. For
+            this sample, after you click "Update Now" button below, QBWC will prompt you for
+            interactive mode, select "Yes" to launch interactive session and be able to view
+            the data being transferred to your QuickBooks. Then, let update finish by clicking
+            "OK". At the end of update session, there will be another optional interactive session
+            that will allow you to view the data but this time will also let you click on a
+            record and be able to view it directly in QuickBooks. </span></span>
+    </span>
+    <br />
+    <br />
+<input type="button" name="btnUpdate" value="UpdateNow" onclick="UpdateNow();" style="font-size: 10pt; font-family: Arial; width: 160px;"/><br/>
+    <br />
+    <span><span style="font-size: 10pt; font-family: Arial">
+        <br />
+        At this point, your QBWC is set to perform update session with WCECommService on
+        demand. However, you may want to set QBWC to run on scheduled basis (step-4) so
+        that it pulls new customer and sales receipt data from your web server into QuickBooks.
+        <br />
+        <br />
+        <br />
+    </span>
+        <strong><span style="font-size: 10pt; font-family: Arial">
+        Step-4) (Optional) Set scheduled update
+        for web service.
+        <br />
+        </span></strong>
+    </span><span><span style="font-size: 10pt; font-family: Arial">Once manual
+            update is successful, set scheduled sync on the web connector. This will enable
+            the web service to push SalesReceipts (or any related transactions) to user on a
+            scheduled basis. 
+        <br />
+        <br />
+        Enter sync interval (minutes): </span>
+        <input id="IntervalInMinutes" style="width: 33px; font-family: Arial; font-size: 10pt;" type="text" /><span
+            style="font-size: 10pt; font-family: Arial">
+        (If empty, default 60 minutes is used)<br />
+        </span>
+    </span>
+<input type="button" name="btnSync" value="SetSync" onclick="SetSync(IntervalInMinutes.value);" style="font-size: 10pt; font-family: Arial; width: 163px;" id="Button1"/><br/>
+    <br />
+    <span>
+        <br />
+        <strong><span style="font-size: 10pt; font-family: Arial">Step-5) (Optional) Remove web
+        service from QBWC.
+        <br />
+        </span>
+        </strong>
+    </span>
+<input type="button" name="btnRemoveWebService" value="RemoveWebService" onclick="RemoveWebService();" style="font-size: 10pt; font-family: Arial" size=""/><br/>
+<p>
+    <span style="font-size: 8pt; font-family: Arial"><em></em></span>&nbsp;</p>
+    <p>
+        <span style="font-size: 8pt; font-family: Arial"><em>Please note:
+            <br />
+        </em></span><span style="font-size: 8pt; font-family: Arial"><em>This site uses ProtocolHandler
+            which does not support Mozilla Firefox at this time. If you are using Firefox then make your 
+            merchant setup site provide a qwcXML that user could download and manually load into 
+            web-connector.</em></span>
+    </p>
+</form>
+</body>
+</html>

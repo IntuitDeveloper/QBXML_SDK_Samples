@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{8C10DEED-D1D6-4A48-A467-9B8D4CA11D26} = s 'AddCustomer'
+		'AddCustomer.EXE'
+		{
+			val AppID = s {8C10DEED-D1D6-4A48-A467-9B8D4CA11D26}
+		}
+	}
+}

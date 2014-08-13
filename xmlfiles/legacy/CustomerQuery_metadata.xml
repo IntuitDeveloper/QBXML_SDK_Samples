@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- CustomerQuery_metadata.xml                                                 -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2004-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rdmgr/?ID=100                         -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the Customer Query request using the new 4.0  -->
+<!-- metadata attribute.                                                        -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to query for customers.            -->
+<!-- Only the count of customers will be returned in the response.              -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="4.0"?>
+<QBXML>
+  <QBXMLMsgsRq onError="continueOnError">
+    <CustomerQueryRq requestID="2" metaData="MetaDataOnly">  
+    </CustomerQueryRq>
+  </QBXMLMsgsRq>
+</QBXML>

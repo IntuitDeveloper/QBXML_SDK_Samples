@@ -1,0 +1,20 @@
+// AddCustomer.idl : IDL source for AddCustomer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddCustomer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(3C3CB60C-17B8-4A7E-BAE9-ADFD29E00394),
+	version(1.0),
+	helpstring("AddCustomer 1.0 Type Library")
+]
+library ADDCUSTOMERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- CustomFieldAddValue.xml                                                    -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the custom field value add request.           -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to add a value to a custom field   -->
+<!-- for a pre-existing customer in the QuickBooks 2004 sample product-based    -->
+<!-- company file.                                                              -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <DataExtAddRq requestID="0">
+         <DataExtAdd>
+            <OwnerID>0</OwnerID>
+            <DataExtName>Spouse's Name</DataExtName>
+            <ListDataExtType>Customer</ListDataExtType>
+            <ListObjRef>
+               <FullName>Baker, Chris</FullName>
+            </ListObjRef>
+            <DataExtValue>Robin</DataExtValue>
+         </DataExtAdd>
+      </DataExtAddRq>
+   </QBXMLMsgsRq>
+</QBXML>

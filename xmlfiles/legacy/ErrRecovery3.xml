@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- ErrRecovery3.xml                                                           -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Demonstrate deleting session status.                              -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains no requests. It asks QuickBooks to delete           -->
+<!-- session status saved for the session with the ID of "AB1F2395".            -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- Before: ErrRecovery2.xml                                                   -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq oldMessageSetID = "AB1F2395" onError="continueOnError">
+  </QBXMLMsgsRq>
+</QBXML>

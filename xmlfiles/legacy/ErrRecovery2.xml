@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- ErrRecovery2.xml                                                           -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Demonstrate checking a session status                             -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains no requests. It asks QuickBooks for status          -->
+<!-- for a message set that it sent earlier, named by "AB1F2395".               -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- Before: ErrRecovery1.xml                                                   -->
+<!-- After: ErrRecovery3.xml                                                    -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq oldMessageSetID = "AB1F2395" newMessageSetID = "AB1F2395" onError="continueOnError">
+  </QBXMLMsgsRq>
+</QBXML>

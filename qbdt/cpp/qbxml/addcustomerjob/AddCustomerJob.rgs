@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{2207F70D-A4BB-457C-9BA5-14C9CA047687} = s 'AddCustomerJob'
+		'AddCustomerJob.EXE'
+		{
+			val AppID = s {2207F70D-A4BB-457C-9BA5-14C9CA047687}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- QueryFilterRq.xml                                                          -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating query requests that use filtering.            -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains several query requests. One request asks for        -->
+<!-- the Other Expenses account. Another request asks for Customers based on    -->
+<!-- their names.                                                               -->
+<!--                                                                            -->
+<!-- This examples depends on the following:                                    -->
+<!--   'Other Expenses' account                                                 -->
+<!--   'Joe Customer' customer                                                  -->
+<!--   'Equipment Installation' job                                             -->
+<!--                                                                            -->
+<!-- In order for this query to return the expected data you must run the       -->
+<!-- sample XML file CustomerAddRq.xml                                          -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- Before: CustomerAddRq.xml                                                  -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?> 
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <!-- Begin first query filter request -->
+    <AccountQueryRq requestID = "1">
+      <FullName>Other Expenses</FullName>                          
+    </AccountQueryRq>
+     <!-- Begin second query filter request -->
+    <CustomerQueryRq requestID = "2">
+      <FullName>Joe Customer</FullName>                          
+      <FullName>Joe Customer:Equipment Installation</FullName>  <!-- use : to separate parents/children -->                       
+    </CustomerQueryRq>
+  </QBXMLMsgsRq>
+</QBXML>

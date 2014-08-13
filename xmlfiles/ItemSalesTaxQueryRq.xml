@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- ItemSalesTaxQueryRq.xml                                                    -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the item sales tax query request.             -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to return the configured sales     -->
+<!-- tax schedules.                                                             -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="8.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <ItemSalesTaxQueryRq requestID="4">
+      </ItemSalesTaxQueryRq>
+   </QBXMLMsgsRq>
+</QBXML>
+

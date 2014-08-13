@@ -1,0 +1,20 @@
+// AddCustomerJob.idl : IDL source for AddCustomerJob.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddCustomerJob.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(6B3D29FA-3D30-42DA-81AB-FA882D224714),
+	version(2.0),
+	helpstring("AddCustomerJob 2.0 Type Library")
+]
+library ADDCUSTOMERJOBLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

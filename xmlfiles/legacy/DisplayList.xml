@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- DisplayList.xml                                                            -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the list display add request.                 -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This request allows an application to cause QuickBooks to bring up the     -->
+<!-- edit window for an new entity.  An application can use this feature if the -->
+<!-- application's design requires the creation of a new entity, but the        -->
+<!-- frequency of this operation is low enough that implementing the UI for the -->
+<!-- creation doesn't make sense.                                               -->
+<!--                                                                            -->
+<!-- This XML file contains a single request to display the Other Name add UI.  -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+    <ListDisplayAddRq requestID = "0">
+      <ListDisplayAddType>OtherName</ListDisplayAddType>
+    </ListDisplayAddRq>
+   </QBXMLMsgsRq>
+</QBXML>

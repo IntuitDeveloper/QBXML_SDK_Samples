@@ -1,0 +1,2740 @@
+
+<html>
+	<head>
+		<Title>Intuit Developer Network | QuickBooks SDK Samples</Title>
+<meta name="Keywords" content="Intuit, QuickBooks, SDK, samples, sample, code, Developer, Network, Development, Software, qbXML, API, download, kit">
+<meta name="Description" content="Intuit Developer Network QuickBooks SDK Samples">
+
+		<meta name="Date" content="11/08/2013">
+		<meta name="revisit-after" content="1">
+		<meta name="Distribution" content="World">
+		<meta name="Copyright" content="Copyright (c) 2001-2013 Intuit Inc.  All rights reserved.">
+		<meta name="Author" content="Intuit Developer Network">
+		<meta name="generator" content="Intuit Developer Network, http://developer.intuit.com">
+		<meta http-equiv="keywords" content="devnetsitesearch" />
+	</head>
+	<body style="LINE-HEIGHT: 1.166; FONT-FAMILY: Arial, sans-serif">
+		<div id="masthead" style="LEFT: 5px; BACKGROUND-IMAGE: url(images/nbLeft.png); WIDTH: 751px; POSITION: absolute; TOP: 5px; HEIGHT: 52px">
+			<h1 id="siteName" style="PADDING-RIGHT:0px; PADDING-LEFT:8px; PADDING-BOTTOM:8px; MARGIN:0px; FONT:bold 16px Arial,sans-serif; COLOR:#ffffff; PADDING-TOP:16px"> 
+				QBSDK Samples
+			</h1>
+		</div>
+		<div id="mastheadright" style="position:absolute; width: 249px; height: 52px; LEFT: 755px; background-image: url(images/nbextend.gif); BACKGROUND-REPEAT: repeat-x; TOP: 5px">
+		</div>
+		<div id="main" style="LEFT: 5px; POSITION: absolute; TOP: 70px; width: 1000px;">
+		    <div id="headerinfo" style="font-size:x-small">
+                All samples are Copyright &copy; 2002-2013 Intuit Inc.  All Rights Reserved.<br>
+                Use is subject to the qbXML Developer Agreement available at: <a href="http://developer.intuit.com/rd/qbXML_agreement">http://developer.intuit.com/rd/qbXML_agreement</a><p>
+            </div>
+            <div id="sampleInfo">
+  <table border=4>
+  <tr>
+    <th>Language</th>
+    <th>qbXML</th>
+    <th>QBFC</th>
+    <th>Online Ed. (qbXML)</th>
+    <th>QBMS</th>
+  </tr>
+  <tr>
+  <th>C#</th>
+    <td>
+      <a href="#SubscribeAndHandleQBEvent (C#) (qbxml) (desktop)">SubscribeAndHandleQBEvent (desktop)</a><br>
+      <a href="#CustomerAdd (C#) (qbxml) (desktop)">CustomerAdd (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>C# ASP.NET</th>
+    <td>
+      <a href="#WCWebService (C# ASP.NET) (qbxml) (desktop)">WCWebService (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>C#.NET</th>
+    <td>
+      <a href="#MCInvoiceAdd (C#.NET) (qbxml) (desktop)">MCInvoiceAdd (desktop)</a><br>
+    </td>
+    <td>
+      <a href="#WCECommSample (C#.NET) (qbfc) (desktop)">WCECommSample (desktop)</a><br>
+      <a href="#QBInvoiceAdd (C#.NET) (qbfc) (desktop)">QBInvoiceAdd (desktop)</a><br>
+      <a href="#MCInvoiceAddQBFC (C#.NET) (qbfc) (desktop)">MCInvoiceAddQBFC (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>C++</th>
+    <td>
+      <a href="#UIandEventTest (C++) (qbxml) (desktop)">UIandEventTest (desktop)</a><br>
+      <a href="#sdktest (C++) (qbxml) (desktop)">sdktest (desktop)</a><br>
+      <a href="#hostquery (C++) (qbxml) (desktop)">hostquery (desktop)</a><br>
+      <a href="#addcustomerjob (C++) (qbxml) (desktop)">addcustomerjob (desktop)</a><br>
+      <a href="#addcustomer (C++) (qbxml) (desktop)">addcustomer (desktop)</a><br>
+    </td>
+    <td>
+      <a href="#multiplerequests (C++) (qbfc) (desktop)">multiplerequests (desktop)</a><br>
+      <a href="#itemquery (C++) (qbfc) (desktop)">itemquery (desktop)</a><br>
+      <a href="#invoicequery (C++) (qbfc) (desktop)">invoicequery (desktop)</a><br>
+      <a href="#billadd (C++) (qbfc) (desktop)">billadd (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>Java</th>
+    <td>
+      <a href="#QueryRq (Java) (qbxml) (any)">QueryRq (any)</a><br>
+      <a href="#QBWebConnectorSvc (Java) (qbxml) (desktop)">QBWebConnectorSvc (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>VB</th>
+    <td>
+      <a href="#US_CDN_CustomerAdd (VB) (qbxml) (desktop)">US_CDN_CustomerAdd (desktop)</a><br>
+      <a href="#SDKTestPlus3 (VB) (qbxml) (desktop)">SDKTestPlus3 (desktop)</a><br>
+      <a href="#SDKTest (VB) (qbxml) (desktop)">SDKTest (desktop)</a><br>
+      <a href="#modifycustomer (VB) (qbxml) (desktop)">modifycustomer (desktop)</a><br>
+      <a href="#InventoryAdjust (VB) (qbxml) (desktop)">InventoryAdjust (desktop)</a><br>
+      <a href="#expensereport (VB) (qbxml) (desktop)">expensereport (desktop)</a><br>
+      <a href="#DepositAdd (VB) (qbxml) (desktop)">DepositAdd (desktop)</a><br>
+      <a href="#deletecustomer (VB) (qbxml) (desktop)">deletecustomer (desktop)</a><br>
+      <a href="#DataExtSample (VB) (qbxml) (desktop)">DataExtSample (desktop)</a><br>
+      <a href="#DataEvents (VB) (qbxml) (desktop)">DataEvents (desktop)</a><br>
+      <a href="#customtxndetreport (VB) (qbxml) (desktop)">customtxndetreport (desktop)</a><br>
+      <a href="#CDN_InvoiceAdd (VB) (qbxml) (desktop)">CDN_InvoiceAdd (desktop)</a><br>
+      <a href="#addcustomer (VB) (qbxml) (desktop)">addcustomer (desktop)</a><br>
+    </td>
+    <td>
+      <a href="#US_CDN_UK_CustomerQuery (VB) (qbfc) (desktop)">US_CDN_UK_CustomerQuery (desktop)</a><br>
+      <a href="#US_CDN_BillAdd (VB) (qbfc) (desktop)">US_CDN_BillAdd (desktop)</a><br>
+      <a href="#SyncCustomerList (VB) (qbfc) (desktop)">SyncCustomerList (desktop)</a><br>
+      <a href="#PurchaseOrderModify (VB) (qbfc) (desktop)">PurchaseOrderModify (desktop)</a><br>
+      <a href="#MenuEventContext (VB) (qbfc) (desktop)">MenuEventContext (desktop)</a><br>
+      <a href="#Macro (VB) (qbfc) (desktop)">Macro (desktop)</a><br>
+      <a href="#itemquery (VB) (qbfc) (desktop)">itemquery (desktop)</a><br>
+      <a href="#ItemInventoryMod (VB) (qbfc) (desktop)">ItemInventoryMod (desktop)</a><br>
+      <a href="#InvoiceMod (VB) (qbfc) (desktop)">InvoiceMod (desktop)</a><br>
+      <a href="#InventoryAdjust (VB) (qbfc) (desktop)">InventoryAdjust (desktop)</a><br>
+      <a href="#ExpenseReportByVendor (VB) (qbfc) (desktop)">ExpenseReportByVendor (desktop)</a><br>
+      <a href="#Events (VB) (qbfc) (desktop)">Events (desktop)</a><br>
+      <a href="#QBFCEventsSubscriber (VB) (qbfc) (desktop)">QBFCEventsSubscriber (desktop)</a><br>
+      <a href="#QBFCEventsCallback (VB) (qbfc) (desktop)">QBFCEventsCallback (desktop)</a><br>
+      <a href="#DepositAdd (VB) (qbfc) (desktop)">DepositAdd (desktop)</a><br>
+      <a href="#DataExtensions (VB) (qbfc) (desktop)">DataExtensions (desktop)</a><br>
+      <a href="#CustomerAdd (VB) (qbfc) (desktop)">CustomerAdd (desktop)</a><br>
+      <a href="#CDN_VendorAdd (VB) (qbfc) (desktop)">CDN_VendorAdd (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>VB.NET</th>
+    <td>
+None<br>
+    </td>
+    <td>
+      <a href="#SyncCustomerList (VB.NET) (qbfc) (desktop)">SyncCustomerList (desktop)</a><br>
+      <a href="#PriceLevels (VB.NET) (qbfc) (desktop)">PriceLevels (desktop)</a><br>
+      <a href="#ItemReceipt (VB.NET) (qbfc) (desktop)">ItemReceipt (desktop)</a><br>
+      <a href="#ItemInventoryMod (VB.NET) (qbfc) (desktop)">ItemInventoryMod (desktop)</a><br>
+      <a href="#GeneralSummaryReportQueryRq (VB.NET) (qbfc) (any)">GeneralSummaryReportQueryRq (any)</a><br>
+      <a href="#ExpenseReportByVendor (VB.NET) (qbfc) (desktop)">ExpenseReportByVendor (desktop)</a><br>
+      <a href="#DepositAdd (VB.NET) (qbfc) (desktop)">DepositAdd (desktop)</a><br>
+      <a href="#DataExtensions (VB.NET) (qbfc) (desktop)">DataExtensions (desktop)</a><br>
+      <a href="#CustomerAdd (VB.NET) (qbfc) (desktop)">CustomerAdd (desktop)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+  <tr>
+  <th>xml</th>
+    <td>
+      <a href="#AccountQueryRq (xml) (qbxml) (any)">AccountQueryRq (any)</a><br>
+      <a href="#BillQueryRq (xml) (qbxml) (any)">BillQueryRq (any)</a><br>
+      <a href="#CheckQueryRq (xml) (qbxml) (any)">CheckQueryRq (any)</a><br>
+      <a href="#CompanyQueryRq (xml) (qbxml) (any)">CompanyQueryRq (any)</a><br>
+      <a href="#EmployeeQueryRq (xml) (qbxml) (any)">EmployeeQueryRq (any)</a><br>
+      <a href="#EntityQueryRq (xml) (qbxml) (any)">EntityQueryRq (any)</a><br>
+      <a href="#HostQueryRq (xml) (qbxml) (any)">HostQueryRq (any)</a><br>
+      <a href="#InvoiceQueryRq (xml) (qbxml) (any)">InvoiceQueryRq (any)</a><br>
+      <a href="#ItemInventoryQueryRq (xml) (qbxml) (any)">ItemInventoryQueryRq (any)</a><br>
+      <a href="#ItemSalesTaxQueryRq (xml) (qbxml) (any)">ItemSalesTaxQueryRq (any)</a><br>
+      <a href="#ItemServiceQueryRq (xml) (qbxml) (any)">ItemServiceQueryRq (any)</a><br>
+      <a href="#PayrollItemWageQueryRq (xml) (qbxml) (any)">PayrollItemWageQueryRq (any)</a><br>
+      <a href="#PreferencesQueryRq (xml) (qbxml) (any)">PreferencesQueryRq (any)</a><br>
+      <a href="#ReceivePaymentQueryRq (xml) (qbxml) (any)">ReceivePaymentQueryRq (any)</a><br>
+      <a href="#SalesRepQueryRq (xml) (qbxml) (any)">SalesRepQueryRq (any)</a><br>
+      <a href="#AccountAddRq (xml) (qbxml) (any)">AccountAddRq (any)</a><br>
+      <a href="#AccountQueryRq_1 (xml) (qbxml) (any)">AccountQueryRq_1 (any)</a><br>
+      <a href="#AccountQueryRq_2 (xml) (qbxml) (any)">AccountQueryRq_2 (any)</a><br>
+      <a href="#AccountQueryRq_3 (xml) (qbxml) (any)">AccountQueryRq_3 (any)</a><br>
+      <a href="#AccountQueryRq_4 (xml) (qbxml) (any)">AccountQueryRq_4 (any)</a><br>
+      <a href="#AccountQueryRq_5 (xml) (qbxml) (any)">AccountQueryRq_5 (any)</a><br>
+      <a href="#AccountQueryRq_6 (xml) (qbxml) (any)">AccountQueryRq_6 (any)</a><br>
+      <a href="#AccountQueryRq_7 (xml) (qbxml) (any)">AccountQueryRq_7 (any)</a><br>
+      <a href="#AddInvoiceSpecifyTemplate (xml) (qbxml) (any)">AddInvoiceSpecifyTemplate (any)</a><br>
+      <a href="#CustomDetailReport (xml) (qbxml) (any)">CustomDetailReport (any)</a><br>
+      <a href="#CustomerAddRq (xml) (qbxml) (any)">CustomerAddRq (any)</a><br>
+      <a href="#CustomerQuery (xml) (qbxml) (any)">CustomerQuery (any)</a><br>
+      <a href="#CustomerQuery_metadata (xml) (qbxml) (any)">CustomerQuery_metadata (any)</a><br>
+      <a href="#CustomFieldAddValue (xml) (qbxml) (any)">CustomFieldAddValue (any)</a><br>
+      <a href="#CustomFieldDelValue (xml) (qbxml) (any)">CustomFieldDelValue (any)</a><br>
+      <a href="#CustomFieldModValue (xml) (qbxml) (any)">CustomFieldModValue (any)</a><br>
+      <a href="#DepositAddRq (xml) (qbxml) (any)">DepositAddRq (any)</a><br>
+      <a href="#DisplayList (xml) (qbxml) (any)">DisplayList (any)</a><br>
+      <a href="#DisplayTxn (xml) (qbxml) (any)">DisplayTxn (any)</a><br>
+      <a href="#ErrRecovery1 (xml) (qbxml) (any)">ErrRecovery1 (any)</a><br>
+      <a href="#ErrRecovery2 (xml) (qbxml) (any)">ErrRecovery2 (any)</a><br>
+      <a href="#ErrRecovery3 (xml) (qbxml) (any)">ErrRecovery3 (any)</a><br>
+      <a href="#HostQuery (xml) (qbxml) (any)">HostQuery (any)</a><br>
+      <a href="#ItemsAddRq (xml) (qbxml) (any)">ItemsAddRq (any)</a><br>
+      <a href="#ItemServiceAddRq (xml) (qbxml) (any)">ItemServiceAddRq (any)</a><br>
+      <a href="#JournalEntryAddRq (xml) (qbxml) (any)">JournalEntryAddRq (any)</a><br>
+      <a href="#ProfitAndLossStdReport (xml) (qbxml) (any)">ProfitAndLossStdReport (any)</a><br>
+      <a href="#QueryFilterRq (xml) (qbxml) (any)">QueryFilterRq (any)</a><br>
+      <a href="#ReceivePaymentAddRq (xml) (qbxml) (any)">ReceivePaymentAddRq (any)</a><br>
+      <a href="#ReceivePaymentToDepositQueryRq (xml) (qbxml) (any)">ReceivePaymentToDepositQueryRq (any)</a><br>
+      <a href="#TemplateQuery (xml) (qbxml) (any)">TemplateQuery (any)</a><br>
+      <a href="#TxnDisplayAdd_Invoice (xml) (qbxml) (any)">TxnDisplayAdd_Invoice (any)</a><br>
+      <a href="#VendorAddRq (xml) (qbxml) (any)">VendorAddRq (any)</a><br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+    <td>
+None<br>
+    </td>
+  </tr>
+</table border>
+<h2>QBD</h2>
+<a name="MCInvoiceAddQBFC (C#.NET) (qbfc) (desktop)"></a><h3>MCInvoiceAddQBFC (desktop)</h3>
+
+This sample is a C# .NET desktop application that uses QBFC to create a new QuickBooks invoice using the new multicurrency feature in QuickBooks. It uses QBFC Template Wizard shipped with the SDK (7.0 or later). The sample demonstrates how to populate some of the user input with results from querying QuickBooks, allowing user to input data and add an invoice to the QuickBooks running in your desktop (same machine). The behavior of exchange rate and line item prices are similar to QuickBooks UI. 
+
+Running the sample
+------------------
+Before running MCInvoiceAddQBFC.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company file (preferably sample_product-based business.qbw) opened. 
+
+Building the sample
+------------------
+Open MCInvoiceAddQBFC.sln in Microsoft Visual Studio .NET (2005 or higher) and build the solution.  
+
+<p>
+View directory: <a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC">qbdt/c-sharp/QBFC/MCInvoiceAddQBFC</a><br>
+Open Project: <a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/MCInvoiceAddQBFC.sln">qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/MCInvoiceAddQBFC.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Form1.Designer.cs">Intuit_QBFC\Form1.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Form1.cs">Intuit_QBFC\Form1.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Form1.resx">Intuit_QBFC\Form1.resx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/MCInvoiceAddQBFC.csproj">Intuit_QBFC\MCInvoiceAddQBFC.csproj</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Program.cs">Intuit_QBFC\Program.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Properties/AssemblyInfo.cs">Intuit_QBFC\Properties\AssemblyInfo.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Properties/Resources.Designer.cs">Intuit_QBFC\Properties\Resources.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Properties/Resources.resx">Intuit_QBFC\Properties\Resources.resx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Properties/Settings.Designer.cs">Intuit_QBFC\Properties\Settings.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/Properties/Settings.settings">Intuit_QBFC\Properties\Settings.settings</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/Defaults.cs">Intuit_QBFC\SessionFramework\Defaults.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/ENEdition.cs">Intuit_QBFC\SessionFramework\ENEdition.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/Logger.cs">Intuit_QBFC\SessionFramework\Logger.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/QBException.cs">Intuit_QBFC\SessionFramework\QBException.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/QBNoResponseException.cs">Intuit_QBFC\SessionFramework\QBNoResponseException.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/QBResultException.cs">Intuit_QBFC\SessionFramework\QBResultException.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/Intuit_QBFC/SessionFramework/SessionManager.cs">Intuit_QBFC\SessionFramework\SessionManager.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/MCInvoiceAddQBFC/MCInvoiceAddQBFC.sln">MCInvoiceAddQBFC.sln</a></li>
+</ul>
+<p><p>
+<a name="QBInvoiceAdd (C#.NET) (qbfc) (desktop)"></a><h3>QBInvoiceAdd (desktop)</h3>
+
+This sample is a C# .NET desktop application that creates a new QuickBooks invoice by calling interop.QBFC.dll. It demonstrates how to populate some of the user input with results from querying QuickBooks, allowing user to input data and add an invoice to the QuickBooks running in your desktop (same machine). This sample also implements QBFC's automatic error recovery feature.
+
+Running the sample
+------------------
+Before running InvoiceAdd.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company file (preferably sample_product-based business.qbw) opened. 
+
+Building the sample
+------------------
+Open InvoiceAdd.sln in Microsoft Visual Studio .NET and build the solution. Interop.QBFC.dll has been generated by Visual Studio, by adding a COM reference to the dll.
+  <p>
+View directory: <a href="qbdt/c-sharp/QBFC/QBInvoiceAdd">qbdt/c-sharp/QBFC/QBInvoiceAdd</a><br>
+Open Project: <a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.sln">qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/App.ico">App.ico</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/AssemblyInfo.cs">AssemblyInfo.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/ICON1.ICO">ICON1.ICO</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/IDNLogo.gif">IDNLogo.gif</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InputItem.cs">InputItem.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InputItem.resx">InputItem.resx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.cs">InvoiceAdd.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.csproj">InvoiceAdd.csproj</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.csproj.user">InvoiceAdd.csproj.user</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.exe">InvoiceAdd.exe</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.resx">InvoiceAdd.resx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/InvoiceAdd.sln">InvoiceAdd.sln</a></li>
+<li><a href="qbdt/c-sharp/QBFC/QBInvoiceAdd/intuit_blue.gif">intuit_blue.gif</a></li>
+</ul>
+<p><p>
+<a name="WCECommSample (C#.NET) (qbfc) (desktop)"></a><h3>WCECommSample (desktop)</h3>
+
+This sample is a C# .NET desktop application that uses QBFC to create a new QuickBooks transactions featured in QuickBooks. It uses QBFC Template Wizard shipped with the SDK (7.0 or later). The sample demonstrates how to use QuickBooks Web Connector to communicate with QuickBooks and sync data with a client database. It use a simple phone card e-commerce example. 
+
+Running the sample
+------------------
+Before running WCECommSample.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company file (preferably sample_product-based business.qbw) opened. 
+
+There are three components to this sample. 
+
+- Client side demonstrates what an end user would see when they access the application. 
+- Merchant side demonstrates how a merchant can setup their web-connector to point to the web-service.
+- Service side demonstrates how a service provides data correspondence with QuickBooks.
+
+These three components are listed below in order of execution of steps: -
+
+PREPARATION
+1) Copy the entire WCECommSample directory into your c:\inetup\wwwroot path. If you are using Microsoft Developer Studio then the tool should automatically do this step for you. 
+
+2) From IIS_Console, right-click WCECommSample (client, merchant, service) -> Properties -> click Create button next to "Application Name". 
+
+CLIENT SIDE TRANSACTION
+3) Point your IE browser to http://localhost/WCECommSample/client/Default.aspx 
+
+4) Database ecommdb is pre-populated with some username/password (encryption not used for simplicity of the sample) used 
+to log on to the client site. If you want to create a new user, use "sign-up" from log on page. New user created here, will be transfered as Customer into QuickBooks on next update session with web connector.
+
+5) Database ecommdb is also pre-populated with some sample items (phone calling cards) that you could use for this sample. On the next update session with web connector (via Merchant site) any inventory items that you have on QB will be transfered to ecommdb. 
+
+6) After you log on, do some purchasing (it's really a simulation and not tied to any payment system, so don't worry :-)) on client to create some txns (salesreceipts)
+
+
+MERCHANT SITE ADMINISTRATION
+7) Point your IE browser to http://localhost/WCECommSample/merchant/setup.html
+
+8) Start with an empty company file (no customers and inventory items).
+
+9) Setup WCECommService with QBWC using merchant site and following the steps described in the site.
+
+
+WEB SERVICE 
+When you run update from QBWC (directly or via merchant site administration page), QBWC exchanges data with this web service. This web service provides code to insert, update or retrieve data from ecommdb. 
+
+
+Building the sample
+------------------
+Open WCECommSample.sln in Microsoft Visual Studio .NET (2005 or higher) and build the solution.  
+
+<p>
+View directory: <a href="qbdt/c-sharp/QBFC/WCECommSample">qbdt/c-sharp/QBFC/WCECommSample</a><br>
+Open Project: <a href="qbdt/c-sharp/QBFC/WCECommSample/WCECommSample.sln">qbdt/c-sharp/QBFC/WCECommSample/WCECommSample.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Code/Customer.cs">client\App_Code\Customer.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Code/DataBaseManager.cs">client\App_Code\DataBaseManager.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Code/Item.cs">client\App_Code\Item.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Data/ASPNETDB.MDF">client\App_Data\ASPNETDB.MDF</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Data/aspnetdb_log.ldf">client\App_Data\aspnetdb_log.ldf</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/Default.aspx">client\Default.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/Default.aspx.cs">client\Default.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/Web.Config">client\Web.Config</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/cart.aspx">client\cart.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/cart.aspx.cs">client\cart.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/client.sln">client\client.sln</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/purchase.aspx">client\purchase.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/purchase.aspx.cs">client\purchase.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/signup.aspx">client\signup.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/signup.aspx.cs">client\signup.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/db/ecommdb.mdb">db\ecommdb.mdb</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/merchant/Web.Config">merchant\Web.Config</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/merchant/javascript/prototype.js">merchant\javascript\prototype.js</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/merchant/merchant.sln">merchant\merchant.sln</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/merchant/setup.html">merchant\setup.html</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/readme.txt">readme.txt</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/sampleInfo.xml">sampleInfo.xml</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/AccessDatabase.cs">service\App_Code\AccessDatabase.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/DataBaseManager.cs">service\App_Code\DataBaseManager.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/IAuthentication.cs">service\App_Code\IAuthentication.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/IController.cs">service\App_Code\IController.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/ISessionPool.cs">service\App_Code\ISessionPool.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/MemorySession.cs">service\App_Code\MemorySession.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/QuickBooksCustomerOps.cs">service\App_Code\QuickBooksCustomerOps.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/QuickBooksItemOps.cs">service\App_Code\QuickBooksItemOps.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/QuickBooksSalesReceiptOps.cs">service\App_Code\QuickBooksSalesReceiptOps.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/SampleAuthentication.cs">service\App_Code\SampleAuthentication.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/SampleController.cs">service\App_Code\SampleController.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/Session.cs">service\App_Code\Session.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/UtilityManager.cs">service\App_Code\UtilityManager.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/WCECommService.cs">service\App_Code\WCECommService.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/App_Code/XmlManager.cs">service\App_Code\XmlManager.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/Postflight.aspx">service\Postflight.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/Postflight.aspx.cs">service\Postflight.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/Preflight.aspx">service\Preflight.aspx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/Preflight.aspx.cs">service\Preflight.aspx.cs</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/WCECommService.asmx">service\WCECommService.asmx</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/Web.Config">service\Web.Config</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/javascript/prototype.js">service\javascript\prototype.js</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/service/service.sln">service\service.sln</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Data/ASPNETDB.MDF">client/App_Data/ASPNETDB.MDF</a></li>
+<li><a href="qbdt/c-sharp/QBFC/WCECommSample/client/App_Data/aspnetdb_log.ldf">client/App_Data/aspnetdb_log.ldf</a></li>
+</ul>
+<p><p>
+<a name="CustomerAdd (C#) (qbxml) (desktop)"></a><h3>CustomerAdd (desktop)</h3>
+
+This sample is a simple .NET C# desktop application that creates a new 
+QuickBooks customer by calling qbXMLRP COM dll.
+Standard .NET classes are used for formatting the qbXML request 
+and parsing the qbXML response. 
+
+Running the sample
+------------------
+
+Before running CustomerAdd.exe, make sure that .NET runtime is installed on the machine, 
+and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open CustomerAdd.sln in Microsoft Visual Studio .NET and build the solution.
+Interop.QBXMLRPLib.dll has been generated by Visual Studio, 
+by adding a COM reference to qbXMLRP.dll.
+  <p>
+View directory: <a href="qbdt/c-sharp/qbXML/CustomerAdd">qbdt/c-sharp/qbXML/CustomerAdd</a><br>
+Open Project: <a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAdd.sln">qbdt/c-sharp/qbXML/CustomerAdd/CustomerAdd.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/App.ico">App.ico</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/AssemblyInfo.cs">AssemblyInfo.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAdd.csproj">CustomerAdd.csproj</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAdd.exe">CustomerAdd.exe</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAdd.sln">CustomerAdd.sln</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAddForm.cs">CustomerAddForm.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/CustomerAddForm.resx">CustomerAddForm.resx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/CustomerAdd/readme.txt">readme.txt</a></li>
+</ul>
+<p><p>
+<a name="MCInvoiceAdd (C#.NET) (qbxml) (desktop)"></a><h3>MCInvoiceAdd (desktop)</h3>
+
+This sample is a C# .NET desktop application that creates a new QuickBooks invoice using the new multicurrency feature in QuickBooks. It demonstrates how to populate some of the user input with results from querying QuickBooks, allowing user to input data and add an invoice to the QuickBooks running in your desktop (same machine). The behavior of exchange rate and line item prices are similar to QuickBooks UI. 
+
+Running the sample
+------------------
+Before running MCInvoiceAdd.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company file (preferably sample_product-based business.qbw) opened. 
+
+Building the sample
+------------------
+Open MCInvoiceAdd.sln in Microsoft Visual Studio .NET (2005 or higher) and build the solution. Interop.QBXMLRP2.dll has been generated by Visual Studio, by adding a COM reference to the dll.
+  <p>
+View directory: <a href="qbdt/c-sharp/qbXML/MCInvoiceAdd">qbdt/c-sharp/qbXML/MCInvoiceAdd</a><br>
+Open Project: <a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/MCInvoiceAdd.sln">qbdt/c-sharp/qbXML/MCInvoiceAdd/MCInvoiceAdd.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Form1.Designer.cs">Form1.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Form1.cs">Form1.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Form1.resx">Form1.resx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/MCInvoiceAdd.csproj">MCInvoiceAdd.csproj</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/MCInvoiceAdd.exe">MCInvoiceAdd.exe</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/MCInvoiceAdd.sln">MCInvoiceAdd.sln</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Program.cs">Program.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Properties/AssemblyInfo.cs">Properties\AssemblyInfo.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Properties/Resources.Designer.cs">Properties\Resources.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Properties/Resources.resx">Properties\Resources.resx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Properties/Settings.Designer.cs">Properties\Settings.Designer.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/MCInvoiceAdd/Properties/Settings.settings">Properties\Settings.settings</a></li>
+</ul>
+<p><p>
+<a name="SubscribeAndHandleQBEvent (C#) (qbxml) (desktop)"></a><h3>SubscribeAndHandleQBEvent (desktop)</h3>
+
+This sample is a simple .NET C# desktop application that subscribes and listen to
+customer add, modify and delete events. This application also provides means to add
+custom menu item under the 'Customers' menu in QB and listen to menu clcik event for
+this item.
+Standard .NET classes are used for formatting the qbXML request 
+and parsing the qbXML response. 
+
+Running the sample
+------------------
+Before running SubscribeAndHandleQBEvent.exe, this exe need to be registered as COM out of proc server. Run
+SubscribeAndHandleQBEvent.exe -h to see the various option with the exe.
+Also make sure that .NET runtime is installed on the machine, and QuickBooks need to be restarted everytime you add a new event subscription.
+Follow these steps to run the sample.
+	1.) Copy the exe to the QB install directory.
+	2.) Register the EXE as out of proc server.
+	3.) Subscribe for Data and/or UI extension events.
+	4.) Start QB and accept the SDK request.
+	5.) Modify or add customer or click on newly added menu item.
+	6.) Message box should appear with the event qbxml.
+
+Building the sample
+------------------
+Open SubscribeAndHandleQBEvent.sln in Microsoft Visual Studio .NET and build the solution.
+Interop.QBXMLRPLib.dll has been generated by Visual Studio, 
+by adding a COM reference to qbXMLRP.dll and Interop.QBSDKEVENTLib.dll has been generated
+by visual studio by adding a COM reference to qbsdkevent.dll
+ <p>
+View directory: <a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03">qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03</a><br>
+Open Project: <a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.sln">qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/AssemblyInfo.cs">AssemblyInfo.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/ClassFactoryBase.cs">ClassFactoryBase.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/EventHandlerObj.cs">EventHandlerObj.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/IClassFactory.cs">IClassFactory.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/Interop.QBSDKEVENTLib.dll">Interop.QBSDKEVENTLib.dll</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/ReferenceCountedObject.cs">ReferenceCountedObject.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.cs">SubscribeAndHandleQBEvent.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.csproj">SubscribeAndHandleQBEvent.csproj</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.exe">SubscribeAndHandleQBEvent.exe</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/SubscribeAndHandleQBEvent.sln">SubscribeAndHandleQBEvent.sln</a></li>
+<li><a href="qbdt/c-sharp/qbXML/SubscribeAndHandleQBEvent_vs03/readme.txt">readme.txt</a></li>
+</ul>
+<p><p>
+<a name="WCWebService (C# ASP.NET) (qbxml) (desktop)"></a><h3>WCWebService (desktop)</h3>
+
+This sample is a C# ASP.NET web service application that communicates 
+with QuickBooks via QBWebConnector. The sample focuses primarily on 
+demonstrating how to setup all web service web methods to run against 
+QBWebConnector and does not focus on any particular use case. 
+
+For simplicity, it sends three request XMLs: 
+CustomerQuery, InvoiceQuery and BillQuery. 
+
+
+Running the sample
+------------------
+You will need Microsoft Internet Information Services (IIS) installed 
+on your system to be able to run this sample.
+
+This sample assumes that you have configured IIS with ASP.NET and 
+have a functional system to deploy this web service sample. If you have 
+not yet configured ASP.NET with IIS, you may need to run the 
+following command from c:\windows\Microsoft.NET\Framework\
+your_asp_dot_net_version path: aspnet_regiis /i 
+
+This will help avoid the occasional message from microsoft development 
+environment such as "VS.NET has detected that the specified web server 
+is not running ASP.NET version 1.1. You will be unable to run ASP.NET 
+web applications or services). 
+
+
+
+Copy the entire directory to inetpub\wwwroot path.  Before running 
+this web service sample against QBWebConnector make sure that IIS and 
+.NET runtime is installed on the machine, and QuickBooks is running 
+with a company file opened. 
+
+As with any web service application that writes to the directory, 
+configure permission for ASP.NET user account so it can read/write 
+in the directory. Here is one way to set permission for ASP.NET user 
+in Windows XP: -
+
+Start - ControlPanel - AdministrativeTools - ComputerManagement - 
+LocalUsersAndGroups - Users - RightClick on ASPNET - Properties - 
+MemberOf - Administrators group (to be able to write to files).
+
+From within IISConsole,
+- WCWebService -- Properties 
+- Read, Write, LogVisits, IndexThisResource -- Checked
+- In Directory Security Tab -- Annonymous Access + Integrated Windows 
+Access -- Checked
+
+Alternatively, you could set your windows username and password in the 
+Web.config file but that may not be safe. 
+
+When the sample web service is built successfully, run QBWebConnector 
+and use "Load an application" to load the .qwc files provided with this 
+sample. For development purpose, you could use http://localhost... for 
+your web service AppURL. We have provided a sample web connector 
+configuration file (HTTPWebService.qwc) for your convenience.  You could 
+also double-click on the .qwc files, which will automatically run the 
+QBWebConnector loaded with the application. The .qwc (QuickBooks Web 
+Connector Congfiguration) file introduces a sample web service to the 
+QBWebConnector. 
+
+This sample web service uses windows event log to trace activity while 
+being updated from the QBWebConnector. To view the event log, go to 
+Start -- Programs -- Administrative Tools -- Event Viewer and look under
+Application section.
+
+
+Building the sample
+------------------
+Open WCWebService.sln in Microsoft Visual Studio .NET and build the 
+solution. 
+
+
+Note
+----
+For production purpose, you would need to use https and there are some 
+rules to be satisfied before QBWebConnector would load a web service. 
+For information on the rules please visit QBWebConnector knowledgebase 
+at: http://idnforums.intuit.com/messageview.aspx?catid=52&threadid=4593&enterthread=y
+
+You can find more information at the following AlphaGeek article(s): 
+http://developer.intuit.com/support/technical/?id=392
+
+Due to the requirement for this sample to built and deployed to a web server there 
+is no link to run the sample from the samples browser, nor is the sample distributed 
+with built binaries.
+
+  <p>
+View directory: <a href="qbdt/c-sharp/qbXML/WCWebService">qbdt/c-sharp/qbXML/WCWebService</a><br>
+Open Project: <a href="qbdt/c-sharp/qbXML/WCWebService/WCWebService.sln">qbdt/c-sharp/qbXML/WCWebService/WCWebService.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/Global.asax">Global.asax</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/Global.asax.resx">Global.asax.resx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/HTTPSWebService.qwc">HTTPSWebService.qwc</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/HTTPWebService.qwc">HTTPWebService.qwc</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/WCWebService.asmx">WCWebService.asmx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/WCWebService.asmx.resx">WCWebService.asmx.resx</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/WCWebService.sln">WCWebService.sln</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/Web.config">Web.config</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/readme.txt">readme.txt</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/App_Code/Global.asax.cs">App_Code/Global.asax.cs</a></li>
+<li><a href="qbdt/c-sharp/qbXML/WCWebService/App_Code/WCWebService.asmx.cs">App_Code/WCWebService.asmx.cs</a></li>
+</ul>
+<p><p>
+<a name="billadd (C++) (qbfc) (desktop)"></a><h3>billadd (desktop)</h3>
+BillAdd demonstrates adding a bill using QBFC.
+
+It includes examples of the following:
+- Adding a BillAdd request and sending it to QuickBooks
+- Appending an element to a list
+- Setting an OR object (object of mutually exclusive elements)
+- Setting a Ref object (reference to another list object)
+- Checking a field that is not guaranteed in the response and obtaining data from it<p>
+View directory: <a href="qbdt/cpp/qbfc/billadd">qbdt/cpp/qbfc/billadd</a><br>
+Open Project: <a href="qbdt/cpp/qbfc/billadd/BillAdd.dsw">qbdt/cpp/qbfc/billadd/BillAdd.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.cpp">BillAdd.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.dsp">BillAdd.dsp</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.dsw">BillAdd.dsw</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.exe">BillAdd.exe</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.h">BillAdd.h</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAdd.rc">BillAdd.rc</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAddDlg.cpp">BillAddDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/BillAddDlg.h">BillAddDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/QBFC3_IntelliSense.h">QBFC3_IntelliSense.h</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/res/BillAdd.ico">res/BillAdd.ico</a></li>
+<li><a href="qbdt/cpp/qbfc/billadd/res/BillAdd.rc2">res/BillAdd.rc2</a></li>
+</ul>
+<p><p>
+<a name="invoicequery (C++) (qbfc) (desktop)"></a><h3>invoicequery (desktop)</h3>
+InvoiceQuery is a C++ sample that demonstrates querying for the list of invoices.
+
+It includes examples of the following:
+- Constructing a complex query
+- Looping through the list of invoices in a response
+- Getting detailed invoice information (invoice lines)
+- Reading data from an OR object
+- Obtaining a field that is not guaranteed in the response (field may not exist)
+<p>
+View directory: <a href="qbdt/cpp/qbfc/invoicequery">qbdt/cpp/qbfc/invoicequery</a><br>
+Open Project: <a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.dsw">qbdt/cpp/qbfc/invoicequery/InvoiceQuery.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.cpp">InvoiceQuery.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.dsp">InvoiceQuery.dsp</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.dsw">InvoiceQuery.dsw</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.exe">InvoiceQuery.exe</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.h">InvoiceQuery.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQuery.rc">InvoiceQuery.rc</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQueryDlg.cpp">InvoiceQueryDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceQueryDlg.h">InvoiceQueryDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceViewDlg.cpp">InvoiceViewDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/InvoiceViewDlg.h">InvoiceViewDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/QBFC3_IntelliSense.h">QBFC3_IntelliSense.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/resource.h">resource.h</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/res/InvoiceQuery.ico">res/InvoiceQuery.ico</a></li>
+<li><a href="qbdt/cpp/qbfc/invoicequery/res/InvoiceQuery.rc2">res/InvoiceQuery.rc2</a></li>
+</ul>
+<p><p>
+<a name="itemquery (C++) (qbfc) (desktop)"></a><h3>itemquery (desktop)</h3>
+ItemQuery is a C++ sample that demonstrates querying items.  Querying items is similar to querying terms or entities in the sense that the returned detail object is a list of 'OR' objects  - ORItemRet in this case.
+
+It includes examples of the following:
+- Constructing a query
+- Looping through the list of items in a response
+- Reading data from an OR object
+- Obtaining returned fields and checking for fields that may not exist in the response
+<p>
+View directory: <a href="qbdt/cpp/qbfc/itemquery">qbdt/cpp/qbfc/itemquery</a><br>
+Open Project: <a href="qbdt/cpp/qbfc/itemquery/ItemQuery.dsw">qbdt/cpp/qbfc/itemquery/ItemQuery.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.cpp">ItemQuery.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.dsp">ItemQuery.dsp</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.dsw">ItemQuery.dsw</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.exe">ItemQuery.exe</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.h">ItemQuery.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQuery.rc">ItemQuery.rc</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQueryDlg.cpp">ItemQueryDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemQueryDlg.h">ItemQueryDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemViewDlg.cpp">ItemViewDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/ItemViewDlg.h">ItemViewDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/QBFC3_IntelliSense.h">QBFC3_IntelliSense.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/resource.h">resource.h</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/res/ItemQuery.ico">res/ItemQuery.ico</a></li>
+<li><a href="qbdt/cpp/qbfc/itemquery/res/ItemQuery.rc2">res/ItemQuery.rc2</a></li>
+</ul>
+<p><p>
+<a name="multiplerequests (C++) (qbfc) (desktop)"></a><h3>multiplerequests (desktop)</h3>
+MutipleRequests is a C++ sample that demonstrates sending multiple requests in one message set.
+
+It includes examples of the following:
+- Constructing 3 requests (add customer, add invoice, query invoice) and adding them to the same mesage set request.
+- Retrieving the 3 responses and getting the data from them.
+<p>
+View directory: <a href="qbdt/cpp/qbfc/multiplerequests">qbdt/cpp/qbfc/multiplerequests</a><br>
+Open Project: <a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.dsw">qbdt/cpp/qbfc/multiplerequests/MultipleRequests.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.cpp">MultipleRequests.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.dsp">MultipleRequests.dsp</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.dsw">MultipleRequests.dsw</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.exe">MultipleRequests.exe</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.h">MultipleRequests.h</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequests.rc">MultipleRequests.rc</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequestsDlg.cpp">MultipleRequestsDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/MultipleRequestsDlg.h">MultipleRequestsDlg.h</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/QBFC3_IntelliSense.h">QBFC3_IntelliSense.h</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/res/MultipleRequests.ico">res/MultipleRequests.ico</a></li>
+<li><a href="qbdt/cpp/qbfc/multiplerequests/res/MultipleRequests.rc2">res/MultipleRequests.rc2</a></li>
+</ul>
+<p><p>
+<a name="UIandEventTest (C++) (qbxml) (desktop)"></a><h3>UIandEventTest (desktop)</h3>
+
+These applications are designed for testing and demonstrating the UI functionality of QBSDK 3.0. These applications are built with Visual Studio 6.0.
+
+EventHandler - Implements callback handler for QuickBooks events. This is required for the MenuSubscribe application. MenuSubscribe registers its menu extensions using this EventHandler as the callback application.
+
+InvokeUI - Opens form windows in QuickBooks for new and existing transactions and list items.
+
+MenuSubscribe - Adds UI Extension (menu) subscriptions to QuickBooks.
+
+shared - Contains files shared by all of the applications above.
+  <p>
+This sample consists of the following sub-samples:<br>
+<ul>
+<li><a href="#MenuSubscribe (C++) (qbxml) (desktop)">MenuSubscribe</a></li>
+<li><a href="#InvokeUI (C++) (qbxml) (desktop)">InvokeUI</a></li>
+<li><a href="#EventSubscribe (C++) (qbxml) (desktop)">EventSubscribe</a></li>
+<li><a href="#EventHandler (C++) (qbxml) (desktop)">EventHandler</a></li>
+</ul>
+<a name="EventHandler (C++) (qbxml) (desktop)"></a><h3>EventHandler (desktop)</h3>
+EventHandler is the event callback handler for the MenuSubscribe sample application. Run this and register it (Files->Register) before running MenuSubscribe.<p>
+View directory: <a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler">qbdt/cpp/qbxml/UIandEventTest/EventHandler</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.dsw">qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/AboutDialog.cpp">AboutDialog.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/AboutDialog.h">AboutDialog.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/ChildView.cpp">ChildView.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/ChildView.h">ChildView.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.clw">EventHandler.clw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.cpp">EventHandler.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.dsp">EventHandler.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.dsw">EventHandler.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.exe">EventHandler.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.h">EventHandler.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.idl">EventHandler.idl</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.plg">EventHandler.plg</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.rc">EventHandler.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventHandler.rgs">EventHandler.rgs</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/EventXML.txt">EventXML.txt</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/MainFrm.cpp">MainFrm.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/MainFrm.h">MainFrm.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/QBSDKCallback.cpp">QBSDKCallback.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/QBSDKCallback.h">QBSDKCallback.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/QBSDKCallback.rgs">QBSDKCallback.rgs</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/SettingsDialog.cpp">SettingsDialog.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/SettingsDialog.h">SettingsDialog.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/res/EventHandler.ico">res/EventHandler.ico</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventHandler/res/QBSDKCallback.rgs">res/QBSDKCallback.rgs</a></li>
+</ul>
+<p><p>
+<a name="EventSubscribe (C++) (qbxml) (desktop)"></a><h3>EventSubscribe (desktop)</h3>
+Performs data and ui event subscriptions on behalf of the EventHandler application, which subsequently receives the notifications. <p>
+View directory: <a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe">qbdt/cpp/qbxml/UIandEventTest/EventSubscribe</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.dsw">qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.clw">EventSubscribe.clw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.cpp">EventSubscribe.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.dsp">EventSubscribe.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.dsw">EventSubscribe.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.exe">EventSubscribe.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.h">EventSubscribe.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribe.rc">EventSubscribe.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribeDlg.cpp">EventSubscribeDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/EventSubscribeDlg.h">EventSubscribeDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/stdafx.cpp">stdafx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/stdafx.h">stdafx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/EventSubscribe/res/EventSubscribe.ico">res/EventSubscribe.ico</a></li>
+</ul>
+<p><p>
+<a name="InvokeUI (C++) (qbxml) (desktop)"></a><h3>InvokeUI (desktop)</h3>
+InvokeUI opens form windows in QuickBooks for new and existing transactions and list items.<p>
+View directory: <a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI">qbdt/cpp/qbxml/UIandEventTest/InvokeUI</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.dsw">qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.clw">InvokeUI.clw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.cpp">InvokeUI.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.dsp">InvokeUI.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.dsw">InvokeUI.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.exe">InvokeUI.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.h">InvokeUI.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUI.rc">InvokeUI.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUIDlg.cpp">InvokeUIDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/InvokeUIDlg.h">InvokeUIDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/stdafx.cpp">stdafx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/stdafx.h">stdafx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/InvokeUI/res/InvokeUI.ico">res/InvokeUI.ico</a></li>
+</ul>
+<p><p>
+<a name="MenuSubscribe (C++) (qbxml) (desktop)"></a><h3>MenuSubscribe (desktop)</h3>
+MenuSubscribe adds UI Extension (menu) subscriptions to QuickBooks: Run and register the EventHandler sample before running this sample.<p>
+View directory: <a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe">qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.dsw">qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.clw">MenuSubscribe.clw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.cpp">MenuSubscribe.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.dsp">MenuSubscribe.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.dsw">MenuSubscribe.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.exe">MenuSubscribe.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.h">MenuSubscribe.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribe.rc">MenuSubscribe.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribeDlg.cpp">MenuSubscribeDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/MenuSubscribeDlg.h">MenuSubscribeDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/stdafx.cpp">stdafx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/stdafx.h">stdafx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/UIandEventTest/MenuSubscribe/res/MenuSubscribe.ico">res/MenuSubscribe.ico</a></li>
+</ul>
+<p><p>
+<a name="addcustomer (C++) (qbxml) (desktop)"></a><h3>addcustomer (desktop)</h3>
+This C++ sample demonstrates the minimal qbXML required to add a customer to QuickBooks. The user can view the qbXML request and response.<p>
+View directory: <a href="qbdt/cpp/qbxml/addcustomer">qbdt/cpp/qbxml/addcustomer</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.dsw">qbdt/cpp/qbxml/addcustomer/AddCustomer.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustDlg.cpp">AddCustDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustDlg.h">AddCustDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.cpp">AddCustomer.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.dsp">AddCustomer.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.dsw">AddCustomer.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.idl">AddCustomer.idl</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.rc">AddCustomer.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddCustomer.rgs">AddCustomer.rgs</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/AddNewCustomer.exe">AddNewCustomer.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/CustomerAdd.cpp">CustomerAdd.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/CustomerAdd.h">CustomerAdd.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/DisplayDlg.cpp">DisplayDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/DisplayDlg.h">DisplayDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/Utility.cpp">Utility.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/Utility.h">Utility.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/ValidatorDlg.cpp">ValidatorDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/ValidatorDlg.h">ValidatorDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/XMLBuilder.cpp">XMLBuilder.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/XMLBuilder.h">XMLBuilder.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/XMLValidator.cpp">XMLValidator.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/XMLValidator.h">XMLValidator.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/customers.bmp">customers.bmp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/qbXMLTags.h">qbXMLTags.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/qbXMLWrapper.cpp">qbXMLWrapper.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/qbXMLWrapper.h">qbXMLWrapper.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/qbbanner.bmp">qbbanner.bmp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomer/resource.hm">resource.hm</a></li>
+</ul>
+<p><p>
+<a name="addcustomerjob (C++) (qbxml) (desktop)"></a><h3>addcustomerjob (desktop)</h3>
+This C++ sample demonstrates the minimal qbXML required to add a customer and also a customer job (sub customer) to QuickBooks. <p>
+View directory: <a href="qbdt/cpp/qbxml/addcustomerjob">qbdt/cpp/qbxml/addcustomerjob</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.dsw">qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.cpp">AddCustomerJob.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.dsp">AddCustomerJob.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.dsw">AddCustomerJob.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.exe">AddCustomerJob.exe</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.idl">AddCustomerJob.idl</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.rc">AddCustomerJob.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/AddCustomerJob.rgs">AddCustomerJob.rgs</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/DOMXMLBuilder.cpp">DOMXMLBuilder.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/DOMXMLBuilder.h">DOMXMLBuilder.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBAddCustomerJobDlg.cpp">QBAddCustomerJobDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBAddCustomerJobDlg.h">QBAddCustomerJobDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCompanyFileDlg.cpp">QBCompanyFileDlg.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCompanyFileDlg.h">QBCompanyFileDlg.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerAdd.cpp">QBCustomerAdd.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerAdd.h">QBCustomerAdd.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerQuery.cpp">QBCustomerQuery.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerQuery.h">QBCustomerQuery.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerRet.cpp">QBCustomerRet.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerRet.h">QBCustomerRet.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeAdd.cpp">QBCustomerTypeAdd.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeAdd.h">QBCustomerTypeAdd.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeQuery.cpp">QBCustomerTypeQuery.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeQuery.h">QBCustomerTypeQuery.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeRet.cpp">QBCustomerTypeRet.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/QBCustomerTypeRet.h">QBCustomerTypeRet.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/Resource.h">Resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/StdAfx.cpp">StdAfx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/StdAfx.h">StdAfx.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/Utility.cpp">Utility.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/Utility.h">Utility.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/customers.bmp">customers.bmp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbXMLOpsBase.cpp">qbXMLOpsBase.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbXMLOpsBase.h">qbXMLOpsBase.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbXMLRPWrapper.cpp">qbXMLRPWrapper.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbXMLRPWrapper.h">qbXMLRPWrapper.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbXMLTags.h">qbXMLTags.h</a></li>
+<li><a href="qbdt/cpp/qbxml/addcustomerjob/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="hostquery (C++) (qbxml) (desktop)"></a><h3>hostquery (desktop)</h3>
+This VC++2005 sample demonstrates the minimal qbXML required to perform a hostquery to QuickBooks. The user can view the qbXML request and response in messagebox. The intent of this sample is to demonstrate how to utilize QBXMLRP2 library using VC+2005. <p>
+View directory: <a href="qbdt/cpp/qbxml/hostquery">qbdt/cpp/qbxml/hostquery</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/hostquery/hostquery.sln">qbdt/cpp/qbxml/hostquery/hostquery.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/hostquery/AssemblyInfo.cpp">AssemblyInfo.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/Form1.h">Form1.h</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/Form1.resx">Form1.resx</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/ReadMe.txt">ReadMe.txt</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/app.ico">app.ico</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/app.rc">app.rc</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/hostquery.cpp">hostquery.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/hostquery.sln">hostquery.sln</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/hostquery.vcproj">hostquery.vcproj</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/resource.h">resource.h</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/stdafx.cpp">stdafx.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/hostquery/stdafx.h">stdafx.h</a></li>
+</ul>
+<p><p>
+<a name="sdktest (C++) (qbxml) (desktop)"></a><h3>sdktest (desktop)</h3>
+This C++ version of SDKTest accepts a qbXML request and returns a qbXML response. This is a command line program rather than a GUI application.<p>
+View directory: <a href="qbdt/cpp/qbxml/sdktest">qbdt/cpp/qbxml/sdktest</a><br>
+Open Project: <a href="qbdt/cpp/qbxml/sdktest/sdktest.dsw">qbdt/cpp/qbxml/sdktest/sdktest.dsw</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/cpp/qbxml/sdktest/sdktest.cpp">sdktest.cpp</a></li>
+<li><a href="qbdt/cpp/qbxml/sdktest/sdktest.dsp">sdktest.dsp</a></li>
+<li><a href="qbdt/cpp/qbxml/sdktest/sdktest.dsw">sdktest.dsw</a></li>
+<li><a href="qbdt/cpp/qbxml/sdktest/sdktest.exe">sdktest.exe</a></li>
+</ul>
+<p><p>
+<a name="QBWebConnectorSvc (Java) (qbxml) (desktop)"></a><h3>QBWebConnectorSvc (desktop)</h3>
+
+This sample is a Java web service application that communicates with
+QuickBooks via QBWebConnector. This sample is primarily intended to
+demonstrate how to implement the required methods.
+
+This samples implements the QWC 1.0 spec.
+
+This sample requires Tomcat and Axis.
+
+Run compit *.java to compile all the java sources.
+Copy the resulting directory structure (starting at "com")
+to the TOMCAT_HOME/webapps/axis/WEB-INF directory.
+<p>
+View directory: <a href="qbdt/java/qbxml/QBWebConnectorSvc">qbdt/java/qbxml/QBWebConnectorSvc</a><br>
+Open Project: <a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnector">qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnector</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/ArrayOfString.java">ArrayOfString.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/AuthResponse.java">AuthResponse.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnectorSvc.java">QBWebConnectorSvc.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnectorSvcLocator.java">QBWebConnectorSvcLocator.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnectorSvcSoap.java">QBWebConnectorSvcSoap.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnectorSvcSoapImpl.java">QBWebConnectorSvcSoapImpl.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/QBWebConnectorSvcSoapStub.java">QBWebConnectorSvcSoapStub.java</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/compit">compit</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/compit.bat">compit.bat</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/deploy.wsdd">deploy.wsdd</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/sampleInfo.xml">sampleInfo.xml</a></li>
+<li><a href="qbdt/java/qbxml/QBWebConnectorSvc/undeploy.wsdd">undeploy.wsdd</a></li>
+</ul>
+<p><p>
+<a name="QueryRq (Java) (qbxml) (any)"></a><h3>QueryRq (any)</h3>
+
+This XML file contains a simple query request for multiple objects.
+None of the requests contain filtering parameters. These are
+requests for all data for each data type.
+
+<p>
+View directory: <a href="qbdt/java/qbxml/sdktest">qbdt/java/qbxml/sdktest</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/java/qbxml/sdktest/QueryRq.xml">QueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomerAdd (VB.NET) (qbfc) (desktop)"></a><h3>CustomerAdd (desktop)</h3>
+This sample is a simple VB.NET desktop application that creates a new 
+QuickBooks customer by using QBFC2 COM dll. 
+
+Running the sample
+------------------
+
+Before running CustomerAdd.exe, make sure that .NET runtime is installed on the machine, 
+and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open CustomerAdd.sln in Microsoft Visual Studio .NET and build the solution.
+QBFC2Assembly.dll was generated with 'tlbimp' .NET Type Library to Assembly Convertor.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/CustomerAdd">qbdt/vb.NET/QBFC/CustomerAdd</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.sln">qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.exe">CustomerAdd.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.sln">CustomerAdd.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.vbproj">CustomerAdd.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAdd.vbproj.user">CustomerAdd.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAddForm.resx">CustomerAddForm.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/CustomerAddForm.vb">CustomerAddForm.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/CustomerAdd/readme.txt">readme.txt</a></li>
+</ul>
+<p><p>
+<a name="DataExtensions (VB.NET) (qbfc) (desktop)"></a><h3>DataExtensions (desktop)</h3>
+
+This sample is a simple VB.NET desktop application that creates data extension
+definitions and allows data extensions to be added to a customer.
+
+Running the sample
+------------------
+
+Before running DataExtSample.exe, make sure that .NET runtime is 
+installed on the machine, and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open DataExtensions.sln in Microsoft Visual Studio .NET and build the 
+solution.  QBFC2Assembly.dll was generated with 'tlbimp' .NET Type Library 
+to Assembly Convertor.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/DataExtensions">qbdt/vb.NET/QBFC/DataExtensions</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.sln">qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.exe">DataExtSample.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.sln">DataExtSample.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.vbproj">DataExtSample.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/DataExtSample.vbproj.user">DataExtSample.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmAddDataExtDef.resX">frmAddDataExtDef.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmAddDataExtDef.vb">frmAddDataExtDef.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmAddDataExtension.resX">frmAddDataExtension.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmAddDataExtension.vb">frmAddDataExtension.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmDataExtSample.resX">frmDataExtSample.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmDataExtSample.vb">frmDataExtSample.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmModDataExtension.resX">frmModDataExtension.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/frmModDataExtension.vb">frmModDataExtension.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DataExtensions/modDataExtSample.vb">modDataExtSample.vb</a></li>
+</ul>
+<p><p>
+<a name="DepositAdd (VB.NET) (qbfc) (desktop)"></a><h3>DepositAdd (desktop)</h3>
+
+This sample is a simple VB.NET desktop application that enters a new deposit
+into QuickBooks by using QBFC2 COM dll. 
+
+Running the sample
+------------------
+
+Before running DepositAdd.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open DepositAdd.sln in Microsoft Visual Studio .NET and build the solution.
+QBFC2Assembly.dll was generated with 'tlbimp' .NET Type Library to Assembly Convertor.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/DepositAdd">qbdt/vb.NET/QBFC/DepositAdd</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.sln">qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.exe">DepositAdd.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.sln">DepositAdd.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.vbproj">DepositAdd.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/DepositAdd.vbproj.user">DepositAdd.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/frmFundsForDeposit.resX">frmFundsForDeposit.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/frmFundsForDeposit.vb">frmFundsForDeposit.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/DepositAdd/modDepositAdd.vb">modDepositAdd.vb</a></li>
+</ul>
+<p><p>
+<a name="ExpenseReportByVendor (VB.NET) (qbfc) (desktop)"></a><h3>ExpenseReportByVendor (desktop)</h3>
+
+This sample is a simple VB.NET desktop application that runs an expense report
+
+Running the sample
+------------------
+Before running ExpenseReport.exe, make sure that .NET runtime is 
+installed on the machine, and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open ExpenseReport.sln in Microsoft Visual Studio .NET and build the 
+solution. 
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor">qbdt/vb.NET/QBFC/ExpenseReportByVendor</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.sln">qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/AxInterop.MSComDlg.dll">AxInterop.MSComDlg.dll</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/AxInterop.SHDocVw.dll">AxInterop.SHDocVw.dll</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/DisplayForm.resX">DisplayForm.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/DisplayForm.vb">DisplayForm.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.exe">ExpenseReport.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.sln">ExpenseReport.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.vbproj">ExpenseReport.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ExpenseReport.vbproj.user">ExpenseReport.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/Interop.MSComDlg.dll">Interop.MSComDlg.dll</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/Interop.SHDocVw.dll">Interop.SHDocVw.dll</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/ParserHelper.vb">ParserHelper.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/UIForm.resX">UIForm.resX</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/UIForm.vb">UIForm.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/blank.html">blank.html</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/qbooks.vb">qbooks.vb</a></li>
+</ul>
+<p><p>
+<a name="GeneralSummaryReportQueryRq (VB.NET) (qbfc) (any)"></a><h3>GeneralSummaryReportQueryRq (any)</h3>
+Queries a General summary report with type ExpenseByVendorSummary
+Sumarizes columns by month.
+Uses the fiscal year for the reporting calendar
+<p>
+View directory: <a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor">qbdt/vb.NET/QBFC/ExpenseReportByVendor</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/ExpenseReportByVendor/GeneralSummaryReportQueryRq.xml">GeneralSummaryReportQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemInventoryMod (VB.NET) (qbfc) (desktop)"></a><h3>ItemInventoryMod (desktop)</h3>
+
+This sample is a simple VB.NET desktop application that modifies an 
+Inventory Item in QuickBooks customer by using QBFC2 COM dll. 
+
+Running the sample
+------------------
+
+Before running ItemInventoryMod.exe, make sure that .NET runtime is 
+installed on the machine, and QuickBooks is running with a company opened. 
+
+Building the sample
+------------------
+Open ItemInventoryMod.sln in Microsoft Visual Studio .NET and build the 
+solution.  
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/ItemInventoryMod">qbdt/vb.NET/QBFC/ItemInventoryMod</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.sln">qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/FullNameListIDClass.vb">FullNameListIDClass.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.exe">ItemInventoryMod.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.sln">ItemInventoryMod.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.vbproj">ItemInventoryMod.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryMod.vbproj.user">ItemInventoryMod.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/ItemInventoryModule.vb">ItemInventoryModule.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/frmMain.resx">frmMain.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemInventoryMod/frmMain.vb">frmMain.vb</a></li>
+</ul>
+<p><p>
+<a name="ItemReceipt (VB.NET) (qbfc) (desktop)"></a><h3>ItemReceipt (desktop)</h3>
+
+This sample illustrates the basics of receiving items against a PO already recorded in QuickBooks.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/ItemReceipt">qbdt/vb.NET/QBFC/ItemReceipt</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.sln">qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemObjects.vb">ItemObjects.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.exe">ItemReceipt.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.sln">ItemReceipt.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.vbproj">ItemReceipt.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ItemReceipt.vbproj.user">ItemReceipt.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ReceiveItems.resx">ReceiveItems.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/ItemReceipt/ReceiveItems.vb">ReceiveItems.vb</a></li>
+</ul>
+<p><p>
+<a name="PriceLevels (VB.NET) (qbfc) (desktop)"></a><h3>PriceLevels (desktop)</h3>
+
+This sample is a simple VB.NET desktop application that manages price levels in QuickBooks to demonstrate the new PriceLevel requests.  You may also be interested in the InvoiceAdd sample which demonstrates the use of a PriceLevel when entering invoice lines from the SDK.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/PriceLevels">qbdt/vb.NET/QBFC/PriceLevels</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.sln">qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/AddItem.resx">AddItem.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/AddItem.vb">AddItem.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevelSample.resx">PriceLevelSample.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevelSample.vb">PriceLevelSample.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.exe">PriceLevels.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.exe">PriceLevels.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.sln">PriceLevels.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.vbproj">PriceLevels.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/PriceLevels.vbproj.user">PriceLevels.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/PriceLevels/app.config">app.config</a></li>
+</ul>
+<p><p>
+<a name="SyncCustomerList (VB.NET) (qbfc) (desktop)"></a><h3>SyncCustomerList (desktop)</h3>
+
+Maintains a simulation of an application-side customer database and synchs 
+it with QB.
+  <p>
+View directory: <a href="qbdt/vb.NET/QBFC/SyncCustomerList">qbdt/vb.NET/QBFC/SyncCustomerList</a><br>
+Open Project: <a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.sln">qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.sln</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/AssemblyInfo.vb">AssemblyInfo.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/CustomerClass.vb">CustomerClass.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.exe">SyncCustomerList.exe</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.sln">SyncCustomerList.sln</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.vbproj">SyncCustomerList.vbproj</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerList.vbproj.user">SyncCustomerList.vbproj.user</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerListModule.vb">SyncCustomerListModule.vb</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerMainForm.resx">SyncCustomerMainForm.resx</a></li>
+<li><a href="qbdt/vb.NET/QBFC/SyncCustomerList/SyncCustomerMainForm.vb">SyncCustomerMainForm.vb</a></li>
+</ul>
+<p><p>
+<a name="AddInvoice (VB) (array(0x1fd0824)) (desktop)"></a><h3>AddInvoice (desktop)</h3>
+AddInvoice is VB sample code which shows how the same invoice can be added using qbXML built with the MSXML4 DOM parser and QBFC.  It is intended to be used with the sample product based company file and expects that QuickBooks 2003 Pro or above is running with that company
+file open.<p>
+View directory: <a href="qbdt/vb/qbfc/AddInvoice">qbdt/vb/qbfc/AddInvoice</a><br>
+Open Project: <a href="qbdt/vb/qbfc/AddInvoice/AddInvoice.vbp">qbdt/vb/qbfc/AddInvoice/AddInvoice.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/AddInvoice/AddInvoice.exe">AddInvoice.exe</a></li>
+<li><a href="qbdt/vb/qbfc/AddInvoice/AddInvoice.vbp">AddInvoice.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/AddInvoice/frmAddInvoice.frm">frmAddInvoice.frm</a></li>
+<li><a href="qbdt/vb/qbfc/AddInvoice/frmAddInvoice.frx">frmAddInvoice.frx</a></li>
+<li><a href="qbdt/vb/qbfc/AddInvoice/frmInvoiceDisplay.frm">frmInvoiceDisplay.frm</a></li>
+<li><a href="qbdt/vb/qbfc/AddInvoice/modAddInvoice.bas">modAddInvoice.bas</a></li>
+</ul>
+<p><p>
+<a name="CDN_VendorAdd (VB) (qbfc) (desktop)"></a><h3>CDN_VendorAdd (desktop)</h3>
+
+The QBFC vendor add sample is meant to be run against either QuickBooks 
+2002+ US version or QuickBooks 2003+ Canadian version.  It expects 
+QuickBooks to be running with a company file open and the Admin user 
+logged in.  This sample app will work with or without multicurrency 
+is turned on in the accounting preferences.
+
+This sample app shows:
+
+- How to detect if the user is using a Canadian or a US version of QuickBooks
+- How to detect if multicurrency is turned on in a company datafile     
+- How multicurrency can be used on a vendor if multicurrency is selected
+ 
+  <p>
+View directory: <a href="qbdt/vb/qbfc/CDN_VendorAdd">qbdt/vb/qbfc/CDN_VendorAdd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/CDN_VendorAdd/Add_Vendor.vbp">qbdt/vb/qbfc/CDN_VendorAdd/Add_Vendor.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/Add_Vendor.exe">Add_Vendor.exe</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/Add_Vendor.frm">Add_Vendor.frm</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/Add_Vendor.vbp">Add_Vendor.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/ConnectionWithQuickBooks.bas">ConnectionWithQuickBooks.bas</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/GetCurrency.bas">GetCurrency.bas</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/GetVendorType.bas">GetVendorType.bas</a></li>
+<li><a href="qbdt/vb/qbfc/CDN_VendorAdd/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="DataExtensions (VB) (qbfc) (desktop)"></a><h3>DataExtensions (desktop)</h3>
+Presents a UI for displaying and adding data extensions to a company.<p>
+View directory: <a href="qbdt/vb/qbfc/DataExtensions">qbdt/vb/qbfc/DataExtensions</a><br>
+Open Project: <a href="qbdt/vb/qbfc/DataExtensions/DataExtSample.vbp">qbdt/vb/qbfc/DataExtensions/DataExtSample.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/DataExtensions/DataExtSample.exe">DataExtSample.exe</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/DataExtSample.vbp">DataExtSample.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/SyncCustomerMainForm.frm">SyncCustomerMainForm.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmAddDataExtDef.frm">frmAddDataExtDef.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmAddDataExtDef.frx">frmAddDataExtDef.frx</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmAddDataExtension.frm">frmAddDataExtension.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmAddDataExtension.frx">frmAddDataExtension.frx</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmDataExtSample.frm">frmDataExtSample.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmDataExtSample.frx">frmDataExtSample.frx</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmModDataExtension.frm">frmModDataExtension.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/frmModDataExtension.frx">frmModDataExtension.frx</a></li>
+<li><a href="qbdt/vb/qbfc/DataExtensions/modDataExtSample.bas">modDataExtSample.bas</a></li>
+</ul>
+<p><p>
+<a name="DepositAdd (VB) (qbfc) (desktop)"></a><h3>DepositAdd (desktop)</h3>
+This sample VB program provides QBFC examples for:
+
+1) Querying QuickBooks for undeposited funds
+2) Adding a deposit transaction to QuickBooks<p>
+View directory: <a href="qbdt/vb/qbfc/DepositAdd">qbdt/vb/qbfc/DepositAdd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/DepositAdd/DepositAdd.vbp">qbdt/vb/qbfc/DepositAdd/DepositAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/DepositAdd/DepositAdd.exe">DepositAdd.exe</a></li>
+<li><a href="qbdt/vb/qbfc/DepositAdd/DepositAdd.vbp">DepositAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/DepositAdd/frmDepositAdd.frm">frmDepositAdd.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DepositAdd/frmFundsForDeposit.frm">frmFundsForDeposit.frm</a></li>
+<li><a href="qbdt/vb/qbfc/DepositAdd/modDepositAdd.bas">modDepositAdd.bas</a></li>
+</ul>
+<p><p>
+<a name="Events (VB) (qbfc) (desktop)"></a><h3>Events (desktop)</h3>
+
+The QBFCEventsSubscriber and QBFCEventsCallback samples work together to show how to implement Data and UI event subscription and callback handling using the QBFC library. The QBFCEventsSubscriber application subscribes to the CustomerAdd and company file Close events. 
+
+The QBFCEventsCallback application parses and processes the events. If there is a CustomerAdd event, the callback application queries for that customer using the ListID in the event to get the FullName and displays a non blocking UI message to the user about the added customer. (Blocking UI messages can prevent the reception and handling of subsequent events, including company Close events.) 
+The QBFCEventsCallback application also contains a "Query" to get all the customers from the QuickBooks company file.  This functionality is available until a company file close event is received.  When a company file Close event is received, the "Query" button is greyed out and the user can no longer query QuickBooks. 
+  <p>
+View directory: <a href="qbdt/vb/qbfc/Events">qbdt/vb/qbfc/Events</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/Events/Readme.txt">Readme.txt</a></li>
+</ul>
+<p><p>
+<a name="QBFCEventsCallback (VB) (qbfc) (desktop)"></a><h3>QBFCEventsCallback (desktop)</h3>
+
+Handles CustomerAdd and company File Close events from QuickBooks and displays the added customer
+in the UI, along with any errors. You must have this executable running in order to subscribe it
+from the QBFCEventsSubscriber program.
+  <p>
+View directory: <a href="qbdt/vb/qbfc/Events/Callback">qbdt/vb/qbfc/Events/Callback</a><br>
+Open Project: <a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.vbp">qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/Events/Callback/EventsCallbackClass.cls">EventsCallbackClass.cls</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/EventsCallbackModule.bas">EventsCallbackModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.exe">QBFCEventsCallback.exe</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.frm">QBFCEventsCallback.frm</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.frx">QBFCEventsCallback.frx</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.vbp">QBFCEventsCallback.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Callback/QBFCEventsCallback.vbw">QBFCEventsCallback.vbw</a></li>
+</ul>
+<p><p>
+<a name="QBFCEventsSubscriber (VB) (qbfc) (desktop)"></a><h3>QBFCEventsSubscriber (desktop)</h3>
+
+Subscribes the QBFCEventsCallback.exe sample to receive CustomerAdd data events from QuickBooks,
+as well as company file Close events. In order to subscribe, the QBFCEventsCallback sample must be
+running.
+  <p>
+View directory: <a href="qbdt/vb/qbfc/Events/Subscriber">qbdt/vb/qbfc/Events/Subscriber</a><br>
+Open Project: <a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberProject.vbp">qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberProject.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriber.exe">QBFCEventsSubscriber.exe</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberForm.frm">QBFCEventsSubscriberForm.frm</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberModule.bas">QBFCEventsSubscriberModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberProject.vbp">QBFCEventsSubscriberProject.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/Events/Subscriber/QBFCEventsSubscriberProject.vbw">QBFCEventsSubscriberProject.vbw</a></li>
+</ul>
+<p><p>
+<a name="ExpenseReportByVendor (VB) (qbfc) (desktop)"></a><h3>ExpenseReportByVendor (desktop)</h3>
+This VB sample program uses QBFC to generate an expense report for the selected company. It also displays the request and response messages generated by/returned to program.<p>
+View directory: <a href="qbdt/vb/qbfc/ExpenseReportByVendor">qbdt/vb/qbfc/ExpenseReportByVendor</a><br>
+Open Project: <a href="qbdt/vb/qbfc/ExpenseReportByVendor/ExpenseReport.vbp">qbdt/vb/qbfc/ExpenseReportByVendor/ExpenseReport.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/DisplayForm.frm">DisplayForm.frm</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/ExpenseReport.exe">ExpenseReport.exe</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/ExpenseReport.vbp">ExpenseReport.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/ParserHelper.cls">ParserHelper.cls</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/QBooks.bas">QBooks.bas</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/UIForm.frm">UIForm.frm</a></li>
+<li><a href="qbdt/vb/qbfc/ExpenseReportByVendor/blank.html">blank.html</a></li>
+</ul>
+<p><p>
+<a name="InventoryAdjust (VB) (qbfc) (desktop)"></a><h3>InventoryAdjust (desktop)</h3>
+This sample VB application uses QBFC. It allows the user to select an ItemInventory item, Customer, Class and Account, then define changes to the InventoryItem. 
+
+The InventoryItem can then be added to the currently open QuickBooks company.<p>
+View directory: <a href="qbdt/vb/qbfc/InventoryAdjust">qbdt/vb/qbfc/InventoryAdjust</a><br>
+Open Project: <a href="qbdt/vb/qbfc/InventoryAdjust/InventoryAdjustProj.vbp">qbdt/vb/qbfc/InventoryAdjust/InventoryAdjustProj.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/InventoryAdjust/InventoryAdjust.frm">InventoryAdjust.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InventoryAdjust/InventoryAdjust.frx">InventoryAdjust.frx</a></li>
+<li><a href="qbdt/vb/qbfc/InventoryAdjust/InventoryAdjustProj.exe">InventoryAdjustProj.exe</a></li>
+<li><a href="qbdt/vb/qbfc/InventoryAdjust/InventoryAdjustProj.vbp">InventoryAdjustProj.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/InventoryAdjust/QuickBooks.bas">QuickBooks.bas</a></li>
+</ul>
+<p><p>
+<a name="InvoiceMod (VB) (qbfc) (desktop)"></a><h3>InvoiceMod (desktop)</h3>
+
+The InvoiceMod sample program allows users who are running QB 2003 R7P to modify invoices in a company file.  QuickBooks must be running and if this is the first time the sample will be run against a company file the Admin user must have the company file open.
+
+When one runs the InvoiceMod sample, one choose at the onset to use either QBXMLRP or QBFC to be used by the sample application.  The sample continues to use that method throughout the rest of the current run of the sample program.
+
+The first screen the sample program user is presented allows them to query for one invoice by invoice number (RefNumber) or by most of the other filter criteria (except TxnID) that can be used in an invoice query request.  MaxReturned is hard coded at 30 to prevent having to process too many invoices.  You can look at the qbXML used in the query or the QBFC calls made to create the query by checking the Show Invoice Query checkbox at the bottom left of the query screen.
+
+Once you have performed a query you will be presented with a list of up to 30 invoices which you can choose to modify.  Select an invoice by clicking on it and then click on the Modify Invoice button to modify the invoice.
+
+After clicking on the Modify Invoice button the InvoiceMod sample program will query for the invoice details and for list items displayed in the combo boxes on the modify invoice screen.  Depending on the size of the company file this may take a little while.  A form with invoice information will appear including a display at the bottom with invoice line information.  You may add or modify any information which can be added, removed or modified in an invoice.  When one chooses to edit an existing invoice line or add a new invoice line, an invoice line editting form will appear.  One can also delete invoice lines from an invoice.
+
+Invoice lines appear in different colors depending on their status.  Unchanged lines from the existing invoice appear in black.  New lines added to the invoice appear in green.  Lines which have had one or more values changed appear in red.  Lines that have been deleted are shown with a line through them.
+
+When one chooses to save one's modifications to an invoice click on the Modify Invoice button at the bottom right of the screen.  One can check the Show request check box in order to show the qbXML or the QBFC calls used to modify the invoice.
+<p>
+View directory: <a href="qbdt/vb/qbfc/InvoiceMod">qbdt/vb/qbfc/InvoiceMod</a><br>
+Open Project: <a href="qbdt/vb/qbfc/InvoiceMod/InvoiceMod.vbp">qbdt/vb/qbfc/InvoiceMod/InvoiceMod.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/InvoiceMod.exe">InvoiceMod.exe</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/InvoiceMod.vbp">InvoiceMod.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/InvoiceMod.vbw">InvoiceMod.vbw</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/Readme.txt">Readme.txt</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmEditInvoiceLine.frm">frmEditInvoiceLine.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmEditInvoiceLine.frx">frmEditInvoiceLine.frx</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmInvoiceModMain.frm">frmInvoiceModMain.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmInvoiceModMain.frx">frmInvoiceModMain.frx</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmInvoiceModify.frm">frmInvoiceModify.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmInvoiceQuery.frm">frmInvoiceQuery.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmInvoiceQuery.frx">frmInvoiceQuery.frx</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmModifying.frm">frmModifying.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmPatience.frm">frmPatience.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmPatience.frx">frmPatience.frx</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/frmShowRequest.frm">frmShowRequest.frm</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/modGeneric.bas">modGeneric.bas</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/modQBFC.bas">modQBFC.bas</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/modQBXMLRP.bas">modQBXMLRP.bas</a></li>
+<li><a href="qbdt/vb/qbfc/InvoiceMod/modUtilities.bas">modUtilities.bas</a></li>
+</ul>
+<p><p>
+<a name="ItemInventoryMod (VB) (qbfc) (desktop)"></a><h3>ItemInventoryMod (desktop)</h3>
+This sample VB application uses QBFC. It allows the user to select an existing ItemInventory item, then modify all of its fields via textboxes. <p>
+View directory: <a href="qbdt/vb/qbfc/ItemInventoryMod">qbdt/vb/qbfc/ItemInventoryMod</a><br>
+Open Project: <a href="qbdt/vb/qbfc/ItemInventoryMod/ItemInventoryMod.vbp">qbdt/vb/qbfc/ItemInventoryMod/ItemInventoryMod.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/ItemInventoryMod/FullNameListIDClass.cls">FullNameListIDClass.cls</a></li>
+<li><a href="qbdt/vb/qbfc/ItemInventoryMod/ItemInventoryMod.exe">ItemInventoryMod.exe</a></li>
+<li><a href="qbdt/vb/qbfc/ItemInventoryMod/ItemInventoryMod.vbp">ItemInventoryMod.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/ItemInventoryMod/ItemInventoryModule.bas">ItemInventoryModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/ItemInventoryMod/frmMain.frm">frmMain.frm</a></li>
+</ul>
+<p><p>
+<a name="Macro (VB) (qbfc) (desktop)"></a><h3>Macro (desktop)</h3>
+This VB application allows the user to select an existing estimate and create an invoice and a receive payment at the same time, using the QBFC macro feature. d<p>
+View directory: <a href="qbdt/vb/qbfc/Macro">qbdt/vb/qbfc/Macro</a><br>
+Open Project: <a href="qbdt/vb/qbfc/Macro/UseMacroDefMacro.vbp">qbdt/vb/qbfc/Macro/UseMacroDefMacro.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/Macro/EstimatesModule.bas">EstimatesModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/InfoClass.cls">InfoClass.cls</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/UseMacroDefMacro.exe">UseMacroDefMacro.exe</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/UseMacroDefMacro.vbp">UseMacroDefMacro.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/UseMacroDefMacroModule.bas">UseMacroDefMacroModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/frmUseMacroDefMacro.frm">frmUseMacroDefMacro.frm</a></li>
+<li><a href="qbdt/vb/qbfc/Macro/frmUseMacroDefMacro.frx">frmUseMacroDefMacro.frx</a></li>
+</ul>
+<p><p>
+<a name="MenuEventContext (VB) (qbfc) (desktop)"></a><h3>MenuEventContext (desktop)</h3>
+MenuEventContext is VB sample code which shows how to add menus to QuickBooks and how, with QuickBooks 2005 and later you can get information about which forms (if any) are open in QuickBooks at the time the menu is chosen<p>
+View directory: <a href="qbdt/vb/qbfc/MenuEventContext">qbdt/vb/qbfc/MenuEventContext</a><br>
+Open Project: <a href="qbdt/vb/qbfc/MenuEventContext/MenuEventContext.vbp">qbdt/vb/qbfc/MenuEventContext/MenuEventContext.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/MainMod.bas">MainMod.bas</a></li>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/MenuEventContext.exe">MenuEventContext.exe</a></li>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/MenuEventContext.vbp">MenuEventContext.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/MenuEventSample.frm">MenuEventSample.frm</a></li>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/MenuEventSample.frx">MenuEventSample.frx</a></li>
+<li><a href="qbdt/vb/qbfc/MenuEventContext/QBMenuListener.cls">QBMenuListener.cls</a></li>
+</ul>
+<p><p>
+<a name="PurchaseOrderModify (VB) (qbfc) (desktop)"></a><h3>PurchaseOrderModify (desktop)</h3>
+
+The PurchaseOrderModify sample program allows users who are running QB 2003 R7P to close purchase orders or purchase order lines in a company file.  QuickBooks must be running and if this is the first time the sample will be run against a company file the Admin user must have the company file open.
+
+When one runs the PurchaseOrderModify sample, one choose at the onset to use either QBXMLRP or QBFC to be used by the sample application.  The sample continues to use that method throughout the rest of the current run of the sample program.
+
+The next form the sample program user is presented lists up to 30 open purchase orders in the company file.  The sample program uses the GeneralDetailReportQuery to retrieve columns from the OpenPOs report.  It uses the new SDK 2.1 feature allowing the return of the TxnID column in a SDK report query response.  It displays information about the open purchase orders  and allows the user to choose a purchase order to modify.
+
+Once a user has selected a purchase order by clicking on it's information and then clicks the View Purchase Order Details button, a screen listing the purchase order information and lines is displayed.  The user may then choose to close the entire purchase order or close an individual line of the purchase order.  They may also simulate the receipt of items against a purchase order or an individual purchase order line.
+
+The SDK is unable to link bills created through the SDK to existing purchase orders.  This sample uses a method we suggest developers use in the absence of the ability to create the purchase order to bill links.  One cannot modify the Recieved Quantity value for purchase order lines because this is done by creating a link to a bill or item receipt through the QuickBooks UI.  Using the SDK a appliction must instead reduce the quantity ordered by the number they wish to have received against the purchase order line and create a bill for those items.  When the sample application does this it uses the quantity still on order (ordered minus quantity recieved) and modifies the purchase order line or lines to reflect the quantity recieved already through the UI.  It also adds information to the memo field of the bill is created for the item or items and the purchase order memo field indicating what it has done.
+<p>
+View directory: <a href="qbdt/vb/qbfc/PurchaseOrderModify">qbdt/vb/qbfc/PurchaseOrderModify</a><br>
+Open Project: <a href="qbdt/vb/qbfc/PurchaseOrderModify/PurchaseOrderModify.vbp">qbdt/vb/qbfc/PurchaseOrderModify/PurchaseOrderModify.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/PurchaseOrderModify.exe">PurchaseOrderModify.exe</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/PurchaseOrderModify.vbp">PurchaseOrderModify.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/PurchaseOrderModify.vbw">PurchaseOrderModify.vbw</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/Readme.txt">Readme.txt</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/frmPurchaseOrderDetail.frm">frmPurchaseOrderDetail.frm</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/frmPurchaseOrderModifyMain.frm">frmPurchaseOrderModifyMain.frm</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/frmPurchaseOrderModifyMain.frx">frmPurchaseOrderModifyMain.frx</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/frmPurchaseOrderSelect.frm">frmPurchaseOrderSelect.frm</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/modGeneric.bas">modGeneric.bas</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/modQBFC.bas">modQBFC.bas</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/modQBXMLRP.bas">modQBXMLRP.bas</a></li>
+<li><a href="qbdt/vb/qbfc/PurchaseOrderModify/modUtilities.bas">modUtilities.bas</a></li>
+</ul>
+<p><p>
+<a name="SyncCustomerList (VB) (qbfc) (desktop)"></a><h3>SyncCustomerList (desktop)</h3>
+This sample VB application shows how to synchronize a customer list using QBFC.<p>
+View directory: <a href="qbdt/vb/qbfc/SyncCustomerList">qbdt/vb/qbfc/SyncCustomerList</a><br>
+Open Project: <a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerList.vbp">qbdt/vb/qbfc/SyncCustomerList/SyncCustomerList.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/CustomerClass.cls">CustomerClass.cls</a></li>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerList.exe">SyncCustomerList.exe</a></li>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerList.vbp">SyncCustomerList.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerListModule.bas">SyncCustomerListModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerMainForm.frm">SyncCustomerMainForm.frm</a></li>
+<li><a href="qbdt/vb/qbfc/SyncCustomerList/SyncCustomerMainForm.frx">SyncCustomerMainForm.frx</a></li>
+</ul>
+<p><p>
+<a name="US_CDN_BillAdd (VB) (qbfc) (desktop)"></a><h3>US_CDN_BillAdd (desktop)</h3>
+
+  BillAdd demonstrates adding a bill to either Desktop or Online 
+  QuickBooks using QBFC.
+
+  It includes examples of the following:
+  - Adding a BillAdd request and sending it to QuickBooks
+  - Appending an element to a list
+  - Setting an OR object (object of mutually exclusive elements)
+  - Setting a Ref object (reference to another list object)
+  - Checking a field that is not guaranteed in the response and obtaining data from it
+  <p>
+View directory: <a href="qbdt/vb/qbfc/US_CDN_BillAdd">qbdt/vb/qbfc/US_CDN_BillAdd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/US_CDN_BillAdd/BillAdd.vbp">qbdt/vb/qbfc/US_CDN_BillAdd/BillAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/BillAdd.frx">BillAdd.frx</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/BillAdd.vbp">BillAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/BillAdd.vbw">BillAdd.vbw</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/CommPrefsDlg.frm">CommPrefsDlg.frm</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/CommPrefsDlg.frx">CommPrefsDlg.frx</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/SessionTicketDlg.frm">SessionTicketDlg.frm</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/SessionTicketDlg.frx">SessionTicketDlg.frx</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/US_CDN_BillAdd.exe">US_CDN_BillAdd.exe</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/US_CDN_BillAdd.frm">US_CDN_BillAdd.frm</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_BillAdd/US_CDN_BillAdd.frx">US_CDN_BillAdd.frx</a></li>
+</ul>
+<p><p>
+<a name="US_CDN_UK_CustomerQuery (VB) (qbfc) (desktop)"></a><h3>US_CDN_UK_CustomerQuery (desktop)</h3>
+
+	This sample demonstrates how to call HostQuery to determine version 
+	of QuickBooks running and thereby use appropriate QBFC library to 
+	communicate with it. The sample was intentionally kept simple in order 
+	to keep the HostQuery implementation clean and easy to follow.
+  <p>
+View directory: <a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery">qbdt/vb/qbfc/US_CDN_UK_CustomerQuery</a><br>
+Open Project: <a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.vbp">qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNCustomerQuery.exe">USCDNCustomerQuery.exe</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.frm">USCDNUKCustomerQuery.frm</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.frx">USCDNUKCustomerQuery.frx</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.vbp">USCDNUKCustomerQuery.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/US_CDN_UK_CustomerQuery/USCDNUKCustomerQuery.vbw">USCDNUKCustomerQuery.vbw</a></li>
+</ul>
+<p><p>
+<a name="VersionDependentCustAdd (VB) (array(0x1fce0e8)) (desktop)"></a><h3>VersionDependentCustAdd (desktop)</h3>
+In this sample VB application that uses QBFC to add a customer, there is a check of the qbXML version currently being used by the installed copy of QuickBooks. 
+
+Different code is executed depending on which version is being used. If an unexpected version is being used, the application displays an error message. <p>
+View directory: <a href="qbdt/vb/qbfc/VersionDependentCustAdd">qbdt/vb/qbfc/VersionDependentCustAdd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/VersionDependentCustAdd/AddCustomer.vbp">qbdt/vb/qbfc/VersionDependentCustAdd/AddCustomer.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/AddCust.frm">AddCust.frm</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/AddCust.frx">AddCust.frx</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/AddCustomer.vbp">AddCustomer.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/CustomerAddModule.bas">CustomerAddModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/DisplayXML.frm">DisplayXML.frm</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/VersionDependentAddCustomer.exe">VersionDependentAddCustomer.exe</a></li>
+<li><a href="qbdt/vb/qbfc/VersionDependentCustAdd/XMLBuilder.cls">XMLBuilder.cls</a></li>
+</ul>
+<p><p>
+<a name="billadd (VB) (array(0x1fd04f4)) (desktop)"></a><h3>billadd (desktop)</h3>
+
+  BillAdd demonstrates adding a bill to either Desktop or Online 
+  QuickBooks using QBFC.
+
+  It includes examples of the following:
+  - Adding a BillAdd request and sending it to QuickBooks
+  - Appending an element to a list
+  - Setting an OR object (object of mutually exclusive elements)
+  - Setting a Ref object (reference to another list object)
+  - Checking a field that is not guaranteed in the response and obtaining data from it
+  <p>
+View directory: <a href="qbdt/vb/qbfc/billadd">qbdt/vb/qbfc/billadd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/billadd/BillAdd.vbp">qbdt/vb/qbfc/billadd/BillAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/billadd/BillAdd.exe">BillAdd.exe</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/BillAdd.frm">BillAdd.frm</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/BillAdd.frx">BillAdd.frx</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/BillAdd.vbp">BillAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/BillAdd.vbw">BillAdd.vbw</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/CommPrefsDlg.frm">CommPrefsDlg.frm</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/CommPrefsDlg.frx">CommPrefsDlg.frx</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/SessionTicketDlg.frm">SessionTicketDlg.frm</a></li>
+<li><a href="qbdt/vb/qbfc/billadd/SessionTicketDlg.frx">SessionTicketDlg.frx</a></li>
+</ul>
+<p><p>
+<a name="CustomerAdd (VB) (qbfc) (desktop)"></a><h3>CustomerAdd (desktop)</h3>
+This application presents a simple UI which can be used to add a customer to QuickBooks.<p>
+View directory: <a href="qbdt/vb/qbfc/customeradd">qbdt/vb/qbfc/customeradd</a><br>
+Open Project: <a href="qbdt/vb/qbfc/customeradd/CustomerAdd.vbp">qbdt/vb/qbfc/customeradd/CustomerAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/customeradd/CustomerAdd.exe">CustomerAdd.exe</a></li>
+<li><a href="qbdt/vb/qbfc/customeradd/CustomerAdd.vbp">CustomerAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/customeradd/CustomerAdd.vbw">CustomerAdd.vbw</a></li>
+<li><a href="qbdt/vb/qbfc/customeradd/MainModule.bas">MainModule.bas</a></li>
+</ul>
+<p><p>
+<a name="invoicequery (VB) (array(0x1fce9e8)) (desktop)"></a><h3>invoicequery (desktop)</h3>
+InvoiceQuery demonstrates querying for the list of invoices.
+
+It includes examples of the following:
+- Constructing a complex query
+- Looping through the list of invoices in a response
+- Getting detailed invoice information (invoice lines)
+- Reading data from an OR object
+- Obtaining a field that is not guaranteed in the response (field may not exist)
+<p>
+View directory: <a href="qbdt/vb/qbfc/invoicequery">qbdt/vb/qbfc/invoicequery</a><br>
+Open Project: <a href="qbdt/vb/qbfc/invoicequery/InvoiceQuery.vbp">qbdt/vb/qbfc/invoicequery/InvoiceQuery.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/invoicequery/Display.frm">Display.frm</a></li>
+<li><a href="qbdt/vb/qbfc/invoicequery/InvoiceQuery.exe">InvoiceQuery.exe</a></li>
+<li><a href="qbdt/vb/qbfc/invoicequery/InvoiceQuery.vbp">InvoiceQuery.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/invoicequery/Query.frm">Query.frm</a></li>
+</ul>
+<p><p>
+<a name="itemquery (VB) (qbfc) (desktop)"></a><h3>itemquery (desktop)</h3>
+ItemQuery demonstrates querying items.  Querying items is similar to querying terms or entities in the sense that the returned detail object is a list of 'OR' objects  - ORItemRet in this case.
+
+It includes examples of the following:
+- Constructing a query
+- Looping through the list of items in a response
+- Reading data from an OR object
+- Obtaining returned fields and checking for fields that may not exist in the response
+<p>
+View directory: <a href="qbdt/vb/qbfc/itemquery">qbdt/vb/qbfc/itemquery</a><br>
+Open Project: <a href="qbdt/vb/qbfc/itemquery/ItemQuery.vbp">qbdt/vb/qbfc/itemquery/ItemQuery.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbfc/itemquery/ItemQuery.exe">ItemQuery.exe</a></li>
+<li><a href="qbdt/vb/qbfc/itemquery/ItemQuery.vbp">ItemQuery.vbp</a></li>
+<li><a href="qbdt/vb/qbfc/itemquery/MainModule.bas">MainModule.bas</a></li>
+<li><a href="qbdt/vb/qbfc/itemquery/ShowItems.frm">ShowItems.frm</a></li>
+</ul>
+<p><p>
+<a name="AddReceivePayment (VB) (array(0x1fce304)) (desktop)"></a><h3>AddReceivePayment (desktop)</h3>
+This application allows you to choose a customer, an invoice, an optional Credit Memo, and apply a payment.<p>
+View directory: <a href="qbdt/vb/qbxml/AddReceivePayment">qbdt/vb/qbxml/AddReceivePayment</a><br>
+Open Project: <a href="qbdt/vb/qbxml/AddReceivePayment/ReceivePayment.vbp">qbdt/vb/qbxml/AddReceivePayment/ReceivePayment.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/AddReceivePayment/MainForm.frm">MainForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/AddReceivePayment/MainForm.frx">MainForm.frx</a></li>
+<li><a href="qbdt/vb/qbxml/AddReceivePayment/ReceivePayment.exe">ReceivePayment.exe</a></li>
+<li><a href="qbdt/vb/qbxml/AddReceivePayment/ReceivePayment.vbp">ReceivePayment.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/AddReceivePayment/qbooks.bas">qbooks.bas</a></li>
+</ul>
+<p><p>
+<a name="CDN_InvoiceAdd (VB) (qbxml) (desktop)"></a><h3>CDN_InvoiceAdd (desktop)</h3>
+This sample VB program lets you add an invoice and runs against QuickBooks 2003 Canadian version. It uses the item types Item Service, Item Non Inventory and Item Other Charge.   This sample verifies whether the current version of QuickBooks is compatible with the sample application. <p>
+View directory: <a href="qbdt/vb/qbxml/CDN_InvoiceAdd">qbdt/vb/qbxml/CDN_InvoiceAdd</a><br>
+Open Project: <a href="qbdt/vb/qbxml/CDN_InvoiceAdd/InvoiceSample.vbp">qbdt/vb/qbxml/CDN_InvoiceAdd/InvoiceSample.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/ArAccountInfo.bas">ArAccountInfo.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/CurrencyInfo.bas">CurrencyInfo.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/CustomerInfo.bas">CustomerInfo.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/Invoice.frm">Invoice.frm</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/InvoiceSample.exe">InvoiceSample.exe</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/InvoiceSample.vbp">InvoiceSample.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/InvoiceSample.vbw">InvoiceSample.vbw</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/ItemsInfo.bas">ItemsInfo.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/QBooks.bas">QBooks.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/ReadMe.txt">ReadMe.txt</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/SaveInvoice.bas">SaveInvoice.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/TaxCodeInfo.bas">TaxCodeInfo.bas</a></li>
+<li><a href="qbdt/vb/qbxml/CDN_InvoiceAdd/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="DataEvents (VB) (qbxml) (desktop)"></a><h3>DataEvents (desktop)</h3>
+
+This application demonstrates the use of DataEvents to keep a simple "database"
+(implemented as a Windows ListView common control) of customers in sync with
+QuickBooks' customer list using DataEvents, and shows the *careful*
+use of Data Extensions as a direct result of events received.  Please see the
+code commentary for details regarding the discretion and care required if you
+plan to do anything other than Query data as a direct result of an event.
+
+This application is made up of 3 executables:
+
+QBDataEventSubscriber -- Subscribes the application to receive data events
+                         from QuickBooks.  This is the sort of application you
+                         would build as a Custom Action for an MSI installer to
+                         subscribe your application to events when you 
+			 install your app and unsubscribe when your app 
+			 is uninstalled.
+
+			 You MUST run this executable to subscribe the 
+			 EventManager to events for the others to do 
+			 anything interesting.
+
+QBDataEventManager    -- Handles events from QuickBooks and supplies them 
+                         to the main application via a second COM method 
+                         -- also has a UI to display the incoming event XML.
+
+			 This executable will be started automatically by
+			 QuickBooks (or the DataEventApp) as it is a COM
+			 server.
+
+			 NOTE: This executable must be registered as a COM
+			 server prior to use and before you can successfully
+			 run the QBDataEventSubscriber.  Simply run 
+			 QBDataEventManager.exe /REGSERVER.
+
+QBDataEventApp        -- Provides the UI for this application, all this
+                         application does is display a form with a list 
+			 view of the customer list from QuickBooks, as 
+			 customers are changed, added, and deleted in 
+			 QuickBooks (or by other applications) those 
+			 changes are reflected in the list view.  Changed
+			 customers turn red, new customers are blue, 
+			 deleted customers are yellow and the name is 
+			 replaced by #deleted.
+
+			 The first time you run this application it will
+			 take a little while as it will create a data 
+			 extension and each customer record will be 
+			 extended to store the position the customer
+			 record holds in the ListView, from then on that
+			 position belongs to that customer!  This means that
+			 as customers are added and deleted in QuickBooks
+			 records will not be in alphabetical order in the
+			 listview and records deleted since the first time
+			 the application ran will be shown in the list 
+			 view as #deleted. 
+
+In short, to successfully run this sample:
+
+ a. Register the event manager with COM
+ b. Run the DataEventSubscriber to subscribe to events
+ c. Restart QB company file, so that the subscription is acknowledged
+ d. Start QBDataEventApp.exe
+ e. Modify/add/delete customers in QB and notice that they get updated 
+    in QBDataEventApp as well.
+
+  <p>
+This sample consists of the following sub-samples:<br>
+<ul>
+<li><a href="#QBDataEventSubscriber (VB) (qbxml) (desktop)">QBDataEventSubscriber</a></li>
+<li><a href="#QBDataEventManager (VB) (qbxml) (desktop)">QBDataEventManager</a></li>
+<li><a href="#QBDataEventApp (VB) (qbxml) (desktop)">QBDataEventApp</a></li>
+</ul>
+<a name="QBDataEventApp (vb) (qbxml) (desktop)"></a><h3>QBDataEventApp (desktop)</h3>
+
+Provides the UI for this sample, all this application does is display 
+a form with a list view of the customer list from QuickBooks, as 
+customers are changed, added, and deleted in QuickBooks (or by other 
+applications) those changes are reflected in the list view.  Changed
+customers turn red, new customers are blue, deleted customers are yellow 
+and the name is replaced by #deleted.
+
+The first time you run this application it will take a little while as 
+it will create a data extension and each customer record will be 
+extended to store the position the customer record holds in the ListView, 
+(If you have already subscribed the event handler you will see an
+event for each customer being extended) from then on that
+position belongs to that customer!  This means that as customers are added 
+and deleted in QuickBooks records will not be in alphabetical order in the
+listview and records deleted since the first time the application ran will 
+be shown in the list view as #deleted. 
+  <p>
+View directory: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp">qbdt/vb/qbxml/DataEvents/QBDataEventApp</a><br>
+Open Project: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventApp.vbp">qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventApp.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/CCustomer.cls">CCustomer.cls</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventApp.exe">QBDataEventApp.exe</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventApp.vbp">QBDataEventApp.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventApp.vbw">QBDataEventApp.vbw</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventApp/QBDataEventForm.frm">QBDataEventForm.frm</a></li>
+</ul>
+<p><p>
+<a name="QBDataEventManager (vb) (qbxml) (desktop)"></a><h3>QBDataEventManager (desktop)</h3>
+
+Handles events from QuickBooks and supplies them to the main application 
+via a second COM method -- also has a UI to display the incoming event XML.
+
+This executable will be started automatically by QuickBooks (or the 
+DataEventApp) as it is a COM server.
+
+NOTE: This executable must be registered as a COM server prior to use 
+      and before you can successfully run the QBDataEventSubscriber.  Simply 
+      run QBDataEventManager.exe /REGSERVER.
+  <p>
+View directory: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager">qbdt/vb/qbxml/DataEvents/QBDataEventManager</a><br>
+Open Project: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManager.vbp">qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManager.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManager.exe">QBDataEventManager.exe</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManager.vbp">QBDataEventManager.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManager.vbw">QBDataEventManager.vbw</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManagerDisplay.frm">QBDataEventManagerDisplay.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBDataEventManagerDisplay.frx">QBDataEventManagerDisplay.frx</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBEventHandler.cls">QBEventHandler.cls</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventManager/QBEventQueue.cls">QBEventQueue.cls</a></li>
+</ul>
+<p><p>
+<a name="QBDataEventSubscriber (vb) (qbxml) (desktop)"></a><h3>QBDataEventSubscriber (desktop)</h3>
+
+Subscribes the DataEvents sample to receive data events from QuickBooks.  
+This is the sort of application you would build as a Custom Action for 
+an MSI installer to subscribe your application to events when you 
+install your app and unsubscribe when your app is uninstalled.
+
+You MUST run this executable to subscribe the EventManager to events for 
+the others to do anything interesting.
+  <p>
+View directory: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber">qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber</a><br>
+Open Project: <a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/QBDataEventSubscriber.vbp">qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/QBDataEventSubscriber.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/QBDataEventSubscriber.exe">QBDataEventSubscriber.exe</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/QBDataEventSubscriber.vbp">QBDataEventSubscriber.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/QBDataEventSubscriber.vbw">QBDataEventSubscriber.vbw</a></li>
+<li><a href="qbdt/vb/qbxml/DataEvents/QBDataEventSubscriber/SubscriberForm.frm">SubscriberForm.frm</a></li>
+</ul>
+<p><p>
+<a name="DataExtSample (VB) (qbxml) (desktop)"></a><h3>DataExtSample (desktop)</h3>
+Data Extension Sample program displays the currently defined data extension definitions and custom fields, allows the user to add more data extension definitions and allows then to add data extension values to customer records or modify existing data extension values for customers.<p>
+View directory: <a href="qbdt/vb/qbxml/DataExtSample">qbdt/vb/qbxml/DataExtSample</a><br>
+Open Project: <a href="qbdt/vb/qbxml/DataExtSample/DataExtSample.vbp">qbdt/vb/qbxml/DataExtSample/DataExtSample.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/DataExtSample/DataExtSample.exe">DataExtSample.exe</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/DataExtSample.vbp">DataExtSample.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmAddDataExtDef.frm">frmAddDataExtDef.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmAddDataExtDef.frx">frmAddDataExtDef.frx</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmAddDataExtension.frm">frmAddDataExtension.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmAddDataExtension.frx">frmAddDataExtension.frx</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmDataExtSample.frm">frmDataExtSample.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmDataExtSample.frx">frmDataExtSample.frx</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmModDataExtension.frm">frmModDataExtension.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmModDataExtension.frx">frmModDataExtension.frx</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/frmqbXMLDisplay.frm">frmqbXMLDisplay.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DataExtSample/modDataExtSample.bas">modDataExtSample.bas</a></li>
+</ul>
+<p><p>
+<a name="DepositAdd (VB) (qbxml) (desktop)"></a><h3>DepositAdd (desktop)</h3>
+Lists funds available for deposit and allows them to be added to QuickBooks.<p>
+View directory: <a href="qbdt/vb/qbxml/DepositAdd">qbdt/vb/qbxml/DepositAdd</a><br>
+Open Project: <a href="qbdt/vb/qbxml/DepositAdd/DepositAdd.vbp">qbdt/vb/qbxml/DepositAdd/DepositAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/DepositAdd/DepositAdd.exe">DepositAdd.exe</a></li>
+<li><a href="qbdt/vb/qbxml/DepositAdd/DepositAdd.vbp">DepositAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/DepositAdd/frmDepositAdd.frm">frmDepositAdd.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DepositAdd/frmFundsForDeposit.frm">frmFundsForDeposit.frm</a></li>
+<li><a href="qbdt/vb/qbxml/DepositAdd/modDepositAdd.bas">modDepositAdd.bas</a></li>
+</ul>
+<p><p>
+<a name="InventoryAdjust (VB) (qbxml) (desktop)"></a><h3>InventoryAdjust (desktop)</h3>
+This sample VB application allows the user to select an ItemInventory item, Customer, Class and Account, then define changes to the InventoryItem. 
+
+The InventoryItem can then be added to the currently open QuickBooks company.<p>
+View directory: <a href="qbdt/vb/qbxml/InventoryAdjust">qbdt/vb/qbxml/InventoryAdjust</a><br>
+Open Project: <a href="qbdt/vb/qbxml/InventoryAdjust/InventoryAdjustProj.vbp">qbdt/vb/qbxml/InventoryAdjust/InventoryAdjustProj.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/InventoryAdjust/InventoryAdjust.exe">InventoryAdjust.exe</a></li>
+<li><a href="qbdt/vb/qbxml/InventoryAdjust/InventoryAdjust.frm">InventoryAdjust.frm</a></li>
+<li><a href="qbdt/vb/qbxml/InventoryAdjust/InventoryAdjust.frx">InventoryAdjust.frx</a></li>
+<li><a href="qbdt/vb/qbxml/InventoryAdjust/InventoryAdjustProj.vbp">InventoryAdjustProj.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/InventoryAdjust/QuickBooks.bas">QuickBooks.bas</a></li>
+</ul>
+<p><p>
+<a name="SDKTestPlus3 (VB) (qbxml) (desktop)"></a><h3>SDKTestPlus3 (desktop)</h3>
+
+  Enhanced version of SDKTest Shows how to integrate with QuickBooks SDK.  
+  Allows user to select a qbXML request file and submit it to QuickBooks 
+  for processing.  Allows the selection of a company file name for 
+  BeginSession, control over the application name sent to QuickBooks, and
+  supports sending both data requests and subscription requests.  An 
+  excellent tool for diagnosing SDK problems.
+  <p>
+View directory: <a href="qbdt/vb/qbxml/SDKTestPlus3">qbdt/vb/qbxml/SDKTestPlus3</a><br>
+Open Project: <a href="qbdt/vb/qbxml/SDKTestPlus3/SDKTestPlus3.vbp">qbdt/vb/qbxml/SDKTestPlus3/SDKTestPlus3.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/SDKTestPlus3.exe">SDKTestPlus3.exe</a></li>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/SDKTestPlus3.vbp">SDKTestPlus3.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/SDKTestPlus3.vbw">SDKTestPlus3.vbw</a></li>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/frmDisplay.frm">frmDisplay.frm</a></li>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/frmSDKTestPlus3.frm">frmSDKTestPlus3.frm</a></li>
+<li><a href="qbdt/vb/qbxml/SDKTestPlus3/modSDKTestPlus3.bas">modSDKTestPlus3.bas</a></li>
+</ul>
+<p><p>
+<a name="US_CDN_CustomerAdd (VB) (qbxml) (desktop)"></a><h3>US_CDN_CustomerAdd (desktop)</h3>
+This VB sample runs against either QuickBooks 2003 US or
+Canada.  It determines which version of QuickBooks is running and then brings up a form which has been modified depending on the nationality of QuickBooks.  The user may then add customers to that company file by providing customer name and billing address information.<p>
+View directory: <a href="qbdt/vb/qbxml/US_CDN_CustomerAdd">qbdt/vb/qbxml/US_CDN_CustomerAdd</a><br>
+Open Project: <a href="qbdt/vb/qbxml/US_CDN_CustomerAdd/US_CDN_CustomerAdd.vbp">qbdt/vb/qbxml/US_CDN_CustomerAdd/US_CDN_CustomerAdd.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/US_CDN_CustomerAdd/US_CDN_CustomerAdd.exe">US_CDN_CustomerAdd.exe</a></li>
+<li><a href="qbdt/vb/qbxml/US_CDN_CustomerAdd/US_CDN_CustomerAdd.vbp">US_CDN_CustomerAdd.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/US_CDN_CustomerAdd/frmUS_CDN_CustomerAdd.frm">frmUS_CDN_CustomerAdd.frm</a></li>
+<li><a href="qbdt/vb/qbxml/US_CDN_CustomerAdd/modUS_CDN_CustomerAdd.bas">modUS_CDN_CustomerAdd.bas</a></li>
+</ul>
+<p><p>
+<a name="addcustomer (VB) (qbxml) (desktop)"></a><h3>addcustomer (desktop)</h3>
+This application presents a simple UI which can be used to add a customer to QuickBooks.<p>
+View directory: <a href="qbdt/vb/qbxml/addcustomer">qbdt/vb/qbxml/addcustomer</a><br>
+Open Project: <a href="qbdt/vb/qbxml/addcustomer/AddCustomer.vbp">qbdt/vb/qbxml/addcustomer/AddCustomer.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/addcustomer/AddCust.frm">AddCust.frm</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/AddCust.frx">AddCust.frx</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/AddCustomer.exe">AddCustomer.exe</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/AddCustomer.vbp">AddCustomer.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/DisplayXML.frm">DisplayXML.frm</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/customers.bmp">customers.bmp</a></li>
+<li><a href="qbdt/vb/qbxml/addcustomer/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="customtxndetreport (VB) (qbxml) (desktop)"></a><h3>customtxndetreport (desktop)</h3>
+This VB sample program generates a custom transaction detail (CustomTxnDetail) report from the selected company and using the specified filters.<p>
+View directory: <a href="qbdt/vb/qbxml/customtxndetreport">qbdt/vb/qbxml/customtxndetreport</a><br>
+Open Project: <a href="qbdt/vb/qbxml/customtxndetreport/CustomTxnDetail.vbp">qbdt/vb/qbxml/customtxndetreport/CustomTxnDetail.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/BigDisplayForm.frm">BigDisplayForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/CustomTxnDetail.exe">CustomTxnDetail.exe</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/CustomTxnDetail.vbp">CustomTxnDetail.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/DisplayForm.frm">DisplayForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/ParserHelper.cls">ParserHelper.cls</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/QBooks.bas">QBooks.bas</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/UIForm.frm">UIForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/customtxndetreport/UIForm.frx">UIForm.frx</a></li>
+</ul>
+<p><p>
+<a name="deletecustomer (VB) (qbxml) (desktop)"></a><h3>deletecustomer (desktop)</h3>
+Shows how to delete a customer via qbXML.<p>
+View directory: <a href="qbdt/vb/qbxml/deletecustomer">qbdt/vb/qbxml/deletecustomer</a><br>
+Open Project: <a href="qbdt/vb/qbxml/deletecustomer/DeleteCustomerSample.vbp">qbdt/vb/qbxml/deletecustomer/DeleteCustomerSample.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/deletecustomer/DeleteCustomerSample.exe">DeleteCustomerSample.exe</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/DeleteCustomerSample.vbp">DeleteCustomerSample.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/DisplayXML.frm">DisplayXML.frm</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/Main.frm">Main.frm</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/Main.frx">Main.frx</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/customers.bmp">customers.bmp</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/qbModule.bas">qbModule.bas</a></li>
+<li><a href="qbdt/vb/qbxml/deletecustomer/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="expensereport (VB) (qbxml) (desktop)"></a><h3>expensereport (desktop)</h3>
+Prints an ExpenseByVendorSummary report illustrating how to calculate the percentage columns since the SDK does not directly allow access to these.<p>
+View directory: <a href="qbdt/vb/qbxml/expensereport">qbdt/vb/qbxml/expensereport</a><br>
+Open Project: <a href="qbdt/vb/qbxml/expensereport/ExpenseReport.vbp">qbdt/vb/qbxml/expensereport/ExpenseReport.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/expensereport/DisplayForm.frm">DisplayForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/ExpenseReport.exe">ExpenseReport.exe</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/ExpenseReport.vbp">ExpenseReport.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/ParserHelper.cls">ParserHelper.cls</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/QBooks.bas">QBooks.bas</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/UIForm.frm">UIForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/expensereport/blank.html">blank.html</a></li>
+</ul>
+<p><p>
+<a name="modifycustomer (VB) (qbxml) (desktop)"></a><h3>modifycustomer (desktop)</h3>
+In this VB sample application you specify the company, then are prompted to select a customer from the displayed list of customers. After you select a customer name, a window is provided where you can modify its various fields.<p>
+View directory: <a href="qbdt/vb/qbxml/modifycustomer">qbdt/vb/qbxml/modifycustomer</a><br>
+Open Project: <a href="qbdt/vb/qbxml/modifycustomer/ModifyCustomer.vbp">qbdt/vb/qbxml/modifycustomer/ModifyCustomer.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/modifycustomer/Customer.cls">Customer.cls</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/CustomerList.frm">CustomerList.frm</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/CustomerMod.frm">CustomerMod.frm</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/Display.frm">Display.frm</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/Main.frm">Main.frm</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/ModifyCustomer.exe">ModifyCustomer.exe</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/ModifyCustomer.vbp">ModifyCustomer.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/qbXMLRPWrapper.cls">qbXMLRPWrapper.cls</a></li>
+<li><a href="qbdt/vb/qbxml/modifycustomer/qbbanner.bmp">qbbanner.bmp</a></li>
+</ul>
+<p><p>
+<a name="SDKTest (VB) (qbxml) (desktop)"></a><h3>SDKTest (desktop)</h3>
+Shows how to integrate with QuickBooks SDK.  Allows user to select a qbXML request file and submit it to QuickBooks for processing.<p>
+View directory: <a href="qbdt/vb/qbxml/sdktest">qbdt/vb/qbxml/sdktest</a><br>
+Open Project: <a href="qbdt/vb/qbxml/sdktest/SDKTest.vbp">qbdt/vb/qbxml/sdktest/SDKTest.vbp</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="qbdt/vb/qbxml/sdktest/Log.bas">Log.bas</a></li>
+<li><a href="qbdt/vb/qbxml/sdktest/SDKTest.exe">SDKTest.exe</a></li>
+<li><a href="qbdt/vb/qbxml/sdktest/SDKTest.vbp">SDKTest.vbp</a></li>
+<li><a href="qbdt/vb/qbxml/sdktest/UIForm.frm">UIForm.frm</a></li>
+<li><a href="qbdt/vb/qbxml/sdktest/qbooks.bas">qbooks.bas</a></li>
+</ul>
+<p><p>
+<h2>XML Samples</h2>
+<a name="AccountQueryRq (xml) (qbxml) (any)"></a><h3>AccountQueryRq (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/AccountQueryRq.xml">AccountQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="BillQueryRq (xml) (qbxml) (any)"></a><h3>BillQueryRq (any)</h3>
+This XML file contains a single request to query bills.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/BillQueryRq.xml">BillQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="CheckQueryRq (xml) (qbxml) (any)"></a><h3>CheckQueryRq (any)</h3>
+This XML file contains a single request to query all checks.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/CheckQueryRq.xml">CheckQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="CompanyQueryRq (xml) (qbxml) (any)"></a><h3>CompanyQueryRq (any)</h3>
+This XML file contains a single request to query all companies.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/CompanyQueryRq.xml">CompanyQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="EmployeeQueryRq (xml) (qbxml) (any)"></a><h3>EmployeeQueryRq (any)</h3>
+This XML file contains a single request to query all employees.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/EmployeeQueryRq.xml">EmployeeQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="EntityQueryRq (xml) (qbxml) (any)"></a><h3>EntityQueryRq (any)</h3>
+This XML file contains a single request to return all entities.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/EntityQueryRq.xml">EntityQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="HostQueryRq (xml) (qbxml) (any)"></a><h3>HostQueryRq (any)</h3>
+This XML file contains a single request to obtain QB version and support
+information about the host running QuickBooks.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/HostQueryRq.xml">HostQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="InvoiceQueryRq (xml) (qbxml) (any)"></a><h3>InvoiceQueryRq (any)</h3>
+This XML file contains a single request to get all invoices.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/InvoiceQueryRq.xml">InvoiceQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemInventoryQueryRq (xml) (qbxml) (any)"></a><h3>ItemInventoryQueryRq (any)</h3>
+This XML file contains a single request to return all of the items
+in inventory.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/ItemInventoryQueryRq.xml">ItemInventoryQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemSalesTaxQueryRq (xml) (qbxml) (any)"></a><h3>ItemSalesTaxQueryRq (any)</h3>
+This XML file contains a single request to return the configured sales
+tax schedules.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/ItemSalesTaxQueryRq.xml">ItemSalesTaxQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemServiceQueryRq (xml) (qbxml) (any)"></a><h3>ItemServiceQueryRq (any)</h3>
+This XML file contains a single request to return all service related
+items.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/ItemServiceQueryRq.xml">ItemServiceQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="PayrollItemWageQueryRq (xml) (qbxml) (any)"></a><h3>PayrollItemWageQueryRq (any)</h3>
+This XML file contains a single request to return all of the payroll wage.
+items
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/PayrollItemWageQueryRq.xml">PayrollItemWageQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="PreferencesQueryRq (xml) (qbxml) (any)"></a><h3>PreferencesQueryRq (any)</h3>
+This XML file contains a single request to return all preferences data.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/PreferencesQueryRq.xml">PreferencesQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ReceivePaymentQueryRq (xml) (qbxml) (any)"></a><h3>ReceivePaymentQueryRq (any)</h3>
+This XML file contains a single request to return all of the payments.
+
+Note that this request can return a great deal of data, even in the demo
+system.  This is an excellent opportunity to experiment with date
+parameters or other filtering options.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/ReceivePaymentQueryRq.xml">ReceivePaymentQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="SalesRepQueryRq (xml) (qbxml) (any)"></a><h3>SalesRepQueryRq (any)</h3>
+This XML file contains a single request to return all sales report data.
+<p>
+View directory: <a href="xmlfiles">xmlfiles</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/SalesRepQueryRq.xml">SalesRepQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountAddRq (xml) (qbxml) (any)"></a><h3>AccountAddRq (any)</h3>
+This XML file contains a single request to add an account.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountAddRq.xml">AccountAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_1 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_1 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_1.xml">AccountQueryRq_1.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_2 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_2 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_2.xml">AccountQueryRq_2.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_3 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_3 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_3.xml">AccountQueryRq_3.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_4 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_4 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_4.xml">AccountQueryRq_4.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_5 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_5 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_5.xml">AccountQueryRq_5.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_6 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_6 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_6.xml">AccountQueryRq_6.xml</a></li>
+</ul>
+<p><p>
+<a name="AccountQueryRq_7 (xml) (qbxml) (any)"></a><h3>AccountQueryRq_7 (any)</h3>
+This XML file contains a single request to query all accounts. It does not
+filter the output so lots of accounts could cause this to be a bit slow.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AccountQueryRq_7.xml">AccountQueryRq_7.xml</a></li>
+</ul>
+<p><p>
+<a name="AddInvoiceSpecifyTemplate (xml) (qbxml) (any)"></a><h3>AddInvoiceSpecifyTemplate (any)</h3>
+This XML file contains one request to add an invoice specifying the
+template to be used for the invoice.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/AddInvoiceSpecifyTemplate.xml">AddInvoiceSpecifyTemplate.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomDetailReport (xml) (qbxml) (any)"></a><h3>CustomDetailReport (any)</h3>
+This XML file contains a single request to generate a custom detail report
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomDetailReport.xml">CustomDetailReport.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomFieldAddValue (xml) (qbxml) (any)"></a><h3>CustomFieldAddValue (any)</h3>
+This XML file contains a single request to add a value to a custom field
+for a pre-existing customer in the QuickBooks 2004 sample product-based
+company file.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomFieldAddValue.xml">CustomFieldAddValue.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomFieldDelValue (xml) (qbxml) (any)"></a><h3>CustomFieldDelValue (any)</h3>
+This XML file contains a single request to delete (clear) a value in a
+pre-existing custom field for a customer in the QuickBooks 2004 sample
+product-based company file.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomFieldDelValue.xml">CustomFieldDelValue.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomFieldModValue (xml) (qbxml) (any)"></a><h3>CustomFieldModValue (any)</h3>
+This XML file contains a single request to modify a value in a
+pre-existing custom field for a customer in the QuickBooks 2004 sample
+product-based company file.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomFieldModValue.xml">CustomFieldModValue.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomerAddRq (xml) (qbxml) (any)"></a><h3>CustomerAddRq (any)</h3>
+This XML file contains two customer add requests. The first request
+adds a top-level customer, and the second request adds a job.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomerAddRq.xml">CustomerAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomerQuery (xml) (qbxml) (any)"></a><h3>CustomerQuery (any)</h3>
+This XML file contains a single request to query for customers. Since
+no filters are used in this request all customers will be returned.
+This could be slow on company files with large numbers of customers.
+You should use Iterators or filters to reduce the amount of data returned.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomerQuery.xml">CustomerQuery.xml</a></li>
+</ul>
+<p><p>
+<a name="CustomerQuery_metadata (xml) (qbxml) (any)"></a><h3>CustomerQuery_metadata (any)</h3>
+This XML file contains a single request to query for customers.
+Only the count of customers will be returned in the response.
+
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/CustomerQuery_metadata.xml">CustomerQuery_metadata.xml</a></li>
+</ul>
+<p><p>
+<a name="DepositAddRq (xml) (qbxml) (any)"></a><h3>DepositAddRq (any)</h3>
+This XML file contains a single request to add a deposit to a checking
+account. This sample requires there to be an account named "Checking".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/DepositAddRq.xml">DepositAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="DisplayList (xml) (qbxml) (any)"></a><h3>DisplayList (any)</h3>
+This request allows an application to cause QuickBooks to bring up the
+edit window for an new entity.  An application can use this feature if the
+application's design requires the creation of a new entity, but the
+frequency of this operation is low enough that implementing the UI for the
+creation doesn't make sense.
+
+This XML file contains a single request to display the Other Name add UI.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/DisplayList.xml">DisplayList.xml</a></li>
+</ul>
+<p><p>
+<a name="DisplayTxn (xml) (qbxml) (any)"></a><h3>DisplayTxn (any)</h3>
+This request allows an application to cause QuickBooks to bring up the
+edit window for an existing transaction.  An application can use this if
+the application's design allows or requires transaction modifications to
+be performed in the QuickBooks UI.  It can also be used to present an
+existing transaction so that operations not supported by the SDK can be
+performed by the user in the QuickBooks UI.  For example, one cannot cause
+items to be received against a Purchase Order by adding a bill from an
+application through the SDK.  An application could instead direct the user
+create a bill or item receipt against a Purchase Order and bring up the PO
+so the user only need right click on the PO to perform the operation.
+
+This XML file contains a single request to display a purchase order that
+exists in the sample product-based company file.  QuickBooks must have the
+sample product-based company file open in order for this request to work.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/DisplayTxn.xml">DisplayTxn.xml</a></li>
+</ul>
+<p><p>
+<a name="ErrRecovery1 (xml) (qbxml) (any)"></a><h3>ErrRecovery1 (any)</h3>
+This file contains an XML request to add a check.
+It also passes in a new message set ID so information for this session will
+be saved. If everything proceeds normally, the check request will be
+processed and the session status will be saved. In the event of a
+failure (or just to test) this XML file may be sent to QuickBooks
+a second time and status will be returned for the message set named
+by the ID "AB1F2395".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+Next Request ErrRecovery2.xml
+<br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ErrRecovery1.xml">ErrRecovery1.xml</a></li>
+</ul>
+<p><p>
+<a name="ErrRecovery2 (xml) (qbxml) (any)"></a><h3>ErrRecovery2 (any)</h3>
+This XML file contains no requests. It asks QuickBooks for status
+for a message set that it sent earlier, named by "AB1F2395".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+Previous Request: ErrRecovery1.xml
+<br>
+Next Request ErrRecovery3.xml
+<br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ErrRecovery2.xml">ErrRecovery2.xml</a></li>
+</ul>
+<p><p>
+<a name="ErrRecovery3 (xml) (qbxml) (any)"></a><h3>ErrRecovery3 (any)</h3>
+This XML file contains no requests. It asks QuickBooks to delete
+session status saved for the session with the ID of "AB1F2395".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+Previous Request: ErrRecovery2.xml
+<br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ErrRecovery3.xml">ErrRecovery3.xml</a></li>
+</ul>
+<p><p>
+<a name="HostQuery (xml) (qbxml) (any)"></a><h3>HostQuery (any)</h3>
+This XML file contains a single request to obtain QB version and support
+information about the host running QuickBooks.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/HostQuery.xml">HostQuery.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemServiceAddRq (xml) (qbxml) (any)"></a><h3>ItemServiceAddRq (any)</h3>
+This XML contains a request to add a particular service item.
+
+This script depends on there being an account named "Construction".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ItemServiceAddRq.xml">ItemServiceAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ItemsAddRq (xml) (qbxml) (any)"></a><h3>ItemsAddRq (any)</h3>
+This XML file contains four add requests for items, an inventory item,
+non-inventory item, service item and a sales tax item.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ItemsAddRq.xml">ItemsAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="JournalEntryAddRq (xml) (qbxml) (any)"></a><h3>JournalEntryAddRq (any)</h3>
+This XML file contains a single request to add a journal entry
+transaction.
+
+This example depends on having Bank accounts named "Bank Account 1"
+and "Bank Account 2" and the classes "Class1" and "Class2".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/JournalEntryAddRq.xml">JournalEntryAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ProfitAndLossStdReport (xml) (qbxml) (any)"></a><h3>ProfitAndLossStdReport (any)</h3>
+This XML file contains a single request to generate a standard P&L,
+summarized by month for a specified date range.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ProfitAndLossStdReport.xml">ProfitAndLossStdReport.xml</a></li>
+</ul>
+<p><p>
+<a name="QueryFilterRq (xml) (qbxml) (any)"></a><h3>QueryFilterRq (any)</h3>
+This XML file contains several query requests. One request asks for
+the Other Expenses account. Another request asks for Customers based on
+their names.
+
+This examples depends on the following:
+'Other Expenses' account
+'Joe Customer' customer
+'Equipment Installation' job
+
+In order for this query to return the expected data you must run the
+sample XML file CustomerAddRq.xml
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+Previous Request: CustomerAddRq.xml
+<br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/QueryFilterRq.xml">QueryFilterRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ReceivePaymentAddRq (xml) (qbxml) (any)"></a><h3>ReceivePaymentAddRq (any)</h3>
+This XML file contains a single request to add a receive payment.
+
+This sample requires at least a 1.1 version DOCTYPE since this request
+is not implemented in earlier versions
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ReceivePaymentAddRq.xml">ReceivePaymentAddRq.xml</a></li>
+</ul>
+<p><p>
+<a name="ReceivePaymentToDepositQueryRq (xml) (qbxml) (any)"></a><h3>ReceivePaymentToDepositQueryRq (any)</h3>
+This is a helper request that provides back a response that contains
+a list of payments that are available to deposit.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/ReceivePaymentToDepositQueryRq.xml">ReceivePaymentToDepositQueryRq.xml</a></li>
+</ul>
+<p><p>
+<a name="TemplateQuery (xml) (qbxml) (any)"></a><h3>TemplateQuery (any)</h3>
+This XML file contains a single request to query for the list of
+templates defined for the currently open company file.
+
+This is the request an application would use to determine which templates
+are defined in a company file.  An application might ask a user to import
+or download a template if it can't find a particular template in the
+query response.  Another strategy would be to have the user designate a
+template to be used when the application creates a particular transaction.
+
+This xml file will only work when passed through the QBXMLRP2 request
+processor.  The QBXMLRP request processor does not support SDK 3.0 version
+messages.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/TemplateQuery.xml">TemplateQuery.xml</a></li>
+</ul>
+<p><p>
+<a name="TxnDisplayAdd_Invoice (xml) (qbxml) (any)"></a><h3>TxnDisplayAdd_Invoice (any)</h3>
+Sample illustrating the transaction display add request for invoice,
+prefilling the new invoice with an existing customer name. The end user
+has to tab out of the new invoice form in QuickBooks to complete
+the prefilling, just as the user would when working purely in QuickBooks.
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/TxnDisplayAdd_Invoice.xml">TxnDisplayAdd_Invoice.xml</a></li>
+</ul>
+<p><p>
+<a name="VendorAddRq (xml) (qbxml) (any)"></a><h3>VendorAddRq (any)</h3>
+This XML file contains one add requests for a vendor.
+
+This sample depends on a vendor type called "Materials".
+<p>
+View directory: <a href="xmlfiles/legacy">xmlfiles/legacy</a><br>
+<p>
+Individual files:<br>
+<ul>
+<li><a href="xmlfiles/legacy/VendorAddRq.xml">VendorAddRq.xml</a></li>
+</ul>
+<p><p>
+            </div>
+            <div id="footer">
+                <p></p>
+			    <span style="color:DimGray; font-size:x-small;">
+			        &copy;2001-2013 Intuit Inc., All Rights Reserved
+			    </span>
+		    </div>
+        </div>
+	</BODY>
+</html>
+

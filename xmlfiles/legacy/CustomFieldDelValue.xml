@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- CustomFieldDelValue.xml                                                    -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the custom field value delete request.        -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to delete (clear) a value in a     -->
+<!-- pre-existing custom field for a customer in the QuickBooks 2004 sample     -->
+<!-- product-based company file.                                                -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <DataExtDelRq requestID="0">
+         <DataExtDel>
+            <OwnerID>0</OwnerID>
+            <DataExtName>Spouse's Name</DataExtName>
+            <ListDataExtType>Customer</ListDataExtType>
+            <ListObjRef>
+               <FullName>Ecker Designs</FullName>
+            </ListObjRef>
+         </DataExtDel>
+      </DataExtDelRq>
+   </QBXMLMsgsRq>
+</QBXML>

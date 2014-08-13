@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<?qbxml version="3.0" ?>
+<QBXML>
+    <QBXMLEvents>
+        <UIExtensionEvent>
+            <SubscriberID>{70DC83AB-2EC1-478F-9204-C37485AD8E3C}</SubscriberID>
+            <CompanyFilePath>E:\qb2004_ThunderDev\data\test.QBW</CompanyFilePath>
+            <HostInfo>
+                <ProductName>QuickBooks Pro 2004</ProductName>
+                <MajorVersion>13</MajorVersion>
+                <MinorVersion>0</MinorVersion>
+                <Country>US</Country>
+            </HostInfo>
+            <EventTime>2003-09-05T17:14:35-08:00</EventTime>
+            <EventTag>ID-short</EventTag>
+        </UIExtensionEvent>
+    </QBXMLEvents>
+</QBXML>
+--------------------------------------------------------
+<?xml version="1.0" ?>
+<?qbxml version="3.0" ?>
+<QBXML>
+    <QBXMLEvents>
+        <UIExtensionEvent>
+            <SubscriberID>{70DC83AB-2EC1-478F-9204-C37485AD8E3C}</SubscriberID>
+            <CompanyFilePath>E:\qb2004_ThunderDev\data\test.QBW</CompanyFilePath>
+            <HostInfo>
+                <ProductName>QuickBooks Pro 2004</ProductName>
+                <MajorVersion>13</MajorVersion>
+                <MinorVersion>0</MinorVersion>
+                <Country>US</Country>
+            </HostInfo>
+            <EventTime>2003-09-05T17:14:51-08:00</EventTime>
+            <EventTag>ID-short</EventTag>
+        </UIExtensionEvent>
+    </QBXMLEvents>
+</QBXML>

@@ -1,0 +1,236 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""AddCustomer.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "AddCustomer Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "AddCustomer\0"
+            VALUE "LegalCopyright", "Copyright (c) 2001-2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "AddCustomer.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "AddCustomer Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_AddCustomer         REGISTRY MOVEABLE PURE  "AddCustomer.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADDCUSTDLG DIALOG DISCARDABLE  0, 0, 303, 180
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "QuickBooks Sample Application: Create a New Customer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Customer to add:",IDC_STATIC,19,9,54,8
+    EDITTEXT        IDC_CUST_NAME,17,19,154,12,ES_AUTOHSCROLL
+    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP,177,9,21,22
+    GROUPBOX        "C&ontact Info (optional)",IDC_STATIC,16,40,182,73
+    LTEXT           "&First Name:",IDC_STATIC,24,55,35,8
+    EDITTEXT        IDC_FIRSTNAME,68,53,119,12,ES_AUTOHSCROLL
+    LTEXT           "&Last name:",IDC_STATIC,24,74,35,8
+    EDITTEXT        IDC_LASTNAME,68,72,119,12,ES_AUTOHSCROLL
+    LTEXT           "&Phone:",IDC_STATIC,24,93,22,8
+    EDITTEXT        IDC_PHONE,68,90,119,12,ES_AUTOHSCROLL
+    LTEXT           "&QuickBooks file (leave blank to use currently open company file):",
+                    IDC_STATIC,18,119,204,8
+    EDITTEXT        IDC_COM_FILE,16,129,145,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_Browse,165,129,34,12
+    CONTROL         208,IDC_STATIC,"Static",SS_BITMAP,8,154,287,18
+    PUSHBUTTON      "&Add Customer",IDC_Submit,210,8,79,14
+    PUSHBUTTON      "&Done",IDC_Exit,210,27,79,14
+    PUSHBUTTON      "&View XML Request...",IDC_View_Req,210,63,79,14,
+                    BS_MULTILINE
+    PUSHBUTTON      "Check XML R&equest...",IDC_ValidateReq,210,81,79,14,
+                    BS_MULTILINE
+    PUSHBUTTON      "View QB Re&sponse...",IDC_View_Res,210,99,79,14,
+                    BS_MULTILINE
+END
+
+IDD_VALIDATORDLG DIALOGEX 0, 0, 310, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "qbXML Validation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_Schema,10,135,200,12,ES_AUTOHSCROLL,0,HIDC_Schema
+    PUSHBUTTON      "Browse...",IDC_Browse,230,135,40,15
+    EDITTEXT        IDC_RequestXML,10,10,290,106,ES_MULTILINE | 
+                    ES_OEMCONVERT | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "&Validate qbXML",IDC_VALIDATE,50,155,60,15
+    PUSHBUTTON      "&Done",IDC_Exit,160,155,60,15
+    CONTROL         208,IDC_QBBANNER,"Static",SS_BITMAP,8,180,287,18
+    LTEXT           "Please enter the schema file with full path:",
+                    IDC_SCHEMALABEL,10,120,155,10
+END
+
+IDD_DISPLAYDLG DIALOG DISCARDABLE  0, 0, 235, 187
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "qbXML:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_XML,6,6,220,146,ES_MULTILINE | ES_OEMCONVERT | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "&Done",IDC_DONE,81,163,66,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ADDCUSTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 296
+        VERTGUIDE, 59
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_VALIDATORDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 247
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DISPLAYDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 186
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_QBBANNER            BITMAP  DISCARDABLE     "qbbanner.bmp"
+IDB_CUSTOMERS           BITMAP  DISCARDABLE     "customers.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "AddCustomer"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "AddCustomer.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

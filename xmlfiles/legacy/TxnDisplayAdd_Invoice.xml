@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- TxnDisplayAdd_Invoice.xml                                                  -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2004-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Show the transaction display with populated data.                 -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- Sample illustrating the transaction display add request for invoice,       -->
+<!-- prefilling the new invoice with an existing customer name. The end user    -->
+<!-- has to tab out of the new invoice form in QuickBooks to complete           -->
+<!-- the prefilling, just as the user would when working purely in QuickBooks.  -->       
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="4.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+    <TxnDisplayAddRq requestID = "0">
+      <TxnDisplayAddType>Invoice</TxnDisplayAddType>
+	<EntityRef>
+		<FullName>Abercrombie, Kristy</FullName>
+		<!-- <ListID>150000-933272658</ListID>--> 
+	</EntityRef>
+    </TxnDisplayAddRq>
+   </QBXMLMsgsRq>
+</QBXML>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- ReceivePaymentQueryRq.xml                                                  -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the receive payment query request.            -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to return all of the payments.     -->
+<!--                                                                            -->
+<!-- Note that this request can return a great deal of data, even in the demo   -->
+<!-- system.  This is an excellent opportunity to experiment with date          -->
+<!-- parameters or other filtering options.                                     -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="8.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+      <ReceivePaymentQueryRq requestID="abc_123"/>
+   </QBXMLMsgsRq>
+</QBXML>
+

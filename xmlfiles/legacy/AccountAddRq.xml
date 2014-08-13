@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- AccountAddRq.xml                                                           -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the account add request.                      -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to add an account.                 -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?> 
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError -->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <!-- Each request in a message needs a unique requestID string -->
+    <AccountAddRq requestID = "2">
+      <AccountAdd>
+        <Name>Event Expense Account</Name>
+        <IsActive>1</IsActive>
+        <!-- Here we're choosing to make the new account a sub account of -->
+        <!-- the Miscellaneous account.  If that account doesn't exist in -->
+        <!-- your company file, an error status will be returned.          -->                      
+        <ParentRef>                             
+          <FullName>Miscellaneous</FullName>   
+        </ParentRef>
+        <AccountType>Expense</AccountType>
+        <Desc>Special events account</Desc>                        
+      </AccountAdd>
+    </AccountAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

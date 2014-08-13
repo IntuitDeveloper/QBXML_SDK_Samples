@@ -1,0 +1,40 @@
+/*---------------------------------------------------------------------------
+ * FILE: EventHandler.idl
+ *
+ * Created On: 09/15/2003
+ *
+ *
+ * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Use is subject to the terms specified at:
+ *     http://developer.intuit.com/legal/devsite_tos.html
+ *
+ */
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (EventHandler.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+	
+[
+	uuid(F9790C19-DB6A-456E-8DE5-AAEE52BC6CEE),
+	version(1.0),
+	helpstring("EventHandler 1.0 Type Library")
+]
+library EventHandlerLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	importlib("c:/Program Files/Intuit/QuickBooks 2007/sdkevent.dll");
+	
+	
+	[
+		uuid(70DC83AB-2EC1-478F-9204-C37485AD8E3C),
+		helpstring("QBSDKCallback Class")
+	]
+	coclass QBSDKCallback
+	{
+		[default] interface IQBEventCallback;
+	};
+};
+
+	

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- ReceivePaymentAddRq.xml                                                    -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary:Sample illustrating the receive payment add request.               -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains a single request to add a receive payment.          -->
+<!--                                                                            -->
+<!-- This sample requires at least a 1.1 version DOCTYPE since this request     -->
+<!-- is not implemented in earlier versions                                     -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?> 
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError -->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <!-- Each request in a message needs a unique requestID string -->
+    <ReceivePaymentAddRq requestID = "2">
+      <ReceivePaymentAdd>
+        <CustomerRef>
+          <FullName>Ecker Designs:Office Repairs</FullName>
+        </CustomerRef>
+        <!-- Provide a date and a reference number for the payment -->
+        <TxnDate>2002-02-01</TxnDate>                
+        <RefNumber>1000</RefNumber>                      
+        <TotalAmount>100.00</TotalAmount>     
+        <PaymentMethodRef>            
+          <FullName>Cash</FullName>   
+        </PaymentMethodRef>
+        <!-- This payment applies to a single invoice -->
+        <AppliedToTxnAdd>                        
+          <TxnID>44F3-1071525107</TxnID>
+          <PaymentAmount>100.00</PaymentAmount>  
+        </AppliedToTxnAdd>
+      </ReceivePaymentAdd>
+    </ReceivePaymentAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

@@ -1,0 +1,110 @@
+<SampleInfo>
+  <Name>WCECommSample</Name>
+  <Description>
+This sample is a C# .NET desktop application that uses QBFC to create a new QuickBooks transactions featured in QuickBooks. It uses QBFC Template Wizard shipped with the SDK (7.0 or later). The sample demonstrates how to use QuickBooks Web Connector to communicate with QuickBooks and sync data with a client database. It use a simple phone card e-commerce example. 
+
+Running the sample
+------------------
+Before running WCECommSample.exe, make sure that .NET runtime is installed on the machine, and QuickBooks is running with a company file (preferably sample_product-based business.qbw) opened. 
+
+There are three components to this sample. 
+
+- Client side demonstrates what an end user would see when they access the application. 
+- Merchant side demonstrates how a merchant can setup their web-connector to point to the web-service.
+- Service side demonstrates how a service provides data correspondence with QuickBooks.
+
+These three components are listed below in order of execution of steps: -
+
+PREPARATION
+1) Copy the entire WCECommSample directory into your c:\inetup\wwwroot path. If you are using Microsoft Developer Studio then the tool should automatically do this step for you. 
+
+2) From IIS_Console, right-click WCECommSample (client, merchant, service) -> Properties -> click Create button next to "Application Name". 
+
+CLIENT SIDE TRANSACTION
+3) Point your IE browser to http://localhost/WCECommSample/client/Default.aspx 
+
+4) Database ecommdb is pre-populated with some username/password (encryption not used for simplicity of the sample) used 
+to log on to the client site. If you want to create a new user, use "sign-up" from log on page. New user created here, will be transfered as Customer into QuickBooks on next update session with web connector.
+
+5) Database ecommdb is also pre-populated with some sample items (phone calling cards) that you could use for this sample. On the next update session with web connector (via Merchant site) any inventory items that you have on QB will be transfered to ecommdb. 
+
+6) After you log on, do some purchasing (it's really a simulation and not tied to any payment system, so don't worry :-)) on client to create some txns (salesreceipts)
+
+
+MERCHANT SITE ADMINISTRATION
+7) Point your IE browser to http://localhost/WCECommSample/merchant/setup.html
+
+8) Start with an empty company file (no customers and inventory items).
+
+9) Setup WCECommService with QBWC using merchant site and following the steps described in the site.
+
+
+WEB SERVICE 
+When you run update from QBWC (directly or via merchant site administration page), QBWC exchanges data with this web service. This web service provides code to insert, update or retrieve data from ecommdb. 
+
+
+Building the sample
+------------------
+Open WCECommSample.sln in Microsoft Visual Studio .NET (2005 or higher) and build the solution.  
+
+</Description>
+<Language>C#.NET</Language>
+  <Structure>QBFC</Structure>
+  <Deployment>desktop</Deployment>
+  <QuickBooks>qbdt</QuickBooks>
+  <Project>WCECommSample.sln</Project>
+  <Run>WCECommSample.exe</Run>
+  <BuildCommands>
+    <Build>$DEVENV2005 client\client.sln /Rebuild Debug</Build>
+    <Build>$DEVENV2005 merchant\merchant.sln /Rebuild Debug</Build>
+    <Build>$DEVENV2005 service\service.sln /Rebuild Debug</Build>
+  </BuildCommands>
+  <DistributeList>
+      <Filename>client\App_Code\Customer.cs</Filename>
+      <Filename>client\App_Code\DataBaseManager.cs</Filename>
+      <Filename>client\App_Code\Item.cs</Filename>
+      <Filename>client\App_Data</Filename>
+      <Filename>client\App_Data\ASPNETDB.MDF</Filename>
+      <Filename>client\App_Data\aspnetdb_log.ldf</Filename>
+      <Filename>client\cart.aspx</Filename>
+      <Filename>client\cart.aspx.cs</Filename>
+      <Filename>client\client.sln</Filename>
+      <Filename>client\Default.aspx</Filename>
+      <Filename>client\Default.aspx.cs</Filename>
+      <Filename>client\purchase.aspx</Filename>
+      <Filename>client\purchase.aspx.cs</Filename>
+      <Filename>client\signup.aspx</Filename>
+      <Filename>client\signup.aspx.cs</Filename>
+      <Filename>client\Web.Config</Filename>
+      <Filename>db\ecommdb.mdb</Filename>
+      <Filename>merchant\javascript\prototype.js</Filename>
+      <Filename>merchant\merchant.sln</Filename>
+      <Filename>merchant\setup.html</Filename>
+      <Filename>merchant\Web.Config</Filename>
+      <Filename>readme.txt</Filename>
+      <Filename>sampleInfo.xml</Filename>
+      <Filename>service\App_Code\AccessDatabase.cs</Filename>
+      <Filename>service\App_Code\DataBaseManager.cs</Filename>
+      <Filename>service\App_Code\IAuthentication.cs</Filename>
+      <Filename>service\App_Code\IController.cs</Filename>
+      <Filename>service\App_Code\ISessionPool.cs</Filename>
+      <Filename>service\App_Code\MemorySession.cs</Filename>
+      <Filename>service\App_Code\QuickBooksCustomerOps.cs</Filename>
+      <Filename>service\App_Code\QuickBooksItemOps.cs</Filename>
+      <Filename>service\App_Code\QuickBooksSalesReceiptOps.cs</Filename>
+      <Filename>service\App_Code\SampleAuthentication.cs</Filename>
+      <Filename>service\App_Code\SampleController.cs</Filename>
+      <Filename>service\App_Code\Session.cs</Filename>
+      <Filename>service\App_Code\UtilityManager.cs</Filename>
+      <Filename>service\App_Code\WCECommService.cs</Filename>
+      <Filename>service\App_Code\XmlManager.cs</Filename>
+      <Filename>service\javascript\prototype.js</Filename>
+      <Filename>service\Postflight.aspx</Filename>
+      <Filename>service\Postflight.aspx.cs</Filename>
+      <Filename>service\Preflight.aspx</Filename>
+      <Filename>service\Preflight.aspx.cs</Filename>
+      <Filename>service\service.sln</Filename>
+      <Filename>service\WCECommService.asmx</Filename>
+      <Filename>service\Web.Config</Filename>
+  </DistributeList>
+</SampleInfo>

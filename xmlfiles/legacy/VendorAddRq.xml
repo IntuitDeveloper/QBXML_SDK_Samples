@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- VendorAddRq.xml                                                            -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2001-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the vendor add request.                       -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML file contains one add requests for a vendor.                      -->
+<!--                                                                            -->
+<!-- This sample depends on a vendor type called "Materials".                   -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?> 
+<QBXML>
+  <!-- onError may be set to continueOnError or stopOnError-->
+  <QBXMLMsgsRq onError = "stopOnError">
+    <VendorAddRq requestID="1">
+      <VendorAdd>
+        <!-- Name is the only required field for an add request, unless Vendor1099 -->
+        <!-- is set to true or 1. Then, the Address elements giving the vendor's   -->
+        <!-- address are required.                                                 -->
+        <Name>Acme</Name>
+        <IsActive>1</IsActive>                           
+        <CompanyName>Acme Food Products</CompanyName>         
+        <Salutation>Mr</Salutation>                    
+        <FirstName>Mike</FirstName>                    
+        <LastName>Acme</LastName>                    
+        <VendorAddress>                                      
+          <Addr1>4600 N. 1st St.</Addr1>                         
+          <Addr2>Suite B</Addr2>                         
+          <City>San Francisco</City>                   
+          <State>CA</State>                            
+          <PostalCode>94044</PostalCode>               
+          <Country>USA</Country>                       
+        </VendorAddress>
+        <Phone>650-987-9654</Phone>                   
+        <AltPhone>650-214-6549</AltPhone>              
+        <Fax>650-214-6549</Fax>                        
+        <Email>Beka@bestfoods.com</Email>                   
+        <Contact>Mr Leon</Contact>                     
+        <NameOnCheck>Acme Food Products</NameOnCheck>           
+        <AccountNumber>1239-854</AccountNumber>
+        <VendorTypeRef>                                
+          <FullName>Materials</FullName>                   
+        </VendorTypeRef>
+        <TermsRef>                                  
+          <FullName>1% 10 Net 30</FullName>         
+        </TermsRef>
+        <CreditLimit>10000.00</CreditLimit>       
+      </VendorAdd>
+    </VendorAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

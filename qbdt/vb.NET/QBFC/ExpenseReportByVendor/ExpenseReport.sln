@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExpenseReport", "ExpenseReport.vbproj", "{E7B1285A-1D91-454C-ACBA-786A0C3F3315}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E7B1285A-1D91-454C-ACBA-786A0C3F3315}.Debug.ActiveCfg = Debug|.NET
+		{E7B1285A-1D91-454C-ACBA-786A0C3F3315}.Debug.Build.0 = Debug|.NET
+		{E7B1285A-1D91-454C-ACBA-786A0C3F3315}.Release.ActiveCfg = Release|.NET
+		{E7B1285A-1D91-454C-ACBA-786A0C3F3315}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

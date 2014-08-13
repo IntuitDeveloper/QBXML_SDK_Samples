@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- ========================================================================== -->
+<!-- ItemServiceAdd.xml                                                         -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2002-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/legal/devsite_tos.html                -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the Item Service Add request                  -->
+<!--                                                                            -->
+<!-- Description:                                                               -->
+<!-- This XML contains a request to add a particular service item.              -->
+<!--                                                                            -->
+<!-- This script depends on there being an account named "Construction".        -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="2.0"?>
+<QBXML>
+  <QBXMLMsgsRq onError="continueOnError">
+    <ItemServiceAddRq>
+      <ItemServiceAdd>
+        <Name>Gutter</Name>
+        <SalesOrPurchase>
+          <Desc>Clean gutter</Desc>
+          <Price>45.67</Price>
+          <AccountRef>
+            <FullName>Construction</FullName>
+          </AccountRef>
+        </SalesOrPurchase>
+      </ItemServiceAdd>
+    </ItemServiceAddRq>
+  </QBXMLMsgsRq>
+</QBXML>

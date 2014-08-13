@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!-- ========================================================================== -->
+<!-- AddInvoiceSpecifyTemplate.xml                                              -->
+<!--                                                                            -->
+<!-- INTUIT CONFIDENTIAL.                                                       -->
+<!-- Copyright (c) 2003-2013 Intuit Inc. All rights reserved.                   -->
+<!-- Use is subject to the terms specified at:                                  -->
+<!--          http://developer.intuit.com/rd/qbXML_agreement                    -->
+<!--                                                                            -->
+<!-- ========================================================================== -->
+<!-- Summary: Sample illustrating the addition of an invoice using a specified  -->
+<!-- template for the invoice.                                                  -->
+<!--                                                                            -->
+<!-- Description:                                                                -->
+<!-- This XML file contains one request to add an invoice specifying the        -->
+<!-- template to be used for the invoice.                                       -->
+<!--                                                                            -->
+<!-- This xml file will only work when passed through the QBXMLRP2 request      -->
+<!-- processor.  The QBXMLRP request processor does not support SDK 3.0 version -->
+<!-- messages.                                                                  -->
+<!-- ========================================================================== -->
+<!-- Language: xml                                                            -->
+<!-- Structure: QBXML                                                            -->
+<!-- QuickBooks: any                                                            -->
+<!-- Deployment: any                                                            -->
+<!-- ========================================================================== -->
+<?qbxml version="3.0"?>
+<QBXML>
+   <QBXMLMsgsRq onError="stopOnError">
+    <InvoiceAddRq requestID = "0">
+      <InvoiceAdd defMacro = "TxnID:NewInvoice">
+        <CustomerRef>
+          <FullName>Baker, Chris</FullName>
+        </CustomerRef>
+        <TemplateRef>
+          <FullName>Intuit Service Invoice</FullName>
+        </TemplateRef>
+        <InvoiceLineAdd>
+          <ItemRef>
+            <FullName>Blueprint Changes</FullName>
+          </ItemRef>
+          <Amount>100.00</Amount>
+        </InvoiceLineAdd>
+      </InvoiceAdd>
+    </InvoiceAddRq>
+   </QBXMLMsgsRq>
+</QBXML>
