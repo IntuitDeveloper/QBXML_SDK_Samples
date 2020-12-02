@@ -6,7 +6,7 @@ Attribute VB_Name = "modDepositAdd"
 '              messages, exchanges them with QuickBooks, interprets
 '              the responses and loads information into form objects.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

@@ -21,7 +21,7 @@
 
 using namespace std;
 
-#import "QBXMLRP.dll"
+#import "C:\\Program Files (x86)\\Intuit\\QuickBooks 2017\\QBXMLRP.dll"
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *

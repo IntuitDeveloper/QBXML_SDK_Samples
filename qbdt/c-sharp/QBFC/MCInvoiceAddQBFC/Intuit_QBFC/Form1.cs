@@ -1,4 +1,4 @@
-// Copyright (c) 2008-2013 by Intuit Inc.
+// Copyright (c) 2008-2020 by Intuit Inc.
 // All rights reserved
 // Usage governed by the QuickBooks SDK Developer's License Agreement
 

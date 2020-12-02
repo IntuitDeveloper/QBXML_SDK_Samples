@@ -23,7 +23,7 @@
 
 #include "resource.h"       // main symbols
 
-#import  "sdkevent.dll" no_namespace named_guids
+#import  "C:\Program Files (x86)\Intuit\QuickBooks 2017\sdkevent.dll" no_namespace named_guids
 
 
 /////////////////////////////////////////////////////////////////////////////

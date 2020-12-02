@@ -76,15 +76,17 @@ solution.
 
 Note
 ----
-For production purposes, use https. There are some rules to be satisfied 
-before QBWebConnector can load a web service. For information on the rules,
-see the Programmer's Guide to the QuickBooks Web Connector PDF.
+For production purpose, you would need to use https and there are some 
+rules to be satisfied before QBWebConnector would load a web service. 
+For information on the rules please visit QBWebConnector knowledgebase 
+at: 
+http://idnforums.intuit.com/messageview.aspx?catid=52&threadid=4593&enterthread=y
 
-Useful note about using OwnerID and FileID in a real-world application:
+
+Useful note about using OwnerID and FileID in a real-world application
  
 As part of your QB Web Connector configuration (.QWC) file, you include
-OwnerID and FileID. Following information on these two parameters may 
-be useful. 
+OwnerID and FileID. Following note on these two parameters may be useful. 
 
 OwnerID -- this is a GUID that represents your application or suite of 
 applications, if your application needs to store private data in the 
@@ -98,4 +100,9 @@ FileID -- this is a GUID we stamp in the file on your behalf
 It allows an application to verify that the company file it is exchanging 
 data with is consistent over time (by doing a CompanyQuery with the field 
 set appropriately and reading the DataExtRet values returned.
+
+You can find more information at the following AlphaGeek article(s): 
+http://developer.intuit.com/support/technical/?id=392
+
+
 

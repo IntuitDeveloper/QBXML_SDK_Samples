@@ -6,7 +6,7 @@ Attribute VB_Name = "QBooks"
 ' in the function sendReqToQB.  It also has functions to generate
 ' the QBXML Request and to kick off the parsing of the QBXML Response.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

@@ -42,7 +42,7 @@
  * Created On: 11/11/2001
  * Updated to SDK 2.0: 08/08/2002
  *
- * Copyright © 2002-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2002-2020 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  */
@@ -51,7 +51,7 @@
 
 #include "Utility.h"
 
-#import "qbxmlrp.dll" no_namespace named_guids raw_interfaces_only
+#import "C:\\Program Files (x86)\\Intuit\\QuickBooks 2017\\QBXMLRP.dll" no_namespace named_guids raw_interfaces_only
 
 static const char *THE_APPID = "SACJ";
 static const char *THE_APPNAME = "IDN Sample:Add Customer Job";

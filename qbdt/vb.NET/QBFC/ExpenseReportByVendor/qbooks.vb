@@ -1,27 +1,27 @@
 Option Strict Off
 Option Explicit On 
-Imports Interop.QBFC13
+Imports Interop.QBFC14
 
 Module qbooks
-	' QBooks.bas
+    ' QBooks.bas
     ' Created Sept, 2002
-	'
-	' This module contains everything needed to interact with QuickBooks.
-	' It has a function to generate the qbxml request for the report,
-	' a function to call ParserHelper to parse the response, and
-	' most importantly, the function sendReqToQB which connects to
-	' QuickBooks to send the request and receive a response.
-	'
-	' Copyright © 2002-2013 Intuit Inc. All rights reserved.
-	' Use is subject to the terms specified at:
-	'      http://developer.intuit.com/legal/devsite_tos.html
-	'
-	'
-	
+    '
+    ' This module contains everything needed to interact with QuickBooks.
+    ' It has a function to generate the qbxml request for the report,
+    ' a function to call ParserHelper to parse the response, and
+    ' most importantly, the function sendReqToQB which connects to
+    ' QuickBooks to send the request and receive a response.
+    '
+    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '
+
     '
     ' Parses the response using the class module ParserHelper,
-	' and generate the .html report based on the response.
-	'
+    ' and generate the .html report based on the response.
+    '
     Public Function parseResponse(ByRef responseSet As IMsgSetResponse, _
             ByRef url As String) As Boolean
         On Error GoTo ErrorHandler

@@ -1,6 +1,6 @@
 Option Strict Off
 Option Explicit On 
-Imports Interop.QBFC13
+Imports Interop.QBFC14
 
 Friend Class UIForm
 	Inherits System.Windows.Forms.Form
@@ -289,26 +289,26 @@ Friend Class UIForm
 			m_vb6FormDefInstance = Value
 		End Set
 	End Property
-#End Region 
-	' UIForm.frm
+#End Region
+    ' UIForm.frm
     ' Created Sept, 2002
-	'
-	' This file contains the code for the User Interface form of
-	' the project.  The UI allows the user to first select a
-	' QuickBooks company file and a location to store the output
-	' .html file.  When the GenerateReport button is pressed,
-	' it kicks off all of the main action.
-	'
-	' Copyright © 2002-2013 Intuit Inc. All rights reserved.
-	' Use is subject to the terms specified at:
-	'      http://developer.intuit.com/legal/devsite_tos.html
-	'
-	'
-	'
+    '
+    ' This file contains the code for the User Interface form of
+    ' the project.  The UI allows the user to first select a
+    ' QuickBooks company file and a location to store the output
+    ' .html file.  When the GenerateReport button is pressed,
+    ' it kicks off all of the main action.
+    '
+    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '
+    '
 
     ' Variables needed for displaying qbXML request and response
-	' in DisplayForm forms.
-	Private requestDisplay As New DisplayForm
+    ' in DisplayForm forms.
+    Private requestDisplay As New DisplayForm
 	Private responseDisplay As New DisplayForm
 	Private displayInit As Boolean
 

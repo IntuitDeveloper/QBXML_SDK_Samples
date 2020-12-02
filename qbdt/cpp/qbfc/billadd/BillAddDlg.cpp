@@ -13,11 +13,11 @@
 *
 * Created On: 8/15/2002
 *
-* Copyright © 2002-2013 Intuit Inc. All rights reserved.
+* Copyright © 2002-2020 Intuit Inc. All rights reserved.
 * Use is subject to the terms specified at:
 *      http://developer.intuit.com/legal/devsite_tos.html
 *
-* 8/9/2013 Updated to qbfc13.dll
+* 8/9/2013 Updated to qbfc14.dll
 ***********************************************************************************/
 
 
@@ -27,7 +27,7 @@
 #include "BillAdd.h"
 #include "BillAddDlg.h"
 
-#import "qbFC13.dll" no_namespace, named_guids
+#import "C:\\p4\\IDN\\main\\QBSDK\\install\\cache\\QBFC14.dll" no_namespace, named_guids
 CString QBFCLatestVersion(IQBSessionManagerPtr SessionManager);
 IMsgSetRequestPtr GetLatestMsgSetRequest(IQBSessionManagerPtr SessionManager);
 

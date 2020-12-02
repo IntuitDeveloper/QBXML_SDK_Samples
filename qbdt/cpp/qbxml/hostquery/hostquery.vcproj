@@ -189,8 +189,8 @@
 			AssemblyName="System.Xml, Version=2.0.0.0, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
 		/>
 		<AssemblyReference
-			RelativePath="Interop.QBXMLRP2.dll"
-			AssemblyName="Interop.QBXMLRP2, Version=6.0.3.200, PublicKeyToken=31d8aec643e18259, processorArchitecture=MSIL"
+			RelativePath="..\..\..\..\..\..\install\cache\Interop.QBXMLRP2.dll"
+			AssemblyName="Interop.QBXMLRP2, Version=8.0.0.249, PublicKeyToken=31d8aec643e18259, processorArchitecture=MSIL"
 		/>
 	</References>
 	<Files>
