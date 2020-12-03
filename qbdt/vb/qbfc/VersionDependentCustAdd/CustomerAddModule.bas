@@ -37,14 +37,14 @@ Attribute VB_Name = "CustomerAddModule"
 '             This procedure will process the response returned from QB.
 '             The status will be evaluated for each of the requests sent.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/rdmgr/?ID=100
 '
 ' Updated to QBFC12 and fixed max version information 09/2012
 '----------------------------------------------------------
 
-    Dim booSessionBegun As Boolean
+Dim booSessionBegun As Boolean
 
     'Module objects
     Dim SessionManager As QBSessionManager

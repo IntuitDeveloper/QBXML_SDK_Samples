@@ -53,14 +53,14 @@ Attribute VB_Name = "UseMacroDefMacroModule"
 '             This procedure will show that the defMacro value
 '             is persistent over requests.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
 '
 '----------------------------------------------------------
 
-    Dim booSessionBegun As Boolean
+Dim booSessionBegun As Boolean
     Dim booConnectionOpened As Boolean
 
     'Module objects

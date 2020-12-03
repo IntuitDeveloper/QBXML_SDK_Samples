@@ -1,4 +1,4 @@
-// Copyright (c) 2008-2013 by Intuit Inc.
+// Copyright (c) 2008-2020 by Intuit Inc.
 // All rights reserved
 // Usage governed by the QuickBooks SDK Developer's License Agreement
 
@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Interop.QBFC13;
+using Interop.QBFC14;
 using MCInvoiceAddQBFC.Session_Framework;
 
 

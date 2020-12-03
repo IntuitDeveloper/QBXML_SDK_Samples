@@ -199,7 +199,7 @@ Attribute VB_Exposed = False
 '              connected to and allows the input of information for
 '              adding a customer to the currently open company file
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

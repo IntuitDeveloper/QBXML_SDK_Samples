@@ -250,28 +250,28 @@ Friend Class frmDataExtSample
 			m_vb6FormDefInstance = Value
 		End Set
 	End Property
-#End Region 
-	'----------------------------------------------------------
-	' Form: frmDataExtSample
-	'
-	' Description: This the main form and entry point for this sample
-	'              program.  It displays the currently defined data
-	'              extension definitions and custom fields for the open
-	'              company file.  From here the user may choose to
-	'              activate forms to add data extension definitions to the
-	'              company file, define values for data extension
-	'              for customers or modify data extension values for
-	'              customers
-	'
-	'              The form calls OpenSessionBeginSession to make sure
-	'              a company file is open.
-	'
-	' Copyright © 2002-2013 Intuit Inc. All rights reserved.
-	' Use is subject to the terms specified at:
-	'      http://developer.intuit.com/legal/devsite_tos.html
-	'
-	'----------------------------------------------------------
-	Private Sub cmdAddDataExtension_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdAddDataExtension.Click
+#End Region
+    '----------------------------------------------------------
+    ' Form: frmDataExtSample
+    '
+    ' Description: This the main form and entry point for this sample
+    '              program.  It displays the currently defined data
+    '              extension definitions and custom fields for the open
+    '              company file.  From here the user may choose to
+    '              activate forms to add data extension definitions to the
+    '              company file, define values for data extension
+    '              for customers or modify data extension values for
+    '              customers
+    '
+    '              The form calls OpenSessionBeginSession to make sure
+    '              a company file is open.
+    '
+    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '----------------------------------------------------------
+    Private Sub cmdAddDataExtension_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdAddDataExtension.Click
 		If CustomersHaveDataExts Then
             frmAddDataExtension.DefInstance.Show()
         Else

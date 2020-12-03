@@ -17,7 +17,7 @@ Attribute VB_Name = "MainModule"
 ' Updated to QBFC 2.0: 08/2002
 ' Updated to QBFC 5.0: 09/2005
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
