@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.Resources;
-using Interop.QBFC13;
+using Interop.QBFC14;
 
 namespace MCInvoiceAddQBFC.Session_Framework
 {

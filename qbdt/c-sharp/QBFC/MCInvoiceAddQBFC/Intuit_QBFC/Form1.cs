@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Interop.QBFC13;
+using Interop.QBFC14;
 using MCInvoiceAddQBFC.Session_Framework;
 
 

@@ -92,12 +92,12 @@
                 <Reference
                     Name = "Interop.QBSDKEVENTLib"
                     AssemblyName = "Interop.QBSDKEVENTLib"
-                    HintPath = "..\..\..\..\..\..\install\cache\Interop.QBSDKEVENTLib.dll"
+                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBSDKEVENTLib.dll"
                 />
                 <Reference
                     Name = "Interop.QBXMLRP2"
                     AssemblyName = "Interop.QBXMLRP2"
-                    HintPath = "..\..\..\..\..\..\install\cache\Interop.QBXMLRP2.dll"
+                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBXMLRP2.dll"
                 />
             </References>
         </Build>
