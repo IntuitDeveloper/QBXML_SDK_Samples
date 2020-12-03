@@ -18,7 +18,7 @@
 
 #include "qbXMLWrapper.h"
 #include "Utility.h"
-#import "C:\\p4\\IDN\\main\\QBSDK\\src\\tools\\Qbfc\\Includes\\QBXMLRP.dll" named_guids //raw_interfaces_only
+#import "QBXMLRP.dll" named_guids //raw_interfaces_only
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

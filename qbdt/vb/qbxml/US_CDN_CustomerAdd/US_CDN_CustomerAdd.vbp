@@ -1,7 +1,7 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\msxml4.dll#Microsoft XML, v4.0
-Reference=*\G{4351618F-9059-4A79-B638-DCB8B97B3262}#1.0#0#..\..\..\..\..\..\install\cache\QBXMLRP2.dll#QBXMLRP2 1.0 Type Library
+Reference=*\G{4351618F-9059-4A79-B638-DCB8B97B3262}#1.0#0#..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\QBXMLRP2.dll#QBXMLRP2 1.0 Type Library
 Form=frmUS_CDN_CustomerAdd.frm
 Module=modUS_CDN_CustomerAdd; modUS_CDN_CustomerAdd.bas
 Startup="frmUS_CDN_CustomerAdd"

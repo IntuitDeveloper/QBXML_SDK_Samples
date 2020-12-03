@@ -1,7 +1,7 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\msxml4.dll#Microsoft XML, v4.0
-Reference=*\G{AE580877-774F-40BD-AB9A-04FB7CD96DC0}#1.0#0#..\..\..\..\..\tools\QBFC\bin\Release\QBFC14.dll#qbFC14 1.0 Type Library
+Reference=*\G{AE580877-774F-40BD-AB9A-04FB7CD96DC0}#1.0#0#..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\QBFC14.dll#qbFC14 1.0 Type Library
 Form=frmDataExtSample.frm
 Module=modDataExtSample; modDataExtSample.bas
 Form=frmAddDataExtDef.frm

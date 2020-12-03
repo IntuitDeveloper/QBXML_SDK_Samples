@@ -25,7 +25,7 @@
 #include "InvoiceQueryDlg.h"
 #include "InvoiceViewDlg.h"
 
-#import "C:\\p4\\IDN\\main\\QBSDK\\install\\cache\\QBFC14.dll" no_namespace, named_guids
+#import "QBFC14.dll" no_namespace, named_guids
 CString QBFCLatestVersion(IQBSessionManagerPtr SessionManager);
 IMsgSetRequestPtr GetLatestMsgSetRequest(IQBSessionManagerPtr SessionManager);
 

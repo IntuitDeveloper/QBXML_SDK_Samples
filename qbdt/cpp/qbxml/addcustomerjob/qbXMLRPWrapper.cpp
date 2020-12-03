@@ -51,7 +51,7 @@
 
 #include "Utility.h"
 
-#import "C:\\Program Files (x86)\\Intuit\\QuickBooks 2017\\QBXMLRP.dll" no_namespace named_guids raw_interfaces_only
+#import "QBXMLRP.dll" no_namespace named_guids raw_interfaces_only
 
 static const char *THE_APPID = "SACJ";
 static const char *THE_APPNAME = "IDN Sample:Add Customer Job";
