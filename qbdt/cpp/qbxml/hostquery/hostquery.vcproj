@@ -190,7 +190,7 @@
 		/>
 		<AssemblyReference
 			RelativePath="Interop.QBXMLRP2.dll"
-			AssemblyName="Interop.QBXMLRP2, Version=14.0.0.1, PublicKeyToken=31d8aec643e18259, processorArchitecture=MSIL"
+			AssemblyName="Interop.QBXMLRP2, Version=6.0.3.200, PublicKeyToken=31d8aec643e18259, processorArchitecture=MSIL"
 		/>
 	</References>
 	<Files>

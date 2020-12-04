@@ -17,12 +17,12 @@ Attribute VB_Exposed = False
 ' Description: This class contains FullName and ListID Strings.
 '           The properties will set and get the ListID or FullName.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
-Private m_sFullName As String
+    Private m_sFullName As String
     Private m_sListID As String
 
     Public Property Get ListID() As String
@@ -33,11 +33,11 @@ Private m_sFullName As String
         m_sListID = value
     End Property
         
-    Public Property Get fullName() As String
-        fullName = m_sFullName
+    Public Property Get FullName() As String
+        FullName = m_sFullName
     End Property
     
-    Public Property Let fullName(value As String)
+    Public Property Let FullName(value As String)
         m_sFullName = value
     End Property
 

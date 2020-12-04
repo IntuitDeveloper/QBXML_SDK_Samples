@@ -70,13 +70,13 @@ Attribute VB_Name = "ItemInventoryModule"
 '             Loops thru the item objects in the combo box and returns
 '             true if one of the objects has the specified name.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
 '----------------------------------------------------------
-Dim booSessionBegun As Boolean
+    Dim booSessionBegun As Boolean
     Dim booConnectionOpened As Boolean
 
     Const MAX_RETURNED = 20

@@ -642,23 +642,23 @@ Friend Class frmAddDataExtDef
 			m_vb6FormDefInstance = Value
 		End Set
 	End Property
-#End Region
-    '----------------------------------------------------------
-    ' Form: frmAddDataExtDef
-    '
-    ' Description: This form allows the user to type in the name of a
-    '              new data extension definition, select the type for it,
-    '              select the items and transactions to associate it with
-    '              and the add it to the currently open QuickBooks company
-    '              file.
-    '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-    ' Use is subject to the terms specified at:
-    '      http://developer.intuit.com/legal/devsite_tos.html
-    '
-    '----------------------------------------------------------
-
-    Private Sub cmdAdd_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdAdd.Click
+#End Region 
+	'----------------------------------------------------------
+	' Form: frmAddDataExtDef
+	'
+	' Description: This form allows the user to type in the name of a
+	'              new data extension definition, select the type for it,
+	'              select the items and transactions to associate it with
+	'              and the add it to the currently open QuickBooks company
+	'              file.
+	'
+	' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+	' Use is subject to the terms specified at:
+	'      http://developer.intuit.com/legal/devsite_tos.html
+	'
+	'----------------------------------------------------------
+	
+	Private Sub cmdAdd_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdAdd.Click
 		
 		Dim strObjects As String
 		

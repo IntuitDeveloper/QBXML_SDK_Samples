@@ -10,7 +10,7 @@ Attribute VB_Name = "MainModule"
 ' Updated to QBFC 5.0: 09/2005
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
@@ -101,7 +101,7 @@ ErrHandler:
 End Sub
 
 Public Function GetLatestMsgSetRequest(SessionManager As QBSessionManager) As IMsgSetRequest
-        Dim supportedVersion As Double
+	Dim supportedVersion As Double
     supportedVersion = Val(QBFCLatestVersion(SessionManager))
     If (supportedVersion >= 6#) Then
         Set GetLatestMsgSetRequest = SessionManager.CreateMsgSetRequest("US", 6, 0)

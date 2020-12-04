@@ -1,7 +1,7 @@
 Type=OleExe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\msxml4.dll#Microsoft XML, v4.0
-Reference=*\G{941BD791-06C1-4D4D-8F6A-8F685810DD5E}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Intuit\QuickBooks 2017\sdkevent.dll#QBSDKEvent 1.0 Type Library
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\..\WINDOWS\System32\stdole2.tlb#OLE Automation
+Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\..\WINDOWS\System32\msxml4.dll#Microsoft XML, v4.0
+Reference=*\G{941BD791-06C1-4D4D-8F6A-8F685810DD5E}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\Program Files\Intuit\QuickBooks Premier\sdkevent.dll#QBSDKEvent 1.0 Type Library
 Class=QBEventHandler; QBEventHandler.cls
 Form=QBDataEventManagerDisplay.frm
 Class=QBEventQueue; QBEventQueue.cls

@@ -119,22 +119,22 @@ Friend Class DisplayForm
 			m_vb6FormDefInstance = Value
 		End Set
 	End Property
-#End Region
-    ' DisplayForm.frm
+#End Region 
+	' DisplayForm.frm
     ' Created Sept, 2002
-    '
-    ' This form can be used to display the request and response
-    ' qbxml to the user for illustrational purposes.
-    '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-    ' Use is subject to the terms specified at:
-    '      http://developer.intuit.com/legal/devsite_tos.html
-    '
-    '
-    '
-
-
-    Private xmlString As String
+	'
+	' This form can be used to display the request and response
+	' qbxml to the user for illustrational purposes.
+	'
+	' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+	' Use is subject to the terms specified at:
+	'      http://developer.intuit.com/legal/devsite_tos.html
+	'
+	'
+	'
+	
+	
+	Private xmlString As String
 	
 	
 	'

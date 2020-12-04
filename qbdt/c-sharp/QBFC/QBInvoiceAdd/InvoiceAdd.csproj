@@ -1,7 +1,7 @@
 <VisualStudioProject>
     <CSHARP
         ProjectType = "Local"
-        ProductVersion = "7.10.6030"
+        ProductVersion = "7.10.3077"
         SchemaVersion = "2.0"
         ProjectGuid = "{F990DC9E-3F25-4B49-B2CE-B9FE87BC61C4}"
     >
@@ -90,9 +90,10 @@
                     HintPath = "..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
                 />
                 <Reference
-                    Name = "Interop.QBFC14"
-                    AssemblyName = "Interop.QBFC14"
-                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBFC14.dll"
+                    Name = "Interop.QBFC13"
+                    AssemblyName = "Interop.QBFC13"
+                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files\Common Files\Intuit\QuickBooks\Interop.QBFC13.dll"
+                    AssemblyFolderKey = "hklm\dn\intuit developer network"
                 />
             </References>
         </Build>

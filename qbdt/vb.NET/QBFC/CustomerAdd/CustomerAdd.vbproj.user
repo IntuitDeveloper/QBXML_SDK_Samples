@@ -1,7 +1,7 @@
 <VisualStudioProject>
-    <VisualBasic LastOpenVersion = "7.10.6030" >
+    <VisualBasic LastOpenVersion = "7.10.3077" >
         <Build>
-            <Settings ReferencePath = "C:\Program Files (x86)\Common Files\Intuit\QuickBooks\" >
+            <Settings ReferencePath = "C:\Program Files\Common Files\Intuit\QuickBooks\" >
                 <Config
                     Name = "Debug"
                     EnableASPDebugging = "false"

@@ -11,26 +11,26 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-' ParserHelper.cls
-' Created Sept, 2002
-'
-' This class module is used to parse the response from QuickBooks.
-' It creates the .html table from the parsed response, including
-' the calculated percentage columns available through the QuickBooks UI.
-' Although certain small pieces of this module are particular to the
-' type of report being created for this project, most of the code is
-' generic and could easily be adapted to any other QuickBooks report.
-'
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-' Use is subject to the terms specified at:
-'      http://developer.intuit.com/legal/devsite_tos.html
-'
-'
-
-
-
-' Column Description Type
-Private Type ColDescType
+    ' ParserHelper.cls
+    ' Created Sept, 2002
+    '
+    ' This class module is used to parse the response from QuickBooks.
+    ' It creates the .html table from the parsed response, including
+    ' the calculated percentage columns available through the QuickBooks UI.
+    ' Although certain small pieces of this module are particular to the
+    ' type of report being created for this project, most of the code is
+    ' generic and could easily be adapted to any other QuickBooks report.
+    '
+    ' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '
+    
+    
+    
+    ' Column Description Type
+    Private Type ColDescType
          colID As Integer
          colTitle As String
          colType As String

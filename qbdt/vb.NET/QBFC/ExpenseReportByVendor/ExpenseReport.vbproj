@@ -1,7 +1,7 @@
 <VisualStudioProject>
     <VisualBasic
         ProjectType = "Local"
-        ProductVersion = "7.10.6030"
+        ProductVersion = "7.10.3077"
         SchemaVersion = "2.0"
         ProjectGuid = "{E7B1285A-1D91-454C-ACBA-786A0C3F3315}"
     >
@@ -122,9 +122,10 @@
                     WrapperTool = "primary"
                 />
                 <Reference
-                    Name = "Interop.QBFC14"
-                    AssemblyName = "Interop.QBFC14"
-                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBFC14.dll"
+                    Name = "Interop.QBFC13"
+                    AssemblyName = "Interop.QBFC13"
+                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files\Common Files\Intuit\QuickBooks\Interop.QBFC13.dll"
+                    AssemblyFolderKey = "hklm\dn\intuit developer network"
                 />
             </References>
             <Imports>

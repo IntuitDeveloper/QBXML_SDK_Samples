@@ -170,7 +170,7 @@ Attribute VB_Exposed = False
 '              The form calls OpenSessionBeginSession to make sure
 '              a company file is open.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

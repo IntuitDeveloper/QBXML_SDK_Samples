@@ -30,13 +30,13 @@ Attribute VB_Exposed = False
 ' Created On: 06/15/2001
 ' Updated to SDK 2.0 On: 07/30/2002
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/rdmgr/?ID=100
 '
 '----------------------------------------------------------
 
-Option ExplicitOn
+Option Explicit
 
 ' XML string
 Private m_XML  As String

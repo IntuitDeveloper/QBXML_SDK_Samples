@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
-using Interop.QBFC14;
+using Interop.QBFC13;
 
 namespace InvoiceAdd
 {
@@ -20,7 +20,7 @@ namespace InvoiceAdd
 	/// This sample also implements QBFC's automatic error recovery feature.
 	/// 
 	/// Created On: 11/19/2004
-	/// Copyright © 2004-2020 Intuit Inc. All rights reserved.
+	/// Copyright © 2004-2013 Intuit Inc. All rights reserved.
 	/// Use is subject to the terms specified at:
 	///     http://developer.intuit.com/legal/devsite_tos.html
 	///

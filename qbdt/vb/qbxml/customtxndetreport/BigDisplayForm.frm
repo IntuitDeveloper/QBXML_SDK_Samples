@@ -55,7 +55,7 @@ Attribute VB_Exposed = False
 ' This form contains an embedded browser which is
 ' used to display the report we generate to the user.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

@@ -59,7 +59,7 @@ Attribute VB_Name = "QuickBooks"
 '             box to determine if there is already an element with this
 '             name already in the list.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

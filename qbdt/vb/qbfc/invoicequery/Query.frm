@@ -98,7 +98,7 @@ Attribute VB_Exposed = False
 ' Updated to QBFC 5.0: 09/2005
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

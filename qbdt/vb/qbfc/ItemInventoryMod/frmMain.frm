@@ -302,26 +302,26 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-'----------------------------------------------------------
-' Form: mainForm
-'
-' Description: This the main form and entry point for this sample
-'              program.  It displays the list of Item Inventory
-'              FullNames.  Then when an Item Inventory is selected,
-'              the field values are filled in the controls in the form.
-'              The user can change the values in the controls.  Then
-'              press the modify button to change the values of those
-'              fields for the selected Item Inventory.  The list box
-'              of Item Inventory FullNames are refreshed from QB
-'
-'              The form calls OpenConnectionBeginSession to make sure
-'              a company file is open.
-'
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-' Use is subject to the terms specified at:
-'      http://developer.intuit.com/legal/devsite_tos.html
-'
-'----------------------------------------------------------
+   '----------------------------------------------------------
+    ' Form: mainForm
+    '
+    ' Description: This the main form and entry point for this sample
+    '              program.  It displays the list of Item Inventory
+    '              FullNames.  Then when an Item Inventory is selected,
+    '              the field values are filled in the controls in the form.
+    '              The user can change the values in the controls.  Then
+    '              press the modify button to change the values of those
+    '              fields for the selected Item Inventory.  The list box
+    '              of Item Inventory FullNames are refreshed from QB
+    '
+    '              The form calls OpenConnectionBeginSession to make sure
+    '              a company file is open.
+    '
+    ' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '----------------------------------------------------------
 
 Private Sub ClearParent_Click()
         ParentComboBox.listIndex = -1
