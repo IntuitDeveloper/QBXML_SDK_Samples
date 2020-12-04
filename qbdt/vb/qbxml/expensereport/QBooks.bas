@@ -8,7 +8,7 @@ Attribute VB_Name = "qbooks"
 ' most importantly, the function sendReqToQB which connects to
 ' QuickBooks to send the request and receive a response.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

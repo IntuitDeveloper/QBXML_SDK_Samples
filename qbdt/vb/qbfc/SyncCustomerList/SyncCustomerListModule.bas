@@ -53,13 +53,13 @@ Attribute VB_Name = "SyncCustomerListModule"
 '           FoundCustomerInListBox
 '             Loops thru the objects in the list box to see if we have a match.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
 '----------------------------------------------------------
-Dim booSessionBegun As Boolean
+    Dim booSessionBegun As Boolean
     Const MAX_RETURNED = 20
 
     'Module objects

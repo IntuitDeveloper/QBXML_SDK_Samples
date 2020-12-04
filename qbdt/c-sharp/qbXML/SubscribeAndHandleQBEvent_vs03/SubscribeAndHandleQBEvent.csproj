@@ -1,7 +1,7 @@
 <VisualStudioProject>
     <CSHARP
         ProjectType = "Local"
-        ProductVersion = "7.10.6030"
+        ProductVersion = "7.10.3077"
         SchemaVersion = "2.0"
         ProjectGuid = "{868CE953-4142-43E8-B605-A37D6BA94636}"
     >
@@ -90,14 +90,18 @@
                     HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
                 />
                 <Reference
-                    Name = "Interop.QBSDKEVENTLib"
-                    AssemblyName = "Interop.QBSDKEVENTLib"
-                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBSDKEVENTLib.dll"
-                />
-                <Reference
                     Name = "Interop.QBXMLRP2"
                     AssemblyName = "Interop.QBXMLRP2"
-                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBXMLRP2.dll"
+                    HintPath = "..\..\..\..\..\Program Files\Common Files\Intuit\QuickBooks\Interop.QBXMLRP2.dll"
+                    AssemblyFolderKey = "hklm\dn\intuit developer network"
+                />
+                <Reference
+                    Name = "QBSDKEVENTLib"
+                    Guid = "{941BD791-06C1-4D4D-8F6A-8F685810DD5E}"
+                    VersionMajor = "1"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
                 />
             </References>
         </Build>

@@ -18,12 +18,12 @@ Attribute VB_Exposed = False
 '           The properties will return the ListID or FullName
 '           or get/set the customerRet object.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
-Private m_customerRet As ICustomerRet
+    Private m_customerRet As ICustomerRet
 
     Public Function GetListID() As String
         If (m_customerRet Is Nothing) Then

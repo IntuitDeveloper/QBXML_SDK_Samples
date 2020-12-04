@@ -28,10 +28,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.QBXMLRP2, Version=14.0.0.1, Culture=neutral, PublicKeyToken=31d8aec643e18259">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBXMLRP2.dll</HintPath>
-    </Reference>
+    <Reference Include="Interop.QBXMLRP2, Version=7.0.0.134, Culture=neutral, PublicKeyToken=31d8aec643e18259" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

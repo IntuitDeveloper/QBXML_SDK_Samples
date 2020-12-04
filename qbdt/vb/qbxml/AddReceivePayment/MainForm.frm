@@ -273,33 +273,33 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-        ' MainForm.frm
-        '
-        ' This is the form file for the sample receive payment code.
-        ' The user is first asked to choose a customer.  Then lists
-        ' are displayed of the customer's open invoices and credit
-        ' memos as retrieved from QuickBooks.  The user can choose
-        ' an invoice and optionally a credit memo, fill in all of the
-        ' payment information, and then send the payment to QuickBooks.
-        '
-        ' This application works with a few selected customers. A sample
-        ' QuickBooks company file: ReceivePaymentsCompanyFile.qbw has
-        ' been provided with this application, which has the relevant
-        ' information for invoices and credit memos set up for this
-        ' purpose.
-        '
-        '
-        '
-        ' Created February, 2002
-        ' Updated to SDK 2.0 July, 2002
-        '
-        ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-        ' Use is subject to the terms specified at:
-        '      http://developer.intuit.com/legal/devsite_tos.html
-        '
-        '-------------------------------------------------------------
+' MainForm.frm
+'
+' This is the form file for the sample receive payment code.
+' The user is first asked to choose a customer.  Then lists
+' are displayed of the customer's open invoices and credit
+' memos as retrieved from QuickBooks.  The user can choose
+' an invoice and optionally a credit memo, fill in all of the
+' payment information, and then send the payment to QuickBooks.
+'
+' This application works with a few selected customers. A sample
+' QuickBooks company file: ReceivePaymentsCompanyFile.qbw has
+' been provided with this application, which has the relevant
+' information for invoices and credit memos set up for this
+' purpose.
+'
+'
+'
+' Created February, 2002
+' Updated to SDK 2.0 July, 2002
+'
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Use is subject to the terms specified at:
+'      http://developer.intuit.com/legal/devsite_tos.html
+'
+'-------------------------------------------------------------
 
-        Option Explicit
+Option Explicit
 
 ' Global variable holds the customer information so it will not
 ' be inadvertantly modified between when "Display Invoices"

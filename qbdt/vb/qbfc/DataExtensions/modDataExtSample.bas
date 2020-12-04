@@ -1,102 +1,102 @@
 Attribute VB_Name = "modDataExtSample"
-'----------------------------------------------------------
-' Module: modDataExtSample
-'
-' Description: This module contains the code which creates QBFC
-'              messages, exchanges them with QuickBooks, interprets
-'              the responses and loads information into form objects.
-'
-'              The routines in this module are hardcoded to use the
-'              OwnerID {E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}.  The
-'              string constant cstrOwnerID is defined with this value.
-'
-' Routines: OpenConnectionBeginSession
-'             Opens a connection and begins a sesson with the
-'             currently open company file.  If a company isn't open,
-'             the routine will display a message and then exit the
-'             program.
-'
-'           GetDataExts
-'             Builds a DataExtQueryRq request, sends it to QuickBooks
-'             and passes the reply to FillDataExts
-'
-'           GetCustomFields
-'             Builds a DataExtQueryRq request, sends it to QuickBooks
-'             and passes the reply to FillDataExts
-'
-'           FillDataExts
-'             Parses a DataExtDefQueryRs response message and fills
-'             a passed text box with the data extension definitions
-'             returned by the query
-'
-'           AddDataExtDef
-'             Builds a DataExtDefAddRq message, sends it to
-'             QuickBooks, parsed the response and if successful calls
-'             GetDataExts to add the new data extension definition to
-'             the main form, frmDataExtSample
-'
-'           GetCustomers
-'             Builds a CustomerQueryRq message, sends it to
-'             QuickBooks and calls FillCustomerListBox
-'
-'           FillCustomerListBox
-'             Parses the passed CustomerQueryRs response and adds
-'             sublevel 0 (top level customers, not jobs) to a
-'             the listbox passed to the routine.
-'
-'           CustomersHaveDataExts
-'             Calls GetDataExts to fill a text box with the defined
-'             data extensions, searches to see if any of them contain
-'             the word "Customer" (indicating they are assigned to
-'             customer records) and returns True or False depending
-'             on the result of the search.
-'
-'           FillUnusedDataExts
-'             Calls GetDataExts to get a list of all data extensions
-'             available and makes a list of those assigned for
-'             customers records, calls GetUsedDataExts to get the
-'             list of data extensions already in use for the passed
-'             in customer, compares the lists and puts the unused
-'             data extension names and types into the passed in
-'             listbox
-'
-'           GetUsedDataExts
-'             Builds a CustomerQueryRq for the passed in customer with
-'             OwnerID set to the constant for this module causing the
-'             return of data extensions for that customer record to
-'             be returned.  It then passes the response to
-'             FillUsedDataExts
-'
-'           FillUsedDataExts
-'             Parses a CustomerQueryRq response for a single customer,
-'             extracts the returned data extensions (if any) and
-'             adds them to a passed in list box with or without their
-'             values depending on a passed in boolean
-'
-'           AddDataExt
-'             Using values passed in adds a data extension to a
-'             customer record, building the request, parsing the
-'             response and displaying a message box with the result
-'             and returning a boolean indicating the add success
-'
-'           ModDataExt
-'             Using values passed in modifies a data extension to a
-'             customer record, building the request, parsing the
-'             response and displaying a message box with the result
-'             and returning a boolean indicating the modify success
-'
-'           EndSessionCloseConnection
-'             Calls EndSession and CloseConnection if the boolean
-'             booSessionBegun is true.
-'
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
-' Use is subject to the terms specified at:
-'      http://developer.intuit.com/legal/devsite_tos.html
-' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
-' 
-'----------------------------------------------------------
-
-Const cstrOwnerID As String = "{E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}"
+    '----------------------------------------------------------
+    ' Module: modDataExtSample
+    '
+    ' Description: This module contains the code which creates QBFC
+    '              messages, exchanges them with QuickBooks, interprets
+    '              the responses and loads information into form objects.
+    '
+    '              The routines in this module are hardcoded to use the
+    '              OwnerID {E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}.  The
+    '              string constant cstrOwnerID is defined with this value.
+    '
+    ' Routines: OpenConnectionBeginSession
+    '             Opens a connection and begins a sesson with the
+    '             currently open company file.  If a company isn't open,
+    '             the routine will display a message and then exit the
+    '             program.
+    '
+    '           GetDataExts
+    '             Builds a DataExtQueryRq request, sends it to QuickBooks
+    '             and passes the reply to FillDataExts
+    '
+    '           GetCustomFields
+    '             Builds a DataExtQueryRq request, sends it to QuickBooks
+    '             and passes the reply to FillDataExts
+    '
+    '           FillDataExts
+    '             Parses a DataExtDefQueryRs response message and fills
+    '             a passed text box with the data extension definitions
+    '             returned by the query
+    '
+    '           AddDataExtDef
+    '             Builds a DataExtDefAddRq message, sends it to
+    '             QuickBooks, parsed the response and if successful calls
+    '             GetDataExts to add the new data extension definition to
+    '             the main form, frmDataExtSample
+    '
+    '           GetCustomers
+    '             Builds a CustomerQueryRq message, sends it to
+    '             QuickBooks and calls FillCustomerListBox
+    '
+    '           FillCustomerListBox
+    '             Parses the passed CustomerQueryRs response and adds
+    '             sublevel 0 (top level customers, not jobs) to a
+    '             the listbox passed to the routine.
+    '
+    '           CustomersHaveDataExts
+    '             Calls GetDataExts to fill a text box with the defined
+    '             data extensions, searches to see if any of them contain
+    '             the word "Customer" (indicating they are assigned to
+    '             customer records) and returns True or False depending
+    '             on the result of the search.
+    '
+    '           FillUnusedDataExts
+    '             Calls GetDataExts to get a list of all data extensions
+    '             available and makes a list of those assigned for
+    '             customers records, calls GetUsedDataExts to get the
+    '             list of data extensions already in use for the passed
+    '             in customer, compares the lists and puts the unused
+    '             data extension names and types into the passed in
+    '             listbox
+    '
+    '           GetUsedDataExts
+    '             Builds a CustomerQueryRq for the passed in customer with
+    '             OwnerID set to the constant for this module causing the
+    '             return of data extensions for that customer record to
+    '             be returned.  It then passes the response to
+    '             FillUsedDataExts
+    '
+    '           FillUsedDataExts
+    '             Parses a CustomerQueryRq response for a single customer,
+    '             extracts the returned data extensions (if any) and
+    '             adds them to a passed in list box with or without their
+    '             values depending on a passed in boolean
+    '
+    '           AddDataExt
+    '             Using values passed in adds a data extension to a
+    '             customer record, building the request, parsing the
+    '             response and displaying a message box with the result
+    '             and returning a boolean indicating the add success
+    '
+    '           ModDataExt
+    '             Using values passed in modifies a data extension to a
+    '             customer record, building the request, parsing the
+    '             response and displaying a message box with the result
+    '             and returning a boolean indicating the modify success
+    '
+    '           EndSessionCloseConnection
+    '             Calls EndSession and CloseConnection if the boolean
+    '             booSessionBegun is true.
+    '
+    ' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
+    ' 
+    '----------------------------------------------------------
+    
+    Const cstrOwnerID As String = "{E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}"
     
     Dim booSessionBegun As Boolean
     

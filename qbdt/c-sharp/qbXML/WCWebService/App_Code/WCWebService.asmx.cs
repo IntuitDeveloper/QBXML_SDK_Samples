@@ -1,6 +1,6 @@
 //
 // QuickBooks Web Connector Sample: WCWebService
-// Copyright (c) 2006-2020 Intuit, Inc
+// Copyright (c) 2006-2013 Intuit, Inc
 //
 // This sample is a C# ASP.NET web service application that 
 // communicates with QuickBooks via QBWebConnector. The sample focuses 

@@ -17,13 +17,13 @@ Attribute VB_Exposed = False
 ' Description: This class contains RefNumber and TxnID Strings.
 '           The properties will set and get the RefNumber or TxnID.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
 
-Private m_sRefNumber As String
+    Private m_sRefNumber As String
     Private m_sTxnID As String
 
     Function SetTxnID(ByVal Value As String)

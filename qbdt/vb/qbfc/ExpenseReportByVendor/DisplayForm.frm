@@ -37,7 +37,7 @@ Attribute VB_Exposed = False
 ' This form can be used to display the request and response
 ' qbxml to the user for illustrational purposes.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '

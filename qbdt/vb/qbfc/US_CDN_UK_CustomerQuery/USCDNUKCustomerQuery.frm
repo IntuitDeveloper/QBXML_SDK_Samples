@@ -157,7 +157,7 @@ On Error GoTo ErrHandler1
     'Start with a US HostQuery
     'If it succeeds, app is talking to QB_US
     'If it fails with a specific parse error, catch it and then retry a CDN HostQuery
-    Set sessionManager = New QBFC14Lib.QBSessionManager
+    Set sessionManager = New QBFC13Lib.QBSessionManager
     sessionManager.OpenConnection cAppID, cAppName
     sessionManager.BeginSession "", omDontCare
     Set msgset = sessionManager.CreateMsgSetRequest("US", 1, 0)
@@ -319,7 +319,7 @@ On Error GoTo ErrHandler4
         'and instantiates a new QBSessionManager object to use forward
         sessionManager.EndSession
         sessionManager.CloseConnection
-        Set sessionManager = New QBFC14Lib.QBSessionManager
+        Set sessionManager = New QBFC13Lib.QBSessionManager
         sessionManager.OpenConnection cAppID, cAppName
         sessionManager.BeginSession "", omDontCare
         Exit Sub

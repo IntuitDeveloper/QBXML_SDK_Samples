@@ -46,13 +46,13 @@ Attribute VB_Name = "EstimatesModule"
 '             QuickBooks can have estimates with empty lines
 '
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2002-2013 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
 
-Dim estimateCollection As Collection
+    Dim estimateCollection As Collection
     Const MAX_RETURNED = 20
 
     
