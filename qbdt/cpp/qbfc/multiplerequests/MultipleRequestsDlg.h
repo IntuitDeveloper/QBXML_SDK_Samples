@@ -10,7 +10,7 @@
 
 /////////////////////////////////////////////////////////////////////////////
 // CMultipleRequestsDlg dialog
-#import "qbFC13.dll" no_namespace, named_guids
+#import "qbFC14.dll" no_namespace, named_guids
 
 class CMultipleRequestsDlg : public CDialog
 {

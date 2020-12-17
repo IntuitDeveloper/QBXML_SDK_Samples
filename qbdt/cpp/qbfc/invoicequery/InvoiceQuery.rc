@@ -128,7 +128,7 @@ BEGIN
             VALUE "FileDescription", "InvoiceQuery MFC Application\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "InvoiceQuery\0"
-            VALUE "LegalCopyright", "Copyright (C) 2002-2013\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002-2020\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "InvoiceQuery.EXE\0"
             VALUE "ProductName", "InvoiceQuery Application\0"

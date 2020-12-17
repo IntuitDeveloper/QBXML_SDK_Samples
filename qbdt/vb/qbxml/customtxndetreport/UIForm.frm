@@ -296,7 +296,7 @@ Attribute VB_Exposed = False
 ' .html file.  When the GenerateReport button is pressed,
 ' it kicks off all of the main action.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
