@@ -93,13 +93,13 @@ Attribute VB_Name = "modDataExtSample"
 '             Adds intentations and newlines to an XML string to make
 '             it more attractive for display in a text window.
 '
-' Copyright © 2002-2013 Intuit Inc. All rights reserved.
+' Copyright © 2002-2020 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
 
-  Const cstrOwnerID = "{E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}"
+Const cstrOwnerID = "{E09C86CF-9D6E-4EF2-BCBE-4D66B6B0F754}"
   
   Dim booSessionBegun As Boolean
   
