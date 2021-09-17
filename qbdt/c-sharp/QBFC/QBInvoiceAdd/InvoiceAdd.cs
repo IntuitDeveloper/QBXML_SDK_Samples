@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
-using Interop.QBFC14;
+using Interop.QBFC15;
 
 namespace InvoiceAdd
 {

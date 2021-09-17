@@ -48,9 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.QBFC14, Version=14.0.0.1, Culture=neutral, PublicKeyToken=31d8aec643e18259">
+    <Reference Include="Interop.QBFC15, Version=15.0.0.1, Culture=neutral, PublicKeyToken=31d8aec643e18259">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBFC14.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Vsa" />
     <Reference Include="System" />

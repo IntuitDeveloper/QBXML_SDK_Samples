@@ -1,6 +1,6 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{AE580877-774F-40BD-AB9A-04FB7CD96DC0}#1.0#0#..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\QBFC14.dll#qbFC14 1.0 Type Library
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{26D049B7-5D02-4FF9-A803-C783F54A307E}#1.0#0#..\..\..\..\..\tools\QBFC\bin\Release\QBFC15.dll#qbFC15 1.0 Type Library
 Form=SyncCustomerMainForm.frm
 Module=SyncCustomerListModule; SyncCustomerListModule.bas
 Class=CustomerClass; CustomerClass.cls

@@ -75,7 +75,7 @@
 '
 ' Updated itemInventoryQuery.ORListQuery to new query 09/2012
 '----------------------------------------------------------
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 
 Module ItemInventoryModule

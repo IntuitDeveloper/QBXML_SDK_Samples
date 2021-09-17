@@ -1,127 +1,125 @@
-<VisualStudioProject>
-    <VisualBasic
-        ProjectType = "Local"
-        ProductVersion = "7.10.6030"
-        SchemaVersion = "2.0"
-        ProjectGuid = "{2672AE86-58FB-4028-9F6E-8D207A36EC15}"
-    >
-        <Build>
-            <Settings
-                ApplicationIcon = ""
-                AssemblyKeyContainerName = ""
-                AssemblyName = "SyncCustomerList"
-                AssemblyOriginatorKeyFile = ""
-                AssemblyOriginatorKeyMode = "None"
-                DefaultClientScript = "JScript"
-                DefaultHTMLPageLayout = "Grid"
-                DefaultTargetSchema = "IE50"
-                DelaySign = "false"
-                OutputType = "WinExe"
-                OptionCompare = "Binary"
-                OptionExplicit = "On"
-                OptionStrict = "Off"
-                RootNamespace = "SyncCustomerList"
-                StartupObject = "SyncCustomerList.SyncCustomerListForm"
-            >
-                <Config
-                    Name = "Debug"
-                    BaseAddress = "285212672"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = ""
-                    DefineDebug = "true"
-                    DefineTrace = "true"
-                    DebugSymbols = "true"
-                    IncrementalBuild = "true"
-                    Optimize = "false"
-                    OutputPath = "bin\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "1"
-                />
-                <Config
-                    Name = "Release"
-                    BaseAddress = "285212672"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = ""
-                    DefineDebug = "false"
-                    DefineTrace = "true"
-                    DebugSymbols = "false"
-                    IncrementalBuild = "false"
-                    Optimize = "true"
-                    OutputPath = "bin\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "1"
-                />
-            </Settings>
-            <References>
-                <Reference
-                    Name = "System"
-                    AssemblyName = "System"
-                />
-                <Reference
-                    Name = "System.Data"
-                    AssemblyName = "System.Data"
-                />
-                <Reference
-                    Name = "System.Drawing"
-                    AssemblyName = "System.Drawing"
-                />
-                <Reference
-                    Name = "System.Windows.Forms"
-                    AssemblyName = "System.Windows.Forms"
-                />
-                <Reference
-                    Name = "System.XML"
-                    AssemblyName = "System.Xml"
-                />
-                <Reference
-                    Name = "Interop.QBFC14"
-                    AssemblyName = "Interop.QBFC14"
-                    HintPath = "..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\Interop.QBFC14.dll"
-                />
-            </References>
-            <Imports>
-                <Import Namespace = "Microsoft.VisualBasic" />
-                <Import Namespace = "System" />
-                <Import Namespace = "System.Collections" />
-                <Import Namespace = "System.Data" />
-                <Import Namespace = "System.Drawing" />
-                <Import Namespace = "System.Diagnostics" />
-                <Import Namespace = "System.Windows.Forms" />
-            </Imports>
-        </Build>
-        <Files>
-            <Include>
-                <File
-                    RelPath = "AssemblyInfo.vb"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "CustomerClass.vb"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "SyncCustomerListModule.vb"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "SyncCustomerMainForm.vb"
-                    SubType = "Form"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "SyncCustomerMainForm.resx"
-                    DependentUpon = "SyncCustomerMainForm.vb"
-                    BuildAction = "EmbeddedResource"
-                />
-            </Include>
-        </Files>
-    </VisualBasic>
-</VisualStudioProject>
-
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2672AE86-58FB-4028-9F6E-8D207A36EC15}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SyncCustomerList</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>SyncCustomerList</RootNamespace>
+    <StartupObject>SyncCustomerList.SyncCustomerListForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SyncCustomerList.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SyncCustomerList.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.QBFC15">
+      <Name>Interop.QBFC15</Name>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomerClass.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SyncCustomerListModule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SyncCustomerMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="SyncCustomerMainForm.resx">
+      <DependentUpon>SyncCustomerMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

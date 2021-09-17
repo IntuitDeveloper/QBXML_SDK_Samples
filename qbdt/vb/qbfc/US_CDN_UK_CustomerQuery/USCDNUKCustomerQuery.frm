@@ -64,7 +64,7 @@ Attribute VB_Exposed = False
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/
 ' Updated to QBFC 12.0 and fixed setting max QBXML version: 09/2012
-' 08/09/2013 updated to qbfc13
+' updated to qbfc15
 '----------------------------------------------------------
 
 Option Explicit
@@ -157,7 +157,7 @@ On Error GoTo ErrHandler1
     'Start with a US HostQuery
     'If it succeeds, app is talking to QB_US
     'If it fails with a specific parse error, catch it and then retry a CDN HostQuery
-    Set sessionManager = New QBFC14Lib.QBSessionManager
+    Set sessionManager = New QBFC15Lib.QBSessionManager
     sessionManager.OpenConnection cAppID, cAppName
     sessionManager.BeginSession "", omDontCare
     Set msgset = sessionManager.CreateMsgSetRequest("US", 1, 0)
@@ -319,7 +319,7 @@ On Error GoTo ErrHandler4
         'and instantiates a new QBSessionManager object to use forward
         sessionManager.EndSession
         sessionManager.CloseConnection
-        Set sessionManager = New QBFC14Lib.QBSessionManager
+        Set sessionManager = New QBFC15Lib.QBSessionManager
         sessionManager.OpenConnection cAppID, cAppName
         sessionManager.BeginSession "", omDontCare
         Exit Sub

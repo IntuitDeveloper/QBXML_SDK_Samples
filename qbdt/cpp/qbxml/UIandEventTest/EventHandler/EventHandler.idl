@@ -24,7 +24,7 @@ library EventHandlerLib
 {
 	importlib("stdole32.tlb");
 	importlib("stdole2.tlb");
-	importlib("C:\Program Files (x86)\Intuit\QuickBooks 2017\sdkevent.dll");	
+	importlib("C:\Program Files (x86)\Intuit\QuickBooks Enterprise Solutions 21.0\sdkevent.dll");	
 	
 	[
 		uuid(70DC83AB-2EC1-478F-9204-C37485AD8E3C),

@@ -1,10 +1,10 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{4351618F-9059-4A79-B638-DCB8B97B3262}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Common Files\Intuit\QuickBooks\QBXMLRP2.dll#QBXMLRP2 1.0 Type Library
-Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\msxml4.dll#Microsoft XML, v4.0
-Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\..\..\..\..\..\..\..\..\..\Windows\SysWOW64\scrrun.dll#Microsoft Scripting Runtime
-Reference=*\G{80C64076-8111-4445-AFEB-CDC7A9F545FB}#1.0#0#..\..\..\..\..\..\..\build\samples\qbdt\vb\qbxml\DataEvents\QBDataEventManager\QBDataEventManager.exe#QBDataEventManager
-Object={38911DA0-E448-11D0-84A3-00DD01104159}#1.1#0; comct332.ocx
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{4351618F-9059-4A79-B638-DCB8B97B3262}#1.0#0#..\..\..\..\..\..\..\install\cache\QBXMLRP2.dll#QBXMLRP2 1.0 Type Library
+Reference=*\G{F5078F18-C551-11D3-89B9-0000F81FE221}#4.0#0#..\..\..\..\..\..\..\..\..\Windows\SysWOW64\msxml4.dll#Microsoft XML, v4.0
+Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\..\..\..\..\..\..\..\Windows\SysWOW64\scrrun.dll#Microsoft Scripting Runtime
+Reference=*\G{E27C7D35-5AAE-4DEE-A2EF-882680FCB747}#1.0#0#..\..\..\..\..\..\..\build\samples\qbdt\vb\qbxml\DataEvents\QBDataEventManager\QBDataEventManager.exe#QBDataEventManager
+Object={38911DA0-E448-11D0-84A3-00DD01104159}#1.1#0; COMCT332.OCX
 Object={831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0; mscomctl.ocx
 Form=QBDataEventForm.frm
 Class=CCustomer; CCustomer.cls

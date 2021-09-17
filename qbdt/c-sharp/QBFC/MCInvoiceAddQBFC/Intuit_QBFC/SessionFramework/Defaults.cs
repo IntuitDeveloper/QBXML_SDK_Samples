@@ -3,7 +3,7 @@
 // Usage governed by the QuickBooks SDK Developer's License Agreement
 
 using System;
-using Interop.QBFC14;
+using Interop.QBFC15;
 using System.Runtime.InteropServices;
 
 

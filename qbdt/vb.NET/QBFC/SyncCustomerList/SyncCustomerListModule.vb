@@ -57,7 +57,7 @@
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 Module SyncCustomerListModule
 
