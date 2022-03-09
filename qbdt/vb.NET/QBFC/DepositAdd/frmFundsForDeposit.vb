@@ -145,7 +145,7 @@ Friend Class frmDepositAdd
     ' Description: this form is to display payments available for deposit
     '              and allow the user to deposit them.
     '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
     ' Use is subject to the terms specified at:
     '      http://developer.intuit.com/legal/devsite_tos.html
     '
@@ -159,7 +159,7 @@ Friend Class frmDepositAdd
             Exit Sub
         End If
 
-        DepositFunds(VB6.GetItemString(lstFundsForDeposit, lstFundsForDeposit.SelectedIndex))
+        DepositFunds(lstFundsForDeposit.Items(lstFundsForDeposit.SelectedIndex))
         GetFundsForDeposit(lstFundsForDeposit)
     End Sub
 
