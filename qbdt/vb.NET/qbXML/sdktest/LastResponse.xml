@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<BillQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<BillRet>
+<TxnID>7-1646382259</TxnID>
+<TimeCreated>2022-03-04T00:24:19-08:00</TimeCreated>
+<TimeModified>2022-03-04T00:24:19-08:00</TimeModified>
+<EditSequence>1646382259</EditSequence>
+<TxnNumber>3</TxnNumber>
+<VendorRef>
+<ListID>80000001-1646382185</ListID>
+<FullName>v1</FullName>
+</VendorRef>
+<APAccountRef>
+<ListID>80000028-1646382240</ListID>
+<FullName>Accounts Payable</FullName>
+</APAccountRef>
+<TxnDate>2022-03-04</TxnDate>
+<DueDate>2022-03-14</DueDate>
+<AmountDue>2000.00</AmountDue>
+<IsPaid>false</IsPaid>
+<OpenAmount>2000.00</OpenAmount>
+</BillRet>
+<BillRet>
+<TxnID>16-1646632498</TxnID>
+<TimeCreated>2022-03-06T21:54:58-08:00</TimeCreated>
+<TimeModified>2022-03-06T21:54:58-08:00</TimeModified>
+<EditSequence>1646632498</EditSequence>
+<TxnNumber>8</TxnNumber>
+<VendorRef>
+<ListID>80000002-1646382223</ListID>
+<FullName>v2</FullName>
+</VendorRef>
+<APAccountRef>
+<ListID>80000028-1646382240</ListID>
+<FullName>Accounts Payable</FullName>
+</APAccountRef>
+<TxnDate>2022-03-06</TxnDate>
+<DueDate>2022-03-16</DueDate>
+<AmountDue>70.00</AmountDue>
+<Memo>Created by Purchase Order Modify Sample for modified PO 5; TxnDate 2022-03-06; TxnID 13-1646632465 .  Quantity ordered reduced to quantity recieved for one or all lines, differences reflected in this bill.</Memo>
+<IsPaid>false</IsPaid>
+<OpenAmount>120.00</OpenAmount>
+</BillRet>
+<BillRet>
+<TxnID>19-1646632525</TxnID>
+<TimeCreated>2022-03-06T21:55:25-08:00</TimeCreated>
+<TimeModified>2022-03-06T21:55:25-08:00</TimeModified>
+<EditSequence>1646632525</EditSequence>
+<TxnNumber>9</TxnNumber>
+<VendorRef>
+<ListID>80000002-1646382223</ListID>
+<FullName>v2</FullName>
+</VendorRef>
+<APAccountRef>
+<ListID>80000028-1646382240</ListID>
+<FullName>Accounts Payable</FullName>
+</APAccountRef>
+<TxnDate>2022-03-06</TxnDate>
+<DueDate>2022-03-16</DueDate>
+<AmountDue>50.00</AmountDue>
+<Memo>Created by Purchase Order Modify Sample for modified PO 4; TxnDate 2022-03-06; TxnID 10-1646632426 .  Quantity ordered reduced to quantity recieved for one or all lines, differences reflected in this bill.</Memo>
+<IsPaid>false</IsPaid>
+<OpenAmount>120.00</OpenAmount>
+</BillRet>
+</BillQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
