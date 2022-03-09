@@ -90,7 +90,7 @@
   <ItemGroup>
     <Reference Include="Interop.QBFC15">
       <Name>Interop.QBFC15</Name>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
+      <HintPath>C:\Program Files %28x86%29\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.Compatibility">
