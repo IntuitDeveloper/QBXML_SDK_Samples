@@ -1,6 +1,6 @@
 Option Strict Off
 Option Explicit On 
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 Module modDataExtSample
     '----------------------------------------------------------
@@ -93,7 +93,7 @@ Module modDataExtSample
     '             Calls EndSession and CloseConnection if the boolean
     '             booSessionBegun is true.
     '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
     ' Use is subject to the terms specified at:
     '      http://developer.intuit.com/legal/devsite_tos.html
     '

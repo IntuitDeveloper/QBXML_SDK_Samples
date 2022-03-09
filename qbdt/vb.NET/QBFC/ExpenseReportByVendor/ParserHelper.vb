@@ -1,6 +1,6 @@
 Option Strict Off
 Option Explicit On 
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 Friend Class ParserHelper
     ' ParserHelper.cls
@@ -13,7 +13,7 @@ Friend Class ParserHelper
     ' type of report being created for this project, most of the code is
     ' generic and could easily be adapted to any other QuickBooks report.
     '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
     ' Use is subject to the terms specified at:
     '      http://developer.intuit.com/legal/devsite_tos.html
     '

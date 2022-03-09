@@ -1,6 +1,6 @@
 Option Strict Off
 Option Explicit On 
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 Module qbooks
     ' QBooks.bas
@@ -12,7 +12,7 @@ Module qbooks
     ' most importantly, the function sendReqToQB which connects to
     ' QuickBooks to send the request and receive a response.
     '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
     ' Use is subject to the terms specified at:
     '      http://developer.intuit.com/legal/devsite_tos.html
     '

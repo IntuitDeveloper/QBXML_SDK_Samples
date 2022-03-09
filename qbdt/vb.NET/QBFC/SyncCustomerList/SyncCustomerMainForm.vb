@@ -132,7 +132,7 @@ Public Class SyncCustomerListForm
     '           CustomerActivityQuery, CustomerQuery by modified date
     '           and ListDeletedQuery.
     '
-    ' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
     ' Use is subject to the terms specified at:
     '      http://developer.intuit.com/legal/devsite_tos.html
     '
