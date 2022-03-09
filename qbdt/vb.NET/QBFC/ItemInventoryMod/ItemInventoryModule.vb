@@ -69,13 +69,13 @@
 '             Loops thru the item objects in the combo box and returns
 '             true if one of the objects has the specified name.
 '
-' Copyright © 2002-2020 Intuit Inc. All rights reserved.
+' Copyright © 2021-2022 Intuit Inc. All rights reserved.
 ' Use is subject to the terms specified at:
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 ' Updated itemInventoryQuery.ORListQuery to new query 09/2012
 '----------------------------------------------------------
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 
 Module ItemInventoryModule
