@@ -247,9 +247,9 @@ CString CMultipleRequestsDlg::InterpretCustomerAddResponse(
   if (customerRet != NULL )
   {
     msg += ", Detail Type = " ;
-    msg += customerRet->Type->GetAsString();
+    msg += (LPCTSTR) customerRet->Type->GetAsString();
     msg += ":" ;
-    msg += customerRet->Name->GetValue();
+    msg += (LPCTSTR)customerRet->Name->GetValue();
   }
 
   return msg;
@@ -267,9 +267,9 @@ CString CMultipleRequestsDlg::InterpretInvoiceAddResponse(
   if( invoiceRet != NULL )
   {
     msg += ", Detail Type = ";
-    msg += invoiceRet->Type->GetAsString();
+    msg += (LPCTSTR)invoiceRet->Type->GetAsString();
     msg += ":" ;
-    msg += invoiceRet->TxnID->GetValue();
+    msg += (LPCTSTR)invoiceRet->TxnID->GetValue();
   }
    
   return msg;

@@ -117,7 +117,7 @@ BEGIN
             VALUE "FileDescription", "MultipleRequests MFC Application\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "MultipleRequests\0"
-            VALUE "LegalCopyright", "Copyright (C) 2002-2020\0"
+            VALUE "LegalCopyright", "Copyright (C) 2021-2022\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "MultipleRequests.EXE\0"
             VALUE "ProductName", "MultipleRequests Application\0"
