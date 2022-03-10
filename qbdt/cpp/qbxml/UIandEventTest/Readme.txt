@@ -1,4 +1,4 @@
-These applications are designed for testing and demonstrating the UI functionality of QBSDK 3.0. These applications are built with Visual Studio 6.0.
+These applications are designed for testing and demonstrating the UI functionality of QBSDK 3.0. These applications are built with Visual Studio 15.
 
 EventHandler - Implements callback handler for QuickBooks events. This is required for the MenuSubscribe application. MenuSubscribe registers its menu extensions using this EventHandler as the callback application.
 

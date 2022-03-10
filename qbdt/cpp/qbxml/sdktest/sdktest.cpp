@@ -4,9 +4,9 @@
  * Description:
  * QBXMLRP API tester. Run "sdktest -h" to learn how to use it.
  *
- * Created On: 09/09/2001
+ * Created On: 03/09/2022
  *
- * Copyright (c) 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright (c) 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -20,7 +20,6 @@
 #include <string>
 
 using namespace std;
-
 #import "QBXMLRP.dll"
 
 
@@ -237,7 +236,7 @@ void processRequest (CComBSTR   appName,
             std::cout << "process request OK, dumping the response.\n";
             // dump the response
             std::ofstream   outputFile (outputXMLFileName);
-            if (outputFile == 0) {
+			if(!outputFile.is_open()){ // Anitha
               std::cout << "could not open output file" << outputXMLFileName << "\n";
             } else {
               TCHAR *outputData2;   // this pointer does not change;
@@ -396,7 +395,7 @@ bool readXMLinputFile (TCHAR    *fileName,
 {
   std::ifstream   inputFile (fileName);
 
-  if (inputFile == NULL) {
+  if (!inputFile.is_open()) {
     return false;
   }
 

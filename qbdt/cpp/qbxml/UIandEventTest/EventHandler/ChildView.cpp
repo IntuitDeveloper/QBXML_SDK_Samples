@@ -4,10 +4,10 @@
  * Description:
  * MFC-generated view class.
  *
- * Created On: 09/15/2003
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *

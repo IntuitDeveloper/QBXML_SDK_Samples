@@ -1,10 +1,10 @@
 /*---------------------------------------------------------------------------
  * FILE: EventHandler.idl
  *
- * Created On: 09/15/2003
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -24,7 +24,11 @@ library EventHandlerLib
 {
 	importlib("stdole32.tlb");
 	importlib("stdole2.tlb");
-	importlib("C:\Program Files (x86)\Intuit\QuickBooks 2017\sdkevent.dll");	
+#if _WIN64
+	importlib("C:\Program Files\Intuit\QuickBooks Enterprise Solutions 22.0\sdkevent.dll");
+#else
+	importlib("C:\Program Files (x86)\Intuit\QuickBooks Enterprise Solutions 21.0\sdkevent.dll");
+#endif
 	
 	[
 		uuid(70DC83AB-2EC1-478F-9204-C37485AD8E3C),
