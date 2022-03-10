@@ -16,10 +16,10 @@
  *                7. GetHasError:       Returns true if there was an error
  *                8. GetErrorMsg:       Returns the corresponding message for an error
  *
- * Created On: 11/11/2001
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -70,7 +70,7 @@ DOMXMLBuilder::~DOMXMLBuilder()
 bool DOMXMLBuilder::InstantiateXMLDomDocument()
 {
   HRESULT hr;
-  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument40,
+  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument60,
                         NULL,
                         CLSCTX_INPROC_SERVER,
                         MSXML2::IID_IXMLDOMDocument,
@@ -80,7 +80,7 @@ bool DOMXMLBuilder::InstantiateXMLDomDocument()
   // COM Create Instance failed
   if (FAILED(hr)){
     TCHAR tmpMsg[1024];
-    sprintf (tmpMsg, "Failed to instantiate the MSXML DOM Document.  Error: 0x%lx.  Perhaps MSXML4.dll is missing?", hr);
+    sprintf (tmpMsg, "Failed to instantiate the MSXML DOM Document.  Error: 0x%lx.  Perhaps MSXML6.dll is missing?", hr);
     m_ErrorMsg = tmpMsg;
     m_HasError = true;
     return false;

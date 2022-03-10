@@ -4,10 +4,10 @@
  * Description:
  * MFC-generated application class.
  *
- * Created On: 09/15/2003
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -48,8 +48,6 @@ BOOL CMenuSubscribeApp::InitInstance()
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
 	// visual styles.  Otherwise, any window creation will fail.
 	//vc6 InitCommonControls();
-	Enable3dControlsStatic();	// Call this when linking to MFC statically  //vc6
-
 	CWinApp::InitInstance();
 
 	CoInitialize( NULL );

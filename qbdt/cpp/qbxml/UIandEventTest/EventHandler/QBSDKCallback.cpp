@@ -4,10 +4,10 @@
  * Description:
  * Implements callback for QB event notification.
  *
- * Created On: 09/15/2003
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -50,9 +50,7 @@ STDMETHODIMP CQBSDKCallback::inform(BSTR eventXML) {
 
     // Get app settings.
     CEventHandlerApp* pApp = (CEventHandlerApp*)AfxGetApp();
-    BOOL launchApp = pApp->GetProfileInt(   pApp->lpszProfileSection,
-                                            pApp->lpszProfileLaunch,
-                                            1 );
+    
     BOOL recoveryAlert = pApp->GetProfileInt(   pApp->lpszProfileSection,
                                                 pApp->lpszProfileRecoveryAlert,
                                                 1 );
@@ -64,13 +62,6 @@ STDMETHODIMP CQBSDKCallback::inform(BSTR eventXML) {
     if( pFrame != NULL ) {
         pFrame->ShowWindow( SW_SHOWNORMAL );
         pFrame->BringToForeground();
-    }
-    // If app's window does not yet exist, create and show it
-    // if that is the current setting. Otherwise, the XML will
-    // be displayed in a message box.
-    else if( launchApp ) {
-        pApp->CreateMainWindow();
-        pFrame = (CMainFrame*)AfxGetMainWnd();
     }
 
 
@@ -240,16 +231,16 @@ string CQBSDKCallback::GetTagValue( const string& strXML, const string& strTag )
     strCloseTag += ">";
 
     // Find opening and closing tags.
-    int posOpen = 0;
-    int posClose = 0;
+    size_t posOpen = 0;
+    size_t posClose = 0;
     posOpen = strXML.find( strOpenTag );
-    if( posOpen > 0 ) {
+    if( posOpen != string::npos ) {
         posOpen += strOpenTag.length();
         posClose = strXML.find( strCloseTag, posOpen );
     }
 
     // Extract value.
-    if( posClose > 0 ) {
+    if( posClose != string::npos) {
         strTagValue = strXML.substr( posOpen, posClose-posOpen );
     }
 

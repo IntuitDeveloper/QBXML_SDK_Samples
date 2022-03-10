@@ -4,10 +4,10 @@
  * Description:
  * MFC-generated frame class.
  *
- * Created On: 09/15/2003
+ * Created On: 03/09/2022
  *
  *
- * Copyright © 2001-2013 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *     http://developer.intuit.com/legal/devsite_tos.html
  *
@@ -38,6 +38,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
 	ON_WM_SETFOCUS()
 	//}}AFX_MSG_MAP
+	ON_MESSAGE(CM_UNLOCK, &CMainFrame::OnCmUnLock)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -168,3 +169,9 @@ BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO*
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
 }
 
+
+afx_msg LRESULT CMainFrame::OnCmUnLock(WPARAM wParam, LPARAM lParam)
+{
+	AfxOleUnlockApp();
+	return 0;
+}

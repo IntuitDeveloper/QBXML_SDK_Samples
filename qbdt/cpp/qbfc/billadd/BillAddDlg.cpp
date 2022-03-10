@@ -11,13 +11,13 @@
 *                   - Checking a field that is not guaranteed in the response
 *                     and obtaining data from it
 *
-* Created On: 8/15/2002
+* Created On: 03/09/2022
 *
-* Copyright © 2002-2020 Intuit Inc. All rights reserved.
+* Copyright © 2021-2022 Intuit Inc. All rights reserved.
 * Use is subject to the terms specified at:
 *      http://developer.intuit.com/legal/devsite_tos.html
 *
-* 8/9/2013 Updated to qbfc14.dll
+* Updated to qbfc15.dll
 ***********************************************************************************/
 
 
@@ -27,7 +27,7 @@
 #include "BillAdd.h"
 #include "BillAddDlg.h"
 
-#import "QBFC14.dll" no_namespace, named_guids
+#import "QBFC15.dll" no_namespace, named_guids
 CString QBFCLatestVersion(IQBSessionManagerPtr SessionManager);
 IMsgSetRequestPtr GetLatestMsgSetRequest(IQBSessionManagerPtr SessionManager);
 
@@ -173,10 +173,10 @@ void CBillAddDlg::OnOK()
     {
       //Retrive fields that are guaranteed to be returned in the response
       msg += "\r\nBillRet: EditSequence = " ;
-      msg += billRet->EditSequence->GetValue();
+      msg += (LPCTSTR) billRet->EditSequence->GetValue();
       
       msg += ", Amount Due = " ;
-      msg += billRet->AmountDue->GetAsString();
+      msg += (LPCTSTR) billRet->AmountDue->GetAsString();
         
       //Retrieve a field that is not guaranteed to be returned from QuickBooks
       if (billRet->DueDate != NULL) 

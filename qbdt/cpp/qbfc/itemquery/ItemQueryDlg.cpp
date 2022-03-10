@@ -12,13 +12,13 @@
  *                   - Obtaining returned fields, also checking for
  *                     fields that may not exist in the response
  *
- * Created On: 8/15/2002
+ * Created On: 03/09/2002
  *
- * Copyright © 2002-2020 Intuit Inc. All rights reserved.
+ * Copyright © 2021-2022 Intuit Inc. All rights reserved.
  * Use is subject to the terms specified at:
  *      http://developer.intuit.com/legal/devsite_tos.html
  *
- * 8/9/2013 updated to qbfc13
+ * updated to qbfc15
  *----------------------------------------------------------
  */ 
 
@@ -28,7 +28,7 @@
 #include "ItemQueryDlg.h"
 #include "ItemViewDlg.h"
 
-#import "QBFC14.dll" no_namespace, named_guids
+#import "QBFC15.dll" no_namespace, named_guids
 CString QBFCLatestVersion(IQBSessionManagerPtr SessionManager);
 IMsgSetRequestPtr GetLatestMsgSetRequest(IQBSessionManagerPtr SessionManager);
 
@@ -173,8 +173,8 @@ void CItemQueryDlg::OnOK()
         case orirItemServiceRet: //"orir" prefix comes from OR + Item + Ret
           {
             IItemServiceRetPtr itemServiceRet = orItemRet->ItemServiceRet;
-            msg += "\r\nItemServiceRet: FullName = " ;
-            msg += itemServiceRet->FullName->GetValue();
+            msg += (LPCTSTR) "\r\nItemServiceRet: FullName = " ;
+            msg += (LPCTSTR)itemServiceRet->FullName->GetValue();
 
                 
             //Retrieving a field that may not be set
@@ -182,7 +182,7 @@ void CItemQueryDlg::OnOK()
             if ( itemServiceRet->SalesTaxCodeRef != NULL ) 
             {
               msg += ", SalesTaxCodeRef = " ;
-              msg += itemServiceRet->SalesTaxCodeRef->FullName->GetValue();
+              msg += (LPCTSTR) itemServiceRet->SalesTaxCodeRef->FullName->GetValue();
             }
           }
           break;
@@ -190,14 +190,14 @@ void CItemQueryDlg::OnOK()
           {
             IItemInventoryRetPtr itemInventoryRet = orItemRet->ItemInventoryRet;
             msg += "\r\nItemInventoryRet: FullName = ";
-            msg += itemInventoryRet->FullName->GetValue();
+            msg += (LPCTSTR) itemInventoryRet->FullName->GetValue();
                 
             //Retrieving a field that may not be set,
             //in this case, a quantity
             if ( itemInventoryRet->QuantityOnHand != NULL )
             {
               msg += ", QuantityOnHand = ";
-              msg += itemInventoryRet->QuantityOnHand->GetAsString();
+              msg += (LPCTSTR)itemInventoryRet->QuantityOnHand->GetAsString();
             }
           }
           break;
@@ -205,7 +205,7 @@ void CItemQueryDlg::OnOK()
           {      
             IItemNonInventoryRetPtr itemNonInventoryRet = orItemRet->ItemNonInventoryRet;
             msg += "\r\nItemNonInventoryRet: FullName = " ;
-            msg += itemNonInventoryRet->FullName->GetValue();
+            msg += (LPCTSTR)itemNonInventoryRet->FullName->GetValue();
           }
           break;
         default:
