@@ -69,6 +69,8 @@ Application section.
 
 
 Building the sample
+
+Please install latest QBSDK.
 ------------------
 Open WCWebService.sln in Microsoft Visual Studio .NET and build the 
 solution. 
