@@ -8,7 +8,7 @@ to utilize QBXMLRP2 library using VC+2005.
 
 Created On: May 2007
 
-Copyright © 2007-2013 Intuit Inc. All rights reserved.
+Copyright © 2021-2022 Intuit Inc. All rights reserved.
 Use is subject to the terms specified at: 
 http://developer.intuit.com/legal/
 
