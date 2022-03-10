@@ -80,7 +80,7 @@ BEGIN
             VALUE "FileDescription", "AddCustomer Module\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "AddCustomer\0"
-            VALUE "LegalCopyright", "Copyright (c) 2001-2013\0"
+            VALUE "LegalCopyright", "Copyright (c) 2021-2022\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OLESelfRegister", "\0"
             VALUE "OriginalFilename", "AddCustomer.EXE\0"
