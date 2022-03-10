@@ -50,7 +50,7 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif //_WIN32\r\n"
-    "#include ""res\\MultipleRequests.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""res\\CustomerAdd.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
     "#include ""afxres.rc""         // Standard components\r\n"
     "#endif\r\n"
     "\0"
@@ -66,27 +66,25 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MultipleRequests.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CustomerAdd.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_MULTIPLEREQUESTS_DIALOG DIALOGEX 0, 0, 212, 114
+IDD_CUSTOMERADD_DIALOG DIALOGEX 0, 0, 216, 66
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "Multiple Requests"
+CAPTION "Customer Add"
 FONT 8, "MS Sans Serif"
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,37,93,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,122,93,50,14
-    LTEXT           "QuickBooks must be running with a data file open.",
-                    IDC_STATIC,7,68,198,15
-    LTEXT           "This application demonstrates sending multiple requests in one message set request.",
-                    IDC_STATIC,7,8,198,20
-    LTEXT           "The requests are:\r\n1. Adding a customer with name: Jim\r\n2. Adding an invoice with reference number: 12\r\n3. Querying invoices with reference number: 12",
-                    IDC_STATIC,7,31,198,36
+    DEFPUSHBUTTON   "OK",IDOK,51,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,45,50,14
+    LTEXT           "This sample adds a new Customer, named 'Jim', to QuickBooks.",
+                    IDC_STATIC,7,7,202,14
+    LTEXT           "QuickBooks must be running with a data file opened.",
+                    IDC_STATIC,7,23,202,14
 END
 
 
@@ -114,13 +112,13 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "MultipleRequests MFC Application\0"
+            VALUE "FileDescription", "CustomerAdd MFC Application\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "MultipleRequests\0"
+            VALUE "InternalName", "CustomerAdd\0"
             VALUE "LegalCopyright", "Copyright (C) 2021-2022\0"
             VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "MultipleRequests.EXE\0"
-            VALUE "ProductName", "MultipleRequests Application\0"
+            VALUE "OriginalFilename", "CustomerAdd.EXE\0"
+            VALUE "ProductName", "CustomerAdd Application\0"
             VALUE "ProductVersion", "1, 0, 0, 1\0"
         END
     END
@@ -141,12 +139,12 @@ END
 #ifdef APSTUDIO_INVOKED
 GUIDELINES DESIGNINFO DISCARDABLE 
 BEGIN
-    IDD_MULTIPLEREQUESTS_DIALOG, DIALOG
+    IDD_CUSTOMERADD_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 205
-        TOPMARGIN, 8
-        BOTTOMMARGIN, 107
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -171,7 +169,7 @@ END
 LANGUAGE 9, 1
 #pragma code_page(1252)
 #endif //_WIN32
-#include "res\MultipleRequests.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res\CustomerAdd.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"         // Standard components
 #endif
 
