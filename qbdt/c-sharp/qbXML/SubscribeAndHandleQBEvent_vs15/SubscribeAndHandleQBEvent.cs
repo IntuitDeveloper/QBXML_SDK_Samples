@@ -398,12 +398,12 @@ namespace SubscribeAndHandleQBEvent
         //Subscribes this application to listen for Data event or UI extension event
         private static void SubscribeForEvents(QBSubscriptionType strType, string strData)
         {
-            RequestProcessor2Class qbRequestProcessor;
+            RequestProcessor2 qbRequestProcessor;
             try
             {
                 // Get an instance of the qbXMLRP Request Processor and
                 // call OpenConnection if that has not been done already.
-                qbRequestProcessor = new RequestProcessor2Class();
+                qbRequestProcessor = new RequestProcessor2();
                 qbRequestProcessor.OpenConnection("", strAppName);
 
                 StringBuilder strRequest = new StringBuilder();
@@ -453,12 +453,12 @@ namespace SubscribeAndHandleQBEvent
         //Unsubscribes this application from listening to add/modify/delete custmor event
         private static void UnsubscribeForEvents(QBSubscriptionType strType,bool bSilent)
         {
-            RequestProcessor2Class qbRequestProcessor;
+            RequestProcessor2 qbRequestProcessor;
             try
             {
                 // Get an instance of the qbXMLRP Request Processor and
                 // call OpenConnection if that has not been done already.
-                qbRequestProcessor = new RequestProcessor2Class();
+                qbRequestProcessor = new RequestProcessor2();
                 qbRequestProcessor.OpenConnection("", strAppName);
 
                 StringBuilder strRequest = new StringBuilder(GetSubscriptionDeleteXML(strType));

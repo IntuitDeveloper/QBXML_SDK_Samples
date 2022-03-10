@@ -48,6 +48,8 @@ SubscribeAndHandleQBEvent.exe
 
 Running the sample:
 ------------------------
+Please install latest QBSDK.
+
 Before running SubscribeAndHandleQBEvent.exe, this exe need to be registered as COM out of proc server. 
 Run SubscribeAndHandleQBEvent.exe -h to see the various options with the exe.
 Also make sure that .NET runtime is installed on the machine, and QuickBooks need to be restarted every 

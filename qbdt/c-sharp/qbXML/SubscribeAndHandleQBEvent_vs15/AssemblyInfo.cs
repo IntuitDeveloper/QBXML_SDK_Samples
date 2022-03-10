@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Intuit")]
 [assembly: AssemblyProduct("SubscribeAndHandleQBEvent")]
-[assembly: AssemblyCopyright("Copyright © Intuit 2006")]
+[assembly: AssemblyCopyright("Copyright © Intuit 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
