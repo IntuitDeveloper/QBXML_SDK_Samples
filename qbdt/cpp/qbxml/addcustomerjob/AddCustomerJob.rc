@@ -74,7 +74,7 @@ BEGIN
             VALUE "FileDescription", "AddCustomerJob Module\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "AddCustomerJob\0"
-            VALUE "LegalCopyright", "Copyright (c) 2001-2013\0"
+            VALUE "LegalCopyright", "Copyright (c) 2021-2022\0"
             VALUE "OriginalFilename", "AddCustomerJob.EXE\0"
             VALUE "ProductName", "AddCustomerJob Module\0"
             VALUE "ProductVersion", "1, 0, 0, 1\0"

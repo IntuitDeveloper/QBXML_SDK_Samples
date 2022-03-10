@@ -16,7 +16,7 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyConfigurationAttribute("")];
 [assembly:AssemblyCompanyAttribute("Intuit")];
 [assembly:AssemblyProductAttribute("hostquery")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Intuit 2007")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) Intuit 2021-2022")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
