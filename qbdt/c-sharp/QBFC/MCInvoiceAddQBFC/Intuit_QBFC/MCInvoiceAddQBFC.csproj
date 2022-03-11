@@ -77,7 +77,7 @@
   <ItemGroup>
     <Reference Include="Interop.QBFC15, Version=15.0.0.1, Culture=neutral, PublicKeyToken=31d8aec643e18259">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
+      <HintPath>C:\Program Files\Common Files\Intuit\QuickBooks\Interop.QBFC15.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Vsa" />
