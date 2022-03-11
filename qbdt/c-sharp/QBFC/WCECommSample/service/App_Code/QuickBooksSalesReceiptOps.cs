@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using Interop.QBFC13;
+using QBFC15Lib;
 
 /// <summary>
 /// Operations with QuickBooks SalesReceipt objects.

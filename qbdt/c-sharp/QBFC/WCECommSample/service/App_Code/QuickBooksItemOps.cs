@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using Interop.QBFC13;
+using QBFC15Lib;
 
 /// <summary>
 /// Operations with QuickBooks Item objects.
@@ -27,7 +27,7 @@ public class QuickBooksItemOps
         requestSet.Attributes.OnError = ENRqOnError.roeStop;
         IItemInventoryQuery ItemQ = requestSet.AppendItemInventoryQueryRq();
         ItemQ.iterator.SetValue(ENiterator.itStart);
-        ItemQ.ORListQuery.ListFilter.MaxReturned.SetValue(chunkSize);
+        ItemQ.ORListQueryWithOwnerIDAndClass.ListWithClassFilter.MaxReturned.SetValue(chunkSize);
         return requestSet.ToXMLString();
     }
     
@@ -67,7 +67,7 @@ public class QuickBooksItemOps
         IItemInventoryQuery ItemQ = requestSet.AppendItemInventoryQueryRq();
         ItemQ.iterator.SetValue(ENiterator.itContinue);
         ItemQ.iteratorID.SetValue(sess.getProperty("queryContext").ToString());
-        ItemQ.ORListQuery.ListFilter.MaxReturned.SetValue(chunkSize);
+        ItemQ.ORListQueryWithOwnerIDAndClass.ListWithClassFilter.MaxReturned.SetValue(chunkSize);
         return requestSet.ToXMLString();
     }
  

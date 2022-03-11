@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<QBWCXML>
+<AppName>Add you app name here</AppName>
+<AppID>IDNWS2</AppID>
+<AppURL>http://localhost/WCECommSample/service/WCECommService.asmx</AppURL>
+<AppDescription>Starter sample web service for ecommerce</AppDescription>
+<AppSupport>http://localhost/WCECommSample/service/WCECommService.asmx?wsdl</AppSupport>
+<CertURL>http://localhost/WCECommSample/service/WCECommService.asmx</CertURL>
+<UserName>add your merchant name here</UserName>
+<OwnerID>{57F3B9B1-86F1-4fcc-B1EE-566DE1813D20}</OwnerID>
+<FileID>{90A44FB5-33D9-4815-AC85-BC87A7E7D1EB}</FileID>
+<QBType>QBFS</QBType>
+<Style>Document</Style>
+<AuthFlags>0xF</AuthFlags>
+</QBWCXML>

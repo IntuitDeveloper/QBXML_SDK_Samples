@@ -1,23 +1,27 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/WCECommSample/service/", "http://localhost/WCECommSample/service", "{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "service", "http://localhost/WCECommSample/service", "{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/service"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\service\"
+		Debug.AspNetCompiler.PhysicalPath = "..\service\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\service\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/service"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\service\"
+		Release.AspNetCompiler.PhysicalPath = "..\service\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\service\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\service\"
+		SlnRelativePath = "..\service\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -26,8 +30,8 @@ Global
 		Debug|.NET = Debug|.NET
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}.Debug|.NET.ActiveCfg = Debug|.NET
-		{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}.Debug|.NET.Build.0 = Debug|.NET
+		{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{0DF534EB-36E8-4883-BA5C-4DB4BBB0AC51}.Debug|.NET.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

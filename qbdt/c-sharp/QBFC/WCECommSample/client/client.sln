@@ -1,32 +1,39 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/WCECommSample/client/", "http://localhost/WCECommSample/client", "{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client", "http://localhost/WCECommSample/client", "{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/client"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\client\"
+		Debug.AspNetCompiler.PhysicalPath = "..\client\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\client\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/client"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\client\"
+		Release.AspNetCompiler.PhysicalPath = "..\client\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\client\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\..\..\inetpub\wwwroot\WCECommSample\client\"
+		SlnRelativePath = "..\client\"
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|.NET.ActiveCfg = Debug|.NET
-		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|.NET.Build.0 = Debug|.NET
+		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|.NET.Build.0 = Debug|Any CPU
+		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7519AAA-B9F8-46F3-95C7-7CC318A3EF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
