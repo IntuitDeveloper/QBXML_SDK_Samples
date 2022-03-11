@@ -25,17 +25,6 @@ var strSessionID;
 var strListID;
 var strTxnID;
 
-function ListDisplay(strListID, strSessionID) {
-    var command="qbwc://doquery/ListDisplayMod?ListID="+strListID+"&type=Customer&session=" + strSessionID+"&async=true";
-    //alert(command);
-    var req = new Ajax.Request(command, {method:'get', onSuccess:processData, onFailure:reportError});
-}
-
-function TxnDisplay(strTxnID, strSessionID) {
-    var command="qbwc://doquery/TxnDisplayMod?TxnID="+strTxnID+"&type=SalesReceipt&session=" + strSessionID+"&async=true";
-    //alert(command);
-    var req = new Ajax.Request(command, {method:'get', onSuccess:processData, onFailure:reportError});
-}
 
 </script>
 

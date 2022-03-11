@@ -1,13 +1,6 @@
 using System;
 using System.Data;
 using System.Data.OleDb;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using System.Collections;
 
 /// <summary>
@@ -20,7 +13,7 @@ public class DataBaseManager
 
     //Constructor
     public DataBaseManager(string dbPath) {
-        m_ConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" + dbPath;
+        m_ConnectionString = "PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA SOURCE=" + dbPath;
     }
 
     //Public methods
@@ -109,7 +102,7 @@ public class DataBaseManager
 
     public bool StoreNewCustomer(Customer customer) {
         //Setting this as a NEW (=1 or true) customer. Once it is sent to QB, we will set this to OLD (=0 or false).
-        int count = ExecuteDML("insert into customers values(" + GetNextCustomerNumber() + ",'" + customer.UserName + "','" + customer.Password + "','" + customer.FirstName + "','" + customer.LastName + "','" + customer.Addr1 + "','" + customer.Addr2 + "','" + customer.City + "','" + customer.State + "','" + customer.Zip + "','" + customer.Phone + "','" + customer.Email + "',1);");
+        int count = ExecuteDML("insert into customers values(" + GetNextCustomerNumber() + ",'" + customer.UserName + "','" + customer.Password + "','" + customer.FirstName + "','" + customer.LastName + "','" + customer.Addr1 + "','" + customer.Addr2 + "','" + customer.City + "','" + customer.State + "','" + customer.Zip + "','" + customer.Phone + "','" + customer.Email + "',1,''" + "','" + ");");
         if (count > 0) {
             return true;
         }

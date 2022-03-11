@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections;
-using Interop.QBFC13;
+using QBFC15Lib;
 
 /// <summary>
 /// SampleController implements the functionality of the original WCWebService
@@ -41,13 +41,13 @@ public class SampleController: IController
 
     //Private variables
     private bool            dataToExchange = false;
-    private string          dbRelativePath = "\\WCECommSample\\db\\ecommdb.mdb";
+    private string          dbRelativePath = "\\db\\ecommdb.mdb";
     private DataBaseManager dbm;
     
 	public SampleController()
 	{
         //Connect to ecommdb
-        dbm = new DataBaseManager(HttpContext.Current.Server.MapPath(dbRelativePath));
+        dbm = new DataBaseManager(HttpContext.Current.Server.MapPath("..") + dbRelativePath);
     }
 
     /// <summary>
@@ -134,7 +134,7 @@ public class SampleController: IController
                 lastControllerState = ControllerStates.End;
                 action = "<?xml version=\"1.0\" ?><?qbxml version=\"2.0\"?>" + 
                     "<QBXML><QBXMLMsgsRq onError = \"stopOnError\"><HostQueryRq requestID = \"0\">" + 
-                    "<IncludeRetElement>QBFileMode</IncludeRetElement></HostQueryRq></QBXMLMsgsRq></QBXML>";
+                    "</HostQueryRq></QBXMLMsgsRq></QBXML>";
                 break;
             default:
                 throw new Exception("getNextAction: Unexpected state: " + controllerState);

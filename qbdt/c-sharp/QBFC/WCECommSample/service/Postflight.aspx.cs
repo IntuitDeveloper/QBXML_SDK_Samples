@@ -13,7 +13,7 @@ using System.Timers;
 public partial class Postflight : System.Web.UI.Page
 {
     //Private variables
-    private string dbRelativePath = "\\WCECommSample\\db\\ecommdb.mdb";
+    private string dbRelativePath = "\\db\\ecommdb.mdb";
     private string[,] customers;
     private string[,] sales;
     private string ticket;
@@ -25,7 +25,7 @@ public partial class Postflight : System.Web.UI.Page
     {
         ticket              = Request["ticket"].ToString();
         sessionid           = Request["sessionid"].ToString();
-        Session["DBPath"]   = Server.MapPath(dbRelativePath);
+        Session["DBPath"]   = HttpContext.Current.Server.MapPath("..") + dbRelativePath;
         dbm                 = new DataBaseManager((string)Session["DBpath"]);
         
         GetCustomers();
@@ -82,9 +82,7 @@ public partial class Postflight : System.Web.UI.Page
             CreateTableCell(r, firstname);
             CreateTableCell(r, lastname);
             CreateTableCell(r, email);
-            //CreateTableCellWithHyperLink(r, listid, "qbwc://doquery/ListDisplayMod?ListID=" + listid + "&sessionID="+sessionid);
-            //Using CommandArgument as a vehicle to transfer TextBox.ID
-            createTableCellButton(r, "List", listid);
+            CreateTableCell(r, listid);
 
             Table_Customers.Rows.Add(r);
         }
@@ -108,9 +106,7 @@ public partial class Postflight : System.Web.UI.Page
             CreateTableCell(r, itemfullname);
             CreateTableCell(r, itemrate);
             CreateTableCell(r, quantityordered);
-            createTableCellButton(r, "Txn", txnid);
-            //CreateTableCellWithHyperLink(r, txnid, "qbwc://doquery/SalesReceiptQuery?TxnID=" + txnid + "&session=" + sessionid);
-
+            CreateTableCell(r, txnid);
             Table_SalesReceipts.Rows.Add(r);
         }
     }

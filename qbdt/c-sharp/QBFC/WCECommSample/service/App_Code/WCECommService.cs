@@ -379,10 +379,10 @@ public class WCECommService : System.Web.Services.WebService
         string retVal =null, cState = null;
         if(sess != null) cState=sess.getProperty("lastControllerState").ToString();
         if (cState == "Preflight") {
-            retVal = "http://localhost/WCECommSample/service/Preflight.aspx?ticket=" + wcTicket;
+            retVal = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + HttpContext.Current.Request.ApplicationPath + "/Preflight.aspx?ticket=" + sess.getTicket();
         }
         if (cState == "Postflight") {
-            retVal = "http://localhost/WCECommSample/service/Postflight.aspx?ticket=" + wcTicket+"&sessionID="+sessionID;
+            retVal = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + HttpContext.Current.Request.ApplicationPath + "/Postflight.aspx?ticket=" + sess.getTicket() + "&sessionID=" + sessionID;
         }
         sessionPool.put(wcTicket, sess);
         logExit("getInteractiveURL()", new string[,] { { "retVal", retVal } });

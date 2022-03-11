@@ -27,14 +27,14 @@ class AccessDatabaseError : Exception {
 /// </summary>
 public class AccessDatabase
 {
-    private string server = "\\WCECommSample\\db\\ecommdb.mdb";
+    private string server = "\\db\\ecommdb.mdb";
     private string ticket = null;
     private DataBaseManager dbm;
 
 
     //Constructor
     public AccessDatabase(){
-        if (dbm==null) dbm = new DataBaseManager(HttpContext.Current.Server.MapPath(server));
+        if (dbm==null) dbm = new DataBaseManager(HttpContext.Current.Server.MapPath("..") + server);
     }
 
     public AccessDatabase(String myTicket){
@@ -52,7 +52,7 @@ public class AccessDatabase
     public void setServer(String server) {
         this.server = server;
         //Connect to ecommdb
-        dbm = new DataBaseManager(HttpContext.Current.Server.MapPath(server));
+        dbm = new DataBaseManager(HttpContext.Current.Server.MapPath("..") + server);
     }
 
     /// <summary>
