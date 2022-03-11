@@ -1,4 +1,4 @@
-// Copyright (c) 2008-2020 by Intuit Inc.
+// Copyright (c) 2021-2022 by Intuit Inc.
 // All rights reserved
 // Usage governed by the QuickBooks SDK Developer's License Agreement
 
@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Interop.QBFC14;
+using Interop.QBFC15;
 using MCInvoiceAddQBFC.Session_Framework;
 
 
@@ -491,7 +491,7 @@ namespace MCInvoiceAddQBFC
                 if (prefRet.MultiCurrencyPreferences != null)
                 {
                     retVal[0] = Convert.ToString(prefRet.MultiCurrencyPreferences.IsMultiCurrencyOn.GetValue());
-                    retVal[1] = prefRet.MultiCurrencyPreferences.HomeCurrencyRef.FullName.GetValue();
+                    retVal[1] = prefRet.MultiCurrencyPreferences.HomeCurrencyRef?.FullName.GetValue();
                 }
             }
             return retVal;
