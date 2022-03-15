@@ -2,7 +2,12 @@
 
 Sample applications and code
 =============================
-This page helps you find a sample application that you can use to jump-start your own project. The first table lists the sample applications available.  In addition, many of the sample applications are installed with the SDK, with the default location of the samples directory being C:\Program Files (x86)\Intuit\IDN\QBSDK13.0\samples\qbdt.
+
+**Important notice:**
+
+This is the sample application code for 32-bit SDK. We recommend you use the [64-bit SDK](https://github.com/IntuitDeveloper/QBXML_SDK_Samples/tree/64bitUpgrade).
+
+This page helps you find a sample application that you can use to jump-start your own project. The first table lists the sample applications available.  In addition, many of the sample applications are installed with the SDK, with the default location of the samples directory being C:\Program Files\Intuit\IDN\QBSDK15.0\samples\qbdt.
 
 The use of these sample applications is subject to the Terms of Service for Intuit Developer Services, which are available here <https://developer.intuit.com/docsqbo/docs/essentials/legal-agreements/intuit-terms-of-service-for-intuit-developer-services>.
 
