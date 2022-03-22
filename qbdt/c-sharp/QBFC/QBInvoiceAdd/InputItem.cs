@@ -178,7 +178,7 @@ namespace InvoiceAdd
 								IItemServiceRet ItemServiceRet = orItemRet.ItemServiceRet;
 								isTaxable=ItemServiceRet?.SalesTaxCodeRef?.FullName?.GetValue();
                                 SetTaxableDefaultIfEmpty(ref isTaxable);
-								cmboBx2_Item.Items.Add(ItemServiceRet.FullName.GetValue() + ":" + isTaxable);
+								cmboBx2_Item.Items.Add(ItemServiceRet?.FullName?.GetValue() + ":" + isTaxable);
 							}
 								break;
 							case ENORItemRet.orirItemInventoryRet:

@@ -4,7 +4,7 @@ Imports VB = Microsoft.VisualBasic
 Friend Class frmInvoiceModify
 	Inherits System.Windows.Forms.Form
 	'----------------------------------------------------------
-	' Copyright © 2021-2022 Intuit Inc. All rights reserved.
+	' Copyright Â© 2021-2022 Intuit Inc. All rights reserved.
 	' Use is subject to the terms specified at:
 	'      http://developer.intuit.com/rdmgr/?ID=100
 	'
@@ -100,53 +100,54 @@ Friend Class frmInvoiceModify
 	
 	Private Sub frmInvoiceModify_Activated(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Activated
 		Dim intOldHighlightedLine As Short
-		If strLastCommand = "ReturnToInvoiceSelection" Or strLastCommand = "ModifyInvoice" Then
-			
-			ClearForm()
-			
-			If intHighlightedLine > -1 Then
-				UnHighlightLine(intHighlightedLine)
-			End If
-			
-			intHighlightedLine = -1
-			intActualHighlightedLine = -1
-			
-			LoadInvoiceModifyForm()
-			SaveOriginalValues()
-			LoadInvoiceLineArray(strLineArray)
-			CountInvoiceLines()
-			If intNumInvoiceLines < 11 Or vscInvoiceLineScroll.Value = 1 Then
-				DisplayInvoiceLines(1)
-			Else
-				vscInvoiceLineScroll.Value = 1
-			End If
-			booEditInvoiceLineFormLoaded = False
-			booCheckForChanges = False
-			booCheckForLineChanges = False
-		ElseIf strLastCommand = "EditLine" Then 
-			If GetInvoiceLineInfo <> strLineArray(intActualHighlightedLine) Then
-				strLineArray(intActualHighlightedLine) = GetInvoiceLineInfo
-				DisplayLine(strLineArray(intActualHighlightedLine), intHighlightedLine)
-				booCheckForLineChanges = True
-			End If
-		ElseIf strLastCommand = "NewLineAfter" Then 
-			If InStr(1, GetInvoiceLineInfo, "<spliter>") = 0 Then Exit Sub
-			
-			booCheckForLineChanges = True
-			InsertInvoiceLine(GetInvoiceLineInfo, intActualHighlightedLine + 1)
-			
-			If intNumInvoiceLines > 10 Then
-				If intHighlightedLine = 9 Then
-					vscInvoiceLineScroll.Value = intTopDisplayedLine + 1
-				Else
-					DisplayInvoiceLines(intTopDisplayedLine)
-				End If
-			Else
-				DisplayInvoiceLines(intTopDisplayedLine)
-			End If
-			
-		ElseIf strLastCommand = "NewLineBefore" Then 
-			If InStr(1, GetInvoiceLineInfo, "<spliter>") = 0 Then Exit Sub
+        If strLastCommand = "ReturnToInvoiceSelection" Or strLastCommand = "ModifyInvoice" Then
+
+
+            ClearForm()
+
+            If intHighlightedLine > -1 Then
+                UnHighlightLine(intHighlightedLine)
+            End If
+
+            intHighlightedLine = -1
+            intActualHighlightedLine = -1
+
+            LoadInvoiceModifyForm()
+            SaveOriginalValues()
+            LoadInvoiceLineArray(strLineArray)
+            CountInvoiceLines()
+            If intNumInvoiceLines < 11 Or vscInvoiceLineScroll.Value = 1 Then
+                DisplayInvoiceLines(1)
+            Else
+                vscInvoiceLineScroll.Value = 1
+            End If
+            booEditInvoiceLineFormLoaded = False
+            booCheckForChanges = False
+            booCheckForLineChanges = False
+        ElseIf strLastCommand = "EditLine" Then
+            If GetInvoiceLineInfo() <> strLineArray(intActualHighlightedLine) Then
+                strLineArray(intActualHighlightedLine) = GetInvoiceLineInfo()
+                DisplayLine(strLineArray(intActualHighlightedLine), intHighlightedLine)
+                booCheckForLineChanges = True
+            End If
+        ElseIf strLastCommand = "NewLineAfter" Then
+            If InStr(1, GetInvoiceLineInfo, "<spliter>") = 0 Then Exit Sub
+
+            booCheckForLineChanges = True
+            InsertInvoiceLine(GetInvoiceLineInfo, intActualHighlightedLine + 1)
+
+            If intNumInvoiceLines > 10 Then
+                If intHighlightedLine = 9 Then
+                    vscInvoiceLineScroll.Value = intTopDisplayedLine + 1
+                Else
+                    DisplayInvoiceLines(intTopDisplayedLine)
+                End If
+            Else
+                DisplayInvoiceLines(intTopDisplayedLine)
+            End If
+
+        ElseIf strLastCommand = "NewLineBefore" Then
+            If InStr(1, GetInvoiceLineInfo, "<spliter>") = 0 Then Exit Sub
 			
 			booCheckForLineChanges = True
 			InsertInvoiceLine(GetInvoiceLineInfo, intActualHighlightedLine)
@@ -326,36 +327,38 @@ Friend Class frmInvoiceModify
 			SetInvoiceLineInfo("Item,New")
 		Else
 			strSplits = Split(strLineArray(intActualHighlightedLine), "<spliter>")
-			
-			If strSplits(11) = "SubItem" Then
-				If InDeletedGroup(intActualHighlightedLine) Then
-					MsgBox("You can't add a new sub line to a group that's been deleted")
-					Exit Sub
-				Else
-					SetInvoiceLineInfo("SubItem,New")
-				End If
-			Else
-				strSplits = Split(strLineArray(intActualHighlightedLine - 1), "<spliter>")
-				If (strSplits(11) = "SubItem" And Not InDeletedGroup(intActualHighlightedLine - 1)) Or (strSplits(11) = "Group" And InStr(1, strSplits(12), "New") = 0) Then
-					
-					vmbResponse = MsgBox(vbCrLf & "Add new line as a group sub line?", MsgBoxStyle.YesNo)
-					If vmbResponse = MsgBoxResult.Yes Then
-						SetInvoiceLineInfo("SubItem,New")
-					Else
-						SetInvoiceLineInfo("Item,New")
-					End If
-				Else
-					SetInvoiceLineInfo("Item,New")
-				End If
-			End If 'strSplits(11) = "SubItem"
-		End If
+            If (Not String.IsNullOrEmpty(strSplits(0))) Then
 
-        
-        If Not booEditInvoiceLineFormLoaded Then frmEditInvoiceLine.ShowDialog()
+                If strSplits(11) = "SubItem" Then
+                    If InDeletedGroup(intActualHighlightedLine) Then
+                        MsgBox("You can't add a new sub line to a group that's been deleted")
+                        Exit Sub
+                    Else
+                        SetInvoiceLineInfo("SubItem,New")
+                    End If
+                Else
+                    strSplits = Split(strLineArray(intActualHighlightedLine - 1), "<spliter>")
+                    If (strSplits(11) = "SubItem" And Not InDeletedGroup(intActualHighlightedLine - 1)) Or (strSplits(11) = "Group" And InStr(1, strSplits(12), "New") = 0) Then
+
+                        vmbResponse = MsgBox(vbCrLf & "Add new line as a group sub line?", MsgBoxStyle.YesNo)
+                        If vmbResponse = MsgBoxResult.Yes Then
+                            SetInvoiceLineInfo("SubItem,New")
+                        Else
+                            SetInvoiceLineInfo("Item,New")
+                        End If
+                    Else
+                        SetInvoiceLineInfo("Item,New")
+                    End If
+                End If 'strSplits(11) = "SubItem"
+            End If
+        End If
+
+            
+            If Not booEditInvoiceLineFormLoaded Then frmEditInvoiceLine.ShowDialog()
     End Sub
-	
-	
-	Private Sub cmdEditMemo_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdEditMemo.Click
+
+
+    Private Sub cmdEditMemo_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdEditMemo.Click
 		booCheckForChanges = True
 	End Sub
 	
@@ -687,9 +690,8 @@ Friend Class frmInvoiceModify
 		'Disable the buttons in case we're reactivating the form since a line
 		'hasn't yet been chosen
 		cmdEditLine.Enabled = False
-		cmdAddLineBefore.PerformClick()
-		cmdAddLineAfter.Enabled = False
-		cmdDeleteUndelete.Enabled = False
+        cmdAddLineAfter.Enabled = False
+        cmdDeleteUndelete.Enabled = False
 	End Sub
 	
 	

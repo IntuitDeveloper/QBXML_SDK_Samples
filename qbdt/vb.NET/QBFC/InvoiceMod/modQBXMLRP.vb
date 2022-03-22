@@ -728,6 +728,7 @@ Errs:
             Exit Sub
         Else
             MsgBox("Successfully modified invoice")
+
         End If
 
     End Sub

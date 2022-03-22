@@ -2108,7 +2108,6 @@
         Me.txtMemo.Location = New System.Drawing.Point(48, 384)
         Me.txtMemo.MaxLength = 0
         Me.txtMemo.Name = "txtMemo"
-        Me.txtMemo.ReadOnly = True
         Me.txtMemo.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtMemo.Size = New System.Drawing.Size(505, 20)
         Me.txtMemo.TabIndex = 71

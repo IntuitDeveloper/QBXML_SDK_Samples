@@ -121,8 +121,8 @@
 		Me.optqbXMLRP.TabStop = True
 		Me.optqbXMLRP.Visible = True
 		Me.optqbXMLRP.Name = "optqbXMLRP"
-		Me.Label2.Text = "You may choose to have the program use either qbXML and the MSXML4 DOM parser to build the message or QBFC to build the message."
-		Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Text = "You may choose to have the program use either qbXML and the MSXML6 DOM parser to build the message or QBFC to build the message."
+        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.Label2.Size = New System.Drawing.Size(393, 49)
 		Me.Label2.Location = New System.Drawing.Point(8, 136)
 		Me.Label2.TabIndex = 3

@@ -1,5 +1,8 @@
 Option Strict Off
 Option Explicit On
+'Imports Interop.QBFC15
+
+
 Module modAddInvoice
 	'----------------------------------------------------------
 	' Module: modAddInvoice
@@ -70,10 +73,9 @@ Module modAddInvoice
 
         'Create a DOM document object for creating our request.
         Dim xmlInvoiceAdd As New MSXML2.DOMDocument60
-        xmlInvoiceAdd = CreateObject("MSXML2.DOMDocument")
-		
-		'Create the QBXML aggregate
-		Dim rootElement As MSXML2.IXMLDOMNode
+
+        'Create the QBXML aggregate
+        Dim rootElement As MSXML2.IXMLDOMNode
 		rootElement = xmlInvoiceAdd.createElement("QBXML")
 		xmlInvoiceAdd.appendChild(rootElement)
 		
@@ -294,10 +296,9 @@ Module modAddInvoice
 
         'Set up a DOM document object to load the response into
         Dim xmlInvoiceAddResponse As New MSXML2.DOMDocument60
-        xmlInvoiceAddResponse = CreateObject("MSXML2.DOMDocument")
-		
-		'Parse the response XML
-		xmlInvoiceAddResponse.async = False
+
+        'Parse the response XML
+        xmlInvoiceAddResponse.async = False
 		xmlInvoiceAddResponse.loadXML(strXMLResponse)
 		
 		'Get the status for our add request
@@ -369,8 +370,7 @@ Module modAddInvoice
 		Loop
 
         
-        Dim Frm As New frmInvoiceDisplay
-        Frm.ShowDialog()
+        frmInvoiceDisplay.ShowDialog()
 
         Exit Sub
 		
