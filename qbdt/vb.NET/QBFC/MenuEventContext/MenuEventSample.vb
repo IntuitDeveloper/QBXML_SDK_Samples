@@ -49,8 +49,8 @@ Friend Class MenuEventSample
 		' the file menu in this case, and just for fun, we're making it a cascading menu
 		subAdd.SubscriberID.SetValue(appGUID)
 		subAdd.COMCallbackInfo.appName.SetValue(appName)
-		subAdd.COMCallbackInfo.ORProgCLSID.ProgId.SetValue("MenuEventContext.QBMenuListener")
-		subAdd.MenuExtensionSubscription.AddToMenu.SetValue(QBFC15Lib.ENAddToMenu.atmFile)
+        subAdd.COMCallbackInfo.ORProgCLSID.ProgID.SetValue("MenuEventContext.QBMenuListenerClass")
+        subAdd.MenuExtensionSubscription.AddToMenu.SetValue(QBFC15Lib.ENAddToMenu.atmFile)
 		
 		'
 		' For the cascade fun, we're just going to add items to the cascade menu...
@@ -87,9 +87,9 @@ Friend Class MenuEventSample
 		
 		sessMgr = Nothing
 		Exit Sub
-handleError: 
-		sessMgr.CloseConnection()
-		MsgBox("Encountered error subscribing: " & Err.Description)
+handleError:
+        sessMgr.CloseConnection()
+        MsgBox("Encountered error subscribing: " & Err.Description)
 	End Sub
 	
 	Private Sub MenuEventSample_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
