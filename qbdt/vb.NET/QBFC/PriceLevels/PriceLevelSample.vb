@@ -304,6 +304,7 @@ Public Class PriceLevelSample
             If (Not plResp.Detail Is Nothing) Then
                 Dim plList As IPriceLevelRetList
                 plList = plResp.Detail
+                PriceLevels.Items.Clear()
                 Dim i As Integer
                 For i = 0 To plList.Count - 1
                     Dim plRet As IPriceLevelRet
@@ -344,25 +345,27 @@ Public Class PriceLevelSample
         EditSequence.Text = plRet.EditSequence.GetValue
         IsActive.Checked = plRet.IsActive.GetValue
         ItemList.Items.Clear()
-        If (Not (plRet.ORPriceLevelRet.PriceLevelFixedPercentage Is Nothing)) Then
-            Fixed.Checked = True
-            FixedPercent.Text = plRet.ORPriceLevelRet.PriceLevelFixedPercentage.GetValue
-        Else
-            Fixed.Checked = False
-            PerItem.Checked = True
-            FixedPercent.Visible = False
-            ItemList.Visible = True
-            Dim i As Integer
-            For i = 0 To plRet.ORPriceLevelRet.PriceLevelPerItemRetList.Count - 1
-                Dim lvItem As ListViewItem
-                Dim plItem As IPriceLevelPerItemRet
-                plItem = plRet.ORPriceLevelRet.PriceLevelPerItemRetList.GetAt(i)
-                lvItem = New ListViewItem(plItem.ItemRef.ListID.GetValue)
-                lvItem.SubItems.Add(plItem.ItemRef.FullName.GetValue)
-                lvItem.SubItems.Add("")
-                lvItem.SubItems.Add(plItem.ORORCustomPrice.CustomPrice.GetAsString)
-                ItemList.Items.Add(lvItem)
-            Next i
+        If (Not (plRet.ORPriceLevelRet) Is Nothing) Then
+            If (Not (plRet.ORPriceLevelRet.PriceLevelFixedPercentage Is Nothing)) Then
+                Fixed.Checked = True
+                FixedPercent.Text = plRet.ORPriceLevelRet.PriceLevelFixedPercentage.GetValue
+            Else
+                Fixed.Checked = False
+                PerItem.Checked = True
+                FixedPercent.Visible = False
+                ItemList.Visible = True
+                Dim i As Integer
+                For i = 0 To plRet.ORPriceLevelRet.PriceLevelPerItemRetCurrency.PriceLevelPerItemRetList.Count - 1
+                    Dim lvItem As ListViewItem
+                    Dim plItem As IPriceLevelPerItemRet
+                    plItem = plRet.ORPriceLevelRet.PriceLevelPerItemRetCurrency.PriceLevelPerItemRetList.GetAt(i)
+                    lvItem = New ListViewItem(plItem.ItemRef.ListID.GetValue)
+                    lvItem.SubItems.Add(plItem.ItemRef.FullName.GetValue)
+                    lvItem.SubItems.Add("")
+                    lvItem.SubItems.Add(plItem.ORORCustomPrice.CustomPrice.GetAsString)
+                    ItemList.Items.Add(lvItem)
+                Next i
+            End If
         End If
     End Sub
 
@@ -439,7 +442,7 @@ Public Class PriceLevelSample
                     lvItem = ItemList.Items.Item(i)
                     'check if this item has a custom price set
                     If (Not lvItem.SubItems.Item(3).Text = "") Then
-                        plItem = plSubmit.ORPriceLevel.PriceLevelPerItemList.Append()
+                        plItem = plSubmit.ORPriceLevel.PriceLevelPerItemCurrency.PriceLevelPerItemList.Append()
                         plItem.ItemRef.ListID.SetValue(lvItem.Text)
                         plItem.ORPriceLevelPrice.ORCustomPrice.ORORCustomPrice.CustomPrice.SetValue(lvItem.SubItems.Item(3).Text)
                     End If
@@ -463,7 +466,7 @@ Public Class PriceLevelSample
                     lvItem = ItemList.Items.Item(i)
                     'check if this item has a custom price set
                     If (Not lvItem.SubItems.Item(3).Text = "") Then
-                        plItem = plSubmit.ORPriceLevel.PriceLevelPerItemList.Append()
+                        plItem = plSubmit.ORPriceLevel.PriceLevelPerItemCurrency.PriceLevelPerItemList.Append()
                         plItem.ItemRef.ListID.SetValue(lvItem.Text)
                         plItem.ORPriceLevelPrice.ORCustomPrice.ORORCustomPrice.CustomPrice.SetValue(lvItem.SubItems.Item(3).Text)
                     End If

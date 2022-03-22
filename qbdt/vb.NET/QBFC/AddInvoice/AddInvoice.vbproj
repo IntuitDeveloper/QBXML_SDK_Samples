@@ -92,7 +92,7 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="QBFC15Lib">
+    <COMReference Include="QBFC15Lib"> 
       <Guid>{26D049B7-5D02-4FF9-A803-C783F54A307E}</Guid>
       <Lcid>0</Lcid>
       <VersionMajor>1</VersionMajor>
@@ -106,6 +106,7 @@
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <WrapperTool>tlbimp</WrapperTool>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <ItemGroup>
