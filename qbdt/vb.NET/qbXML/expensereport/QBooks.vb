@@ -1,22 +1,22 @@
 Option Strict Off
 Option Explicit On
 Module qbooks
-    ' QBooks.bas
-    ' Created July, 2002
-    '
-    ' This module contains everything needed to interact with QuickBooks.
-    ' It has a function to generate the qbxml request for the report,
-    ' a function to call ParserHelper to parse the response, and
-    ' most importantly, the function sendReqToQB which connects to
-    ' QuickBooks to send the request and receive a response.
-    '
-    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
-    ' Use is subject to the terms specified at:
-    '      http://developer.intuit.com/legal/devsite_tos.html
-    '
-    '
-
-    Public Const ERRORCODE As String = "ERROR"
+	' QBooks.bas
+	' Created July, 2002
+	'
+	' This module contains everything needed to interact with QuickBooks.
+	' It has a function to generate the qbxml request for the report,
+	' a function to call ParserHelper to parse the response, and
+	' most importantly, the function sendReqToQB which connects to
+	' QuickBooks to send the request and receive a response.
+	'
+	' Copyright © 2021-2022 Intuit Inc. All rights reserved.
+	' Use is subject to the terms specified at:
+	'      http://developer.intuit.com/legal/devsite_tos.html
+	'
+	'
+	
+	Public Const ERRORCODE As String = "ERROR"
 	Public Const SUCCESSCODE As String = "SUCCESS"
 	
 	
@@ -58,18 +58,20 @@ Module qbooks
 		Dim onErrorAttr As MSXML2.IXMLDOMAttribute
 		onErrorAttr = doc.createAttribute("onError")
 		onErrorAttr.Text = "stopOnError"
-        msgsRq.attributes.setNamedItem(onErrorAttr)
-
-        Dim genSumReportQuery As MSXML2.IXMLDOMNode
+		
+		msgsRq.Attributes.setNamedItem(onErrorAttr)
+		
+		Dim genSumReportQuery As MSXML2.IXMLDOMNode
 		genSumReportQuery = doc.createElement("GeneralSummaryReportQueryRq")
 		msgsRq.appendChild(genSumReportQuery)
 		
 		Dim rqIdAttr As MSXML2.IXMLDOMAttribute
 		rqIdAttr = doc.createAttribute("requestID")
 		rqIdAttr.Text = "1"
-        genSumReportQuery.attributes.setNamedItem(rqIdAttr)
-
-        Dim genSumRepType As MSXML2.IXMLDOMNode
+		
+		genSumReportQuery.Attributes.setNamedItem(rqIdAttr)
+		
+		Dim genSumRepType As MSXML2.IXMLDOMNode
 		genSumRepType = doc.createElement("GeneralSummaryReportType")
 		genSumRepType.Text = "ExpenseByVendorSummary"
 		genSumReportQuery.appendChild(genSumRepType)
@@ -187,13 +189,16 @@ ErrorHandler:
 		
 		Dim fs, fileObj As Object
 		fs = CreateObject("Scripting.FileSystemObject")
-
-        fileObj = fs.CreateTextFile(fileName, True)
-
-        fileObj.Write(outPut)
-        fileObj.Close()
-
-        CreateFile = True
+		
+		
+		fileObj = fs.CreateTextFile(fileName, True)
+		
+		
+		fileObj.Write(outPut)
+		
+		fileObj.Close()
+		
+		CreateFile = True
 		Exit Function
 		
 ErrorHandler: 
@@ -221,34 +226,48 @@ ErrorHandler:
 		XMLString = Replace(XMLString, vbLf, vbNullString)
 		
 		SplitXMLString = Split(XMLString, "<")
-
-        'We're expecting the first character of the XML string to be "<"
-        'which result in an empty first array element, so skip it.
-        SplitIndex = LBound(SplitXMLString) + 1
-
-        Do
-            If Left(SplitXMLString(SplitIndex), 1) = "/" Then
-                IndentString = Left(IndentString, Len(IndentString) - 3)
-                OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
-                SplitIndex = SplitIndex + 1
-            ElseIf Left(SplitXMLString(SplitIndex + 1), 1) = "/" Then
-                If InStr(1, Left(SplitXMLString(SplitIndex), InStr(1, SplitXMLString(SplitIndex), ">")), " ") > 0 Then
-                    OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
-                    SplitIndex = SplitIndex + 1
-                Else
-                    OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & "<" & SplitXMLString(SplitIndex + 1) & vbCrLf
-                    SplitIndex = SplitIndex + 2
-                End If
-            Else
-                OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
-                If SplitXMLString(SplitIndex) <> "?xml version=""1.0"" ?>" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 1.0//EN' >" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 1.1//EN' >" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 2.0//EN' >" And SplitXMLString(SplitIndex) <> "?qbxml version=""2.0"" ?>" And Right(SplitXMLString(SplitIndex), 2) <> "/>" Then
-                    IndentString = IndentString & "   "
-                End If
-                SplitIndex = SplitIndex + 1
-            End If
-        Loop Until SplitIndex >= UBound(SplitXMLString)
-
-        If Left(SplitXMLString(UBound(SplitXMLString)), 1) = "/" Then
+		
+		'We're expecting the first character of the XML string to be "<"
+		'which result in an empty first array element, so skip it.
+		
+		SplitIndex = LBound(SplitXMLString) + 1
+		
+		Do 
+			
+			If Left(SplitXMLString(SplitIndex), 1) = "/" Then
+				IndentString = Left(IndentString, Len(IndentString) - 3)
+				
+				OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
+				
+				SplitIndex = SplitIndex + 1
+				
+			ElseIf Left(SplitXMLString(SplitIndex + 1), 1) = "/" Then 
+				
+				If InStr(1, Left(SplitXMLString(SplitIndex), InStr(1, SplitXMLString(SplitIndex), ">")), " ") > 0 Then
+					
+					OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
+					
+					SplitIndex = SplitIndex + 1
+				Else
+					
+					OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & "<" & SplitXMLString(SplitIndex + 1) & vbCrLf
+					
+					SplitIndex = SplitIndex + 2
+				End If
+			Else
+				
+				OutString = OutString & IndentString & "<" & SplitXMLString(SplitIndex) & vbCrLf
+				
+				If SplitXMLString(SplitIndex) <> "?xml version=""1.0"" ?>" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 1.0//EN' >" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 1.1//EN' >" And SplitXMLString(SplitIndex) <> "!DOCTYPE QBXML PUBLIC '-//INTUIT//DTD QBXML QBD 2.0//EN' >" And SplitXMLString(SplitIndex) <> "?qbxml version=""2.0"" ?>" And Right(SplitXMLString(SplitIndex), 2) <> "/>" Then
+					IndentString = IndentString & "   "
+				End If
+				
+				SplitIndex = SplitIndex + 1
+			End If
+			
+		Loop Until SplitIndex >= UBound(SplitXMLString)
+		
+		If Left(SplitXMLString(UBound(SplitXMLString)), 1) = "/" Then
 			IndentString = Left(IndentString, Len(IndentString) - 3)
 		End If
 		
@@ -289,10 +308,11 @@ ErrorHandler:
 		Dim onErrorAttr As MSXML2.IXMLDOMAttribute
 		onErrorAttr = xml.createAttribute("onError")
 		onErrorAttr.Text = "stopOnError"
-        QBXMLMsgsRqNode.attributes.setNamedItem(onErrorAttr)
-
-        'Add the InvoiceAddRq aggregate to QBXMLMsgsRq aggregate
-        Dim HostQuery As MSXML2.IXMLDOMNode
+		
+		QBXMLMsgsRqNode.Attributes.setNamedItem(onErrorAttr)
+		
+		'Add the InvoiceAddRq aggregate to QBXMLMsgsRq aggregate
+		Dim HostQuery As MSXML2.IXMLDOMNode
 		HostQuery = xml.createElement("HostQueryRq")
 		QBXMLMsgsRqNode.appendChild(HostQuery)
 		

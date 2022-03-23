@@ -41,9 +41,10 @@ Friend Class ParserHelper
 	
 	Private currNode As MSXML2.IXMLDOMNode ' current node being parsed
 	Private rowCount As Short ' number of rows in report
-    Private currReportRet As ReportRetType ' current ReportRet
-
-    Private errorStatus As Boolean ' true if there is an error
+	
+	Private currReportRet As ReportRetType ' current ReportRet
+	
+	Private errorStatus As Boolean ' true if there is an error
 	Private currStatusMsg As String
 	
 	Private Const NUMOFCOLS As Short = 1000
@@ -130,11 +131,12 @@ Friend Class ParserHelper
 		
 		' Start parsing at the root level
 		AccessNode()
-
-        ' Clean up
-        xmlDoc = Nothing
-
-        ParseResponseXML = True
+		
+		' Clean up
+		
+		xmlDoc = Nothing
+		
+		ParseResponseXML = True
 		Exit Function
 		
 LoadMSXML40ErrorHandler: 
@@ -346,9 +348,10 @@ ProcErrorHandler:
 		outPut = outPut & "<td align=""center""><b>Vendor</b></td>" & vbCrLf
 		
 		For it = 2 To currReportRet.colDescNum
-
-            colDesc = GetColDescType(it - startPos, startPos)
-            outPut = outPut & "<td align=""center""><b>" & colDesc.colTitle & "</b></td>" & vbCrLf
+			
+			
+			colDesc = GetColDescType(it - startPos, startPos)
+			outPut = outPut & "<td align=""center""><b>" & colDesc.colTitle & "</b></td>" & vbCrLf
 			
 			' Need to add the calculated column headers after each with the
 			' exception of the first (vendor name) and last (total) columns
@@ -401,10 +404,12 @@ ProcErrorHandler:
 			' Get rowNum from attribute list
 			For m = 0 To currNode.Attributes.length - 1
 				attrib = currNode.Attributes.Item(m)
-                If (attrib.Name = "rowNumber") Then
-                    rowNum = attrib.nodeValue
-                End If
-            Next 
+				
+				If (attrib.Name = "rowNumber") Then
+					
+					rowNum = attrib.nodeValue
+				End If
+			Next 
 			
 			' Validate rowNum
 			If Val(rowNum) > currReportRet.numRows Or Val(rowNum) < 0 Then
@@ -509,15 +514,19 @@ ProcErrorHandler:
 		Dim attrib As Object
 		For m = 0 To currNode.Attributes.length - 1
 			attrib = currNode.Attributes.Item(m)
-            If attrib.Name = "statusCode" And attrib.nodeValue <> "0" Then
-                CheckRsStatus = True
-                errorStatus = True
-            End If
-
-            If attrib.Name = "statusMessage" Then
-                currStatusMsg = attrib.nodeValue
-            End If
-        Next 
+			
+			
+			If attrib.Name = "statusCode" And attrib.nodeValue <> "0" Then
+				CheckRsStatus = True
+				errorStatus = True
+			End If
+			
+			
+			If attrib.Name = "statusMessage" Then
+				
+				currStatusMsg = attrib.nodeValue
+			End If
+		Next 
 		
 	End Function
 	
@@ -535,8 +544,9 @@ ProcErrorHandler:
 		For m = 0 To currNode.Attributes.length - 1
 			attrib = currNode.Attributes.Item(m)
 			If m = 0 Then
-                GetColID = CShort(attrib.nodeValue)
-                Exit Function
+				
+				GetColID = CShort(attrib.nodeValue)
+				Exit Function
 			End If
 		Next 
 		
@@ -553,8 +563,9 @@ ProcErrorHandler:
 		Dim it As Short
 		For it = startPos To currReportRet.colDescNum - 1
 			If currReportRet.listColDesc(it).colID = colID Then
-                GetColDescType = currReportRet.listColDesc(it)
-                Exit Function
+				
+				GetColDescType = currReportRet.listColDesc(it)
+				Exit Function
 			End If
 			
 		Next 
@@ -562,8 +573,9 @@ ProcErrorHandler:
 		' if can't find
 		Dim tColDesc As ColDescType
 		tColDesc.colID = -1
-        GetColDescType = tColDesc
-    End Function
+		
+		GetColDescType = tColDesc
+	End Function
 	
 	
 	
@@ -582,13 +594,16 @@ ProcErrorHandler:
 		Dim m As Short
 		For m = 0 To currNode.Attributes.length - 1
 			attrib = currNode.Attributes.Item(m)
-            Select Case attrib.Name
-                Case "rowType"
-                    rowType = attrib.nodeValue
-                Case "rowValue"
-                    rowValue = attrib.nodeValue
-            End Select
-        Next 
+			
+			Select Case attrib.Name
+				Case "rowType"
+					
+					rowType = attrib.nodeValue
+				Case "rowValue"
+					
+					rowValue = attrib.nodeValue
+			End Select
+		Next 
 	End Sub
 	
 	
@@ -609,13 +624,16 @@ ProcErrorHandler:
 		Dim m As Short
 		For m = 0 To currNode.Attributes.length - 1
 			attrib = currNode.Attributes.Item(m)
-            Select Case attrib.Name
-                Case "colID"
-                    colID = CShort(attrib.nodeValue)
-                Case "value"
-                    colValue = attrib.nodeValue
-            End Select
-        Next 
+			
+			Select Case attrib.Name
+				Case "colID"
+					
+					colID = CShort(attrib.nodeValue)
+				Case "value"
+					
+					colValue = attrib.nodeValue
+			End Select
+		Next 
 	End Sub
 	
 	
