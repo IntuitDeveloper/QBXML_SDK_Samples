@@ -42,7 +42,6 @@ Friend Class UIForm
 	Public WithEvents qbFile As System.Windows.Forms.TextBox
 	Public WithEvents browseButton As System.Windows.Forms.Button
 	Public WithEvents htmlFile As System.Windows.Forms.TextBox
-    Public WithEvents embedBrowser As WebBrowser
     Public WithEvents browseDialog As OpenFileDialog
     Public WithEvents Label3 As System.Windows.Forms.Label
 	Public WithEvents Label1 As System.Windows.Forms.Label
@@ -52,7 +51,6 @@ Friend Class UIForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UIForm))
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.showResButton = New System.Windows.Forms.Button()
         Me.showReqButton = New System.Windows.Forms.Button()
@@ -61,8 +59,7 @@ Friend Class UIForm
         Me.qbFile = New System.Windows.Forms.TextBox()
         Me.browseButton = New System.Windows.Forms.Button()
         Me.htmlFile = New System.Windows.Forms.TextBox()
-        Me.embedBrowser = New WebBrowser()
-        Me.browseDialog = New OpenFileDialog()
+        Me.browseDialog = New System.Windows.Forms.OpenFileDialog()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -135,7 +132,7 @@ Friend Class UIForm
         Me.qbFile.MaxLength = 0
         Me.qbFile.Name = "qbFile"
         Me.qbFile.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.qbFile.Size = New System.Drawing.Size(241, 25)
+        Me.qbFile.Size = New System.Drawing.Size(241, 20)
         Me.qbFile.TabIndex = 3
         '
         'browseButton
@@ -163,15 +160,9 @@ Friend Class UIForm
         Me.htmlFile.MaxLength = 0
         Me.htmlFile.Name = "htmlFile"
         Me.htmlFile.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.htmlFile.Size = New System.Drawing.Size(349, 25)
+        Me.htmlFile.Size = New System.Drawing.Size(349, 20)
         Me.htmlFile.TabIndex = 1
         '
-        'embedBrowser
-        '
-        Me.embedBrowser.Location = New System.Drawing.Point(20, 116)
-        Me.embedBrowser.Size = New System.Drawing.Size(789, 409)
-        Me.embedBrowser.TabIndex = 0
-        '        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
@@ -218,7 +209,7 @@ Friend Class UIForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(828, 539)
+        Me.ClientSize = New System.Drawing.Size(793, 142)
         Me.Controls.Add(Me.showResButton)
         Me.Controls.Add(Me.showReqButton)
         Me.Controls.Add(Me.exitButton)
@@ -226,7 +217,6 @@ Friend Class UIForm
         Me.Controls.Add(Me.qbFile)
         Me.Controls.Add(Me.browseButton)
         Me.Controls.Add(Me.htmlFile)
-        Me.Controls.Add(Me.embedBrowser)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -237,6 +227,7 @@ Friend Class UIForm
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Text = "QBSDK 2.0 --- Expense By Vendor Summary Report"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 #End Region
@@ -280,13 +271,9 @@ Friend Class UIForm
     Private displayInit As Boolean
 
     '
-	' Set default values when the form is loaded.
-	'
-	Private Sub UIForm_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
-
-        ' Load a blank page on the embedded browser to avoid
-        ' file not found pages
-        embedBrowser.Navigate(Application.StartupPath & "\blank.html")
+    ' Set default values when the form is loaded.
+    '
+    Private Sub UIForm_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
 
         ' Default location for html file
         htmlFile.Text = Application.StartupPath & "\output.html"
@@ -294,10 +281,10 @@ Friend Class UIForm
     End Sub
 
     '
-	' Browse for a company file using the MS Common Dialog
-	' Control
-	'
-	Private Sub browseButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles browseButton.Click
+    ' Browse for a company file using the MS Common Dialog
+    ' Control
+    '
+    Private Sub browseButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles browseButton.Click
 		On Error GoTo ErrorHandler
         Dim dialogResult As System.Windows.Forms.DialogResult
 
@@ -321,10 +308,10 @@ ErrorHandler:
 	End Sub
 
     '
-	' Generate and display the report when the go button is
-	' clicked if a company file has already been selected.
-	'
-	Private Sub goButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles goButton.Click
+    ' Generate and display the report when the go button is
+    ' clicked if a company file has already been selected.
+    '
+    Private Sub goButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles goButton.Click
         On Error GoTo ErrorHandler
 
 		' Get company file name, use open company file if blank
@@ -373,8 +360,8 @@ ErrorHandler:
             GoTo ErrorHandler2
         End If
 
-        ' Finally, display the result html in the embedded browser
-        embedBrowser.Navigate(url)
+        ' Finally, display the result html in the external browser
+        Process.Start(url)
 
         UIForm.DefInstance.Cursor = System.Windows.Forms.Cursors.Default
         Exit Sub

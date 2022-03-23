@@ -25,43 +25,43 @@ Friend Class UIForm
     Private requestDisplayStr As String
     Private responseDisplayStr As String
     Private displayInit As Boolean
-	
-	
-	
-	'
-	' Set default values when the form is loaded.
-	'
-	Private Sub UIForm_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
 
-        ' Load a blank page on the embedded browser to avoid
-        ' file not found pages
-        embedBrowser.Navigate(New System.Uri(My.Application.Info.DirectoryPath & "\blank.html"))
+
+
+    '
+    ' Set default values when the form is loaded.
+    '
+    Private Sub UIForm_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
 
         ' Default location for html file
         htmlFile.Text = My.Application.Info.DirectoryPath & "\output.html"
-		
-	End Sub
-	
-	
-	
-	'
-	' Browse for a company file using the MS Common Dialog
-	' Control
-	'
-	Private Sub browseButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles browseButton.Click
+
+    End Sub
+
+
+
+    '
+    ' Browse for a company file using the MS Common Dialog
+    ' Control
+    '
+    Private Sub browseButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles browseButton.Click
 		On Error GoTo ErrorHandler
 
         ' Set CancelError to True
+        
         'browseDialog.CancelError = True
 
         ' Set flags
+        
+        
         browseDialogOpen.ShowReadOnly = False
-
-        ' Set filters
-        browseDialogOpen.Filter = "All Files (*.*)|*.*|QB Company Files" & "(*.qbw)|*.qbw"
-
-        ' Specify default filter
-        browseDialogOpen.FilterIndex = 2
+		
+		' Set filters
+		
+		browseDialogOpen.Filter = "All Files (*.*)|*.*|QB Company Files" & "(*.qbw)|*.qbw"
+		
+		' Specify default filter
+		browseDialogOpen.FilterIndex = 2
 		
 		' Display the Open dialog box
 		browseDialogOpen.ShowDialog()
@@ -74,14 +74,12 @@ ErrorHandler:
 		' If an error occurs, do nothing
 		Exit Sub
 	End Sub
-	
-	
-	
-	'
-	' Generate and display the report when the go button is
-	' clicked if a company file has already been selected.
-	'
-	Private Sub goButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles goButton.Click
+
+    '
+    ' Generate and display the report when the go button is
+    ' clicked if a company file has already been selected.
+    '
+    Private Sub goButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles goButton.Click
 		On Error GoTo ErrorHandler
 		
 		' Get company file name, use open company file if blank
@@ -133,7 +131,8 @@ ErrorHandler:
 		End If
 
         ' Finally, display the result html in the embedded browser
-        embedBrowser.Navigate(New System.Uri(url))
+        
+        Process.Start(url)
 
         Me.Cursor = System.Windows.Forms.Cursors.Default
 		Exit Sub
