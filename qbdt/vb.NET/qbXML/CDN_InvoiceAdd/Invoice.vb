@@ -14,190 +14,222 @@ Friend Class Invoice
     '      http://developer.intuit.com/legal/devsite_tos.html
     '
     '-------------------------------------------------------------
+    
+    
     Private Sub Combo_ArAccount_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_ArAccount.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_ArAccount.SelectedIndex = -1 Then
-            Combo_ArAccount.Text = ""
-        End If
-    End Sub
-
-    Private Sub Combo_ArAccount_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_ArAccount.SelectedIndexChanged
-        'Once the account is selected, We must make sure that the currency is the same as the customer selected (If multi-currency is turned on in the preferences)
-
-        Dim strArAccountArray() As String
-        Dim strCustomerArray() As String 'I am using the name in the combo box to retrieve the info about
-        If Combo_ArAccount.Text <> "" Then
-            'This ArAccount from the collection
-            strArAccountArray = colArAccount.Item(Combo_ArAccount)
-            If strArAccountArray(1) <> "" Then 'If multicurrency is turned on in the preference, The currencyref is not ""
-
-                strCustomerArray = colCustomerCurrencyList.Item(Combo_Customer) 'I am using the name in the combo box to retrieve the info about
-                'This customer from the collection
-
-                If strCustomerArray(1) <> strArAccountArray(1) Then ' Make sure that both account and customer use the same currency by comparing the currencyref
-                    MsgBox("Please select an account that has the same currency as the customer",  , "Change account")
-                    Combo_ArAccount.Text = ""
-                    Combo_ArAccount.Focus()
-
-                End If
-            End If
-        End If
-
-
-    End Sub
-
-    Private Sub Combo_Customer_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Customer.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Customer.SelectedIndex = -1 Then
-            Combo_Customer.Text = ""
-        End If
-    End Sub
-
-    Private Sub Combo_Customer_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Customer.SelectedIndexChanged
-        ' Once the customer is selected, We need to find the Exchange rate if multi-currency
-        ' To do so, the use the currency used by the customer and find the exchange rate associated with this currency
-
-        'Clear the form
-        Call FormClear()
-        Dim strCustomerArray() As String
-        If Combo_Customer.Text <> "" Then
-            'Get the customer info from the collection
-            strCustomerArray = colCustomerCurrencyList.Item(Combo_Customer) 'I am using the name in the combo box to retrieve the info about
-            'This customer from the collection
-
-            If strCustomerArray(1) <> "" Then 'If multicurrency is turned on in the preference, The currencyref is not ""
-                Text_ExRate.Text = GetCurExRate(strCustomerArray(1)) ' Call the GetCurExRate that will use the currency ListID to find the Exchange Rate
-            End If
-        End If
-    End Sub
-
-    Private Sub Combo_First_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_Item.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_First_Item.SelectedIndex = -1 Then
-            Combo_First_Item.Text = ""
-        End If
-    End Sub
-
-    Private Sub Combo_First_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_Item.SelectedIndexChanged
-        'Once the Item is selected, Populate the Description, rate and tax rate fields
-
-        Dim strItemArray() As String
-        If Combo_First_Item.Text <> "" Then
-            'Get the Item info from the collection
-            strItemArray = colItemList.Item(Combo_First_Item) 'I am using the name in the combo box to retrieve the info about
-            'This item from the collection
-            'strItemArray(0) is the name of the item
-            'strItemArray(1) is the taxcode associated to this currency
-            'strItemArray(2) is Description associated to this item
-            'strItemArray(3) is the price associated to this item
-            'strItemArray(4) tell us if it's a sale or a purchase desc and price
-            Text_Desc_First_Item.Text = strItemArray(2)
-            Text_First_Rate.Text = strItemArray(3)
-            Combo_First_TaxCode.Text = strItemArray(1)
-        End If
-    End Sub
-
-    Private Sub Combo_First_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_TaxCode.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_First_TaxCode.SelectedIndex = -1 Then
-            Combo_First_TaxCode.Text = ""
-        End If
-        CalculateTaxAndTotal()
-    End Sub
-
-    Private Sub Combo_First_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_TaxCode.SelectedIndexChanged
-        'Recalculate the total and taxes
-        CalculateTaxAndTotal()
-    End Sub
-    Private Sub Combo_Second_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_Item.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Second_Item.SelectedIndex = -1 Then
-            Combo_Second_Item.Text = ""
-        End If
-        CalculateTaxAndTotal()
-    End Sub
-
-    Private Sub Combo_Second_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_Item.SelectedIndexChanged
-        'Once the Item is selected, Populate the Description, rate and tax rate fields
-
-        Dim strItemArray() As String
-        If Combo_Second_Item.Text <> "" Then
-            'Get the Item info from the collection
-            strItemArray = colItemList.Item(Combo_Second_Item) 'I am using the name in the combo box to retrieve the info about
-            'This item from the collection
-            'strItemArray(0) is the name of the item
-            'strItemArray(1) is the taxcode associated to this currency
-            'strItemArray(2) is Description associated to this item
-            'strItemArray(3) is the price associated to this item
-            'strItemArray(4) tell us if it's a sale or a purchase desc and price
-            Text_Desc_Second_Item.Text = strItemArray(2)
-            Text_Second_Rate.Text = strItemArray(3)
-            Combo_Second_TaxCode.Text = strItemArray(1)
-        End If
-    End Sub
-
-    Private Sub Combo_Second_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_TaxCode.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Second_TaxCode.SelectedIndex = -1 Then
-            Combo_Second_TaxCode.Text = ""
-        End If
-        CalculateTaxAndTotal()
-
-    End Sub
-
-    Private Sub Combo_Second_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_TaxCode.SelectedIndexChanged
-        'Recalculate the total and taxes
-        CalculateTaxAndTotal()
-    End Sub
-
-    Private Sub Combo_Terms_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Terms.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Terms.SelectedIndex = -1 Then
-            Combo_Terms.Text = ""
-        End If
-    End Sub
-
-    Private Sub Combo_Third_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_Item.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Third_Item.SelectedIndex = -1 Then
-            Combo_Third_Item.Text = ""
-        End If
-    End Sub
-
-    Private Sub Combo_Third_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_Item.SelectedIndexChanged
-        'Once the Item is selected, Populate the Description, rate and tax rate fields
-
-        Dim strItemArray() As String
-        If Combo_Third_Item.Text <> "" Then
-            'Get the Item info from the collection
-            strItemArray = colItemList.Item(Combo_Third_Item) 'I am using the name in the combo box to retrieve the info about
-            'This item from the collection
-            'strItemArray(0) is the name of the item
-            'strItemArray(1) is the taxcode associated to this currency
-            'strItemArray(2) is Description associated to this item
-            'strItemArray(3) is the price associated to this item
-            'strItemArray(4) tell us if it's a sale or a purchase desc and price
-            Text_Desc_Third_Item.Text = strItemArray(2)
-            Text_Third_Rate.Text = strItemArray(3)
-            Combo_Third_TaxCode.Text = strItemArray(1)
-        End If
-    End Sub
-
-    Private Sub Combo_Third_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_TaxCode.TextChanged
-        'If not in the list, we clear the combo box
-        If Combo_Third_TaxCode.SelectedIndex = -1 Then
-            Combo_Third_TaxCode.Text = ""
-        End If
-        CalculateTaxAndTotal()
-    End Sub
-
-    Private Sub Combo_Third_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_TaxCode.SelectedIndexChanged
-        'Recalculate the total and taxes
-        CalculateTaxAndTotal()
-
-    End Sub
-
-    Private Sub Command_Clear_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command_Clear.Click
+		'If not in the list, we clear the combo box
+		If Combo_ArAccount.SelectedIndex = -1 Then
+			Combo_ArAccount.Text = ""
+		End If
+	End Sub
+	
+	
+	Private Sub Combo_ArAccount_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_ArAccount.SelectedIndexChanged
+		'Once the account is selected, We must make sure that the currency is the same as the customer selected (If multi-currency is turned on in the preferences)
+		
+		Dim strArAccountArray() As String
+		Dim strCustomerArray() As String 'I am using the name in the combo box to retrieve the info about
+		If Combo_ArAccount.Text <> "" Then
+			'This ArAccount from the collection
+			
+			strArAccountArray = colArAccount.Item(Combo_ArAccount.SelectedIndex + 1)
+			If strArAccountArray(1) <> "" Then 'If multicurrency is turned on in the preference, The currencyref is not ""
+				
+				
+				strCustomerArray = colCustomerCurrencyList.Item(Combo_Customer) 'I am using the name in the combo box to retrieve the info about
+				'This customer from the collection
+				
+				If strCustomerArray(1) <> strArAccountArray(1) Then ' Make sure that both account and customer use the same currency by comparing the currencyref
+					MsgBox("Please select an account that has the same currency as the customer",  , "Change account")
+					Combo_ArAccount.Text = ""
+					Combo_ArAccount.Focus()
+					
+				End If
+			End If
+		End If
+		
+		
+	End Sub
+	
+	
+	
+	Private Sub Combo_Customer_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Customer.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Customer.SelectedIndex = -1 Then
+			Combo_Customer.Text = ""
+		End If
+	End Sub
+	
+	
+	Private Sub Combo_Customer_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Customer.SelectedIndexChanged
+		' Once the customer is selected, We need to find the Exchange rate if multi-currency
+		' To do so, the use the currency used by the customer and find the exchange rate associated with this currency
+		
+		'Clear the form
+		Call FormClear()
+		Dim strCustomerArray() As String
+		If Combo_Customer.Text <> "" Then
+			'Get the customer info from the collection
+			
+			strCustomerArray = colCustomerCurrencyList.Item(Combo_Customer.SelectedIndex + 1) 'I am using the name in the combo box to retrieve the info about
+			'This customer from the collection
+			
+			If strCustomerArray(1) <> "" Then 'If multicurrency is turned on in the preference, The currencyref is not ""
+				Text_ExRate.Text = GetCurExRate(strCustomerArray(1)) ' Call the GetCurExRate that will use the currency ListID to find the Exchange Rate
+			End If
+		End If
+	End Sub
+	
+	
+	
+	Private Sub Combo_First_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_Item.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_First_Item.SelectedIndex = -1 Then
+			Combo_First_Item.Text = ""
+		End If
+	End Sub
+	
+	
+	Private Sub Combo_First_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_Item.SelectedIndexChanged
+		'Once the Item is selected, Populate the Description, rate and tax rate fields
+		
+		Dim strItemArray() As String
+		If Combo_First_Item.Text <> "" Then
+			'Get the Item info from the collection
+			
+			strItemArray = colItemList.Item(Combo_First_Item.SelectedIndex + 1) 'I am using the name in the combo box to retrieve the info about
+			'This item from the collection
+			'strItemArray(0) is the name of the item
+			'strItemArray(1) is the taxcode associated to this currency
+			'strItemArray(2) is Description associated to this item
+			'strItemArray(3) is the price associated to this item
+			'strItemArray(4) tell us if it's a sale or a purchase desc and price
+			Text_Desc_First_Item.Text = strItemArray(2)
+			Text_First_Rate.Text = strItemArray(3)
+			Combo_First_TaxCode.Text = strItemArray(1)
+		End If
+	End Sub
+	
+	
+	
+	Private Sub Combo_First_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_TaxCode.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_First_TaxCode.SelectedIndex = -1 Then
+			Combo_First_TaxCode.Text = ""
+		End If
+		CalculateTaxAndTotal()
+	End Sub
+	
+	
+	Private Sub Combo_First_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_First_TaxCode.SelectedIndexChanged
+		'Recalculate the total and taxes
+		CalculateTaxAndTotal()
+	End Sub
+	
+	
+	Private Sub Combo_Second_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_Item.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Second_Item.SelectedIndex = -1 Then
+			Combo_Second_Item.Text = ""
+		End If
+		CalculateTaxAndTotal()
+	End Sub
+	
+	
+	Private Sub Combo_Second_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_Item.SelectedIndexChanged
+		'Once the Item is selected, Populate the Description, rate and tax rate fields
+		
+		Dim strItemArray() As String
+		If Combo_Second_Item.Text <> "" Then
+			'Get the Item info from the collection
+			
+			strItemArray = colItemList.Item(Combo_Second_Item.SelectedIndex + 1) 'I am using the name in the combo box to retrieve the info about
+			'This item from the collection
+			'strItemArray(0) is the name of the item
+			'strItemArray(1) is the taxcode associated to this currency
+			'strItemArray(2) is Description associated to this item
+			'strItemArray(3) is the price associated to this item
+			'strItemArray(4) tell us if it's a sale or a purchase desc and price
+			Text_Desc_Second_Item.Text = strItemArray(2)
+			Text_Second_Rate.Text = strItemArray(3)
+			Combo_Second_TaxCode.Text = strItemArray(1)
+		End If
+	End Sub
+	
+	
+	
+	Private Sub Combo_Second_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_TaxCode.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Second_TaxCode.SelectedIndex = -1 Then
+			Combo_Second_TaxCode.Text = ""
+		End If
+		CalculateTaxAndTotal()
+		
+	End Sub
+	
+	
+	Private Sub Combo_Second_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Second_TaxCode.SelectedIndexChanged
+		'Recalculate the total and taxes
+		CalculateTaxAndTotal()
+	End Sub
+	
+	
+	
+	Private Sub Combo_Terms_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Terms.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Terms.SelectedIndex = -1 Then
+			Combo_Terms.Text = ""
+		End If
+	End Sub
+	
+	
+	
+	Private Sub Combo_Third_Item_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_Item.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Third_Item.SelectedIndex = -1 Then
+			Combo_Third_Item.Text = ""
+		End If
+	End Sub
+	
+	
+	Private Sub Combo_Third_Item_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_Item.SelectedIndexChanged
+		'Once the Item is selected, Populate the Description, rate and tax rate fields
+		
+		Dim strItemArray() As String
+		If Combo_Third_Item.Text <> "" Then
+			'Get the Item info from the collection
+			
+			strItemArray = colItemList.Item(Combo_Third_Item.SelectedIndex + 1) 'I am using the name in the combo box to retrieve the info about
+			'This item from the collection
+			'strItemArray(0) is the name of the item
+			'strItemArray(1) is the taxcode associated to this currency
+			'strItemArray(2) is Description associated to this item
+			'strItemArray(3) is the price associated to this item
+			'strItemArray(4) tell us if it's a sale or a purchase desc and price
+			Text_Desc_Third_Item.Text = strItemArray(2)
+			Text_Third_Rate.Text = strItemArray(3)
+			Combo_Third_TaxCode.Text = strItemArray(1)
+		End If
+	End Sub
+	
+	
+	
+	Private Sub Combo_Third_TaxCode_TextChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_TaxCode.TextChanged
+		'If not in the list, we clear the combo box
+		If Combo_Third_TaxCode.SelectedIndex = -1 Then
+			Combo_Third_TaxCode.Text = ""
+		End If
+		CalculateTaxAndTotal()
+	End Sub
+	
+	
+	Private Sub Combo_Third_TaxCode_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Combo_Third_TaxCode.SelectedIndexChanged
+		'Recalculate the total and taxes
+		CalculateTaxAndTotal()
+		
+	End Sub
+	
+	Private Sub Command_Clear_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command_Clear.Click
 		Combo_Customer.Text = ""
 		'I call the FormClear sub
 		Call FormClear()
@@ -231,7 +263,7 @@ Friend Class Invoice
 			
 			
 			
-			strXMLRequest = GenerateInvoiceXMLRequest 'Create the XML request using the information on the form
+			strXMLRequest = GenerateInvoiceXMLRequest() 'Create the XML request using the information on the form
 			'Save the invoice in QuickBooks
 			FuncTionSaveInvoice((strXMLRequest)) 'Call this function to send the request to QuickBooks
 		End If
@@ -263,9 +295,10 @@ Friend Class Invoice
 			intIndex = 1
 			'We loop through the customer arrays in the colCustomerCurrencyList collection
 			While intIndex <= colCustomerCurrencyList.Count()
-                'Adding the customer's name to the combo box
-                strCustomerArray = colCustomerCurrencyList.Item(intIndex)
-                Combo_Customer.Items.Add(strCustomerArray(0))
+				'Adding the customer's name to the combo box
+				
+				strCustomerArray = colCustomerCurrencyList.Item(intIndex)
+				Combo_Customer.Items.Add(strCustomerArray(0))
 				intIndex = intIndex + 1 ' Go to the next customer
 			End While
 			
@@ -279,25 +312,30 @@ Friend Class Invoice
 			intIndex = 1
 			'We loop through the item arrays in the colItemList collection
 			While intIndex <= colItemList.Count()
-                'Adding the Item name to all three item combo boxes
-                strItemArray = colItemList.Item(intIndex)
-                Combo_First_Item.Items.Add(strItemArray(0))
+				'Adding the Item name to all three item combo boxes
+				
+				strItemArray = colItemList.Item(intIndex)
+				Combo_First_Item.Items.Add(strItemArray(0))
 				Combo_Second_Item.Items.Add(strItemArray(0))
 				Combo_Third_Item.Items.Add(strItemArray(0))
 				intIndex = intIndex + 1 ' Go to the next item
 			End While
-
-            ' Populating the Tax Code combo boxes
-
-            colTaxCodeList = New Collection
+			
+			
+			
+			
+			' Populating the Tax Code combo boxes
+			
+			colTaxCodeList = New Collection
 			'Call the GetTaxCodeList procedure that will populate the colItemList collection
 			GetTaxCodeList()
 			intIndex = 1
 			'We loop through the taxcode arrays in the colTaxCodeList collection
 			While intIndex <= colTaxCodeList.Count()
-                'Adding the TaxCode name to all three TaxCode combo boxes
-                strTaxCodeArray = colTaxCodeList.Item(intIndex)
-                Combo_First_TaxCode.Items.Add(strTaxCodeArray(0))
+				'Adding the TaxCode name to all three TaxCode combo boxes
+				
+				strTaxCodeArray = colTaxCodeList.Item(intIndex)
+				Combo_First_TaxCode.Items.Add(strTaxCodeArray(0))
 				Combo_Second_TaxCode.Items.Add(strTaxCodeArray(0))
 				Combo_Third_TaxCode.Items.Add(strTaxCodeArray(0))
 				intIndex = intIndex + 1 ' Go to the next TaxCode
@@ -318,9 +356,10 @@ Friend Class Invoice
 			
 			'We loop through the ArAccount arrays in the colArAccount collection
 			While intIndex <= colArAccount.Count()
-                'Adding the ArAccount name to the ArAccount combo box
-                strArAccountArray = colArAccount.Item(intIndex)
-                Combo_ArAccount.Items.Add(strArAccountArray(0))
+				'Adding the ArAccount name to the ArAccount combo box
+				
+				strArAccountArray = colArAccount.Item(intIndex)
+				Combo_ArAccount.Items.Add(strArAccountArray(0))
 				intIndex = intIndex + 1 ' Go to the next ArAccount
 			End While
 			
@@ -563,7 +602,8 @@ ErrHandler:
 		Dim strFirstComboTaxRate2 As String
 		If Combo_First_TaxCode.Text <> "" Then
             'If tax rate selected for the first item...
-            strTaxCodeArray = colTaxCodeList.Item(Combo_First_TaxCode) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
+            
+            strTaxCodeArray = colTaxCodeList.Item(Combo_First_TaxCode.SelectedIndex + 1) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
 
             If strTaxCodeArray(1) <> "" Then
 				strFirstComboTaxRate1 = CStr(CDbl(strTaxCodeArray(1)) / 100)
@@ -580,7 +620,8 @@ ErrHandler:
 		Dim strSecondComboTaxRate2 As String
 		If Combo_Second_TaxCode.Text <> "" Then
             'If tax rate selected for the second item...
-            strTaxCodeArray = colTaxCodeList.Item(Combo_Second_TaxCode) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
+            
+            strTaxCodeArray = colTaxCodeList.Item(Combo_Second_TaxCode.SelectedIndex + 1) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
 
             If strTaxCodeArray(1) <> "" Then
 				strSecondComboTaxRate1 = CStr(CDbl(strTaxCodeArray(1)) / 100)
@@ -597,7 +638,8 @@ ErrHandler:
 		Dim strThirdComboTaxRate2 As String
 		If Combo_Third_TaxCode.Text <> "" Then
             'If tax rate selected for the third item...
-            strTaxCodeArray = colTaxCodeList.Item(Combo_Third_TaxCode) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
+            
+            strTaxCodeArray = colTaxCodeList.Item(Combo_Third_TaxCode.SelectedIndex + 1) 'We  retrieve the taxcode array corresponding to the taxcode selected in the combo box
 
             If strTaxCodeArray(1) <> "" Then
 				strThirdComboTaxRate1 = CStr(CDbl(strTaxCodeArray(1)) / 100)
@@ -677,7 +719,7 @@ ErrHandler:
 	Function GenerateInvoiceXMLRequest() As String
 		' We generate the request qbXML in order to get the ArAccount list with filter to have only account receivables.
 		Dim requestXML As String
-        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""CA2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<InvoiceAddRq requestID=""1"">" & "<InvoiceAdd>" & "<CustomerRef>" & "<FullName>" & Combo_Customer.Text & "</FullName>" & "</CustomerRef>"
+        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<InvoiceAddRq requestID=""1"">" & "<InvoiceAdd>" & "<CustomerRef>" & "<FullName>" & Combo_Customer.Text & "</FullName>" & "</CustomerRef>"
         If Combo_ArAccount.Text <> "" Then
 			requestXML = requestXML & "<ARAccountRef>" & "<FullName>" & Combo_ArAccount.Text & "</FullName>" & "</ARAccountRef>"
 		End If
@@ -701,7 +743,7 @@ ErrHandler:
 			End If
 			
 			If Combo_First_TaxCode.Text <> "" Then
-				requestXML = requestXML & "<TaxCodeRef>" & "<FullName>" & Combo_First_TaxCode.Text & "</FullName>" & "</TaxCodeRef>"
+				requestXML = requestXML & "<SalesTaxCodeRef>" & "<FullName>" & Combo_First_TaxCode.Text & "</FullName>" & "</SalesTaxCodeRef>"
 			End If
 			requestXML = requestXML & "</InvoiceLineAdd>"
 		End If
@@ -721,7 +763,7 @@ ErrHandler:
 			End If
 			
 			If Combo_Second_TaxCode.Text <> "" Then
-				requestXML = requestXML & "<TaxCodeRef>" & "<FullName>" & Combo_Second_TaxCode.Text & "</FullName>" & "</TaxCodeRef>"
+				requestXML = requestXML & "<SalesTaxCodeRef>" & "<FullName>" & Combo_Second_TaxCode.Text & "</FullName>" & "</SalesTaxCodeRef>"
 			End If
 			requestXML = requestXML & "</InvoiceLineAdd>"
 			
@@ -744,7 +786,7 @@ ErrHandler:
 			
 			
 			If Combo_Third_TaxCode.Text <> "" Then
-				requestXML = requestXML & "<TaxCodeRef>" & "<FullName>" & Combo_Third_TaxCode.Text & "</FullName>" & "</TaxCodeRef>"
+				requestXML = requestXML & "<SalesTaxCodeRef>" & "<FullName>" & Combo_Third_TaxCode.Text & "</FullName>" & "</SalesTaxCodeRef>"
 			End If
 			requestXML = requestXML & "</InvoiceLineAdd>"
 			

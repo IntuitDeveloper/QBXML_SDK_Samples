@@ -89,10 +89,12 @@ ErrHandler:
 		' We only want the statusCode attribute and the statusMessage
 		If rprAttr.length > 0 Then
 			statCodeNode = rprAttr.getNamedItem("statusCode")
-            statusCode = statCodeNode.nodeValue
-            statMsgNode = rprAttr.getNamedItem("statusMessage")
-            statusMsg = statMsgNode.nodeValue
-        End If
+			
+			statusCode = statCodeNode.nodeValue
+			statMsgNode = rprAttr.getNamedItem("statusMessage")
+			
+			statusMsg = statMsgNode.nodeValue
+		End If
 		
 		
 		' A statusCode of 0 indicates that there is no error.

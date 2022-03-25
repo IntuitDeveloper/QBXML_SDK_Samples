@@ -1,20 +1,20 @@
 Option Strict Off
 Option Explicit On
 Module TaxCodeInfo
-	' TaxCodeInfo.bas
-	' This module is part of the Invoice sample program
-	' for the QuickBooks SDK Version CA2.0.
-	' Created September, 2002
-	'
-	' Copyright © 2021-2022 Intuit Inc. All rights reserved.
-	' Use is subject to the terms specified at:
-	'      http://developer.intuit.com/legal/devsite_tos.html
-	'
-	'-------------------------------------------------------------
-	
-	
-	'global strings containing information associated with the Tax code
-	Public colTaxCodeList As Collection
+    ' TaxCodeInfo.bas
+    ' This module is part of the Invoice sample program
+    ' for the QuickBooks SDK Version CA2.0.
+    ' Created September, 2002
+    '
+    ' Copyright © 2021-2022 Intuit Inc. All rights reserved.
+    ' Use is subject to the terms specified at:
+    '      http://developer.intuit.com/legal/devsite_tos.html
+    '
+    '-------------------------------------------------------------
+
+
+    'global strings containing information associated with the Tax code
+    Public colTaxCodeList As Collection
 	Sub GetTaxCodeList()
 		'The GetTaxCodeList function generates a request to QuickBooks and call the ParseTaxCode procedure to parse the
 		'TaxCode's list
@@ -28,7 +28,7 @@ Module TaxCodeInfo
 
 
         ' We generate the request qbXML in order to get the TaxCode list.
-        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""CA2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<TaxCodeQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
+        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<SalesTaxCodeQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
 
 
         '    PrintXMLToFile requestXML, "C:\request.xml" '*** remove Comment character to produce a xml request file
@@ -64,18 +64,19 @@ ErrHandler:
 		'strTaxCodeArray(2) is PST
 		' Load XML Script
 		objXmlDoc.async = False
-        If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
-
-            objRootElement = objXmlDoc.documentElement
-
-            For Each objMsgsRsNode In objRootElement.childNodes
-
-                If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
-
-                    For Each objMessageNode In objMsgsRsNode.childNodes
+		
+		If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
+			
+			objRootElement = objXmlDoc.documentElement
+			
+			For	Each objMsgsRsNode In objRootElement.childNodes
+				
+				If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
+					
+					For	Each objMessageNode In objMsgsRsNode.childNodes
 
                         ' If we find the TaxCode list, let's parse it.
-                        If objMessageNode.nodeName = "TaxCodeQueryRs" Then
+                        If objMessageNode.nodeName = "SalesTaxCodeQueryRs" Then
 
                             For Each objTaxCodeNode In objMessageNode.childNodes
                                 strTaxCodeArray(0) = ""
@@ -86,21 +87,24 @@ ErrHandler:
                                     'Transfer the TaxCode information into the TaxCode collection
 
                                     If objTaxCodeItem.nodeName = "Name" Then
+                                        
                                         strTaxCodeArray(0) = objTaxCodeItem.nodeTypedValue
                                     ElseIf objTaxCodeItem.nodeName = "Tax1Rate" Then
+                                        
                                         strTaxCodeArray(1) = objTaxCodeItem.nodeTypedValue
                                     ElseIf objTaxCodeItem.nodeName = "Tax2Rate" Then
+                                        
                                         strTaxCodeArray(2) = objTaxCodeItem.nodeTypedValue
                                     End If
 
                                 Next objTaxCodeItem
-                                colTaxCodeList.Add(strTaxCodeArray, strTaxCodeArray(0))
+                                colTaxCodeList.Add(strTaxCodeArray.Clone, strTaxCodeArray(0))
                             Next objTaxCodeNode
 
                         End If
                     Next objMessageNode
-                End If
-            Next objMsgsRsNode
-        End If
-    End Sub
+				End If
+			Next objMsgsRsNode
+		End If
+	End Sub
 End Module

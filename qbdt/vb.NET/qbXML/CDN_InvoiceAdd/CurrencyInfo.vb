@@ -26,7 +26,7 @@ Module CurrencyInfo
 
 
         ' This request ask QuickBooks to return information on a certain currency
-        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""CA2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<CurrencyQueryRq requestID=""1"">" & "<ListID>" & strCurrencyID & "</ListID>" & "</CurrencyQueryRq>" & "</QBXMLMsgsRq></QBXML>"
+        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<CurrencyQueryRq requestID=""1"">" & "<ListID>" & strCurrencyID & "</ListID>" & "</CurrencyQueryRq>" & "</QBXMLMsgsRq></QBXML>"
 
         '    PrintXMLToFile requestXML, "C:\request.xml" '*** remove Comment character to produce a xml request file
 
@@ -57,35 +57,37 @@ ErrHandler:
 		
 		' Load XML Script
 		objXmlDoc.async = False
-        If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
-
-            objRootElement = objXmlDoc.documentElement
-
-            For Each objMsgsRsNode In objRootElement.childNodes
-
-                If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
-
-                    For Each objMessageNode In objMsgsRsNode.childNodes
-
-                        ' If we find the Currency, let's parse it.
-                        If objMessageNode.nodeName = "CurrencyQueryRs" Then
-
-
-                            For Each objCurrencyNode In objMessageNode.childNodes 'For each currency in the list(in this example, there is only one currency returned)
-
-                                For Each objCurrencyItem In objCurrencyNode.childNodes
-                                    If objCurrencyItem.nodeName = "ExchangeRate" Then
-                                        ParseCurrency = objCurrencyItem.nodeTypedValue 'Add the exchange rate to the collection
-                                        Exit For
-                                    End If
-                                Next objCurrencyItem
-                            Next objCurrencyNode
-
-                        End If
-                    Next objMessageNode
-                End If
-            Next objMsgsRsNode
-        End If
-
-    End Function
+		
+		If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
+			
+			objRootElement = objXmlDoc.documentElement
+			
+			For	Each objMsgsRsNode In objRootElement.childNodes
+				
+				If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
+					
+					For	Each objMessageNode In objMsgsRsNode.childNodes
+						
+						' If we find the Currency, let's parse it.
+						If objMessageNode.nodeName = "CurrencyQueryRs" Then
+							
+							
+							For	Each objCurrencyNode In objMessageNode.childNodes 'For each currency in the list(in this example, there is only one currency returned)
+								
+								For	Each objCurrencyItem In objCurrencyNode.childNodes
+									If objCurrencyItem.nodeName = "ExchangeRate" Then
+										
+										ParseCurrency = objCurrencyItem.nodeTypedValue 'Add the exchange rate to the collection
+										Exit For
+									End If
+								Next objCurrencyItem
+							Next objCurrencyNode
+							
+						End If
+					Next objMessageNode
+				End If
+			Next objMsgsRsNode
+		End If
+		
+	End Function
 End Module
