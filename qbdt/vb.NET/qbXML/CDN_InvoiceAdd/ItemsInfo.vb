@@ -32,7 +32,7 @@ Module ItemsInfo
 		End If
 
         'Create the query to find the Item list
-        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""CA2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<ItemQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
+        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<ItemQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
 
         'PrintToFile requestXML
         '    PrintXMLToFile requestXML, "C:\request.xml" '*** remove comment character to produce a xml request file
@@ -78,77 +78,84 @@ ErrHandler:
 		
 		' Load XML Script
 		objXmlDoc.async = False
-        If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
-
-            objRootElement = objXmlDoc.documentElement
-
-            For Each objMsgsRsNode In objRootElement.childNodes
-
-                If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
-
-                    For Each objMessageNode In objMsgsRsNode.childNodes
-
-                        ' If we find the Item list, let's parse it.
-                        If objMessageNode.nodeName = "ItemQueryRs" Then
-
-
-                            For Each objItemNode In objMessageNode.childNodes
-                                strCustomerCurrencyArray(0) = ""
-                                strCustomerCurrencyArray(1) = ""
-                                strCustomerCurrencyArray(2) = ""
-                                strCustomerCurrencyArray(3) = ""
-                                strCustomerCurrencyArray(4) = ""
-                                ' This if statement filter the items that we want to retrieve information about
-                                If objItemNode.nodeName = "ItemServiceRet" Or objItemNode.nodeName = "ItemNonInventoryRet" Or objItemNode.nodeName = "ItemOtherChargeRet" Then
-                                    blnDescFound = False
-                                    For Each objItemGroupItem In objItemNode.childNodes
-                                        If objItemGroupItem.nodeName = "Name" Then
-                                            strCustomerCurrencyArray(0) = objItemGroupItem.nodeTypedValue
-                                        ElseIf objItemGroupItem.nodeName = "TaxCodeRef" Then
-                                            ' Parses the TaxCodeRef node
-                                            For Each objElementItem In objItemGroupItem.childNodes
-                                                If objElementItem.nodeName = "FullName" Then
-                                                    strCustomerCurrencyArray(1) = objElementItem.nodeTypedValue
-                                                End If
-                                            Next objElementItem
-                                        ElseIf objItemGroupItem.nodeName = "SalesAndPurchase" Then
-                                            ' Parses the SalesAndPurchase node
-                                            For Each objElementItem In objItemGroupItem.childNodes
-                                                If objElementItem.nodeName = "SalesDesc" Then
-                                                    strCustomerCurrencyArray(2) = objElementItem.nodeTypedValue
-                                                    blnDescFound = True
-                                                ElseIf objElementItem.nodeName = "SalesPrice" Then
-                                                    strCustomerCurrencyArray(3) = objElementItem.nodeTypedValue
-                                                    strCustomerCurrencyArray(4) = "SalesAndPurchase"
-                                                    Exit For
-                                                End If
-                                            Next objElementItem
-
-                                        ElseIf objItemGroupItem.nodeName = "SalesOrPurchase" Then
-                                            ' Parses the SalesOrPurchase node
-                                            For Each objElementItem In objItemGroupItem.childNodes
-                                                If objElementItem.nodeName = "Desc" Then
-                                                    strCustomerCurrencyArray(2) = objElementItem.nodeTypedValue
-                                                    blnDescFound = True
-                                                ElseIf objElementItem.nodeName = "Price" Then
-                                                    strCustomerCurrencyArray(3) = objElementItem.nodeTypedValue
-                                                    strCustomerCurrencyArray(4) = "SalesOrPurchase"
-                                                    Exit For
-                                                End If
-                                            Next objElementItem
-                                        End If
-                                    Next objItemGroupItem
-                                    colItemList.Add(strCustomerCurrencyArray, strCustomerCurrencyArray(0))
+		
+		If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
+			
+			objRootElement = objXmlDoc.documentElement
+			
+			For	Each objMsgsRsNode In objRootElement.childNodes
+				
+				If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
+					
+					For	Each objMessageNode In objMsgsRsNode.childNodes
+						
+						' If we find the Item list, let's parse it.
+						If objMessageNode.nodeName = "ItemQueryRs" Then
+							
+							
+							For	Each objItemNode In objMessageNode.childNodes
+								strCustomerCurrencyArray(0) = ""
+								strCustomerCurrencyArray(1) = ""
+								strCustomerCurrencyArray(2) = ""
+								strCustomerCurrencyArray(3) = ""
+								strCustomerCurrencyArray(4) = ""
+								' This if statement filter the items that we want to retrieve information about
+								If objItemNode.nodeName = "ItemServiceRet" Or objItemNode.nodeName = "ItemNonInventoryRet" Or objItemNode.nodeName = "ItemOtherChargeRet" Then
+									blnDescFound = False
+									For	Each objItemGroupItem In objItemNode.childNodes
+										If objItemGroupItem.nodeName = "Name" Then
+											
+											strCustomerCurrencyArray(0) = objItemGroupItem.nodeTypedValue
+                                        						ElseIf objItemGroupItem.nodeName = "SalesTaxCodeRef" Then
+											' Parses the TaxCodeRef node
+											For	Each objElementItem In objItemGroupItem.childNodes
+												If objElementItem.nodeName = "FullName" Then
+													
+													strCustomerCurrencyArray(1) = objElementItem.nodeTypedValue
+												End If
+											Next objElementItem
+										ElseIf objItemGroupItem.nodeName = "SalesAndPurchase" Then 
+											' Parses the SalesAndPurchase node
+											For	Each objElementItem In objItemGroupItem.childNodes
+												If objElementItem.nodeName = "SalesDesc" Then
+													
+													strCustomerCurrencyArray(2) = objElementItem.nodeTypedValue
+													blnDescFound = True
+												ElseIf objElementItem.nodeName = "SalesPrice" Then 
+													
+													strCustomerCurrencyArray(3) = objElementItem.nodeTypedValue
+													strCustomerCurrencyArray(4) = "SalesAndPurchase"
+													Exit For
+												End If
+											Next objElementItem
+											
+										ElseIf objItemGroupItem.nodeName = "SalesOrPurchase" Then 
+											' Parses the SalesOrPurchase node
+											For	Each objElementItem In objItemGroupItem.childNodes
+												If objElementItem.nodeName = "Desc" Then
+													
+													strCustomerCurrencyArray(2) = objElementItem.nodeTypedValue
+													blnDescFound = True
+												ElseIf objElementItem.nodeName = "Price" Then 
+													
+													strCustomerCurrencyArray(3) = objElementItem.nodeTypedValue
+													strCustomerCurrencyArray(4) = "SalesOrPurchase"
+													Exit For
+												End If
+											Next objElementItem
+										End If
+									Next objItemGroupItem
+                                    colItemList.Add(strCustomerCurrencyArray.Clone, strCustomerCurrencyArray(0))
                                 End If
-                            Next objItemNode
-
-                        End If
-                    Next objMessageNode
-
-                End If
-
-            Next objMsgsRsNode
-
-        End If
-    End Sub
+							Next objItemNode
+							
+						End If
+					Next objMessageNode
+					
+				End If
+				
+			Next objMsgsRsNode
+			
+		End If
+	End Sub
 End Module

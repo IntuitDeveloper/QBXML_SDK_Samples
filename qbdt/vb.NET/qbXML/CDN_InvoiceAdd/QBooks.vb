@@ -63,16 +63,18 @@ Module QBooks
         'Checking that QuickBooks support the Canadian SDK (version CA2.0)
         Dim strCanadianVersion As String
 		Dim blnCanadianVersionFound As Boolean
-        Dim str_Renamed As Object
+		
+		Dim str_Renamed As Object
 
 
         '    Dim nArrayUpperBound As Integer
 
 
-        strCanadianVersion = "CA2.0"
+        strCanadianVersion = "2.0"
         blnCanadianVersionFound = True
 
         For	Each str_Renamed In VersionSupportedArray
+            
             'MessageBox.Show(str_Renamed)
             If strCanadianVersion = str_Renamed Then
                 blnCanadianVersionFound = True
@@ -81,8 +83,8 @@ Module QBooks
         Next str_Renamed
 		
 		If blnCanadianVersionFound = False Then 'If version CA 2.0 not found...
-			MsgBox("This QuickBooks does not support the version CA2.0 of qbXML",  , "qbXML version not supported""")
-			If blnSessionBegun = True Then
+            MsgBox("This QuickBooks does not support the version 2.0 of qbXML",  , "qbXML version not supported""")
+            If blnSessionBegun = True Then
 				qbXMLRP.EndSession(ticket)
 			End If
 			' Close the connection
@@ -157,44 +159,65 @@ ErrHandler:
 		IndentString = ""
 		
 		Dim FileNum As Object
-        FileNum = FreeFile()
-        FileOpen(FileNum, XMLFile, OpenMode.Output)
-
-        ' Remove the linefeeds from the XML output string
-        xmlString = Replace(xmlString, vbLf, vbNullString)
+		
+		FileNum = FreeFile
+		
+		FileOpen(FileNum, XMLFile, OpenMode.Output)
+		
+		' Remove the linefeeds from the XML output string
+		xmlString = Replace(xmlString, vbLf, vbNullString)
 		
 		SplitXMLString = Split(xmlString, "<")
-
-        ' We're expecting the first character of the XML output to be "<"
-        ' which result in an empty first array element, so skip it.
-        SplitIndex = LBound(SplitXMLString) + 1
-
-        Do
-            If Left(SplitXMLString(SplitIndex), 1) = "/" Then
-                IndentString = Left(IndentString, Len(IndentString) - 3)
-                PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
-                SplitIndex = SplitIndex + 1
-            ElseIf Left(SplitXMLString(SplitIndex + 1), 1) = "/" Then
-                If InStr(1, Left(SplitXMLString(SplitIndex), InStr(1, SplitXMLString(SplitIndex), ">")), " ") > 0 Then
-                    PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
-                    SplitIndex = SplitIndex + 1
-                Else
-                    PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex) & "<" & SplitXMLString(SplitIndex + 1))
-                    SplitIndex = SplitIndex + 2
-                End If
-            Else
-                PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
-                IndentString = IndentString & "   "
-                SplitIndex = SplitIndex + 1
-            End If
-        Loop Until SplitIndex >= UBound(SplitXMLString)
-
-        If Left(SplitXMLString(UBound(SplitXMLString)), 1) = "/" Then
+		
+		' We're expecting the first character of the XML output to be "<"
+		' which result in an empty first array element, so skip it.
+		
+		SplitIndex = LBound(SplitXMLString) + 1
+		
+		Do 
+			
+			If Left(SplitXMLString(SplitIndex), 1) = "/" Then
+				IndentString = Left(IndentString, Len(IndentString) - 3)
+				
+				
+				PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
+				
+				SplitIndex = SplitIndex + 1
+				
+			ElseIf Left(SplitXMLString(SplitIndex + 1), 1) = "/" Then 
+				
+				If InStr(1, Left(SplitXMLString(SplitIndex), InStr(1, SplitXMLString(SplitIndex), ">")), " ") > 0 Then
+					
+					
+					PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
+					
+					SplitIndex = SplitIndex + 1
+				Else
+					
+					
+					PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex) & "<" & SplitXMLString(SplitIndex + 1))
+					
+					SplitIndex = SplitIndex + 2
+				End If
+			Else
+				
+				
+				PrintLine(FileNum, IndentString & "<" & SplitXMLString(SplitIndex))
+				IndentString = IndentString & "   "
+				
+				SplitIndex = SplitIndex + 1
+			End If
+			
+		Loop Until SplitIndex >= UBound(SplitXMLString)
+		
+		If Left(SplitXMLString(UBound(SplitXMLString)), 1) = "/" Then
 			IndentString = Left(IndentString, Len(IndentString) - 3)
 		End If
-
-        PrintLine(FileNum, IndentString & "<" & SplitXMLString(UBound(SplitXMLString)))
-
-        FileClose(FileNum)
-    End Sub
+		
+		
+		PrintLine(FileNum, IndentString & "<" & SplitXMLString(UBound(SplitXMLString)))
+		
+		
+		FileClose(FileNum)
+	End Sub
 End Module

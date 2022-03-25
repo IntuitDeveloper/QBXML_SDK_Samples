@@ -28,7 +28,7 @@ Module CustomerInfo
 
 
         ' We generate the request qbXML in order to get the customer list.
-        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""CA2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<CustomerQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
+        requestXML = "<?xml version=""1.0"" ?>" & "<?qbxml version=""2.0""?>" & "<QBXML><QBXMLMsgsRq onError=""continueOnError"">" & "<CustomerQueryRq requestID=""1""/>" & "</QBXMLMsgsRq></QBXML>"
 
 
         '    PrintXMLToFile requestXML, "C:\request.xml" '*** remove Comment character to produce a xml request file
@@ -65,47 +65,50 @@ ErrHandler:
 		
 		' Load XML Script
 		objXmlDoc.async = False
-        If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
-
-            objRootElement = objXmlDoc.documentElement
-
-            For Each objMsgsRsNode In objRootElement.childNodes
-
-                If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
-
-                    For Each objMessageNode In objMsgsRsNode.childNodes
-
-                        ' If we find the customer list, let's parse it.
-                        If objMessageNode.nodeName = "CustomerQueryRs" Then
-
-                            For Each objCustomerNode In objMessageNode.childNodes ' Go through each customer nodes returned by the query
-                                strCustomerCurrencyArray(0) = ""
-                                strCustomerCurrencyArray(1) = ""
-
-                                For Each objCustomerItem In objCustomerNode.childNodes
+		
+		If objXmlDoc.loadXML(sXML) = True And Len(objXmlDoc.xml) > 0 Then 'verify that there is some values in the documents
+			
+			objRootElement = objXmlDoc.documentElement
+			
+			For	Each objMsgsRsNode In objRootElement.childNodes
+				
+				If objMsgsRsNode.nodeName = "QBXMLMsgsRs" Then
+					
+					For	Each objMessageNode In objMsgsRsNode.childNodes
+						
+						' If we find the customer list, let's parse it.
+						If objMessageNode.nodeName = "CustomerQueryRs" Then
+							
+							For	Each objCustomerNode In objMessageNode.childNodes ' Go through each customer nodes returned by the query
+								strCustomerCurrencyArray(0) = ""
+								strCustomerCurrencyArray(1) = ""
+								
+								For	Each objCustomerItem In objCustomerNode.childNodes
                                     'Transfer the customer information into the collection
 
                                     If objCustomerItem.nodeName = "FullName" Then
+                                        
                                         strFullName = objCustomerItem.nodeTypedValue
                                         strCustomerCurrencyArray(0) = strFullName
                                     ElseIf objCustomerItem.nodeName = "CurrencyRef" Then
                                         ' Parses the CurrencyRef node
-                                        For Each objElementItem In objCustomerItem.childNodes
-                                            If objElementItem.nodeName = "ListID" Then
-                                                strCustomerCurrencyArray(1) = objElementItem.nodeTypedValue
-                                                Exit For
-                                            End If
-                                        Next objElementItem
-
-                                    End If
-                                Next objCustomerItem
-                                colCustomerCurrencyList.Add(strCustomerCurrencyArray, strFullName)
-                            Next objCustomerNode
-
-                        End If
-                    Next objMessageNode
-                End If
-            Next objMsgsRsNode
-        End If
-    End Sub
+                                        For	Each objElementItem In objCustomerItem.childNodes
+											If objElementItem.nodeName = "ListID" Then
+												
+												strCustomerCurrencyArray(1) = objElementItem.nodeTypedValue
+												Exit For
+											End If
+										Next objElementItem
+										
+									End If
+								Next objCustomerItem
+								colCustomerCurrencyList.Add(strCustomerCurrencyArray, strFullName)
+							Next objCustomerNode
+							
+						End If
+					Next objMessageNode
+				End If
+			Next objMsgsRsNode
+		End If
+	End Sub
 End Module
