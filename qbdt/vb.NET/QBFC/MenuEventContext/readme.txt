@@ -1,4 +1,4 @@
-This sample is a simple VB.NET desktop application that is used for adding or removing Menu items by using QBFC2 COM dll. 
+This sample is a simple VB.NET desktop application that is used for adding or removing Menu items by using QBFC COM dll. 
 
 Running the sample
 ------------------
@@ -12,4 +12,4 @@ Building the sample
 ------------------
 Please install latest QBSDK.
 Open MenuEventContext.sln in Microsoft Visual Studio .NET and build the solution.
-QBFC2Assembly.dll was generated with 'tlbimp' .NET Type Library to Assembly Convertor.
+
