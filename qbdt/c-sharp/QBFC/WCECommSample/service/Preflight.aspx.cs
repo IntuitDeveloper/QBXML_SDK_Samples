@@ -13,7 +13,7 @@ using System.Timers;
 public partial class Preflight : System.Web.UI.Page
 {
     //Private variables
-    private string dbRelativePath = "\\WCECommSample\\db\\ecommdb.mdb";
+    private string dbRelativePath = "\\db\\ecommdb.mdb";
     private string[,] customers;
     private string[,] sales;
     private string ticket;
@@ -23,7 +23,7 @@ public partial class Preflight : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         ticket = Request["ticket"].ToString();
-        Session["DBPath"] = Server.MapPath(dbRelativePath);
+        Session["DBPath"] = HttpContext.Current.Server.MapPath("..") + dbRelativePath;
         dbm = new DataBaseManager((string)Session["DBpath"]);
         GetCustomers();
         DisplayCustomers();

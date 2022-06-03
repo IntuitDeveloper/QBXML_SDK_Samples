@@ -20,40 +20,40 @@
             <br />
             <br />
                 </span>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#FFFFC0" Height="249px" Width="550px">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#FFFFC0" Height="460px" Width="550px">
                 <br />
                 Username*&nbsp; 
                 <asp:TextBox ID="TextBox_Username" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox>&nbsp;<br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox>&nbsp;<br /><br />
                 Password*&nbsp; &nbsp;<asp:TextBox ID="TextBox_Password" runat="server" Font-Names="Courier New" Font-Size="Smaller"
                     TextMode="Password" Width="450px" BorderStyle="Outset"></asp:TextBox><br />
-                <br />
+                <br /><br />
                 First name*&nbsp;
                 <asp:TextBox ID="TextBox_Firstname" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 Last name*&nbsp;
                 <asp:TextBox ID="TextBox_Lastname" runat="server" Font-Names="Courier New" Font-Size="Smaller"
                     Width="450px" BorderStyle="Outset"></asp:TextBox><br />
-                <br />
+                <br /><br />
                 Address1 &nbsp; &nbsp;
                 <asp:TextBox ID="TextBox_Addr1" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 Address2 &nbsp; &nbsp;
                 <asp:TextBox ID="TextBox_Addr2" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <asp:TextBox ID="TextBox_City" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 <br />
                 State &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<asp:TextBox ID="TextBox_State" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 Zip code &nbsp; &nbsp; &nbsp;
                 <asp:TextBox ID="TextBox_Zip" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br />
                 <br />
                 Phone &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
                 <asp:TextBox ID="TextBox_Phone" runat="server" Font-Names="Courier New" Font-Size="Smaller"
-                    Width="450px" BorderStyle="Outset"></asp:TextBox><br />
+                    Width="450px" BorderStyle="Outset"></asp:TextBox><br /><br /><br />
                 Email &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<asp:TextBox ID="TextBox_Email" runat="server" Font-Names="Courier New" Font-Size="Smaller"
                     Width="450px" BorderStyle="Outset"></asp:TextBox></asp:Panel>
             <span style="font-family: Arial">

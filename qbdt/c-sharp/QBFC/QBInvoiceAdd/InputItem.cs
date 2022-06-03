@@ -4,7 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
-using Interop.QBFC14;
+using Interop.QBFC15;
 
 namespace InvoiceAdd
 {
@@ -168,31 +168,33 @@ namespace InvoiceAdd
 					for(int ndx=0; ndx<=(orItemRetList.Count-1); ndx++)
 					{ 
 						IORItemRet orItemRet=orItemRetList.GetAt(ndx);
-
-						// IY: The ortype property returns an enum
-						// of the elements that can be contained in the OR object
-						switch(orItemRet.ortype)
+                        // IY: The ortype property returns an enum
+                        // of the elements that can be contained in the OR object
+                        switch (orItemRet.ortype)
 						{
 							case ENORItemRet.orirItemServiceRet:
 							{
 								// orir prefix comes from OR + Item + Ret
 								IItemServiceRet ItemServiceRet = orItemRet.ItemServiceRet;
-								isTaxable=ItemServiceRet.SalesTaxCodeRef.FullName.GetValue();
-								cmboBx2_Item.Items.Add(ItemServiceRet.FullName.GetValue() + ":" + isTaxable);
+								isTaxable=ItemServiceRet?.SalesTaxCodeRef?.FullName?.GetValue();
+                                SetTaxableDefaultIfEmpty(ref isTaxable);
+								cmboBx2_Item.Items.Add(ItemServiceRet?.FullName?.GetValue() + ":" + isTaxable);
 							}
 								break;
 							case ENORItemRet.orirItemInventoryRet:
 							{
 								IItemInventoryRet ItemInventoryRet = orItemRet.ItemInventoryRet;
-								isTaxable=ItemInventoryRet.SalesTaxCodeRef.FullName.GetValue();
-								cmboBx2_Item.Items.Add(ItemInventoryRet.FullName.GetValue() + ":" + isTaxable);
+								isTaxable=ItemInventoryRet?.SalesTaxCodeRef?.FullName?.GetValue();
+                                SetTaxableDefaultIfEmpty(ref isTaxable);
+								cmboBx2_Item.Items.Add(ItemInventoryRet?.FullName?.GetValue() + ":" + isTaxable);
 							}
 								break;
 							case ENORItemRet.orirItemNonInventoryRet:
 							{
 								IItemNonInventoryRet ItemNonInventoryRet = orItemRet.ItemNonInventoryRet;
-								isTaxable=ItemNonInventoryRet.SalesTaxCodeRef.FullName.GetValue();
-								cmboBx2_Item.Items.Add(ItemNonInventoryRet.FullName.GetValue() + ":" + isTaxable);
+								isTaxable=ItemNonInventoryRet?.SalesTaxCodeRef?.FullName?.GetValue();
+                                SetTaxableDefaultIfEmpty(ref isTaxable);
+								cmboBx2_Item.Items.Add(ItemNonInventoryRet?.FullName?.GetValue() + ":" + isTaxable);
 							}
 								break;
 						}
@@ -216,9 +218,14 @@ namespace InvoiceAdd
 
 		}
 
-		
-		// IY: CODE FOR HANDLING DIFFERENT VERSIONS
-		private double QBFCLatestVersion(QBSessionManager SessionManager)
+        private void SetTaxableDefaultIfEmpty(ref string isTaxable)
+        {
+            if (string.IsNullOrEmpty(isTaxable))
+                isTaxable = "Non";
+        }
+
+        // IY: CODE FOR HANDLING DIFFERENT VERSIONS
+        private double QBFCLatestVersion(QBSessionManager SessionManager)
 		{
 			// IY: Use oldest version to ensure that we work with any QuickBooks (US)
 			IMsgSetRequest msgset = SessionManager.CreateMsgSetRequest("US", 1, 0);
@@ -321,8 +328,14 @@ namespace InvoiceAdd
 
 
 		private void btn1_OK_Click(object sender, System.EventArgs e)
-		{	
+		{
+            if (cmboBx2_Item.SelectedItem == null)
+            {
+                MessageBox.Show("Please select an item or add items to Company File if no items are listed and try again");
+                return;
+            }
 			string capText = cmboBx2_Item.Text;
+            
 			//MessageBox.Show("capText = " + capText);
 			int pos = capText.IndexOf(":",0);
 			//MessageBox.Show("pos = " + pos);

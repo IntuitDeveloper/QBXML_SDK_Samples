@@ -8,17 +8,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using System.IO;
 
 public partial class _Default : System.Web.UI.Page 
 {
     //Private variables
-    private string dbRelativePath = "\\WCECommSample\\db\\ecommdb.mdb";
+    private string dbRelativePath = "\\db\\ecommdb.mdb";
     private DataBaseManager dbm;
 
     //Protected methods
     protected void Page_Load(object sender, EventArgs e)
     {
-        Session["DBPath"] = Server.MapPath(dbRelativePath);
+        Session["DBPath"] = Server.MapPath("..") + dbRelativePath;
     }
     
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e) {

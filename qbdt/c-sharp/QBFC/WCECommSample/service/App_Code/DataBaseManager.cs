@@ -27,7 +27,7 @@ public class DataBaseManager
 
     //Constructor
     public DataBaseManager(string dbPath) {
-        m_ConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" + dbPath;
+        m_ConnectionString = "PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA SOURCE=" + dbPath;
     }
 
     #region Public methods
