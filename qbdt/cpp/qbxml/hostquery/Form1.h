@@ -171,7 +171,7 @@ namespace hostquery {
 			 }
 
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
-				 label1->Text="This is a very simple vc++/QBXML sample written using Visual Studio 2005. ";
+				 label1->Text="This is a very simple vc++/QBXML sample written using Visual Studio 2015. ";
 				 label1->Text=label1->Text+"It has been created just to demonstrate how to use vc++ to communicate ";
 				 label1->Text=label1->Text+"with QuickBooks via QBXMLRP2.";
 			 }

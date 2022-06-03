@@ -18,7 +18,8 @@
 
 #include "MainFrm.h"
 #include <initguid.h>
-#include "EventHandler_i.c"
+#include "EventHandler.h" 
+#include "EventHandler_i.c"   
 #include "QBSDKCallback.h"
 #include "SettingsDialog.h"
 #include "AboutDialog.h"
@@ -97,17 +98,14 @@ BOOL CEventHandlerApp::InitInstance()
 	//  of your final executable, you should remove from the following
 	//  the specific initialization routines you do not need.
 
-#ifdef _AFXDLL
-	Enable3dControls();			// Call this when using MFC in a shared DLL
-#else
-	Enable3dControlsStatic();	// Call this when linking to MFC statically
-#endif
-
 	// Change the registry key under which our settings are stored.
 	SetRegistryKey(_T("QBSDK Tools"));
 
+	BOOL launchApp = GetProfileInt(lpszProfileSection,
+		lpszProfileLaunch,
+		1);
 
-	if (cmdInfo.m_bRunEmbedded || cmdInfo.m_bRunAutomated)
+	if ((cmdInfo.m_bRunEmbedded && launchApp == FALSE) || cmdInfo.m_bRunAutomated)
 	{
 		return TRUE;
 	}
@@ -152,7 +150,7 @@ END_OBJECT_MAP()
 
 LONG CEventHandlerModule::Unlock()
 {
-	AfxOleUnlockApp();
+	theApp.GetMainWnd()->SendMessage(CM_UNLOCK);
 	return 0;
 }
 

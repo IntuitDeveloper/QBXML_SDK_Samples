@@ -19,7 +19,7 @@
 #include <afxcmn.h>			// MFC support for Windows Common Controls
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
-#import "msxml4.dll" named_guids raw_interfaces_only
+#import "msxml6.dll" named_guids raw_interfaces_only
 
 #include <string> // STL string
 #include <vector> // STL vector

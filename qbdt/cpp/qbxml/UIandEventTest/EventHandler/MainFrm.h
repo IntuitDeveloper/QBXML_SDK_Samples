@@ -72,7 +72,8 @@ protected:
 	afx_msg void OnSetFocus(CWnd *pOldWnd);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
-};
+	afx_msg LRESULT OnCmUnLock(WPARAM wParam, LPARAM lParam);
+ };
 
 /////////////////////////////////////////////////////////////////////////////
 

@@ -30,7 +30,7 @@
 
 // MSXML lib
 #include "msxml.h"
-#import "msxml4.dll" named_guids raw_interfaces_only
+#import "msxml6.dll" named_guids raw_interfaces_only
 
 class Utility
 {

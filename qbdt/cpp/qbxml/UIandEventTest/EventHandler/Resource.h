@@ -25,6 +25,8 @@
 
 #define WM_RECOVERY_ALERT               WM_APP+1
 
+#define CM_UNLOCK						WM_USER+1
+
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED

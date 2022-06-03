@@ -64,7 +64,7 @@ MSXML2::IXMLDOMDocument *Utility::LoadXML(const string &xmlStr, string &reason)
   HRESULT hr;
 
   MSXML2::IXMLDOMDocument *xmlDocPtr = NULL;
-  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument40,
+  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument60,
                         NULL,
                         CLSCTX_INPROC_SERVER,
                         MSXML2::IID_IXMLDOMDocument,

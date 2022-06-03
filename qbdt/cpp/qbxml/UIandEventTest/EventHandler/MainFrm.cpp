@@ -38,6 +38,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
 	ON_WM_SETFOCUS()
 	//}}AFX_MSG_MAP
+	ON_MESSAGE(CM_UNLOCK, &CMainFrame::OnCmUnLock)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -168,3 +169,9 @@ BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO*
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
 }
 
+
+afx_msg LRESULT CMainFrame::OnCmUnLock(WPARAM wParam, LPARAM lParam)
+{
+	AfxOleUnlockApp();
+	return 0;
+}

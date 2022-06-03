@@ -24,8 +24,7 @@
 #endif
 
 #include "resource.h"       // main symbols
-#include "EventHandler_i.h"
-
+#include "EventHandler_i.h" 
 /////////////////////////////////////////////////////////////////////////////
 // CEventHandlerApp:
 // See EventHandler.cpp for the implementation of this class

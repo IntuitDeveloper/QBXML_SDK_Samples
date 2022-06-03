@@ -48,8 +48,6 @@ BOOL CMenuSubscribeApp::InitInstance()
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
 	// visual styles.  Otherwise, any window creation will fail.
 	//vc6 InitCommonControls();
-	Enable3dControlsStatic();	// Call this when linking to MFC statically  //vc6
-
 	CWinApp::InitInstance();
 
 	CoInitialize( NULL );

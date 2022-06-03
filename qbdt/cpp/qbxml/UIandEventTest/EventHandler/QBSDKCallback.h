@@ -33,7 +33,7 @@
 class ATL_NO_VTABLE CQBSDKCallback : 
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CQBSDKCallback,&CLSID_QBSDKCallback>,
-    IQBEventCallback
+    public IQBEventCallback
 {
 public:
 	CQBSDKCallback() {}

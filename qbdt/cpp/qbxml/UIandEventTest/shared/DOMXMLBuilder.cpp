@@ -70,7 +70,7 @@ DOMXMLBuilder::~DOMXMLBuilder()
 bool DOMXMLBuilder::InstantiateXMLDomDocument()
 {
   HRESULT hr;
-  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument40,
+  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument60,
                         NULL,
                         CLSCTX_INPROC_SERVER,
                         MSXML2::IID_IXMLDOMDocument,
@@ -80,7 +80,7 @@ bool DOMXMLBuilder::InstantiateXMLDomDocument()
   // COM Create Instance failed
   if (FAILED(hr)){
     TCHAR tmpMsg[1024];
-    sprintf (tmpMsg, "Failed to instantiate the MSXML DOM Document.  Error: 0x%lx.  Perhaps MSXML4.dll is missing?", hr);
+    sprintf (tmpMsg, "Failed to instantiate the MSXML DOM Document.  Error: 0x%lx.  Perhaps MSXML6.dll is missing?", hr);
     m_ErrorMsg = tmpMsg;
     m_HasError = true;
     return false;

@@ -70,7 +70,7 @@ DOMXMLBuilder::~DOMXMLBuilder()
 bool DOMXMLBuilder::InstantiateXMLDomDocument()
 {
   HRESULT hr;
-  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument40,
+  hr = CoCreateInstance(MSXML2::CLSID_DOMDocument60,
                         NULL,
                         CLSCTX_INPROC_SERVER,
                         MSXML2::IID_IXMLDOMDocument,

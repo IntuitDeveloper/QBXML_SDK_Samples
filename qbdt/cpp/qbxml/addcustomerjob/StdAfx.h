@@ -11,7 +11,8 @@
 
 #define STRICT
 #ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0400
+//#define _WIN32_WINNT 0x0400
+#define _WIN32_WINNT 0x0500
 #endif
 #define _ATL_APARTMENT_THREADED
 
@@ -33,7 +34,7 @@ extern CExeModule _Module;
 #include <atlwin.h>
 
 // MSXML lib
-#import "msxml4.dll" named_guids raw_interfaces_only
+#import "msxml6.dll" named_guids raw_interfaces_only
 
 // STL lib
 #include <string> // STL string
