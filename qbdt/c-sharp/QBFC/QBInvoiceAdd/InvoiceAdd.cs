@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
-using Interop.QBFC14;
+using Interop.QBFC15;
 
 namespace InvoiceAdd
 {
@@ -156,7 +156,7 @@ namespace InvoiceAdd
 		{
 			for (int i = 0; i < listView1_InvoiceItems.Columns.Count; i++)
 			{
-				if (listView1_InvoiceItems.Items[nRow].SubItems.Count - 1  < i)
+				if ( listView1_InvoiceItems.Items[nRow].SubItems.Count - 1  < i)
 				{
 					listView1_InvoiceItems.Items[nRow].SubItems.Add(RowItems[i].Text);
 				}
@@ -1207,8 +1207,8 @@ namespace InvoiceAdd
 			try
 			{
 				// Open the connection and begin a session to QuickBooks
-				sessionManager.OpenConnection("", "IDN InvoiceAdd C# sample");
-				//sessionManager.OpenConnection2("", "IDN InvoiceAdd C# sample",ENConnectionType.ctLocalQBDLaunchUI);
+				//sessionManager.OpenConnection("", "IDN InvoiceAdd C# sample");
+				sessionManager.OpenConnection2("", "IDN InvoiceAdd C# sample",ENConnectionType.ctLocalQBDLaunchUI);
 				sessionManager.BeginSession("", ENOpenMode.omDontCare);
 				booSessionBegun=true;
 
@@ -1249,7 +1249,7 @@ namespace InvoiceAdd
 			
 
 				ICustomerRetList customerRetList = response.Detail as ICustomerRetList;
-				if (!(customerRetList.Count==0))
+				if (customerRetList != null && !(customerRetList.Count==0))
 				{
 					for (int ndx=0; ndx<=(customerRetList.Count-1); ndx++)
 					{
@@ -1657,42 +1657,46 @@ namespace InvoiceAdd
 					}
 					else
 					{	
-						IResponse res = resMsgSet.ResponseList.GetAt(0);
-						int sCode = res.StatusCode;
-						//string sMessage = res.StatusMessage;
-						//string sSeverity = res.StatusSeverity;
-						//MessageBox.Show("StatusCode = " + sCode + "\n" + "StatusMessage = " + sMessage + "\n" + "StatusSeverity = " + sSeverity);
-					
-						if (sCode == 0)
-						{
-							MessageBox.Show("Last request was processed and Invoice was added successfully!");
-						}
-						else if (sCode > 0)
-						{
-							MessageBox.Show("There was a warning but last request was processed successfully!");
-						}
-						else
-						{
-							MessageBox.Show("It seems that there was an error in processing last request"); 
-							// b. Get the saved request, using GetSavedMsgSetRequest
-							reqMsgSet = sessionManager.GetSavedMsgSetRequest();
-							//reqXML = reqMsgSet.ToXMLString();
-							//MessageBox.Show(reqXML);
-							
-							// c. Process the response, possibly using the saved request
-							resMsgSet = sessionManager.DoRequests(reqMsgSet);
-							IResponse resp = resMsgSet.ResponseList.GetAt(0);
-							int statCode = resp.StatusCode;
-							if (statCode == 0)
-							{	
-								string resStr = null;
-								IInvoiceRet invRet = resp.Detail as IInvoiceRet;
-								resStr = resStr + "Following invoice has been successfully submitted to QuickBooks:\n\n\n";
-								if (invRet.TxnNumber != null)
-									resStr = resStr + "Txn Number = " + Convert.ToString(invRet.TxnNumber.GetValue()) + "\n";
-							} // if (statusCode == 0)
-						} // else (sCode)
+						IResponse res = resMsgSet?.ResponseList?.GetAt(0);
+                        if (res != null)
+                        {
+                            int sCode = res.StatusCode;
+                            //string sMessage = res.StatusMessage;
+                            //string sSeverity = res.StatusSeverity;
+                            //MessageBox.Show("StatusCode = " + sCode + "\n" + "StatusMessage = " + sMessage + "\n" + "StatusSeverity = " + sSeverity);
+
+                            if (sCode == 0)
+                            {
+                                MessageBox.Show("Last request was processed and Invoice was added successfully!");
+                            }
+                            else if (sCode > 0)
+                            {
+                                MessageBox.Show("There was a warning but last request was processed successfully!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("It seems that there was an error in processing last request");
+                                // b. Get the saved request, using GetSavedMsgSetRequest
+                                reqMsgSet = sessionManager.GetSavedMsgSetRequest();
+                                //reqXML = reqMsgSet.ToXMLString();
+                                //MessageBox.Show(reqXML);
+
+                                // c. Process the response, possibly using the saved request
+                                resMsgSet = sessionManager.DoRequests(reqMsgSet);
+                                IResponse resp = resMsgSet.ResponseList.GetAt(0);
+                                int statCode = resp.StatusCode;
+                                if (statCode == 0)
+                                {
+                                    string resStr = null;
+                                    IInvoiceRet invRet = resp.Detail as IInvoiceRet;
+                                    resStr = resStr + "Following invoice has been successfully submitted to QuickBooks:\n\n\n";
+                                    if (invRet.TxnNumber != null)
+                                        resStr = resStr + "Txn Number = " + Convert.ToString(invRet.TxnNumber.GetValue()) + "\n";
+                                } // if (statusCode == 0)
+                            } // else (sCode)
+                        }
 					} // else (MessageSetStatusCode)
+
 					
 					// d. Clear the response status, using ClearErrorRecovery
 					sessionManager.ClearErrorRecovery();
@@ -1840,32 +1844,32 @@ namespace InvoiceAdd
 								resString = resString + "Txn Date = " + Convert.ToString(invoiceRet.TxnDate.GetValue()) + "\n";
 							if (invoiceRet.RefNumber != null)
 								resString = resString + "Reference Number = " + invoiceRet.RefNumber.GetValue() + "\n";
-							if (invoiceRet.CustomerRef.FullName != null)
+							if (invoiceRet?.CustomerRef?.FullName != null)
 								resString = resString + "Customer FullName = " + invoiceRet.CustomerRef.FullName.GetValue() + "\n";
 							resString = resString + "\nBilling Address:" + "\n";
-							if (invoiceRet.BillAddress.Addr1 != null)
+							if (invoiceRet?.BillAddress?.Addr1 != null)
 								resString = resString + "Addr1 = " + invoiceRet.BillAddress.Addr1.GetValue() + "\n";
-							if (invoiceRet.BillAddress.Addr2 != null)
+							if (invoiceRet?.BillAddress?.Addr2 != null)
 								resString = resString + "Addr2 = " + invoiceRet.BillAddress.Addr2.GetValue() + "\n";
-							if (invoiceRet.BillAddress.Addr3 != null)
+							if (invoiceRet?.BillAddress?.Addr3 != null)
 								resString = resString + "Addr3 = " + invoiceRet.BillAddress.Addr3.GetValue() + "\n";
-							if (invoiceRet.BillAddress.Addr4 != null)
+							if (invoiceRet?.BillAddress?.Addr4 != null)
 								resString = resString + "Addr4 = " + invoiceRet.BillAddress.Addr4.GetValue() + "\n";
-							if (invoiceRet.BillAddress.City != null)
+							if (invoiceRet?.BillAddress?.City != null)
 								resString = resString + "City = " + invoiceRet.BillAddress.City.GetValue() + "\n";
-							if (invoiceRet.BillAddress.State != null)
+							if (invoiceRet?.BillAddress?.State != null)
 								resString = resString + "State = " + invoiceRet.BillAddress.State.GetValue() + "\n";
-							if (invoiceRet.BillAddress.PostalCode != null)
+							if (invoiceRet?.BillAddress?.PostalCode != null)
 								resString = resString + "Postal Code = " + invoiceRet.BillAddress.PostalCode.GetValue() + "\n";
-							if (invoiceRet.BillAddress.Country != null)
+							if (invoiceRet?.BillAddress?.Country != null)
 								resString = resString + "Country = " + invoiceRet.BillAddress.Country.GetValue() + "\n";
-							if (invoiceRet.PONumber != null)
+							if (invoiceRet?.PONumber != null)
 								resString = resString + "\nPO Number = " + invoiceRet.PONumber.GetValue() + "\n";
-							if (invoiceRet.TermsRef.FullName != null)
+							if (invoiceRet?.TermsRef?.FullName != null)
 								resString = resString + "Terms = " + invoiceRet.TermsRef.FullName.GetValue() + "\n";
-							if (invoiceRet.DueDate != null)
+							if (invoiceRet?.DueDate != null)
 								resString = resString + "Due Date = " + Convert.ToString(invoiceRet.DueDate.GetValue()) + "\n";
-							if (invoiceRet.SalesTaxTotal != null)
+							if (invoiceRet?.SalesTaxTotal != null)
 								resString = resString + "Sales Tax = " + Convert.ToString(invoiceRet.SalesTaxTotal.GetValue()) + "\n";
 							resString = resString + "\nInvoice Line Items:" + "\n";
 							IORInvoiceLineRetList orInvoiceLineRetList = invoiceRet.ORInvoiceLineRetList;
@@ -1876,30 +1880,30 @@ namespace InvoiceAdd
 							string amount="<empty>";
 							for (int i=0; i<=orInvoiceLineRetList.Count-1; i++)
 							{
-								if(invoiceRet.ORInvoiceLineRetList.GetAt(i).ortype== ENORInvoiceLineRet.orilrInvoiceLineRet)
+								if(invoiceRet.ORInvoiceLineRetList.GetAt(i)?.ortype== ENORInvoiceLineRet.orilrInvoiceLineRet)
 								{
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.ItemRef.FullName != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet?.ItemRef?.FullName != null)
 										fullname=invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.ItemRef.FullName.GetValue();
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Desc != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet?.Desc != null)
 										desc=invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Desc.GetValue();
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.ORRate.Rate != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet?.ORRate?.Rate != null)
 										rate=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.ORRate.Rate.GetValue());
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Quantity !=null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet?.Quantity !=null)
 										quantity=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Quantity.GetValue());
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Amount != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet?.Amount != null)
 										amount=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineRet.Amount.GetValue());
 								}
 								else
 								{
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.ItemGroupRef.FullName != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet?.ItemGroupRef?.FullName != null)
 										fullname=invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.ItemGroupRef.FullName.GetValue();
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.Desc !=null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet?.Desc !=null)
 										desc=invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.Desc.GetValue();
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.InvoiceLineRetList.GetAt(i).ORRate.Rate != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet?.InvoiceLineRetList?.GetAt(i)?.ORRate?.Rate != null)
 										rate=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.InvoiceLineRetList.GetAt(i).ORRate.Rate.GetValue());
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.Quantity != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet?.Quantity != null)
 										quantity=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.Quantity.GetValue());
-									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.TotalAmount != null)
+									if (invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet?.TotalAmount != null)
 										amount=Convert.ToString(invoiceRet.ORInvoiceLineRetList.GetAt(i).InvoiceLineGroupRet.TotalAmount.GetValue());
 								}
 								resString = resString + "Fullname: " + fullname + "\n";

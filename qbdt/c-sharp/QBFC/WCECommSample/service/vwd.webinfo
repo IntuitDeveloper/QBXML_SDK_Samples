@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.qbfc15lib" ID="{26D049B7-5D02-4FF9-A803-C783F54A307E}\1.0\0"/>
+  </comReferences>
+</VisualWebDeveloper>
