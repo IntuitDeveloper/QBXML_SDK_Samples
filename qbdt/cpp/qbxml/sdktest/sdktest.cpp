@@ -20,7 +20,6 @@
 #include <string>
 
 using namespace std;
-
 #import "QBXMLRP.dll"
 
 
@@ -237,7 +236,7 @@ void processRequest (CComBSTR   appName,
             std::cout << "process request OK, dumping the response.\n";
             // dump the response
             std::ofstream   outputFile (outputXMLFileName);
-            if (outputFile == 0) {
+			if(!outputFile.is_open()){ // Anitha
               std::cout << "could not open output file" << outputXMLFileName << "\n";
             } else {
               TCHAR *outputData2;   // this pointer does not change;
@@ -396,7 +395,7 @@ bool readXMLinputFile (TCHAR    *fileName,
 {
   std::ifstream   inputFile (fileName);
 
-  if (inputFile == NULL) {
+  if (!inputFile.is_open()) {
     return false;
   }
 

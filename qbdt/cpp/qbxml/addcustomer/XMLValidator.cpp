@@ -15,7 +15,7 @@
 #include "stdafx.h"
 #include "XMLValidator.h"
 
-#import "msxml4.dll"
+#import "msxml6.dll"
 using namespace MSXML2;
 
 //////////////////////////////////////////////////////////////////////
@@ -78,9 +78,9 @@ bool XMLValidator::XMLValidation(const string &inputXMLStr,
 
     // Create instances
     //
-    pXMLDoc.CreateInstance(__uuidof(MSXML2::DOMDocument40));
-    pSchema.CreateInstance(__uuidof(MSXML2::DOMDocument40));
-    pSchemaCache.CreateInstance(__uuidof(MSXML2::XMLSchemaCache40));
+    pXMLDoc.CreateInstance(__uuidof(MSXML2::DOMDocument60));
+    pSchema.CreateInstance(__uuidof(MSXML2::DOMDocument60));
+    pSchemaCache.CreateInstance(__uuidof(MSXML2::XMLSchemaCache60));
 
     // make sure our objects were created - if not, this is a config issue
     if ((pXMLDoc == NULL) ||
@@ -94,19 +94,28 @@ bool XMLValidator::XMLValidation(const string &inputXMLStr,
     // first to load schema
     hr = pSchema->put_async (VARIANT_FALSE);
     if (SUCCEEDED(hr)) {
-      varOut = pSchema->load(schemaFile.c_str());
+		CComVariant varFile(schemaFile.c_str());
+      //varOut = pSchema->load(schemaFile.c_str());
       if ((bool)varOut != TRUE) {
-        IXMLDOMParseErrorPtr errPtr =  pSchema->GetparseError();
-        _bstr_t bstrErr(errPtr->reason);
+		  MSXML2::IXMLDOMParseErrorPtr errPtr;
+        //IXMLDOMParseErrorPtr errPtr =  pSchema->GetparseError();
+		  pSchema->get_parseError(&errPtr);
+        //_bstr_t bstrErr(errPtr->reason);
+		  BSTR bstrErr;
+		  errPtr->get_reason(&bstrErr);
         m_ErrorMsg = "Failed to load Schema file or one of the schemas it includes";
         char buf[256];
-        sprintf(buf, "Error, line %ld, reason: %s", errPtr->line,(char*)bstrErr);
+		long lineNumber;
+		errPtr->get_line(&lineNumber);
+        //sprintf(buf, "Error, line %ld, reason: %s", errPtr->line,(char*)bstrErr);
+		sprintf(buf, "Error, line %ld, reason: %s", lineNumber, (char*)bstrErr);
         m_ErrorMsg += "\n";
         m_ErrorMsg += buf;
         return false;
       } else {
         if (pSchema != NULL)  {
-          hr = pSchemaCache->raw_add(_bstr_t(""), _variant_t((IUnknown *)pSchema));
+          //hr = pSchemaCache->raw_add(_bstr_t(""), _variant_t((IUnknown *)pSchema));
+			hr = pSchemaCache->raw_add(_bstr_t(""), _variant_t((IUnknown *)pSchema));
           if (FAILED(hr)) {
             m_ErrorMsg = "Failed to load schema cache.  Perhaps you chose the wrong schema file?";
             return false;
@@ -122,7 +131,7 @@ bool XMLValidator::XMLValidation(const string &inputXMLStr,
       }
 
       if (SUCCEEDED(hr)) {
-        IXMLDOMParseErrorPtr errPtr;
+	  MSXML2::IXMLDOMParseErrorPtr errPtr;
 
         _bstr_t bs(xmlStr.c_str());
         varOut = pXMLDoc->loadXML(bs);
