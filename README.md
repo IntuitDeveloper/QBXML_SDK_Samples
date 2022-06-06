@@ -10,7 +10,6 @@ This is the sample application code for 32-bit SDK. We recommend you use the [64
 This page helps you find a sample application that you can use to jump-start your own project. The first table lists the sample applications available.  In addition, many of the sample applications are installed with the SDK, with the default location of the samples directory being C:\Program Files\Intuit\IDN\QBSDK15.0\samples\qbdt.
 
 The use of these sample applications is subject to the Terms of Service for Intuit Developer Services, which are available here <https://developer.intuit.com/app/developer/qbo/docs/legal-agreements/intuit-terms-of-service-for-intuit-developer-services>.
-
 | Language         | qbXML                             | QBFC                                          |
 | ---------------- | ---------------------------------- | ------------------------------------------- |
 | C#         | SubscribeAndHandleQBEvent         | None                                                                            |
@@ -31,7 +30,7 @@ The use of these sample applications is subject to the Terms of Service for Intu
 | Java       | QueryRq (any)                                                     | None                                                                            |
 |            | QBWebConnectorSvc                          |                                                                                 |
 | ---------------- | ---------------------------------- | ------------------------------------------- |
-| VB         | US_CDN_CustomerAdd                        | US_CDN_UK_CustomerQuery   |
+| VB.NET     | US_CDN_CustomerAdd                        | US_CDN_UK_CustomerQuery   |
 |            | SDKTestPlus3                                    | US_CDN_BillAdd                     |
 |            | SDKTest                                              | SyncCustomerList                 |
 |            | modifycustomer                                | PurchaseOrderModify           |
@@ -49,16 +48,11 @@ The use of these sample applications is subject to the Terms of Service for Intu
 |            |                                                                                       | DataExtensions                   |
 |            |                                                                                       | CustomerAdd                         |
 |            |                                                                                       | CDN_VendorAdd                       |
-| ---------------- | ---------------------------------- | ------------------------------------------- |
-| VB.NET     | None                                                                                  | SyncCustomerList                 |
-|            |                                                                                       | PriceLevels                           |
-|            |                                                                                       | ItemReceipt                           |
-|            |                                                                                       | ItemInventoryMod                 |
-|            |                                                                                       | GeneralSummaryReportQueryRq (any)  |
-|            |                                                                                       | ExpenseReportByVendor       |
-|            |                                                                                       | DepositAdd                           |
-|            |                                                                                       | DataExtensions                     |
-|            |                                                                                       | CustomerAdd                         |
+|            |                                          |PriceLevels    |
+|            |                                          |ItemReceipt    |
+|            |                                          |ItemInventoryMod    |
+|            |                                          |GeneralSummaryReportQueryRq (any)    |
+|            |                                          |ExpenseReportByVendor   |
 | ---------------- | ---------------------------------- | ------------------------------------------- |
 | xml        | AccountQueryRq (any)                                       | None                                                                            |
 |            | BillQueryRq (any)                                             |                                                                                 |
@@ -108,6 +102,5 @@ The use of these sample applications is subject to the Terms of Service for Intu
 |            | TemplateQuery (any)                                         |                                                                                 |
 |            | TxnDisplayAdd_Invoice (any)                         |                                                                                 |
 |            | VendorAddRq (any)                                             |                                                                                 |
-| ---------------- | ---------------------------------- | ------------------------------------------- |
 
 [ss1]: https://help.developer.intuit.com/s/samplefeedback?cid=9010&repoName=QBXML_SDK15_Samples
