@@ -12,7 +12,7 @@
 '      http://developer.intuit.com/legal/devsite_tos.html
 '
 '----------------------------------------------------------
-Imports Interop.QBFC14
+Imports Interop.QBFC15
 
 
 Public Class CustomerAddForm
@@ -152,7 +152,7 @@ Public Class CustomerAddForm
         Dim msgSetRs As IMsgSetResponse
 
         Try
-            sessManager = New QBSessionManagerClass()
+            sessManager = New QBSessionManager()
 
             Dim msgSetRq As IMsgSetRequest = sessManager.CreateMsgSetRequest("US", 2, 0)
             msgSetRq.Attributes.OnError = ENRqOnError.roeContinue

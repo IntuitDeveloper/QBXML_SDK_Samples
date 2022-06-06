@@ -39,72 +39,60 @@ Friend Class DisplayForm
 	'It can be modified using the Windows Form Designer.
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-		Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(DisplayForm))
-		Me.components = New System.ComponentModel.Container()
-		Me.ToolTip1 = New System.Windows.Forms.ToolTip(components)
-		Me.ToolTip1.Active = True
-		Me.closeButton = New System.Windows.Forms.Button
-		Me.displayText = New System.Windows.Forms.TextBox
-		Me.ClientSize = New System.Drawing.Size(391, 295)
-		Me.Location = New System.Drawing.Point(4, 23)
-		Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
-		Me.Font = New System.Drawing.Font("Arial", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-		Me.BackColor = System.Drawing.SystemColors.Control
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
-		Me.ControlBox = True
-		Me.Enabled = True
-		Me.KeyPreview = False
-		Me.MaximizeBox = True
-		Me.MinimizeBox = True
-		Me.Cursor = System.Windows.Forms.Cursors.Default
-		Me.RightToLeft = System.Windows.Forms.RightToLeft.No
-		Me.ShowInTaskbar = True
-		Me.HelpButton = False
-		Me.WindowState = System.Windows.Forms.FormWindowState.Normal
-		Me.Name = "DisplayForm"
-		Me.closeButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-		Me.closeButton.Text = "Close"
-		Me.closeButton.Size = New System.Drawing.Size(157, 17)
-		Me.closeButton.Location = New System.Drawing.Point(116, 272)
-		Me.closeButton.TabIndex = 1
-		Me.closeButton.Font = New System.Drawing.Font("Arial", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.closeButton.BackColor = System.Drawing.SystemColors.Control
-		Me.closeButton.CausesValidation = True
-		Me.closeButton.Enabled = True
-		Me.closeButton.ForeColor = System.Drawing.SystemColors.ControlText
-		Me.closeButton.Cursor = System.Windows.Forms.Cursors.Default
-		Me.closeButton.RightToLeft = System.Windows.Forms.RightToLeft.No
-		Me.closeButton.TabStop = True
-		Me.closeButton.Name = "closeButton"
-		Me.displayText.AutoSize = False
-		Me.displayText.Size = New System.Drawing.Size(381, 261)
-		Me.displayText.Location = New System.Drawing.Point(4, 4)
-		Me.displayText.MultiLine = True
-		Me.displayText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-		Me.displayText.TabIndex = 0
-		Me.displayText.Font = New System.Drawing.Font("Arial", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.displayText.AcceptsReturn = True
-		Me.displayText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-		Me.displayText.BackColor = System.Drawing.SystemColors.Window
-		Me.displayText.CausesValidation = True
-		Me.displayText.Enabled = True
-		Me.displayText.ForeColor = System.Drawing.SystemColors.WindowText
-		Me.displayText.HideSelection = True
-		Me.displayText.ReadOnly = False
-		Me.displayText.Maxlength = 0
-		Me.displayText.Cursor = System.Windows.Forms.Cursors.IBeam
-		Me.displayText.RightToLeft = System.Windows.Forms.RightToLeft.No
-		Me.displayText.TabStop = True
-		Me.displayText.Visible = True
-		Me.displayText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.displayText.Name = "displayText"
-		Me.Controls.Add(closeButton)
-		Me.Controls.Add(displayText)
-	End Sub
-#End Region 
+        Me.components = New System.ComponentModel.Container()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.closeButton = New System.Windows.Forms.Button()
+        Me.displayText = New System.Windows.Forms.TextBox()
+        Me.SuspendLayout()
+        '
+        'closeButton
+        '
+        Me.closeButton.BackColor = System.Drawing.SystemColors.Control
+        Me.closeButton.Cursor = System.Windows.Forms.Cursors.Default
+        Me.closeButton.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.closeButton.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.closeButton.Location = New System.Drawing.Point(116, 272)
+        Me.closeButton.Name = "closeButton"
+        Me.closeButton.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.closeButton.Size = New System.Drawing.Size(157, 28)
+        Me.closeButton.TabIndex = 1
+        Me.closeButton.Text = "Close"
+        Me.closeButton.UseVisualStyleBackColor = False
+        '
+        'displayText
+        '
+        Me.displayText.AcceptsReturn = True
+        Me.displayText.BackColor = System.Drawing.SystemColors.Window
+        Me.displayText.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.displayText.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.displayText.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.displayText.Location = New System.Drawing.Point(4, 4)
+        Me.displayText.MaxLength = 0
+        Me.displayText.Multiline = True
+        Me.displayText.Name = "displayText"
+        Me.displayText.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.displayText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.displayText.Size = New System.Drawing.Size(381, 261)
+        Me.displayText.TabIndex = 0
+        '
+        'DisplayForm
+        '
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(391, 304)
+        Me.Controls.Add(Me.closeButton)
+        Me.Controls.Add(Me.displayText)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Location = New System.Drawing.Point(4, 23)
+        Me.Name = "DisplayForm"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ResumeLayout(False)
+
+    End Sub
+#End Region
 #Region "Upgrade Support "
-	Private Shared m_vb6FormDefInstance As DisplayForm
+    Private Shared m_vb6FormDefInstance As DisplayForm
 	Private Shared m_InitializingDefInstance As Boolean
 	Public Shared Property DefInstance() As DisplayForm
 		Get
@@ -154,13 +142,10 @@ Friend Class DisplayForm
 		displayText.Text = xmlString
 		Me.Show()
 	End Sub
-	
-	
-	
-	'
-	' Close the form.
-	'
-	Private Sub closeButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles closeButton.Click
-		Me.Close()
-	End Sub
+    '
+    ' Close the form.
+    '
+    Private Sub closeButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles closeButton.Click
+        Me.Close()
+    End Sub
 End Class

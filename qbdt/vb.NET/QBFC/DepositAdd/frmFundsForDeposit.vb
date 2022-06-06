@@ -159,7 +159,7 @@ Friend Class frmDepositAdd
             Exit Sub
         End If
 
-        DepositFunds(VB6.GetItemString(lstFundsForDeposit, lstFundsForDeposit.SelectedIndex))
+        DepositFunds(lstFundsForDeposit.Items(lstFundsForDeposit.SelectedIndex))
         GetFundsForDeposit(lstFundsForDeposit)
     End Sub
 

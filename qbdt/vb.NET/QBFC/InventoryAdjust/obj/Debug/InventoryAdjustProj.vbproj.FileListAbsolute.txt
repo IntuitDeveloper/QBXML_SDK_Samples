@@ -1,0 +1,4 @@
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\bin\Debug\InventoryAdjustProj.exe.config
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Debug\Interop.MSXML2.dll
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Debug\Interop.QBFC15Lib.dll
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Debug\InventoryAdjustProj.vbproj.ResolveComReference.cache
