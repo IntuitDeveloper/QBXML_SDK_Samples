@@ -1,0 +1,10 @@
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\bin\Release\InventoryAdjustProj.exe.config
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\Interop.MSXML2.dll
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\Interop.QBFC15Lib.dll
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\InventoryAdjustProj.vbproj.ResolveComReference.cache
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\bin\Release\InventoryAdjustProj.exe
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\bin\Release\InventoryAdjustProj.xml
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\InventoryAdjustProj.InventoryAdjust.resources
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\InventoryAdjustProj.vbproj.GenerateResource.Cache
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\InventoryAdjustProj.exe
+C:\SDK_32bit\QBXML_SDK_Samples\qbdt\vb.NET\QBFC\InventoryAdjust\obj\Release\InventoryAdjustProj.xml

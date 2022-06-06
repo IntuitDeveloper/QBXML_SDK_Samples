@@ -1,4 +1,5 @@
 
+
 This sample is a simple VB.NET desktop application that creates a new 
 QuickBooks customer by using QBFC2 COM dll. 
 
