@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SDKTestPlus3", "SDKTestPlus3.vbproj", "{8BC5A602-DB40-4413-9D82-6FE1FA748E81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Debug|x86.ActiveCfg = Debug|x86
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Debug|x86.Build.0 = Debug|x86
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Release|x86.ActiveCfg = Release|x86
+		{8BC5A602-DB40-4413-9D82-6FE1FA748E81}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
